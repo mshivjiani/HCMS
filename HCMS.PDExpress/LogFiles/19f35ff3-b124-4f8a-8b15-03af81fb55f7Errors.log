@@ -1,0 +1,75 @@
+----------------------------------------
+Timestamp: 7/22/2015 7:29:23 PM
+Message: HandlingInstanceID: 7c7f44a6-980f-4609-b958-7991c8fd8e63
+An exception of type 'System.IO.FileLoadException' occurred and was caught.
+---------------------------------------------------------------------------
+07/22/2015 15:29:23
+Type : System.IO.FileLoadException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Could not load file or assembly 'Microsoft.Practices.EnterpriseLibrary.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+Source : mscorlib
+Help link : 
+FileName : Microsoft.Practices.EnterpriseLibrary.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+FusionLog : === Pre-bind state information ===
+LOG: User = IFW\mshivjiani
+LOG: DisplayName = Microsoft.Practices.EnterpriseLibrary.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+ (Fully-specified)
+LOG: Appbase = file:///C:/HCMS/HCMS.PDExpress/
+LOG: Initial PrivatePath = C:\HCMS\HCMS.PDExpress\bin
+Calling assembly : Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: C:\HCMS\HCMS.PDExpress\web.config
+LOG: Using host configuration file: 
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Post-policy reference: Microsoft.Practices.EnterpriseLibrary.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+LOG: Attempting download of new URL file:///C:/Users/mshivjiani/AppData/Local/Temp/1/Temporary ASP.NET Files/root/5c032f77/5e25b9b3/Microsoft.Practices.EnterpriseLibrary.Configuration.Design.DLL.
+LOG: Attempting download of new URL file:///C:/Users/mshivjiani/AppData/Local/Temp/1/Temporary ASP.NET Files/root/5c032f77/5e25b9b3/Microsoft.Practices.EnterpriseLibrary.Configuration.Design/Microsoft.Practices.EnterpriseLibrary.Configuration.Design.DLL.
+LOG: Attempting download of new URL file:///C:/HCMS/HCMS.PDExpress/bin/Microsoft.Practices.EnterpriseLibrary.Configuration.Design.DLL.
+WRN: Comparing the assembly name resulted in the mismatch: PUBLIC KEY TOKEN
+ERR: Failed to complete setup of assembly (hr = 0x80131040). Probing terminated.
+
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ResolveType(System.Reflection.RuntimeModule, Int32, IntPtr*, Int32, IntPtr*, Int32, System.Runtime.CompilerServices.ObjectHandleOnStack)
+Stack Trace :    at System.ModuleHandle.ResolveType(RuntimeModule module, Int32 typeToken, IntPtr* typeInstArgs, Int32 typeInstCount, IntPtr* methodInstArgs, Int32 methodInstCount, ObjectHandleOnStack type)
+   at System.ModuleHandle.ResolveTypeHandleInternal(RuntimeModule module, Int32 typeToken, RuntimeTypeHandle[] typeInstantiationContext, RuntimeTypeHandle[] methodInstantiationContext)
+   at System.Reflection.RuntimeModule.ResolveType(Int32 metadataToken, Type[] genericTypeArguments, Type[] genericMethodArguments)
+   at System.Reflection.CustomAttribute.FilterCustomAttributeRecord(CustomAttributeRecord caRecord, MetadataImport scope, Assembly& lastAptcaOkAssembly, RuntimeModule decoratedModule, MetadataToken decoratedToken, RuntimeType attributeFilterType, Boolean mustBeInheritable, Object[] attributes, IList derivedAttributes, RuntimeType& attributeType, IRuntimeMethodInfo& ctor, Boolean& ctorHasParameters, Boolean& isVarArg)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeModule decoratedModule, Int32 decoratedMetadataToken, Int32 pcaCount, RuntimeType attributeFilterType, Boolean mustBeInheritable, IList derivedAttributes, Boolean isDecoratedTargetSecurityTransparent)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeAssembly assembly, RuntimeType caType)
+   at System.Reflection.RuntimeAssembly.GetCustomAttributes(Boolean inherit)
+   at System.Web.UI.AssemblyCache.GetAjaxFrameworkAssemblyAttribute(Assembly assembly)
+   at System.Web.UI.ScriptManager.get_DefaultAjaxFrameworkAssembly()
+   at System.Web.UI.ScriptManager..ctor()
+   at ASP.pdmaster_master.__BuildControlScriptManager1() in c:\HCMS\HCMS.PDExpress\PDMaster.master:line 55
+   at ASP.pdmaster_master.__BuildControl_theForm() in c:\HCMS\HCMS.PDExpress\PDMaster.master:line 54
+   at ASP.pdmaster_master.__BuildControlTree(pdmaster_master __ctrl) in c:\HCMS\HCMS.PDExpress\PDMaster.master:line 1
+   at ASP.pdmaster_master.FrameworkInitialize() in c:\Users\mshivjiani\AppData\Local\Temp\1\Temporary ASP.NET Files\root\5c032f77\5e25b9b3\App_Web_nsc3g1xt.1.cs:line 0
+   at System.Web.UI.UserControl.InitializeAsUserControlInternal()
+   at System.Web.UI.MasterPage.CreateMaster(TemplateControl owner, HttpContext context, VirtualPath masterPageFile, IDictionary contentTemplateCollection)
+   at System.Web.UI.Page.get_Master()
+   at System.Web.UI.Page.ApplyMasterPage()
+   at System.Web.UI.Page.PerformPreInit()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+Additional Info:
+
+MachineName : IFW9WO-BDBCHA1
+TimeStamp : 7/22/2015 7:29:23 PM
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : b4579cf2-3-130820669582774559
+ThreadIdentity : 1
+WindowsIdentity : IFW\mshivjiani
+
+Category: General
+Priority: 0
+EventId: 100
+Severity: Error
+Title:Enterprise Library Exception Handling
+Machine: IFW9WO-BDBCHA1
+Application Domain: b4579cf2-3-130820669582774559
+Process Id: 5404
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\10.0\WebDev.WebServer40.exe
+Win32 Thread Id: 7736
+Thread Name: 
+Extended Properties: 
+----------------------------------------

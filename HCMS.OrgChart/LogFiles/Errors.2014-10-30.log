@@ -1,0 +1,64 @@
+----------------------------------------
+Timestamp: 10/29/2014 10:38:11 AM
+Message: System.IO.FileLoadException: Could not load file or assembly 'Microsoft.Practices.EnterpriseLibrary.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+File name: 'Microsoft.Practices.EnterpriseLibrary.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null'
+   at System.ModuleHandle.ResolveType(RuntimeModule module, Int32 typeToken, IntPtr* typeInstArgs, Int32 typeInstCount, IntPtr* methodInstArgs, Int32 methodInstCount, ObjectHandleOnStack type)
+   at System.ModuleHandle.ResolveTypeHandleInternal(RuntimeModule module, Int32 typeToken, RuntimeTypeHandle[] typeInstantiationContext, RuntimeTypeHandle[] methodInstantiationContext)
+   at System.Reflection.RuntimeModule.ResolveType(Int32 metadataToken, Type[] genericTypeArguments, Type[] genericMethodArguments)
+   at System.Reflection.CustomAttribute.FilterCustomAttributeRecord(CustomAttributeRecord caRecord, MetadataImport scope, Assembly& lastAptcaOkAssembly, RuntimeModule decoratedModule, MetadataToken decoratedToken, RuntimeType attributeFilterType, Boolean mustBeInheritable, Object[] attributes, IList derivedAttributes, RuntimeType& attributeType, IRuntimeMethodInfo& ctor, Boolean& ctorHasParameters, Boolean& isVarArg)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeModule decoratedModule, Int32 decoratedMetadataToken, Int32 pcaCount, RuntimeType attributeFilterType, Boolean mustBeInheritable, IList derivedAttributes, Boolean isDecoratedTargetSecurityTransparent)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeAssembly assembly, RuntimeType caType)
+   at System.Reflection.RuntimeAssembly.GetCustomAttributes(Boolean inherit)
+   at System.Web.UI.AssemblyCache.GetAjaxFrameworkAssemblyAttribute(Assembly assembly)
+   at System.Web.UI.ScriptManager.get_DefaultAjaxFrameworkAssembly()
+   at System.Web.UI.ScriptManager..ctor()
+   at ASP.orgchartmaster_master.__BuildControlScriptManager1() in c:\HCMS\HCMS.OrgChart\OrgChartMaster.Master:line 15
+   at ASP.orgchartmaster_master.__BuildControlform1() in c:\HCMS\HCMS.OrgChart\OrgChartMaster.Master:line 14
+   at ASP.orgchartmaster_master.__BuildControlTree(orgchartmaster_master __ctrl) in c:\HCMS\HCMS.OrgChart\OrgChartMaster.Master:line 1
+   at ASP.orgchartmaster_master.FrameworkInitialize() in c:\Users\mshivjiani\AppData\Local\Temp\1\Temporary ASP.NET Files\root\0a4a827e\73f761a\App_Web_hznux1fq.0.cs:line 0
+   at System.Web.UI.UserControl.InitializeAsUserControlInternal()
+   at System.Web.UI.MasterPage.CreateMaster(TemplateControl owner, HttpContext context, VirtualPath masterPageFile, IDictionary contentTemplateCollection)
+   at System.Web.UI.Page.get_Master()
+   at System.Web.UI.Page.ApplyMasterPage()
+   at System.Web.UI.Page.PerformPreInit()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+Category: General
+Priority: -1
+EventId: 0
+Severity: Information
+Title:
+Machine: mshivjiani/IFW9WO-BDBCHA1
+Application Domain: 380fcdc2-1-130590670810526221
+Process Id: 7252
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\10.0\WebDev.WebServer40.exe
+Win32 Thread Id: 8436
+Thread Name: 
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10/29/2014 10:38:18 AM
+Message: System.Web.HttpException (0x80004005): File does not exist.
+   at System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   at System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   at System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+Category: General
+Priority: -1
+EventId: 0
+Severity: Information
+Title:
+Machine: mshivjiani/IFW9WO-BDBCHA1
+Application Domain: 380fcdc2-1-130590670810526221
+Process Id: 7252
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\10.0\WebDev.WebServer40.exe
+Win32 Thread Id: 8436
+Thread Name: 
+Extended Properties: 
+----------------------------------------

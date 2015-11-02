@@ -1,0 +1,1652 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio 14.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="14.0">
+ <Targets>
+  <Target Name="C:\HCMS\HCMS.Business\bin\Debug\HCMS.Business.dll">
+   <Modules>
+    <Module Name="hcms.business.dll">
+     <Namespaces>
+      <Namespace Name="HCMS.Business.Admin.Workforce">
+       <Types>
+        <Type Name="DashboardRole" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Admin\Workforce" File="DashboardRole.cs" Line="43">'DashboardRole.DashboardRole(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;DashboardRole..ctor(DataRow)&#xD;&#xA;DashboardRole.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="HCMS.Business.Common">
+       <Types>
+        <Type Name="BusinessException" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'BusinessException'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="HCMS.Business.Common.Exceptions">
+       <Types>
+        <Type Name="DBPrimaryKeyNotSetException" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+           <Issue Certainty="95" Level="Error">Add [Serializable] to 'DBPrimaryKeyNotSetException' as this type implements ISerializable.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="HCMS.Business.DashBoard">
+       <Types>
+        <Type Name="DashBoard" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\DashBoard" File="DashBoard.cs" Line="591">'DashBoard.DashBoard(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;DashBoard..ctor(DataRow)&#xD;&#xA;DashBoard.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="HCMS.Business.Duty">
+       <Types>
+        <Type Name="DutyCompetencyKSA" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Duty" File="DutyCompetencyKSA.cs" Line="23">'DutyCompetencyKSA.DutyCompetencyKSA(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;DutyCompetencyKSA..ctor(DataRow)&#xD;&#xA;DutyCompetencyKSA.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Duty" File="DutyCompetencyKSA.cs" Line="23">'DutyCompetencyKSA.DutyCompetencyKSA(int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;DutyCompetencyKSA..ctor(Int32)&#xD;&#xA;DutyCompetencyKSA.loadData(DataTable):Void&#xD;&#xA;DutyCompetencyKSA.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="HCMS.Business.Factor">
+       <Types>
+        <Type Name="FactorRevisionNote" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Factor" File="FactorRevisionNote.cs" Line="23">'FactorRevisionNote.FactorRevisionNote(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;FactorRevisionNote..ctor(DataRow)&#xD;&#xA;FactorRevisionNote.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Factor" File="FactorRevisionNote.cs" Line="23">'FactorRevisionNote.FactorRevisionNote(int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;FactorRevisionNote..ctor(Int32)&#xD;&#xA;FactorRevisionNote.loadData(DataTable):Void&#xD;&#xA;FactorRevisionNote.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="FesFactorGradeLevel" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Factor" File="FESFactorGradeLevel.cs" Line="23">'FesFactorGradeLevel.FesFactorGradeLevel(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;FesFactorGradeLevel..ctor(DataRow)&#xD;&#xA;FesFactorGradeLevel.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Factor" File="FESFactorGradeLevel.cs" Line="23">'FesFactorGradeLevel.FesFactorGradeLevel(int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;FesFactorGradeLevel..ctor(Int32)&#xD;&#xA;FesFactorGradeLevel.loadData(DataTable):Void&#xD;&#xA;FesFactorGradeLevel.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PrimaryFESFactorLevelLanguage" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Factor" File="PrimaryFESFactorLevelLanguage.cs" Line="18">'PrimaryFESFactorLevelLanguage.PrimaryFESFactorLevelLanguage(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;PrimaryFESFactorLevelLanguage..ctor(Int32, Int32)&#xD;&#xA;PrimaryFESFactorLevelLanguage.loadData(DataTable):Void&#xD;&#xA;PrimaryFESFactorLevelLanguage.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="HCMS.Business.JA">
+       <Types>
+        <Type Name="JobAnalysis" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\JA" File="JobAnalysis.cs" Line="25">'JobAnalysis.JobAnalysis(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;JobAnalysis..ctor(DataRow)&#xD;&#xA;JobAnalysis.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int64)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\JA" File="JobAnalysis.cs" Line="25">'JobAnalysis.JobAnalysis(long)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;JobAnalysis..ctor(Int64)&#xD;&#xA;JobAnalysis.loadData(DataTable):Void&#xD;&#xA;JobAnalysis.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="JobAnalysisDuty" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\JA" File="JobAnalysisDuty.cs" Line="23">'JobAnalysisDuty.JobAnalysisDuty(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;JobAnalysisDuty..ctor(DataRow)&#xD;&#xA;JobAnalysisDuty.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int64)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\JA" File="JobAnalysisDuty.cs" Line="23">'JobAnalysisDuty.JobAnalysisDuty(long)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;JobAnalysisDuty..ctor(Int64)&#xD;&#xA;JobAnalysisDuty.loadData(DataTable):Void&#xD;&#xA;JobAnalysisDuty.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="JobAnalysisDutyKSA" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\JA" File="JobAnalysisDutyKSA.cs" Line="23">'JobAnalysisDutyKSA.JobAnalysisDutyKSA(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;JobAnalysisDutyKSA..ctor(DataRow)&#xD;&#xA;JobAnalysisDutyKSA.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int64)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\JA" File="JobAnalysisDutyKSA.cs" Line="23">'JobAnalysisDutyKSA.JobAnalysisDutyKSA(long)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;JobAnalysisDutyKSA..ctor(Int64)&#xD;&#xA;JobAnalysisDutyKSA.loadData(DataTable):Void&#xD;&#xA;JobAnalysisDutyKSA.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="JobAnalysisDutyKSAFactor" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\JA" File="JobAnalysisDutyKSAFactor.cs" Line="19">'JobAnalysisDutyKSAFactor.JobAnalysisDutyKSAFactor(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;JobAnalysisDutyKSAFactor..ctor(DataRow)&#xD;&#xA;JobAnalysisDutyKSAFactor.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int64)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\JA" File="JobAnalysisDutyKSAFactor.cs" Line="19">'JobAnalysisDutyKSAFactor.JobAnalysisDutyKSAFactor(long)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;JobAnalysisDutyKSAFactor..ctor(Int64)&#xD;&#xA;JobAnalysisDutyKSAFactor.loadData(DataTable):Void&#xD;&#xA;JobAnalysisDutyKSAFactor.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="JobAnalysisDutyQualification" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\JA" File="JobAnalysisDutyQualification.cs" Line="23">'JobAnalysisDutyQualification.JobAnalysisDutyQualification(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;JobAnalysisDutyQualification..ctor(DataRow)&#xD;&#xA;JobAnalysisDutyQualification.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\JA" File="JobAnalysisDutyQualification.cs" Line="23">'JobAnalysisDutyQualification.JobAnalysisDutyQualification(int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;JobAnalysisDutyQualification..ctor(Int32)&#xD;&#xA;JobAnalysisDutyQualification.loadData(DataTable):Void&#xD;&#xA;JobAnalysisDutyQualification.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="HCMS.Business.JNP">
+       <Types>
+        <Type Name="JNPackage" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\JNP" File="JNPackage.cs" Line="24">'JNPackage.JNPackage(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;JNPackage..ctor(DataRow)&#xD;&#xA;JNPackage.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int64)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\JNP" File="JNPackage.cs" Line="24">'JNPackage.JNPackage(long)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;JNPackage..ctor(Int64)&#xD;&#xA;JNPackage.loadData(DataTable):Void&#xD;&#xA;JNPackage.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="JNPCheck" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\JNP" File="JNPCheck.cs" Line="23">'JNPCheck.JNPCheck(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;JNPCheck..ctor(DataRow)&#xD;&#xA;JNPCheck.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\JNP" File="JNPCheck.cs" Line="23">'JNPCheck.JNPCheck(int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;JNPCheck..ctor(Int32)&#xD;&#xA;JNPCheck.loadData(DataTable):Void&#xD;&#xA;JNPCheck.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="JNPWorkflowNote" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\JNPWorkflowNote" File="JNPWorkflowNote.cs" Line="26">'JNPWorkflowNote.JNPWorkflowNote(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;JNPWorkflowNote..ctor(DataRow)&#xD;&#xA;JNPWorkflowNote.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="JNPWorkflowStatus" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\JNP" File="JNPWorkflowStatus.cs" Line="26">'JNPWorkflowStatus.JNPWorkflowStatus(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;JNPWorkflowStatus..ctor(DataRow)&#xD;&#xA;JNPWorkflowStatus.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="HCMS.Business.JNPWorkflowNote">
+       <Types>
+        <Type Name="JNPWorkflowNoteStatus" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\JNPWorkflowNote" File="JNPWorkflowNoteStatus.cs" Line="26">'JNPWorkflowNoteStatus.JNPWorkflowNoteStatus(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;JNPWorkflowNoteStatus..ctor(DataRow)&#xD;&#xA;JNPWorkflowNoteStatus.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="HCMS.Business.JQ">
+       <Types>
+        <Type Name="JQFactor" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\JQ" File="JQFactor.cs" Line="23">'JQFactor.JQFactor(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;JQFactor..ctor(DataRow)&#xD;&#xA;JQFactor.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\JQ" File="JQFactor.cs" Line="23">'JQFactor.JQFactor(int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;JQFactor..ctor(Int32)&#xD;&#xA;JQFactor.loadData(DataTable):Void&#xD;&#xA;JQFactor.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="JQFactorItem" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\JQ" File="JQFactorItem.cs" Line="23">'JQFactorItem.JQFactorItem(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;JQFactorItem..ctor(DataRow)&#xD;&#xA;JQFactorItem.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\JQ" File="JQFactorItem.cs" Line="23">'JQFactorItem.JQFactorItem(int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;JQFactorItem..ctor(Int32)&#xD;&#xA;JQFactorItem.loadData(DataTable):Void&#xD;&#xA;JQFactorItem.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="JQRatingScale" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\JQ" File="JQRatingScale.cs" Line="24">'JQRatingScale.JQRatingScale(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;JQRatingScale..ctor(DataRow)&#xD;&#xA;JQRatingScale.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\JQ" File="JQRatingScale.cs" Line="24">'JQRatingScale.JQRatingScale(int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;JQRatingScale..ctor(Int32)&#xD;&#xA;JQRatingScale.loadData(DataTable):Void&#xD;&#xA;JQRatingScale.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="RatingScaleResponse" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\JQ" File="RatingScaleResponse.cs" Line="23">'RatingScaleResponse.RatingScaleResponse(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;RatingScaleResponse..ctor(DataRow)&#xD;&#xA;RatingScaleResponse.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\JQ" File="RatingScaleResponse.cs" Line="23">'RatingScaleResponse.RatingScaleResponse(int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;RatingScaleResponse..ctor(Int32)&#xD;&#xA;RatingScaleResponse.loadData(DataTable):Void&#xD;&#xA;RatingScaleResponse.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SeriesGradeKSATaskStatement" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\JQ" File="SeriesGradeKSATaskStatement.cs" Line="23">'SeriesGradeKSATaskStatement.SeriesGradeKSATaskStatement(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;SeriesGradeKSATaskStatement..ctor(DataRow)&#xD;&#xA;SeriesGradeKSATaskStatement.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\JQ" File="SeriesGradeKSATaskStatement.cs" Line="23">'SeriesGradeKSATaskStatement.SeriesGradeKSATaskStatement(int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;SeriesGradeKSATaskStatement..ctor(Int32)&#xD;&#xA;SeriesGradeKSATaskStatement.loadData(DataTable):Void&#xD;&#xA;SeriesGradeKSATaskStatement.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="HCMS.Business.LogObjects">
+       <Types>
+        <Type Name="DutyCompetencyKSALog" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\LogObjects" File="DutyCompetencyKSALog.cs" Line="23">'DutyCompetencyKSALog.DutyCompetencyKSALog(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;DutyCompetencyKSALog..ctor(DataRow)&#xD;&#xA;DutyCompetencyKSALog.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\LogObjects" File="DutyCompetencyKSALog.cs" Line="23">'DutyCompetencyKSALog.DutyCompetencyKSALog(int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;DutyCompetencyKSALog..ctor(Int32)&#xD;&#xA;DutyCompetencyKSALog.loadData(DataTable):Void&#xD;&#xA;DutyCompetencyKSALog.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\LogObjects" File="DutyCompetencyKSALog.cs" Line="23">'DutyCompetencyKSALog.DutyCompetencyKSALog(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;DutyCompetencyKSALog..ctor(Int32, Int32)&#xD;&#xA;DutyCompetencyKSALog.loadData(DataTable):Void&#xD;&#xA;DutyCompetencyKSALog.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PositionCompetencyKSALog" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\LogObjects" File="PositionCompetencyKSALog.cs" Line="23">'PositionCompetencyKSALog.PositionCompetencyKSALog(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;PositionCompetencyKSALog..ctor(DataRow)&#xD;&#xA;PositionCompetencyKSALog.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\LogObjects" File="PositionCompetencyKSALog.cs" Line="23">'PositionCompetencyKSALog.PositionCompetencyKSALog(int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;PositionCompetencyKSALog..ctor(Int32)&#xD;&#xA;PositionCompetencyKSALog.loadData(DataTable):Void&#xD;&#xA;PositionCompetencyKSALog.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PositionDescriptionLog" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\LogObjects" File="PositionDescriptionLog.cs" Line="23">'PositionDescriptionLog.PositionDescriptionLog(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;PositionDescriptionLog..ctor(DataRow)&#xD;&#xA;PositionDescriptionLog.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\LogObjects" File="PositionDescriptionLog.cs" Line="23">'PositionDescriptionLog.PositionDescriptionLog(int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;PositionDescriptionLog..ctor(Int32)&#xD;&#xA;PositionDescriptionLog.loadData(DataTable):Void&#xD;&#xA;PositionDescriptionLog.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\LogObjects" File="PositionDescriptionLog.cs" Line="23">'PositionDescriptionLog.PositionDescriptionLog(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;PositionDescriptionLog..ctor(Int32, Int32)&#xD;&#xA;PositionDescriptionLog.loadData(DataTable):Void&#xD;&#xA;PositionDescriptionLog.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PositionDutyLog" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\LogObjects" File="PositionDutyLog.cs" Line="23">'PositionDutyLog.PositionDutyLog(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;PositionDutyLog..ctor(DataRow)&#xD;&#xA;PositionDutyLog.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\LogObjects" File="PositionDutyLog.cs" Line="23">'PositionDutyLog.PositionDutyLog(int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;PositionDutyLog..ctor(Int32)&#xD;&#xA;PositionDutyLog.loadData(DataTable):Void&#xD;&#xA;PositionDutyLog.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\LogObjects" File="PositionDutyLog.cs" Line="23">'PositionDutyLog.PositionDutyLog(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;PositionDutyLog..ctor(Int32, Int32)&#xD;&#xA;PositionDutyLog.loadData(DataTable):Void&#xD;&#xA;PositionDutyLog.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="HCMS.Business.Lookups">
+       <Types>
+        <Type Name="CareerLadderPDType" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="CareerLadderPDType.cs" Line="18">'CareerLadderPDType.CareerLadderPDType(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;CareerLadderPDType..ctor(DataRow)&#xD;&#xA;CareerLadderPDType.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="CareerLadderPDTypeGrade" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="CareerLadderPDTypeGrade.cs" Line="18">'CareerLadderPDTypeGrade.CareerLadderPDTypeGrade(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;CareerLadderPDTypeGrade..ctor(DataRow)&#xD;&#xA;CareerLadderPDTypeGrade.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ClassificationStandardSource" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="ClassificationStandardSource.cs" Line="23">'ClassificationStandardSource.ClassificationStandardSource(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;ClassificationStandardSource..ctor(DataRow)&#xD;&#xA;ClassificationStandardSource.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="DashboardRoleType" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="DashboardRoleType.cs" Line="31">'DashboardRoleType.DashboardRoleType(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;DashboardRoleType..ctor(DataRow)&#xD;&#xA;DashboardRoleType.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="DutyType" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="DutyType.cs" Line="21">'DutyType.DutyType(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;DutyType..ctor(DataRow)&#xD;&#xA;DutyType.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="EvalCriteria" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="EvalCriteria.cs" Line="23">'EvalCriteria.EvalCriteria(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;EvalCriteria..ctor(DataRow)&#xD;&#xA;EvalCriteria.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="FactorFormatType" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="FactorFormatType.cs" Line="23">'FactorFormatType.FactorFormatType(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;FactorFormatType..ctor(DataRow)&#xD;&#xA;FactorFormatType.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="FactorLevelPoint" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="FactorLevelPoint.cs" Line="23">'FactorLevelPoint.FactorLevelPoint(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;FactorLevelPoint..ctor(DataRow)&#xD;&#xA;FactorLevelPoint.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int32,enumFactorFormatType)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="FactorLevelPoint.cs" Line="23">'FactorLevelPoint.FactorLevelPoint(int, enumFactorFormatType)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;FactorLevelPoint..ctor(Int32, enumFactorFormatType)&#xD;&#xA;FactorLevelPoint.FillObject(IFactorLevelPoint, enumFactorFormatType):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="FesFactorLevelPoints" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="FesFactorLevelPoints.cs" Line="23">'FesFactorLevelPoints.FesFactorLevelPoints(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;FesFactorLevelPoints..ctor(DataRow)&#xD;&#xA;FesFactorLevelPoints.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="FesFactorLevelPoints.cs" Line="23">'FesFactorLevelPoints.FesFactorLevelPoints(int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;FesFactorLevelPoints..ctor(Int32)&#xD;&#xA;FesFactorLevelPoints.loadData(DataTable):Void&#xD;&#xA;FesFactorLevelPoints.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="FLSAType" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="FLSAType.cs" Line="23">'FLSAType.FLSAType(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;FLSAType..ctor(DataRow)&#xD;&#xA;FLSAType.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Grade" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="Grade.cs" Line="24">'Grade.Grade(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Grade..ctor(DataRow)&#xD;&#xA;Grade.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="GSSGFactorLevelPoints" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="GSSGFactorLevelPoints.cs" Line="23">'GSSGFactorLevelPoints.GSSGFactorLevelPoints(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;GSSGFactorLevelPoints..ctor(DataRow)&#xD;&#xA;GSSGFactorLevelPoints.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="GSSGFactorLevelPoints.cs" Line="23">'GSSGFactorLevelPoints.GSSGFactorLevelPoints(int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;GSSGFactorLevelPoints..ctor(Int32)&#xD;&#xA;GSSGFactorLevelPoints.loadData(DataTable):Void&#xD;&#xA;GSSGFactorLevelPoints.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="KSA" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="KSA.cs" Line="26">'KSA.KSA(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;KSA..ctor(DataRow)&#xD;&#xA;KSA.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int64)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="KSA.cs" Line="26">'KSA.KSA(long)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;KSA..ctor(Int64)&#xD;&#xA;KSA.loadData(DataTable):Void&#xD;&#xA;KSA.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="NoteStatus" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="NoteStatus.cs" Line="23">'NoteStatus.NoteStatus(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;NoteStatus..ctor(DataRow)&#xD;&#xA;NoteStatus.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="OrganizationCode" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="OrganizationCode.cs" Line="24">'OrganizationCode.OrganizationCode(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;OrganizationCode..ctor(DataRow)&#xD;&#xA;OrganizationCode.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="OrganizationCode.cs" Line="24">'OrganizationCode.OrganizationCode(int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;OrganizationCode..ctor(Int32)&#xD;&#xA;OrganizationCode.loadData(DataTable):Void&#xD;&#xA;OrganizationCode.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PayPlan" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="PayPlan.cs" Line="24">'PayPlan.PayPlan(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;PayPlan..ctor(DataRow)&#xD;&#xA;PayPlan.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PositionStatusType" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="PositionStatusType.cs" Line="23">'PositionStatusType.PositionStatusType(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;PositionStatusType..ctor(DataRow)&#xD;&#xA;PositionStatusType.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PositionType" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="PositionType.cs" Line="23">'PositionType.PositionType(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;PositionType..ctor(DataRow)&#xD;&#xA;PositionType.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PostionSensitivityType" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="PostionSensitivityType.cs" Line="23">'PostionSensitivityType.PostionSensitivityType(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;PostionSensitivityType..ctor(DataRow)&#xD;&#xA;PostionSensitivityType.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Qualification" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="Qualification.cs" Line="23">'Qualification.Qualification(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Qualification..ctor(DataRow)&#xD;&#xA;Qualification.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="QualificationType" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="QualificationType.cs" Line="23">'QualificationType.QualificationType(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;QualificationType..ctor(DataRow)&#xD;&#xA;QualificationType.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ReasonForSubmission" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="ReasonForSubmission.cs" Line="23">'ReasonForSubmission.ReasonForSubmission(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;ReasonForSubmission..ctor(DataRow)&#xD;&#xA;ReasonForSubmission.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Region" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="Region.cs" Line="25">'Region.Region(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Region..ctor(DataRow)&#xD;&#xA;Region.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="Region.cs" Line="25">'Region.Region(int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Region..ctor(Int32)&#xD;&#xA;Region.loadData(DataTable):Void&#xD;&#xA;Region.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ScoringRangeGroupType" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="ScoringRangeGroupType.cs" Line="23">'ScoringRangeGroupType.ScoringRangeGroupType(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;ScoringRangeGroupType..ctor(DataRow)&#xD;&#xA;ScoringRangeGroupType.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Series" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="Series.cs" Line="26">'Series.Series(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Series..ctor(DataRow)&#xD;&#xA;Series.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="Series.cs" Line="26">'Series.Series(int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Series..ctor(Int32)&#xD;&#xA;Series.loadData(DataTable):Void&#xD;&#xA;Series.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Service" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="Service.cs" Line="23">'Service.Service(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Service..ctor(DataRow)&#xD;&#xA;Service.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SODParagraphOptions" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="SODParagraphOptions.cs" Line="23">'SODParagraphOptions.SODParagraphOptions(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;SODParagraphOptions..ctor(DataRow)&#xD;&#xA;SODParagraphOptions.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="TaskStatement" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="TaskStatement.cs" Line="25">'TaskStatement.TaskStatement(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;TaskStatement..ctor(DataRow)&#xD;&#xA;TaskStatement.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int64)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="TaskStatement.cs" Line="25">'TaskStatement.TaskStatement(long)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;TaskStatement..ctor(Int64)&#xD;&#xA;TaskStatement.loadData(DataTable):Void&#xD;&#xA;TaskStatement.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ToolTip" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="ToolTip.cs" Line="23">'ToolTip.ToolTip(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;ToolTip..ctor(DataRow)&#xD;&#xA;ToolTip.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int64)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="ToolTip.cs" Line="23">'ToolTip.ToolTip(long)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;ToolTip..ctor(Int64)&#xD;&#xA;ToolTip.loadData(DataTable):Void&#xD;&#xA;ToolTip.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="WorkflowStatus" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="WorkflowStatus.cs" Line="23">'WorkflowStatus.WorkflowStatus(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;WorkflowStatus..ctor(DataRow)&#xD;&#xA;WorkflowStatus.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="HCMS.Business.NarrativeFactor">
+       <Types>
+        <Type Name="NarrativeFactor" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(enumFactorFormatType)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\NarrativeFactor" File="NarrativeFactor.cs" Line="23">'NarrativeFactor.NarrativeFactor(enumFactorFormatType)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;NarrativeFactor..ctor(enumFactorFormatType)&#xD;&#xA;NarrativeFactor.loadData(DataTable):Void&#xD;&#xA;NarrativeFactor.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\NarrativeFactor" File="NarrativeFactor.cs" Line="23">'NarrativeFactor.NarrativeFactor(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;NarrativeFactor..ctor(DataRow)&#xD;&#xA;NarrativeFactor.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="HCMS.Business.OrganizationChart.Configuration">
+       <Types>
+        <Type Name="OrgExElementCollection" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\OrganizationChart\Configuration" File="OrgExElementCollection.cs" Line="12">'OrgExElementCollection.OrgExElementCollection()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;OrgExElementCollection..ctor()&#xD;&#xA;ConfigurationElementCollection.CreateNewElement():ConfigurationElement</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\OrganizationChart\Configuration" File="OrgExElementCollection.cs" Line="12">'OrgExElementCollection.OrgExElementCollection()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;OrgExElementCollection..ctor()&#xD;&#xA;ConfigurationElementCollection.CreateNewElement():ConfigurationElement&#xD;&#xA;OrgExElementCollection.Add(OrgExElement):Void&#xD;&#xA;ConfigurationElementCollection.BaseAdd(ConfigurationElement):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="HCMS.Business.OrganizationChart.Exceptions">
+       <Types>
+        <Type Name="ChartAlreadyInProgressException" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+           <Issue Certainty="95" Level="Error">Add [Serializable] to 'ChartAlreadyInProgressException' as this type implements ISerializable.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="ChartBrokenHierarchyException" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+           <Issue Certainty="95" Level="Error">Add [Serializable] to 'ChartBrokenHierarchyException' as this type implements ISerializable.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="NoPublishedChartAvailableException" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+           <Issue Certainty="95" Level="Error">Add [Serializable] to 'NoPublishedChartAvailableException' as this type implements ISerializable.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="NullActionUserException" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+           <Issue Certainty="95" Level="Error">Add [Serializable] to 'NullActionUserException' as this type implements ISerializable.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="NullNewUserException" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+           <Issue Certainty="95" Level="Error">Add [Serializable] to 'NullNewUserException' as this type implements ISerializable.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="NullOrganizationChartException" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+           <Issue Certainty="95" Level="Error">Add [Serializable] to 'NullOrganizationChartException' as this type implements ISerializable.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="NullOrganizationCodeException" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+           <Issue Certainty="95" Level="Error">Add [Serializable] to 'NullOrganizationCodeException' as this type implements ISerializable.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="HCMS.Business.OrganizationChart.Positions.Exceptions">
+       <Types>
+        <Type Name="CircularPositionReferenceException" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+           <Issue Certainty="95" Level="Error">Add [Serializable] to 'CircularPositionReferenceException' as this type implements ISerializable.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="InvalidChartPositionException" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+           <Issue Certainty="95" Level="Error">Add [Serializable] to 'InvalidChartPositionException' as this type implements ISerializable.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="InvalidParentChartPositionException" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+           <Issue Certainty="95" Level="Error">Add [Serializable] to 'InvalidParentChartPositionException' as this type implements ISerializable.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="PositionContainsSubordinatesException" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+           <Issue Certainty="95" Level="Error">Add [Serializable] to 'PositionContainsSubordinatesException' as this type implements ISerializable.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="HCMS.Business.OrganizationChart.Processing">
+       <Types>
+        <Type Name="ImageManager" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#ConvertToByteArray(System.Drawing.Image,System.Drawing.Imaging.ImageFormat)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\HCMS\HCMS.Business\OrganizationChart\Processing" File="ImageManager.cs" Line="40">Object 'stream' can be disposed more than once in method 'ImageManager.ConvertToByteArray(Image, ImageFormat)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 40</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="HCMS.Business.PD">
+       <Types>
+        <Type Name="PDValidationError" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\PD" File="PDValidationError.cs" Line="18">'PDValidationError.PDValidationError(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;PDValidationError..ctor(DataRow)&#xD;&#xA;PDValidationError.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PositionClassificationStandard" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\PD" File="PositionClassificationStandard.cs" Line="23">'PositionClassificationStandard.PositionClassificationStandard(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;PositionClassificationStandard..ctor(DataRow)&#xD;&#xA;PositionClassificationStandard.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int64)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\PD" File="PositionClassificationStandard.cs" Line="23">'PositionClassificationStandard.PositionClassificationStandard(long)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;PositionClassificationStandard..ctor(Int64)&#xD;&#xA;PositionClassificationStandard.loadData(DataTable):Void&#xD;&#xA;PositionClassificationStandard.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PositionCompetencyKSA" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\PD" File="PositionCompetencyKSA.cs" Line="27">'PositionCompetencyKSA.PositionCompetencyKSA(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;PositionCompetencyKSA..ctor(DataRow)&#xD;&#xA;PositionCompetencyKSA.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\PD" File="PositionCompetencyKSA.cs" Line="27">'PositionCompetencyKSA.PositionCompetencyKSA(int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;PositionCompetencyKSA..ctor(Int32)&#xD;&#xA;PositionCompetencyKSA.loadData(DataTable):Void&#xD;&#xA;PositionCompetencyKSA.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PositionDescription" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\PD" File="PositionDescription.cs" Line="33">'PositionDescription.PositionDescription(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;PositionDescription..ctor(DataRow)&#xD;&#xA;PositionDescription.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int64)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\PD" File="PositionDescription.cs" Line="33">'PositionDescription.PositionDescription(long)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;PositionDescription..ctor(Int64)&#xD;&#xA;PositionDescription.loadData(DataTable):Void&#xD;&#xA;PositionDescription.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PositionDuty" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\PD" File="PositionDuty.cs" Line="25">'PositionDuty.PositionDuty(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;PositionDuty..ctor(DataRow)&#xD;&#xA;PositionDuty.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\PD" File="PositionDuty.cs" Line="25">'PositionDuty.PositionDuty(int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;PositionDuty..ctor(Int32)&#xD;&#xA;PositionDuty.loadData(DataTable):Void&#xD;&#xA;PositionDuty.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PositionEvalCriteria" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\PD" File="PositionEvalCriteria.cs" Line="23">'PositionEvalCriteria.PositionEvalCriteria(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;PositionEvalCriteria..ctor(DataRow)&#xD;&#xA;PositionEvalCriteria.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int64,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\PD" File="PositionEvalCriteria.cs" Line="23">'PositionEvalCriteria.PositionEvalCriteria(long, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;PositionEvalCriteria..ctor(Int64, Int32)&#xD;&#xA;PositionEvalCriteria.loadData(DataTable):Void&#xD;&#xA;PositionEvalCriteria.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PositionFactor" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\PD" File="PositionFactor.cs" Line="22">'PositionFactor.PositionFactor(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;PositionFactor..ctor(DataRow)&#xD;&#xA;PositionFactor.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\PD" File="PositionFactor.cs" Line="22">'PositionFactor.PositionFactor(int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;PositionFactor..ctor(Int32)&#xD;&#xA;PositionFactor.loadData(DataTable):Void&#xD;&#xA;PositionFactor.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int64,System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\PD" File="PositionFactor.cs" Line="22">'PositionFactor.PositionFactor(long, int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;PositionFactor..ctor(Int64, Int32, Int32)&#xD;&#xA;PositionFactor.loadData(DataTable):Void&#xD;&#xA;PositionFactor.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PositionFactorLog" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\PD" File="PositionFactorLog.cs" Line="18">'PositionFactorLog.PositionFactorLog(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;PositionFactorLog..ctor(DataRow)&#xD;&#xA;PositionFactorLog.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int32,enumIDType)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\PD" File="PositionFactorLog.cs" Line="18">'PositionFactorLog.PositionFactorLog(int, enumIDType)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;PositionFactorLog..ctor(Int32, enumIDType)&#xD;&#xA;PositionFactorLog.loadData(DataTable):Void&#xD;&#xA;PositionFactorLog.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PositionGradePoint" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Int64)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\PD" File="PositionGradePoint.cs" Line="18">'PositionGradePoint.PositionGradePoint(long)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;PositionGradePoint..ctor(Int64)&#xD;&#xA;PositionGradePoint.loadData(DataTable):Void&#xD;&#xA;PositionGradePoint.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int64,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\PD" File="PositionGradePoint.cs" Line="18">'PositionGradePoint.PositionGradePoint(long, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;PositionGradePoint..ctor(Int64, Int32)&#xD;&#xA;PositionGradePoint.loadData(DataTable):Void&#xD;&#xA;PositionGradePoint.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PositionWorkflowStatus" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\PD" File="PositionWorkflowStatus.cs" Line="25">'PositionWorkflowStatus.PositionWorkflowStatus(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;PositionWorkflowStatus..ctor(DataRow)&#xD;&#xA;PositionWorkflowStatus.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\PD" File="PositionWorkflowStatus.cs" Line="25">'PositionWorkflowStatus.PositionWorkflowStatus(int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;PositionWorkflowStatus..ctor(Int32)&#xD;&#xA;PositionWorkflowStatus.loadData(DataTable):Void&#xD;&#xA;PositionWorkflowStatus.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="WorkflowNote" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\WorkFlow" File="WorkflowNote.cs" Line="23">'WorkflowNote.WorkflowNote(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;WorkflowNote..ctor(DataRow)&#xD;&#xA;WorkflowNote.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\WorkFlow" File="WorkflowNote.cs" Line="23">'WorkflowNote.WorkflowNote(int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;WorkflowNote..ctor(Int32)&#xD;&#xA;WorkflowNote.loadData(DataTable):Void&#xD;&#xA;WorkflowNote.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="HCMS.Business.Positions.Exceptions">
+       <Types>
+        <Type Name="AbolishedPositionsExistException" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+           <Issue Certainty="95" Level="Error">Add [Serializable] to 'AbolishedPositionsExistException' as this type implements ISerializable.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="InvalidRootNodePositionReplacementException" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+           <Issue Certainty="95" Level="Error">Add [Serializable] to 'InvalidRootNodePositionReplacementException' as this type implements ISerializable.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="MissingRootNodePositionException" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+           <Issue Certainty="95" Level="Error">Add [Serializable] to 'MissingRootNodePositionException' as this type implements ISerializable.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="HCMS.Business.Security">
+       <Types>
+        <Type Name="Permission" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Security" File="Permission.cs" Line="20">'Permission.Permission(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Permission..ctor(DataRow)&#xD;&#xA;Permission.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Role" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Security" File="Role.cs" Line="22">'Role.Role(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Role..ctor(DataRow)&#xD;&#xA;Role.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="User" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Security" File="User.cs" Line="26">'User.User(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;User..ctor(DataRow)&#xD;&#xA;User.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Security" File="User.cs" Line="26">'User.User(int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;User..ctor(Int32)&#xD;&#xA;User.loadData(DataTable):Void&#xD;&#xA;User.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Security" File="User.cs" Line="26">'User.User(string)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;User..ctor(String)&#xD;&#xA;User.loadData(DataTable):Void&#xD;&#xA;User.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="HCMS.Business.Series">
+       <Types>
+        <Type Name="SeriesGradeKSATaskStatement" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Series" File="SeriesGradeKSATaskStatement.cs" Line="13">'SeriesGradeKSATaskStatement.SeriesGradeKSATaskStatement(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;SeriesGradeKSATaskStatement..ctor(DataRow)&#xD;&#xA;SeriesGradeKSATaskStatement.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SeriesOPMTitle" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Series" File="SeriesOPMTitle.cs" Line="24">'SeriesOPMTitle.SeriesOPMTitle(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;SeriesOPMTitle..ctor(DataRow)&#xD;&#xA;SeriesOPMTitle.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Series" File="SeriesOPMTitle.cs" Line="24">'SeriesOPMTitle.SeriesOPMTitle(int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;SeriesOPMTitle..ctor(Int32)&#xD;&#xA;SeriesOPMTitle.loadData(DataTable):Void&#xD;&#xA;SeriesOPMTitle.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="HCMS.Business.SeriesFactorLevelLanguage">
+       <Types>
+        <Type Name="SeriesFactorLevelLanguage" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Int32,System.Int32,enumFactorFormatType)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\SeriesFactorLevelLanguage" File="SeriesFactorLevelLanguage.cs" Line="24">'SeriesFactorLevelLanguage.SeriesFactorLevelLanguage(int, int, enumFactorFormatType)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;SeriesFactorLevelLanguage..ctor(Int32, Int32, enumFactorFormatType)&#xD;&#xA;SeriesFactorLevelLanguage.FillObject(ISeriesFactorLevelLanguage, enumFactorFormatType):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SeriesFesFactorLevelLanguage" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\SeriesFactorLevelLanguage" File="SeriesFesFactorLevelLanguage.cs" Line="19">'SeriesFesFactorLevelLanguage.SeriesFesFactorLevelLanguage(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;SeriesFesFactorLevelLanguage..ctor(DataRow)&#xD;&#xA;SeriesFesFactorLevelLanguage.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\SeriesFactorLevelLanguage" File="SeriesFesFactorLevelLanguage.cs" Line="19">'SeriesFesFactorLevelLanguage.SeriesFesFactorLevelLanguage(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;SeriesFesFactorLevelLanguage..ctor(Int32, Int32)&#xD;&#xA;SeriesFesFactorLevelLanguage.loadData(DataTable):Void&#xD;&#xA;SeriesFesFactorLevelLanguage.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int32,System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\SeriesFactorLevelLanguage" File="SeriesFesFactorLevelLanguage.cs" Line="19">'SeriesFesFactorLevelLanguage.SeriesFesFactorLevelLanguage(int, int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;SeriesFesFactorLevelLanguage..ctor(Int32, Int32, Int32)&#xD;&#xA;SeriesFesFactorLevelLanguage.loadData(DataTable):Void&#xD;&#xA;SeriesFesFactorLevelLanguage.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SeriesGSSGFactorLevelLanguage" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\SeriesFactorLevelLanguage" File="SeriesGSSGFactorLevelLanguage.cs" Line="18">'SeriesGSSGFactorLevelLanguage.SeriesGSSGFactorLevelLanguage(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;SeriesGSSGFactorLevelLanguage..ctor(DataRow)&#xD;&#xA;SeriesGSSGFactorLevelLanguage.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\SeriesFactorLevelLanguage" File="SeriesGSSGFactorLevelLanguage.cs" Line="18">'SeriesGSSGFactorLevelLanguage.SeriesGSSGFactorLevelLanguage(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;SeriesGSSGFactorLevelLanguage..ctor(Int32, Int32)&#xD;&#xA;SeriesGSSGFactorLevelLanguage.loadData(DataTable):Void&#xD;&#xA;SeriesGSSGFactorLevelLanguage.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="HCMS.Business.SeriesGradeFactor">
+       <Types>
+        <Type Name="SeriesGradeFesFactorLevelPoints" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\SeriesGradeFactor" File="SeriesGradeFesFactorLevelPoints.cs" Line="22">'SeriesGradeFesFactorLevelPoints.SeriesGradeFesFactorLevelPoints(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;SeriesGradeFesFactorLevelPoints..ctor(DataRow)&#xD;&#xA;SeriesGradeFesFactorLevelPoints.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\SeriesGradeFactor" File="SeriesGradeFesFactorLevelPoints.cs" Line="22">'SeriesGradeFesFactorLevelPoints.SeriesGradeFesFactorLevelPoints(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;SeriesGradeFesFactorLevelPoints..ctor(Int32, Int32)&#xD;&#xA;SeriesGradeFesFactorLevelPoints.loadData(DataTable):Void&#xD;&#xA;SeriesGradeFesFactorLevelPoints.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="HCMS.Business.SSAS">
+       <Types>
+        <Type Name="AnalyisServicesRoleManager" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="DependsOnFix">
+           <Issue Name="DependsOnFix" Certainty="95" Level="CriticalError">Implement IDisposable on 'AnalyisServicesRoleManager' because it creates members of the following IDisposable types: 'Server'. If 'AnalyisServicesRoleManager' has previously shipped, adding new members that implement IDisposable to this type is considered a breaking change to existing consumers.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#_Cube" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'AnalyisServicesRoleManager._Cube' is a member of type 'AnalyisServicesRoleManager', which is serializable, but is of type 'Cube', which is not serializable. Add the NonSerializedAttribute to 'AnalyisServicesRoleManager._Cube'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#_DB" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'AnalyisServicesRoleManager._DB' is a member of type 'AnalyisServicesRoleManager', which is serializable, but is of type 'Database', which is not serializable. Add the NonSerializedAttribute to 'AnalyisServicesRoleManager._DB'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#_SSAS" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">Field 'AnalyisServicesRoleManager._SSAS' is a member of type 'AnalyisServicesRoleManager', which is serializable, but is of type 'Server', which is not serializable. Add the NonSerializedAttribute to 'AnalyisServicesRoleManager._SSAS'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ExecuteStoredProcedure(System.String,System.String)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\HCMS\HCMS.Business\SSAS" File="AnalyisServicesRoleManager.cs" Line="1513">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'AnalyisServicesRoleManager.ExecuteStoredProcedure(string, string)' could contain the following variables 'sqlProcedureName'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ExecuteStoredProcedure(System.String,System.String,System.String[],System.Object[])" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\HCMS\HCMS.Business\SSAS" File="AnalyisServicesRoleManager.cs" Line="1530">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'AnalyisServicesRoleManager.ExecuteStoredProcedure(string, string, string[], object[])' could contain the following variables 'sqlProcedureName'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="HCMS.Business.WorkFlow.Exceptions">
+       <Types>
+        <Type Name="WorkflowNotSupportedException" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+           <Issue Certainty="95" Level="Error">Add [Serializable] to 'WorkflowNotSupportedException' as this type implements ISerializable.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="HCMS.Lookups">
+       <Types>
+        <Type Name="DocWorkflowStatus" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="DocWorkflowStatus.cs" Line="23">'DocWorkflowStatus.DocWorkflowStatus(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;DocWorkflowStatus..ctor(DataRow)&#xD;&#xA;DocWorkflowStatus.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="JNPType" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="JNPType.cs" Line="23">'JNPType.JNPType(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;JNPType..ctor(DataRow)&#xD;&#xA;JNPType.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="JNPWorkflowStatus" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="JNPWorkflowStatus.cs" Line="23">'JNPWorkflowStatus.JNPWorkflowStatus(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;JNPWorkflowStatus..ctor(DataRow)&#xD;&#xA;JNPWorkflowStatus.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="JQFactorType" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="JQFactorType.cs" Line="23">'JQFactorType.JQFactorType(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;JQFactorType..ctor(DataRow)&#xD;&#xA;JQFactorType.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="JQItemType" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="JQItemType.cs" Line="23">'JQItemType.JQItemType(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;JQItemType..ctor(DataRow)&#xD;&#xA;JQItemType.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="RatingScaleType" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Data.DataRow)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2015-10-02 19:13:07Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\HCMS\HCMS.Business\Lookups" File="RatingScaleType.cs" Line="23">'RatingScaleType.RatingScaleType(DataRow)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;RatingScaleType..ctor(DataRow)&#xD;&#xA;RatingScaleType.FillObjectFromRowData(DataRow):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202">
+   <Name>Do not dispose objects multiple times</Name>
+   <Description>A correctly implemented Dispose method can be called multiple times without throwing an exception. However, this is not guaranteed and to avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.</Description>
+   <Resolution Name="Default">Object {0} can be disposed more than once in method {1}. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 40</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182334.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214">
+   <Name>Do not call overridable methods in constructors</Name>
+   <Description>Virtual methods defined on the class should not be called from constructors. If a derived class has overridden the method, the derived class version will be called (before the derived class constructor is called).</Description>
+   <Resolution Name="Default">{0} contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: {1}</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182331.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalWarning</MessageLevel>
+   <File Name="usagerules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240">
+   <Name>Implement ISerializable correctly</Name>
+   <Description>If a type is assignable to ISerializable, it should implement GetObjectData. For unsealed types, the GetObjectData method should be callable and overridable by derived types.</Description>
+   <Resolution Name="Default">Add an implementation of GetObjectData to type {0}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182342.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="60">Error</MessageLevel>
+   <File Name="usagerules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235">
+   <Name>Mark all non-serializable fields</Name>
+   <Description>All fields that cannot be serialized directly should have the NonSerializedAttribute. Types that have the SerializableAttribute should not have fields of types that do not have the SerializableAttribute unless the fields are marked with the NonSerializedAttribute.</Description>
+   <Resolution Name="Default">Field {0} is a member of type {1}, which is serializable, but is of type {2}, which is not serializable. Add the NonSerializedAttribute to {0}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182349.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="usagerules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237">
+   <Name>Mark ISerializable types with SerializableAttribute</Name>
+   <Description>The System.Runtime.Serialization.ISerializable interface allows the type to customize its serialization, while the Serializable attribute enables the runtime to recognize the type as being serializable.</Description>
+   <Resolution Name="Default">Add [Serializable] to {0} as this type implements ISerializable.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182350.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100">
+   <Name>Review SQL queries for security vulnerabilities</Name>
+   <Description>A SQL command string built from user input is vulnerable to SQL injection attacks. Microsoft SQL Server and other database servers support stored procedures and parameterized SQL queries, which reduce the risk of injection attacks.</Description>
+   <Resolution Name="WithNonLiterals">The query string passed to {0} in {1} could contain the following variables {2}. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182310.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001">
+   <Name>Types that own disposable fields should be disposable</Name>
+   <Description>Types that declare disposable members should also implement IDisposable. If the type does not own any unmanaged resources, do not implement a finalizer on it.</Description>
+   <Resolution Name="DependsOnFix">Implement IDisposable on {0} because it creates members of the following IDisposable types: {1}. If {0} has previously shipped, adding new members that implement IDisposable to this type is considered a breaking change to existing consumers.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182172.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

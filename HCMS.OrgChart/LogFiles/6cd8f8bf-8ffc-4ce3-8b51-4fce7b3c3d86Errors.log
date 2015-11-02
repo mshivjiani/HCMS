@@ -1,0 +1,1800 @@
+----------------------------------------
+Timestamp: 11/13/2014 8:23:04 PM
+Message: HandlingInstanceID: a359d538-b3ce-4efe-b910-bb117246b283
+An exception of type 'System.IO.FileLoadException' occurred and was caught.
+---------------------------------------------------------------------------
+11/13/2014 15:23:04
+Type : System.IO.FileLoadException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Could not load file or assembly 'Microsoft.Practices.EnterpriseLibrary.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+Source : mscorlib
+Help link : 
+FileName : Microsoft.Practices.EnterpriseLibrary.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+FusionLog : WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ResolveType(System.Reflection.RuntimeModule, Int32, IntPtr*, Int32, IntPtr*, Int32, System.Runtime.CompilerServices.ObjectHandleOnStack)
+Stack Trace :    at System.ModuleHandle.ResolveType(RuntimeModule module, Int32 typeToken, IntPtr* typeInstArgs, Int32 typeInstCount, IntPtr* methodInstArgs, Int32 methodInstCount, ObjectHandleOnStack type)
+   at System.ModuleHandle.ResolveTypeHandleInternal(RuntimeModule module, Int32 typeToken, RuntimeTypeHandle[] typeInstantiationContext, RuntimeTypeHandle[] methodInstantiationContext)
+   at System.Reflection.RuntimeModule.ResolveType(Int32 metadataToken, Type[] genericTypeArguments, Type[] genericMethodArguments)
+   at System.Reflection.CustomAttribute.FilterCustomAttributeRecord(CustomAttributeRecord caRecord, MetadataImport scope, Assembly& lastAptcaOkAssembly, RuntimeModule decoratedModule, MetadataToken decoratedToken, RuntimeType attributeFilterType, Boolean mustBeInheritable, Object[] attributes, IList derivedAttributes, RuntimeType& attributeType, IRuntimeMethodInfo& ctor, Boolean& ctorHasParameters, Boolean& isVarArg)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeModule decoratedModule, Int32 decoratedMetadataToken, Int32 pcaCount, RuntimeType attributeFilterType, Boolean mustBeInheritable, IList derivedAttributes, Boolean isDecoratedTargetSecurityTransparent)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeAssembly assembly, RuntimeType caType)
+   at System.Reflection.RuntimeAssembly.GetCustomAttributes(Boolean inherit)
+   at System.Web.UI.AssemblyCache.GetAjaxFrameworkAssemblyAttribute(Assembly assembly)
+   at System.Web.UI.ScriptManager.get_DefaultAjaxFrameworkAssembly()
+   at System.Web.UI.ScriptManager..ctor()
+   at ASP.orgchart_addposition_aspx.__BuildControlScriptManager1() in c:\HCMS\HCMS.OrgChart\OrgChart\AddPosition.aspx:line 16
+   at ASP.orgchart_addposition_aspx.__BuildControlform1() in c:\HCMS\HCMS.OrgChart\OrgChart\AddPosition.aspx:line 14
+   at ASP.orgchart_addposition_aspx.__BuildControlTree(orgchart_addposition_aspx __ctrl) in c:\HCMS\HCMS.OrgChart\OrgChart\AddPosition.aspx:line 1
+   at ASP.orgchart_addposition_aspx.FrameworkInitialize() in c:\Users\mshivjiani\AppData\Local\Temp\1\Temporary ASP.NET Files\root\0a4a827e\73f761a\App_Web_vbxpydt4.1.cs:line 0
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.orgchart_addposition_aspx.ProcessRequest(HttpContext context) in c:\Users\mshivjiani\AppData\Local\Temp\1\Temporary ASP.NET Files\root\0a4a827e\73f761a\App_Web_vbxpydt4.1.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : IFW9WO-BDBCHA1
+TimeStamp : 11/13/2014 8:23:04 PM
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : 380fcdc2-9-130603837684655717
+ThreadIdentity : 50
+WindowsIdentity : IFW\mshivjiani
+
+Category: General
+Priority: 0
+EventId: 100
+Severity: Error
+Title:Enterprise Library Exception Handling
+Machine: IFW9WO-BDBCHA1
+Application Domain: 380fcdc2-9-130603837684655717
+Process Id: 8108
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\10.0\WebDev.WebServer40.exe
+Win32 Thread Id: 6232
+Thread Name: 
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 11/13/2014 8:36:26 PM
+Message: HandlingInstanceID: 22dda173-3026-4e46-b59e-19ea37b765c0
+An exception of type 'System.Web.HttpCompileException' occurred and was caught.
+-------------------------------------------------------------------------------
+11/13/2014 15:36:26
+Type : System.Web.HttpCompileException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : c:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx(7): error CS1061: 'ASP.controls_createorgchart_ctrladdwfpposition_ascx' does not contain a definition for 'rcbReportsTo_SelectedIndexChanged' and no extension method 'rcbReportsTo_SelectedIndexChanged' accepting a first argument of type 'ASP.controls_createorgchart_ctrladdwfpposition_ascx' could be found (are you missing a using directive or an assembly reference?)
+Source : System.Web
+Help link : 
+Results : System.CodeDom.Compiler.CompilerResults
+SourceCode : #pragma checksum "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx" "{406ea660-64cf-4c82-b6f0-42d48172a799}" "BAFFC6BE225F6FB719018239EFFEBD34"
+//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//     Runtime Version:4.0.30319.1026
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+namespace ASP {
+    
+    #line 389 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config\web.config"
+    using System.Linq;
+    
+    #line default
+    #line hidden
+    
+    #line 385 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config\web.config"
+    using System.Collections.Generic;
+    
+    #line default
+    #line hidden
+    
+    #line 402 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config\web.config"
+    using System.Xml.Linq;
+    
+    #line default
+    #line hidden
+    
+    #line 6 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+    using System.Web.UI.WebControls;
+    
+    #line default
+    #line hidden
+    
+    #line 392 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config\web.config"
+    using System.Web;
+    
+    #line default
+    #line hidden
+    
+    #line 383 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config\web.config"
+    using System;
+    
+    #line default
+    #line hidden
+    
+    #line 7 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+    using Telerik.Web.UI;
+    
+    #line default
+    #line hidden
+    
+    #line 6 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+    using System.Web.UI;
+    
+    #line default
+    #line hidden
+    
+    #line 401 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config\web.config"
+    using System.Web.UI.HtmlControls;
+    
+    #line default
+    #line hidden
+    
+    #line 396 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config\web.config"
+    using System.Web.Security;
+    
+    #line default
+    #line hidden
+    
+    #line 391 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config\web.config"
+    using System.Text.RegularExpressions;
+    
+    #line default
+    #line hidden
+    
+    #line 388 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config\web.config"
+    using System.Configuration;
+    
+    #line default
+    #line hidden
+    
+    #line 387 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config\web.config"
+    using System.ComponentModel.DataAnnotations;
+    
+    #line default
+    #line hidden
+    
+    #line 390 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config\web.config"
+    using System.Text;
+    
+    #line default
+    #line hidden
+    
+    #line 397 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config\web.config"
+    using System.Web.Profile;
+    
+    #line default
+    #line hidden
+    
+    #line 393 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config\web.config"
+    using System.Web.Caching;
+    
+    #line default
+    #line hidden
+    
+    #line 384 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config\web.config"
+    using System.Collections;
+    
+    #line default
+    #line hidden
+    
+    #line 6 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+    using System.Web.UI.WebControls.WebParts;
+    
+    #line default
+    #line hidden
+    
+    #line 6 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+    using System.Web.UI.WebControls.Expressions;
+    
+    #line default
+    #line hidden
+    
+    #line 386 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config\web.config"
+    using System.Collections.Specialized;
+    
+    #line default
+    #line hidden
+    
+    #line 395 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config\web.config"
+    using System.Web.SessionState;
+    
+    #line default
+    #line hidden
+    
+    #line 6 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+    using System.Web.DynamicData;
+    
+    #line default
+    #line hidden
+    
+    
+    [System.Runtime.CompilerServices.CompilerGlobalScopeAttribute()]
+    public class controls_createorgchart_ctrladdwfpposition_ascx : global::HCMS.OrgChart.Controls.CreateOrgChart.ctrlAddWFPPosition {
+        
+        private static bool @__initialized;
+        
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public controls_createorgchart_ctrladdwfpposition_ascx() {
+            ((global::HCMS.OrgChart.Controls.CreateOrgChart.ctrlAddWFPPosition)(this)).AppRelativeVirtualPath = "~/Controls/CreateOrgChart/ctrlAddWFPPosition.ascx";
+            if ((global::ASP.controls_createorgchart_ctrladdwfpposition_ascx.@__initialized == false)) {
+                global::ASP.controls_createorgchart_ctrladdwfpposition_ascx.@__initialized = true;
+            }
+        }
+        
+        protected System.Web.Profile.DefaultProfile Profile {
+            get {
+                return ((System.Web.Profile.DefaultProfile)(this.Context.Profile));
+            }
+        }
+        
+        protected ASP.global_asax ApplicationInstance {
+            get {
+                return ((ASP.global_asax)(this.Context.ApplicationInstance));
+            }
+        }
+        
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::System.Web.UI.WebControls.Label @__BuildControllblReportsTo() {
+            global::System.Web.UI.WebControls.Label @__ctrl;
+            
+            #line 6 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl = new global::System.Web.UI.WebControls.Label();
+            
+            #line default
+            #line hidden
+            this.lblReportsTo = @__ctrl;
+            @__ctrl.ApplyStyleSheetSkin(this.Page);
+            
+            #line 6 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ID = "lblReportsTo";
+            
+            #line default
+            #line hidden
+            
+            #line 6 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ToolTip = "Select Reports To:";
+            
+            #line default
+            #line hidden
+            
+            #line 6 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.Text = "Select Reports To:";
+            
+            #line default
+            #line hidden
+            return @__ctrl;
+        }
+        
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::Telerik.Web.UI.RadComboBox @__BuildControlrcbReportsTo() {
+            global::Telerik.Web.UI.RadComboBox @__ctrl;
+            
+            #line 7 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl = new global::Telerik.Web.UI.RadComboBox();
+            
+            #line default
+            #line hidden
+            this.rcbReportsTo = @__ctrl;
+            @__ctrl.ApplyStyleSheetSkin(this.Page);
+            
+            #line 7 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ID = "rcbReportsTo";
+            
+            #line default
+            #line hidden
+            
+            #line 7 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.MarkFirstMatch = true;
+            
+            #line default
+            #line hidden
+            
+            #line 7 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.AutoPostBack = true;
+            
+            #line default
+            #line hidden
+            
+            #line 7 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(400D, global::System.Web.UI.WebControls.UnitType.Pixel);
+            
+            #line default
+            #line hidden
+            
+            #line 7 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.SelectedIndexChanged -= new Telerik.Web.UI.RadComboBoxSelectedIndexChangedEventHandler(this.rcbReportsTo_SelectedIndexChanged);
+            
+            #line default
+            #line hidden
+            
+            #line 7 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.SelectedIndexChanged += new Telerik.Web.UI.RadComboBoxSelectedIndexChangedEventHandler(this.rcbReportsTo_SelectedIndexChanged);
+            
+            #line default
+            #line hidden
+            return @__ctrl;
+        }
+        
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::System.Web.UI.WebControls.Label @__BuildControllblPositionOrgCode() {
+            global::System.Web.UI.WebControls.Label @__ctrl;
+            
+            #line 13 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl = new global::System.Web.UI.WebControls.Label();
+            
+            #line default
+            #line hidden
+            this.lblPositionOrgCode = @__ctrl;
+            @__ctrl.ApplyStyleSheetSkin(this.Page);
+            
+            #line 13 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ID = "lblPositionOrgCode";
+            
+            #line default
+            #line hidden
+            
+            #line 13 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ToolTip = "Select Organization Code:";
+            
+            #line default
+            #line hidden
+            
+            #line 13 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.Text = "Select Organization Code:";
+            
+            #line default
+            #line hidden
+            return @__ctrl;
+        }
+        
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::Telerik.Web.UI.RadComboBox @__BuildControlrcbPositionOrgCode() {
+            global::Telerik.Web.UI.RadComboBox @__ctrl;
+            
+            #line 14 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl = new global::Telerik.Web.UI.RadComboBox();
+            
+            #line default
+            #line hidden
+            this.rcbPositionOrgCode = @__ctrl;
+            @__ctrl.ApplyStyleSheetSkin(this.Page);
+            
+            #line 14 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ID = "rcbPositionOrgCode";
+            
+            #line default
+            #line hidden
+            
+            #line 14 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.MarkFirstMatch = true;
+            
+            #line default
+            #line hidden
+            
+            #line 14 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(400D, global::System.Web.UI.WebControls.UnitType.Pixel);
+            
+            #line default
+            #line hidden
+            return @__ctrl;
+        }
+        
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::System.Web.UI.WebControls.Label @__BuildControllblPayPlan() {
+            global::System.Web.UI.WebControls.Label @__ctrl;
+            
+            #line 19 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl = new global::System.Web.UI.WebControls.Label();
+            
+            #line default
+            #line hidden
+            this.lblPayPlan = @__ctrl;
+            @__ctrl.ApplyStyleSheetSkin(this.Page);
+            
+            #line 19 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ID = "lblPayPlan";
+            
+            #line default
+            #line hidden
+            
+            #line 19 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ToolTip = "Select Pay Plan:";
+            
+            #line default
+            #line hidden
+            
+            #line 19 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.Text = "Select Pay Plan:";
+            
+            #line default
+            #line hidden
+            return @__ctrl;
+        }
+        
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::Telerik.Web.UI.RadComboBox @__BuildControlrcbPayPlan() {
+            global::Telerik.Web.UI.RadComboBox @__ctrl;
+            
+            #line 20 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl = new global::Telerik.Web.UI.RadComboBox();
+            
+            #line default
+            #line hidden
+            this.rcbPayPlan = @__ctrl;
+            @__ctrl.ApplyStyleSheetSkin(this.Page);
+            
+            #line 20 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ID = "rcbPayPlan";
+            
+            #line default
+            #line hidden
+            
+            #line 20 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.MarkFirstMatch = true;
+            
+            #line default
+            #line hidden
+            
+            #line 20 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(400D, global::System.Web.UI.WebControls.UnitType.Pixel);
+            
+            #line default
+            #line hidden
+            return @__ctrl;
+        }
+        
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::System.Web.UI.WebControls.Label @__BuildControllblSeries() {
+            global::System.Web.UI.WebControls.Label @__ctrl;
+            
+            #line 25 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl = new global::System.Web.UI.WebControls.Label();
+            
+            #line default
+            #line hidden
+            this.lblSeries = @__ctrl;
+            @__ctrl.ApplyStyleSheetSkin(this.Page);
+            
+            #line 25 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ID = "lblSeries";
+            
+            #line default
+            #line hidden
+            
+            #line 25 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ToolTip = "Select Series:";
+            
+            #line default
+            #line hidden
+            
+            #line 25 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.Text = "Select Series:";
+            
+            #line default
+            #line hidden
+            return @__ctrl;
+        }
+        
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::Telerik.Web.UI.RadComboBox @__BuildControlrcbSeries() {
+            global::Telerik.Web.UI.RadComboBox @__ctrl;
+            
+            #line 26 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl = new global::Telerik.Web.UI.RadComboBox();
+            
+            #line default
+            #line hidden
+            this.rcbSeries = @__ctrl;
+            @__ctrl.ApplyStyleSheetSkin(this.Page);
+            
+            #line 26 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ID = "rcbSeries";
+            
+            #line default
+            #line hidden
+            
+            #line 26 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.MarkFirstMatch = true;
+            
+            #line default
+            #line hidden
+            
+            #line 26 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(400D, global::System.Web.UI.WebControls.UnitType.Pixel);
+            
+            #line default
+            #line hidden
+            return @__ctrl;
+        }
+        
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::System.Web.UI.WebControls.Label @__BuildControllblFPLGrade() {
+            global::System.Web.UI.WebControls.Label @__ctrl;
+            
+            #line 31 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl = new global::System.Web.UI.WebControls.Label();
+            
+            #line default
+            #line hidden
+            this.lblFPLGrade = @__ctrl;
+            @__ctrl.ApplyStyleSheetSkin(this.Page);
+            
+            #line 31 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ID = "lblFPLGrade";
+            
+            #line default
+            #line hidden
+            
+            #line 31 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ToolTip = "Select Full Performance Grade:";
+            
+            #line default
+            #line hidden
+            
+            #line 31 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.Text = "Select Full Performance Grade:";
+            
+            #line default
+            #line hidden
+            return @__ctrl;
+        }
+        
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::Telerik.Web.UI.RadComboBox @__BuildControlrcbFPLGrade() {
+            global::Telerik.Web.UI.RadComboBox @__ctrl;
+            
+            #line 32 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl = new global::Telerik.Web.UI.RadComboBox();
+            
+            #line default
+            #line hidden
+            this.rcbFPLGrade = @__ctrl;
+            @__ctrl.ApplyStyleSheetSkin(this.Page);
+            
+            #line 32 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ID = "rcbFPLGrade";
+            
+            #line default
+            #line hidden
+            
+            #line 32 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.MarkFirstMatch = true;
+            
+            #line default
+            #line hidden
+            
+            #line 32 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(400D, global::System.Web.UI.WebControls.UnitType.Pixel);
+            
+            #line default
+            #line hidden
+            return @__ctrl;
+        }
+        
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::System.Web.UI.WebControls.Label @__BuildControllblGrade() {
+            global::System.Web.UI.WebControls.Label @__ctrl;
+            
+            #line 37 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl = new global::System.Web.UI.WebControls.Label();
+            
+            #line default
+            #line hidden
+            this.lblGrade = @__ctrl;
+            @__ctrl.ApplyStyleSheetSkin(this.Page);
+            
+            #line 37 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ID = "lblGrade";
+            
+            #line default
+            #line hidden
+            
+            #line 37 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ToolTip = "Select Grade:";
+            
+            #line default
+            #line hidden
+            
+            #line 37 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.Text = "Select Grade:";
+            
+            #line default
+            #line hidden
+            return @__ctrl;
+        }
+        
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::Telerik.Web.UI.RadComboBox @__BuildControlrcbGrade() {
+            global::Telerik.Web.UI.RadComboBox @__ctrl;
+            
+            #line 38 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl = new global::Telerik.Web.UI.RadComboBox();
+            
+            #line default
+            #line hidden
+            this.rcbGrade = @__ctrl;
+            @__ctrl.ApplyStyleSheetSkin(this.Page);
+            
+            #line 38 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ID = "rcbGrade";
+            
+            #line default
+            #line hidden
+            
+            #line 38 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.MarkFirstMatch = true;
+            
+            #line default
+            #line hidden
+            
+            #line 38 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(400D, global::System.Web.UI.WebControls.UnitType.Pixel);
+            
+            #line default
+            #line hidden
+            return @__ctrl;
+        }
+        
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::System.Web.UI.WebControls.Label @__BuildControllblPositionTitle() {
+            global::System.Web.UI.WebControls.Label @__ctrl;
+            
+            #line 43 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl = new global::System.Web.UI.WebControls.Label();
+            
+            #line default
+            #line hidden
+            this.lblPositionTitle = @__ctrl;
+            @__ctrl.ApplyStyleSheetSkin(this.Page);
+            
+            #line 43 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ID = "lblPositionTitle";
+            
+            #line default
+            #line hidden
+            
+            #line 43 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ToolTip = "Enter Position Title:";
+            
+            #line default
+            #line hidden
+            
+            #line 43 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.Text = "Enter Position Title:";
+            
+            #line default
+            #line hidden
+            return @__ctrl;
+        }
+        
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::System.Web.UI.WebControls.TextBox @__BuildControltxtPositionTitle() {
+            global::System.Web.UI.WebControls.TextBox @__ctrl;
+            
+            #line 44 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl = new global::System.Web.UI.WebControls.TextBox();
+            
+            #line default
+            #line hidden
+            this.txtPositionTitle = @__ctrl;
+            @__ctrl.ApplyStyleSheetSkin(this.Page);
+            
+            #line 44 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ID = "txtPositionTitle";
+            
+            #line default
+            #line hidden
+            
+            #line 44 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.MaxLength = 255;
+            
+            #line default
+            #line hidden
+            
+            #line 44 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(400D, global::System.Web.UI.WebControls.UnitType.Pixel);
+            
+            #line default
+            #line hidden
+            return @__ctrl;
+        }
+        
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::System.Web.UI.WebControls.Label @__BuildControllblDutyStationState() {
+            global::System.Web.UI.WebControls.Label @__ctrl;
+            
+            #line 49 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl = new global::System.Web.UI.WebControls.Label();
+            
+            #line default
+            #line hidden
+            this.lblDutyStationState = @__ctrl;
+            @__ctrl.ApplyStyleSheetSkin(this.Page);
+            
+            #line 49 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ID = "lblDutyStationState";
+            
+            #line default
+            #line hidden
+            
+            #line 49 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ToolTip = "Select Duty Station State:";
+            
+            #line default
+            #line hidden
+            
+            #line 49 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.Text = "Select Duty Station State:";
+            
+            #line default
+            #line hidden
+            return @__ctrl;
+        }
+        
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::Telerik.Web.UI.RadComboBox @__BuildControlrcbDutyStationState() {
+            global::Telerik.Web.UI.RadComboBox @__ctrl;
+            
+            #line 50 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl = new global::Telerik.Web.UI.RadComboBox();
+            
+            #line default
+            #line hidden
+            this.rcbDutyStationState = @__ctrl;
+            @__ctrl.ApplyStyleSheetSkin(this.Page);
+            
+            #line 50 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ID = "rcbDutyStationState";
+            
+            #line default
+            #line hidden
+            
+            #line 50 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.MarkFirstMatch = true;
+            
+            #line default
+            #line hidden
+            
+            #line 50 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(400D, global::System.Web.UI.WebControls.UnitType.Pixel);
+            
+            #line default
+            #line hidden
+            return @__ctrl;
+        }
+        
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::System.Web.UI.WebControls.Label @__BuildControllblDutyStationDescription() {
+            global::System.Web.UI.WebControls.Label @__ctrl;
+            
+            #line 55 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl = new global::System.Web.UI.WebControls.Label();
+            
+            #line default
+            #line hidden
+            this.lblDutyStationDescription = @__ctrl;
+            @__ctrl.ApplyStyleSheetSkin(this.Page);
+            
+            #line 55 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ID = "lblDutyStationDescription";
+            
+            #line default
+            #line hidden
+            
+            #line 55 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ToolTip = "Enter Duty Station:";
+            
+            #line default
+            #line hidden
+            
+            #line 55 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.Text = "Enter Duty Station:";
+            
+            #line default
+            #line hidden
+            return @__ctrl;
+        }
+        
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::System.Web.UI.WebControls.TextBox @__BuildControltxtDutyStationDescription() {
+            global::System.Web.UI.WebControls.TextBox @__ctrl;
+            
+            #line 56 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl = new global::System.Web.UI.WebControls.TextBox();
+            
+            #line default
+            #line hidden
+            this.txtDutyStationDescription = @__ctrl;
+            @__ctrl.ApplyStyleSheetSkin(this.Page);
+            
+            #line 56 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ID = "txtDutyStationDescription";
+            
+            #line default
+            #line hidden
+            
+            #line 56 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.MaxLength = 255;
+            
+            #line default
+            #line hidden
+            
+            #line 56 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(400D, global::System.Web.UI.WebControls.UnitType.Pixel);
+            
+            #line default
+            #line hidden
+            return @__ctrl;
+        }
+        
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::System.Web.UI.WebControls.Label @__BuildControllblPositionType() {
+            global::System.Web.UI.WebControls.Label @__ctrl;
+            
+            #line 61 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl = new global::System.Web.UI.WebControls.Label();
+            
+            #line default
+            #line hidden
+            this.lblPositionType = @__ctrl;
+            @__ctrl.ApplyStyleSheetSkin(this.Page);
+            
+            #line 61 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ID = "lblPositionType";
+            
+            #line default
+            #line hidden
+            
+            #line 61 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ToolTip = "Select Position Type:";
+            
+            #line default
+            #line hidden
+            
+            #line 61 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.Text = "Select Position Type:";
+            
+            #line default
+            #line hidden
+            return @__ctrl;
+        }
+        
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::Telerik.Web.UI.RadComboBox @__BuildControlrcbPositionType() {
+            global::Telerik.Web.UI.RadComboBox @__ctrl;
+            
+            #line 62 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl = new global::Telerik.Web.UI.RadComboBox();
+            
+            #line default
+            #line hidden
+            this.rcbPositionType = @__ctrl;
+            @__ctrl.ApplyStyleSheetSkin(this.Page);
+            
+            #line 62 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ID = "rcbPositionType";
+            
+            #line default
+            #line hidden
+            
+            #line 62 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.MarkFirstMatch = true;
+            
+            #line default
+            #line hidden
+            
+            #line 62 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(400D, global::System.Web.UI.WebControls.UnitType.Pixel);
+            
+            #line default
+            #line hidden
+            return @__ctrl;
+        }
+        
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::System.Web.UI.WebControls.Label @__BuildControllblOrgPositionType() {
+            global::System.Web.UI.WebControls.Label @__ctrl;
+            
+            #line 67 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl = new global::System.Web.UI.WebControls.Label();
+            
+            #line default
+            #line hidden
+            this.lblOrgPositionType = @__ctrl;
+            @__ctrl.ApplyStyleSheetSkin(this.Page);
+            
+            #line 67 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ID = "lblOrgPositionType";
+            
+            #line default
+            #line hidden
+            
+            #line 67 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ToolTip = "Select Organization Position Type:";
+            
+            #line default
+            #line hidden
+            
+            #line 67 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.Text = "Select Organization Position Type:";
+            
+            #line default
+            #line hidden
+            return @__ctrl;
+        }
+        
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::Telerik.Web.UI.RadComboBox @__BuildControlrcbOrganizationPositionType() {
+            global::Telerik.Web.UI.RadComboBox @__ctrl;
+            
+            #line 68 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl = new global::Telerik.Web.UI.RadComboBox();
+            
+            #line default
+            #line hidden
+            this.rcbOrganizationPositionType = @__ctrl;
+            @__ctrl.ApplyStyleSheetSkin(this.Page);
+            
+            #line 68 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ID = "rcbOrganizationPositionType";
+            
+            #line default
+            #line hidden
+            
+            #line 68 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.MarkFirstMatch = true;
+            
+            #line default
+            #line hidden
+            
+            #line 68 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(400D, global::System.Web.UI.WebControls.UnitType.Pixel);
+            
+            #line default
+            #line hidden
+            return @__ctrl;
+        }
+        
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::System.Web.UI.WebControls.Label @__BuildControllblEmploymentStatus() {
+            global::System.Web.UI.WebControls.Label @__ctrl;
+            
+            #line 74 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl = new global::System.Web.UI.WebControls.Label();
+            
+            #line default
+            #line hidden
+            this.lblEmploymentStatus = @__ctrl;
+            @__ctrl.ApplyStyleSheetSkin(this.Page);
+            
+            #line 74 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ID = "lblEmploymentStatus";
+            
+            #line default
+            #line hidden
+            
+            #line 74 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ToolTip = "Select Employment Status:";
+            
+            #line default
+            #line hidden
+            
+            #line 74 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.Text = "Select Employment Status:";
+            
+            #line default
+            #line hidden
+            return @__ctrl;
+        }
+        
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::Telerik.Web.UI.RadComboBox @__BuildControlrcbEmploymentStatus() {
+            global::Telerik.Web.UI.RadComboBox @__ctrl;
+            
+            #line 75 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl = new global::Telerik.Web.UI.RadComboBox();
+            
+            #line default
+            #line hidden
+            this.rcbEmploymentStatus = @__ctrl;
+            @__ctrl.ApplyStyleSheetSkin(this.Page);
+            
+            #line 75 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ID = "rcbEmploymentStatus";
+            
+            #line default
+            #line hidden
+            
+            #line 75 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.MarkFirstMatch = true;
+            
+            #line default
+            #line hidden
+            
+            #line 75 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(400D, global::System.Web.UI.WebControls.UnitType.Pixel);
+            
+            #line default
+            #line hidden
+            return @__ctrl;
+        }
+        
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::System.Web.UI.WebControls.Label @__BuildControllblPlacementType() {
+            global::System.Web.UI.WebControls.Label @__ctrl;
+            
+            #line 81 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl = new global::System.Web.UI.WebControls.Label();
+            
+            #line default
+            #line hidden
+            this.lblPlacementType = @__ctrl;
+            @__ctrl.ApplyStyleSheetSkin(this.Page);
+            
+            #line 81 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ID = "lblPlacementType";
+            
+            #line default
+            #line hidden
+            
+            #line 81 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ToolTip = "Select Position Box Placement:";
+            
+            #line default
+            #line hidden
+            
+            #line 81 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.Text = "Select Position Box Placement:";
+            
+            #line default
+            #line hidden
+            return @__ctrl;
+        }
+        
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::Telerik.Web.UI.RadComboBox @__BuildControlrcbPlacementType() {
+            global::Telerik.Web.UI.RadComboBox @__ctrl;
+            
+            #line 82 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl = new global::Telerik.Web.UI.RadComboBox();
+            
+            #line default
+            #line hidden
+            this.rcbPlacementType = @__ctrl;
+            @__ctrl.ApplyStyleSheetSkin(this.Page);
+            
+            #line 82 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ID = "rcbPlacementType";
+            
+            #line default
+            #line hidden
+            
+            #line 82 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.MarkFirstMatch = true;
+            
+            #line default
+            #line hidden
+            
+            #line 82 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(400D, global::System.Web.UI.WebControls.UnitType.Pixel);
+            
+            #line default
+            #line hidden
+            return @__ctrl;
+        }
+        
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::System.Web.UI.WebControls.Label @__BuildControllblPositionGroupType() {
+            global::System.Web.UI.WebControls.Label @__ctrl;
+            
+            #line 88 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl = new global::System.Web.UI.WebControls.Label();
+            
+            #line default
+            #line hidden
+            this.lblPositionGroupType = @__ctrl;
+            @__ctrl.ApplyStyleSheetSkin(this.Page);
+            
+            #line 88 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ID = "lblPositionGroupType";
+            
+            #line default
+            #line hidden
+            
+            #line 88 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ToolTip = "Select Position Box Location:";
+            
+            #line default
+            #line hidden
+            
+            #line 88 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.Text = "Select Position Box Location:";
+            
+            #line default
+            #line hidden
+            return @__ctrl;
+        }
+        
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::Telerik.Web.UI.RadComboBox @__BuildControlrcbPositionGroupType() {
+            global::Telerik.Web.UI.RadComboBox @__ctrl;
+            
+            #line 89 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl = new global::Telerik.Web.UI.RadComboBox();
+            
+            #line default
+            #line hidden
+            this.rcbPositionGroupType = @__ctrl;
+            @__ctrl.ApplyStyleSheetSkin(this.Page);
+            
+            #line 89 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ID = "rcbPositionGroupType";
+            
+            #line default
+            #line hidden
+            
+            #line 89 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.MarkFirstMatch = true;
+            
+            #line default
+            #line hidden
+            
+            #line 89 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.Width = new System.Web.UI.WebControls.Unit(400D, global::System.Web.UI.WebControls.UnitType.Pixel);
+            
+            #line default
+            #line hidden
+            return @__ctrl;
+        }
+        
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::System.Web.UI.WebControls.Button @__BuildControlbtnCreate() {
+            global::System.Web.UI.WebControls.Button @__ctrl;
+            
+            #line 93 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl = new global::System.Web.UI.WebControls.Button();
+            
+            #line default
+            #line hidden
+            this.btnCreate = @__ctrl;
+            @__ctrl.ApplyStyleSheetSkin(this.Page);
+            
+            #line 93 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ID = "btnCreate";
+            
+            #line default
+            #line hidden
+            
+            #line 93 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.Text = "Create Position";
+            
+            #line default
+            #line hidden
+            
+            #line 93 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl.ToolTip = "Create Position";
+            
+            #line default
+            #line hidden
+            return @__ctrl;
+        }
+        
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private void @__BuildControlTree(controls_createorgchart_ctrladdwfpposition_ascx @__ctrl) {
+            System.Web.UI.IParserAccessor @__parser = ((System.Web.UI.IParserAccessor)(@__ctrl));
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n\r\n<table class=\"blueTable\" width=\"60%\">\r\n\r\n<tr>\r\n<td width=\"20%\">"));
+            
+            #line default
+            #line hidden
+            global::System.Web.UI.WebControls.Label @__ctrl1;
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl1 = this.@__BuildControllblReportsTo();
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(@__ctrl1);
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("</td>\r\n<td>"));
+            
+            #line default
+            #line hidden
+            global::Telerik.Web.UI.RadComboBox @__ctrl2;
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl2 = this.@__BuildControlrcbReportsTo();
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(@__ctrl2);
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("</td>\r\n</tr>\r\n\r\n<tr>\r\n<td>"));
+            
+            #line default
+            #line hidden
+            global::System.Web.UI.WebControls.Label @__ctrl3;
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl3 = this.@__BuildControllblPositionOrgCode();
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(@__ctrl3);
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("</td>\r\n<td>"));
+            
+            #line default
+            #line hidden
+            global::Telerik.Web.UI.RadComboBox @__ctrl4;
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl4 = this.@__BuildControlrcbPositionOrgCode();
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(@__ctrl4);
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("</td>\r\n</tr>\r\n\r\n\r\n<tr>\r\n<td>"));
+            
+            #line default
+            #line hidden
+            global::System.Web.UI.WebControls.Label @__ctrl5;
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl5 = this.@__BuildControllblPayPlan();
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(@__ctrl5);
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("</td>\r\n<td>"));
+            
+            #line default
+            #line hidden
+            global::Telerik.Web.UI.RadComboBox @__ctrl6;
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl6 = this.@__BuildControlrcbPayPlan();
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(@__ctrl6);
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("</td>\r\n</tr>\r\n\r\n\r\n<tr>\r\n<td>"));
+            
+            #line default
+            #line hidden
+            global::System.Web.UI.WebControls.Label @__ctrl7;
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl7 = this.@__BuildControllblSeries();
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(@__ctrl7);
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("</td>\r\n<td>"));
+            
+            #line default
+            #line hidden
+            global::Telerik.Web.UI.RadComboBox @__ctrl8;
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl8 = this.@__BuildControlrcbSeries();
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(@__ctrl8);
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("</td>\r\n</tr>\r\n\r\n\r\n<tr>\r\n<td>"));
+            
+            #line default
+            #line hidden
+            global::System.Web.UI.WebControls.Label @__ctrl9;
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl9 = this.@__BuildControllblFPLGrade();
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(@__ctrl9);
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("</td>\r\n<td>"));
+            
+            #line default
+            #line hidden
+            global::Telerik.Web.UI.RadComboBox @__ctrl10;
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl10 = this.@__BuildControlrcbFPLGrade();
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(@__ctrl10);
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("</td>\r\n</tr>\r\n\r\n\r\n<tr>\r\n<td>"));
+            
+            #line default
+            #line hidden
+            global::System.Web.UI.WebControls.Label @__ctrl11;
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl11 = this.@__BuildControllblGrade();
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(@__ctrl11);
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("</td>\r\n<td>"));
+            
+            #line default
+            #line hidden
+            global::Telerik.Web.UI.RadComboBox @__ctrl12;
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl12 = this.@__BuildControlrcbGrade();
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(@__ctrl12);
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("</td>\r\n</tr>\r\n\r\n\r\n<tr>\r\n<td>"));
+            
+            #line default
+            #line hidden
+            global::System.Web.UI.WebControls.Label @__ctrl13;
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl13 = this.@__BuildControllblPositionTitle();
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(@__ctrl13);
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("</td>\r\n<td>"));
+            
+            #line default
+            #line hidden
+            global::System.Web.UI.WebControls.TextBox @__ctrl14;
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl14 = this.@__BuildControltxtPositionTitle();
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(@__ctrl14);
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("</td>\r\n</tr>\r\n\r\n\r\n<tr>\r\n<td>"));
+            
+            #line default
+            #line hidden
+            global::System.Web.UI.WebControls.Label @__ctrl15;
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl15 = this.@__BuildControllblDutyStationState();
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(@__ctrl15);
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("</td>\r\n<td>"));
+            
+            #line default
+            #line hidden
+            global::Telerik.Web.UI.RadComboBox @__ctrl16;
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl16 = this.@__BuildControlrcbDutyStationState();
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(@__ctrl16);
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("</td>\r\n</tr>\r\n\r\n\r\n<tr>\r\n<td>"));
+            
+            #line default
+            #line hidden
+            global::System.Web.UI.WebControls.Label @__ctrl17;
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl17 = this.@__BuildControllblDutyStationDescription();
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(@__ctrl17);
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("</td>\r\n<td>"));
+            
+            #line default
+            #line hidden
+            global::System.Web.UI.WebControls.TextBox @__ctrl18;
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl18 = this.@__BuildControltxtDutyStationDescription();
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(@__ctrl18);
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("</td>\r\n</tr>\r\n\r\n\r\n<tr>\r\n<td>"));
+            
+            #line default
+            #line hidden
+            global::System.Web.UI.WebControls.Label @__ctrl19;
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl19 = this.@__BuildControllblPositionType();
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(@__ctrl19);
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("</td>\r\n<td>"));
+            
+            #line default
+            #line hidden
+            global::Telerik.Web.UI.RadComboBox @__ctrl20;
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl20 = this.@__BuildControlrcbPositionType();
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(@__ctrl20);
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("</td>\r\n</tr>\r\n\r\n\r\n<tr>\r\n<td>"));
+            
+            #line default
+            #line hidden
+            global::System.Web.UI.WebControls.Label @__ctrl21;
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl21 = this.@__BuildControllblOrgPositionType();
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(@__ctrl21);
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("</td>\r\n<td>"));
+            
+            #line default
+            #line hidden
+            global::Telerik.Web.UI.RadComboBox @__ctrl22;
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl22 = this.@__BuildControlrcbOrganizationPositionType();
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(@__ctrl22);
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("</td>\r\n</tr>\r\n\r\n\r\n\r\n<tr>\r\n<td>"));
+            
+            #line default
+            #line hidden
+            global::System.Web.UI.WebControls.Label @__ctrl23;
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl23 = this.@__BuildControllblEmploymentStatus();
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(@__ctrl23);
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("</td>\r\n<td>"));
+            
+            #line default
+            #line hidden
+            global::Telerik.Web.UI.RadComboBox @__ctrl24;
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl24 = this.@__BuildControlrcbEmploymentStatus();
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(@__ctrl24);
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("</td>\r\n</tr>\r\n\r\n\r\n\r\n<tr>\r\n<td>"));
+            
+            #line default
+            #line hidden
+            global::System.Web.UI.WebControls.Label @__ctrl25;
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl25 = this.@__BuildControllblPlacementType();
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(@__ctrl25);
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("</td>\r\n<td>"));
+            
+            #line default
+            #line hidden
+            global::Telerik.Web.UI.RadComboBox @__ctrl26;
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl26 = this.@__BuildControlrcbPlacementType();
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(@__ctrl26);
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("</td>\r\n</tr>\r\n\r\n\r\n\r\n<tr>\r\n<td>"));
+            
+            #line default
+            #line hidden
+            global::System.Web.UI.WebControls.Label @__ctrl27;
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl27 = this.@__BuildControllblPositionGroupType();
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(@__ctrl27);
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("</td>\r\n<td>"));
+            
+            #line default
+            #line hidden
+            global::Telerik.Web.UI.RadComboBox @__ctrl28;
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl28 = this.@__BuildControlrcbPositionGroupType();
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(@__ctrl28);
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("</td>\r\n</tr>\r\n<tr><td colspan=\"2\">\r\n<span class=\"spanAction\">\r\n"));
+            
+            #line default
+            #line hidden
+            global::System.Web.UI.WebControls.Button @__ctrl29;
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__ctrl29 = this.@__BuildControlbtnCreate();
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(@__ctrl29);
+            
+            #line default
+            #line hidden
+            
+            #line 1 "C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx"
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n</span></td>\r\n</tr>\r\n</table>\r\n"));
+            
+            #line default
+            #line hidden
+        }
+        
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        protected override void FrameworkInitialize() {
+            base.FrameworkInitialize();
+            this.@__BuildControlTree(this);
+        }
+    }
+}
+
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.Web.Compilation.BuildResult PostProcessFoundBuildResult(System.Web.Compilation.BuildResult, Boolean, System.Web.VirtualPath)
+Stack Trace :    at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.UI.BaseTemplateParser.GetReferencedType(VirtualPath virtualPath, Boolean allowNoCompile)
+   at System.Web.UI.BaseTemplateParser.GetUserControlType(VirtualPath virtualPath)
+   at System.Web.UI.MainTagNameToTypeMapper.ProcessUserControlRegistration(UserControlRegisterEntry ucRegisterEntry)
+   at System.Web.UI.BaseTemplateParser.ProcessDirective(String directiveName, IDictionary directive)
+   at System.Web.UI.TemplateControlParser.ProcessDirective(String directiveName, IDictionary directive)
+   at System.Web.UI.PageParser.ProcessDirective(String directiveName, IDictionary directive)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+
+Additional Info:
+
+MachineName : IFW9WO-BDBCHA1
+TimeStamp : 11/13/2014 8:36:26 PM
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : 380fcdc2-9-130603837684655717
+ThreadIdentity : 50
+WindowsIdentity : IFW\mshivjiani
+
+Category: General
+Priority: 0
+EventId: 100
+Severity: Error
+Title:Enterprise Library Exception Handling
+Machine: IFW9WO-BDBCHA1
+Application Domain: 380fcdc2-9-130603837684655717
+Process Id: 8108
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\10.0\WebDev.WebServer40.exe
+Win32 Thread Id: 7432
+Thread Name: 
+Extended Properties: 
+----------------------------------------

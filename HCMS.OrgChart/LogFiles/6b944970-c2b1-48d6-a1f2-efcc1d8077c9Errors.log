@@ -1,0 +1,259 @@
+----------------------------------------
+Timestamp: 2/6/2015 8:23:02 PM
+Message: HandlingInstanceID: 5d06b5f9-a502-4ea1-853e-ec8fc1b6f4a1
+An exception of type 'System.IO.FileLoadException' occurred and was caught.
+---------------------------------------------------------------------------
+02/06/2015 15:23:02
+Type : System.IO.FileLoadException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Could not load file or assembly 'Microsoft.Practices.EnterpriseLibrary.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+Source : mscorlib
+Help link : 
+FileName : Microsoft.Practices.EnterpriseLibrary.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+FusionLog : === Pre-bind state information ===
+LOG: User = IFW\mshivjiani
+LOG: DisplayName = Microsoft.Practices.EnterpriseLibrary.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+ (Fully-specified)
+LOG: Appbase = file:///C:/HCMS/HCMS.OrgChart/
+LOG: Initial PrivatePath = C:\HCMS\HCMS.OrgChart\bin
+Calling assembly : Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: C:\HCMS\HCMS.OrgChart\web.config
+LOG: Using host configuration file: 
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Policy not being applied to reference at this time (private, custom, partial, or location-based assembly bind).
+LOG: Attempting download of new URL file:///C:/Users/mshivjiani/AppData/Local/Temp/1/Temporary ASP.NET Files/root/0a4a827e/73f761a/Microsoft.Practices.EnterpriseLibrary.Configuration.Design.DLL.
+LOG: Attempting download of new URL file:///C:/Users/mshivjiani/AppData/Local/Temp/1/Temporary ASP.NET Files/root/0a4a827e/73f761a/Microsoft.Practices.EnterpriseLibrary.Configuration.Design/Microsoft.Practices.EnterpriseLibrary.Configuration.Design.DLL.
+LOG: Attempting download of new URL file:///C:/HCMS/HCMS.OrgChart/bin/Microsoft.Practices.EnterpriseLibrary.Configuration.Design.DLL.
+WRN: Comparing the assembly name resulted in the mismatch: PUBLIC KEY TOKEN
+ERR: Failed to complete setup of assembly (hr = 0x80131040). Probing terminated.
+
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ResolveType(System.Reflection.RuntimeModule, Int32, IntPtr*, Int32, IntPtr*, Int32, System.Runtime.CompilerServices.ObjectHandleOnStack)
+Stack Trace :    at System.ModuleHandle.ResolveType(RuntimeModule module, Int32 typeToken, IntPtr* typeInstArgs, Int32 typeInstCount, IntPtr* methodInstArgs, Int32 methodInstCount, ObjectHandleOnStack type)
+   at System.ModuleHandle.ResolveTypeHandleInternal(RuntimeModule module, Int32 typeToken, RuntimeTypeHandle[] typeInstantiationContext, RuntimeTypeHandle[] methodInstantiationContext)
+   at System.Reflection.RuntimeModule.ResolveType(Int32 metadataToken, Type[] genericTypeArguments, Type[] genericMethodArguments)
+   at System.Reflection.CustomAttribute.FilterCustomAttributeRecord(CustomAttributeRecord caRecord, MetadataImport scope, Assembly& lastAptcaOkAssembly, RuntimeModule decoratedModule, MetadataToken decoratedToken, RuntimeType attributeFilterType, Boolean mustBeInheritable, Object[] attributes, IList derivedAttributes, RuntimeType& attributeType, IRuntimeMethodInfo& ctor, Boolean& ctorHasParameters, Boolean& isVarArg)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeModule decoratedModule, Int32 decoratedMetadataToken, Int32 pcaCount, RuntimeType attributeFilterType, Boolean mustBeInheritable, IList derivedAttributes, Boolean isDecoratedTargetSecurityTransparent)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeAssembly assembly, RuntimeType caType)
+   at System.Reflection.RuntimeAssembly.GetCustomAttributes(Boolean inherit)
+   at System.Web.UI.AssemblyCache.GetAjaxFrameworkAssemblyAttribute(Assembly assembly)
+   at System.Web.UI.ScriptManager.get_DefaultAjaxFrameworkAssembly()
+   at System.Web.UI.ScriptManager..ctor()
+   at ASP.orgchartmaster_master.__BuildControlScriptManager1() in c:\HCMS\HCMS.OrgChart\OrgChartMaster.Master:line 51
+   at ASP.orgchartmaster_master.__BuildControlform1() in c:\HCMS\HCMS.OrgChart\OrgChartMaster.Master:line 50
+   at ASP.orgchartmaster_master.__BuildControlTree(orgchartmaster_master __ctrl) in c:\HCMS\HCMS.OrgChart\OrgChartMaster.Master:line 1
+   at ASP.orgchartmaster_master.FrameworkInitialize() in c:\Users\mshivjiani\AppData\Local\Temp\1\Temporary ASP.NET Files\root\0a4a827e\73f761a\App_Web_wtu5u234.1.cs:line 0
+   at System.Web.UI.UserControl.InitializeAsUserControlInternal()
+   at System.Web.UI.MasterPage.CreateMaster(TemplateControl owner, HttpContext context, VirtualPath masterPageFile, IDictionary contentTemplateCollection)
+   at System.Web.UI.Page.get_Master()
+   at System.Web.UI.Page.ApplyMasterPage()
+   at System.Web.UI.Page.PerformPreInit()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+Additional Info:
+
+MachineName : IFW9WO-BDBCHA1
+TimeStamp : 2/6/2015 8:23:02 PM
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : 380fcdc2-18-130677277710175662
+ThreadIdentity : 50
+WindowsIdentity : IFW\mshivjiani
+
+Category: General
+Priority: 0
+EventId: 100
+Severity: Error
+Title:Enterprise Library Exception Handling
+Machine: IFW9WO-BDBCHA1
+Application Domain: 380fcdc2-18-130677277710175662
+Process Id: 8752
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\10.0\WebDev.WebServer40.exe
+Win32 Thread Id: 5168
+Thread Name: 
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 2/6/2015 8:23:12 PM
+Message: HandlingInstanceID: 91b7582a-732f-4733-b46b-12361fafbe2a
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+02/06/2015 15:23:12
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : File does not exist.
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.IO.FileInfo GetFileInfo(System.String, System.String, System.Web.HttpResponse)
+Stack Trace :    at System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   at System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   at System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : IFW9WO-BDBCHA1
+TimeStamp : 2/6/2015 8:23:12 PM
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : 380fcdc2-18-130677277710175662
+ThreadIdentity : 50
+WindowsIdentity : IFW\mshivjiani
+
+Category: General
+Priority: 0
+EventId: 100
+Severity: Error
+Title:Enterprise Library Exception Handling
+Machine: IFW9WO-BDBCHA1
+Application Domain: 380fcdc2-18-130677277710175662
+Process Id: 8752
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\10.0\WebDev.WebServer40.exe
+Win32 Thread Id: 5168
+Thread Name: 
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 2/6/2015 8:23:31 PM
+Message: HandlingInstanceID: 2db4df4c-c1b2-42fe-bf22-80e4ad0d9d4f
+An exception of type 'HCMS.Business.Common.BusinessException' occurred and was caught.
+--------------------------------------------------------------------------------------
+02/06/2015 15:23:31
+Type : HCMS.Business.Common.BusinessException, HCMS.Business, Version=14.0.0.0, Culture=neutral, PublicKeyToken=null
+Message : No search criteria provided. At least one expected.
+Source : HCMS.Business
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.Collections.Generic.List`1[HCMS.Business.OrganizationChart.OrgChartSearchResult] LoadSearchResults(Int32, System.Nullable`1[System.Int32], System.Nullable`1[System.Int32], System.Nullable`1[System.Int32], enumOrgWorkflowStatus, System.Nullable`1[System.Int32], System.String, System.String, System.Nullable`1[System.Int32], System.Nullable`1[System.Int32], System.String)
+Stack Trace :    at HCMS.Business.OrganizationChart.Search.OrgChartSearchManager.LoadSearchResults(Int32 userID, Nullable`1 organizationChartID, Nullable`1 organizationChartTypeID, Nullable`1 organizationCodeID, enumOrgWorkflowStatus orgChartWorkflowStatusID, Nullable`1 regionID, String authorName, String approverName, Nullable`1 publishedYear, Nullable`1 seriesID, String employeeName) in C:\HCMS\HCMS.Business\OrganizationChart\Search\OrgChartSearchManager.cs:line 57
+   at HCMS.OrgChart.Controls.Search.ctrlOrgChartSearch.GetSearchResults() in C:\HCMS\HCMS.OrgChart\Controls\Search\ctrlOrgChartSearch.ascx.cs:line 199
+   at HCMS.OrgChart.Controls.Search.ctrlOrgChartSearch.rgSearchResults_NeedDataSource(Object source, GridNeedDataSourceEventArgs e) in C:\HCMS\HCMS.OrgChart\Controls\Search\ctrlOrgChartSearch.ascx.cs:line 208
+   at Telerik.Web.UI.RadGrid.OnNeedDataSource(GridNeedDataSourceEventArgs e)
+   at Telerik.Web.UI.RadGrid.ObtainDataSource(GridRebindReason rebindReason, Boolean IsBoundUsingDataSourceId)
+   at Telerik.Web.UI.RadGrid.AutoDataBind(GridRebindReason rebindReason)
+   at Telerik.Web.UI.RadGrid.Rebind()
+   at HCMS.OrgChart.Controls.Search.ctrlOrgChartSearch.RebindGrid() in C:\HCMS\HCMS.OrgChart\Controls\Search\ctrlOrgChartSearch.ascx.cs:line 175
+   at HCMS.OrgChart.Controls.Search.ctrlOrgChartSearch.btnSearch2_Click(Object sender, EventArgs e) in C:\HCMS\HCMS.OrgChart\Controls\Search\ctrlOrgChartSearch.ascx.cs:line 167
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+Additional Info:
+
+MachineName : IFW9WO-BDBCHA1
+TimeStamp : 2/6/2015 8:23:31 PM
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : 380fcdc2-18-130677277710175662
+ThreadIdentity : 50
+WindowsIdentity : IFW\mshivjiani
+
+Category: General
+Priority: 0
+EventId: 100
+Severity: Error
+Title:Enterprise Library Exception Handling
+Machine: IFW9WO-BDBCHA1
+Application Domain: 380fcdc2-18-130677277710175662
+Process Id: 8752
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\10.0\WebDev.WebServer40.exe
+Win32 Thread Id: 14728
+Thread Name: 
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 2/6/2015 8:24:36 PM
+Message: HandlingInstanceID: b326a050-5ce7-4110-acee-fcfcfdf79592
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+02/06/2015 15:24:36
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : File does not exist.
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.IO.FileInfo GetFileInfo(System.String, System.String, System.Web.HttpResponse)
+Stack Trace :    at System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   at System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   at System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : IFW9WO-BDBCHA1
+TimeStamp : 2/6/2015 8:24:36 PM
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : 380fcdc2-18-130677277710175662
+ThreadIdentity : 50
+WindowsIdentity : IFW\mshivjiani
+
+Category: General
+Priority: 0
+EventId: 100
+Severity: Error
+Title:Enterprise Library Exception Handling
+Machine: IFW9WO-BDBCHA1
+Application Domain: 380fcdc2-18-130677277710175662
+Process Id: 8752
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\10.0\WebDev.WebServer40.exe
+Win32 Thread Id: 10920
+Thread Name: 
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 2/6/2015 8:24:49 PM
+Message: HandlingInstanceID: 56e54ec2-2680-4987-8fe5-5a6f35da8a8d
+An exception of type 'HCMS.Business.Common.BusinessException' occurred and was caught.
+--------------------------------------------------------------------------------------
+02/06/2015 15:24:49
+Type : HCMS.Business.Common.BusinessException, HCMS.Business, Version=14.0.0.0, Culture=neutral, PublicKeyToken=null
+Message : No search criteria provided. At least one expected.
+Source : HCMS.Business
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.Collections.Generic.List`1[HCMS.Business.OrganizationChart.OrgChartSearchResult] LoadSearchResults(Int32, System.Nullable`1[System.Int32], System.Nullable`1[System.Int32], System.Nullable`1[System.Int32], enumOrgWorkflowStatus, System.Nullable`1[System.Int32], System.String, System.String, System.Nullable`1[System.Int32], System.Nullable`1[System.Int32], System.String)
+Stack Trace :    at HCMS.Business.OrganizationChart.Search.OrgChartSearchManager.LoadSearchResults(Int32 userID, Nullable`1 organizationChartID, Nullable`1 organizationChartTypeID, Nullable`1 organizationCodeID, enumOrgWorkflowStatus orgChartWorkflowStatusID, Nullable`1 regionID, String authorName, String approverName, Nullable`1 publishedYear, Nullable`1 seriesID, String employeeName) in C:\HCMS\HCMS.Business\OrganizationChart\Search\OrgChartSearchManager.cs:line 57
+   at HCMS.OrgChart.Controls.Search.ctrlOrgChartSearch.GetSearchResults() in C:\HCMS\HCMS.OrgChart\Controls\Search\ctrlOrgChartSearch.ascx.cs:line 199
+   at HCMS.OrgChart.Controls.Search.ctrlOrgChartSearch.rgSearchResults_NeedDataSource(Object source, GridNeedDataSourceEventArgs e) in C:\HCMS\HCMS.OrgChart\Controls\Search\ctrlOrgChartSearch.ascx.cs:line 208
+   at Telerik.Web.UI.RadGrid.OnNeedDataSource(GridNeedDataSourceEventArgs e)
+   at Telerik.Web.UI.RadGrid.ObtainDataSource(GridRebindReason rebindReason, Boolean IsBoundUsingDataSourceId)
+   at Telerik.Web.UI.RadGrid.AutoDataBind(GridRebindReason rebindReason)
+   at Telerik.Web.UI.RadGrid.Rebind()
+   at HCMS.OrgChart.Controls.Search.ctrlOrgChartSearch.RebindGrid() in C:\HCMS\HCMS.OrgChart\Controls\Search\ctrlOrgChartSearch.ascx.cs:line 175
+   at HCMS.OrgChart.Controls.Search.ctrlOrgChartSearch.btnSearch2_Click(Object sender, EventArgs e) in C:\HCMS\HCMS.OrgChart\Controls\Search\ctrlOrgChartSearch.ascx.cs:line 167
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+Additional Info:
+
+MachineName : IFW9WO-BDBCHA1
+TimeStamp : 2/6/2015 8:24:49 PM
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : 380fcdc2-18-130677277710175662
+ThreadIdentity : 50
+WindowsIdentity : IFW\mshivjiani
+
+Category: General
+Priority: 0
+EventId: 100
+Severity: Error
+Title:Enterprise Library Exception Handling
+Machine: IFW9WO-BDBCHA1
+Application Domain: 380fcdc2-18-130677277710175662
+Process Id: 8752
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\10.0\WebDev.WebServer40.exe
+Win32 Thread Id: 6196
+Thread Name: 
+Extended Properties: 
+----------------------------------------

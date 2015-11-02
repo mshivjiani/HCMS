@@ -1,0 +1,211 @@
+----------------------------------------
+Timestamp: 3/20/2015 2:00:32 PM
+Message: HandlingInstanceID: f9b92238-41a0-4117-b4a2-00102121a031
+An exception of type 'System.IO.FileLoadException' occurred and was caught.
+---------------------------------------------------------------------------
+03/20/2015 10:00:32
+Type : System.IO.FileLoadException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Could not load file or assembly 'Microsoft.Practices.EnterpriseLibrary.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+Source : mscorlib
+Help link : 
+FileName : Microsoft.Practices.EnterpriseLibrary.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+FusionLog : WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ResolveType(System.Reflection.RuntimeModule, Int32, IntPtr*, Int32, IntPtr*, Int32, System.Runtime.CompilerServices.ObjectHandleOnStack)
+Stack Trace :    at System.ModuleHandle.ResolveType(RuntimeModule module, Int32 typeToken, IntPtr* typeInstArgs, Int32 typeInstCount, IntPtr* methodInstArgs, Int32 methodInstCount, ObjectHandleOnStack type)
+   at System.ModuleHandle.ResolveTypeHandleInternal(RuntimeModule module, Int32 typeToken, RuntimeTypeHandle[] typeInstantiationContext, RuntimeTypeHandle[] methodInstantiationContext)
+   at System.Reflection.RuntimeModule.ResolveType(Int32 metadataToken, Type[] genericTypeArguments, Type[] genericMethodArguments)
+   at System.Reflection.CustomAttribute.FilterCustomAttributeRecord(CustomAttributeRecord caRecord, MetadataImport scope, Assembly& lastAptcaOkAssembly, RuntimeModule decoratedModule, MetadataToken decoratedToken, RuntimeType attributeFilterType, Boolean mustBeInheritable, Object[] attributes, IList derivedAttributes, RuntimeType& attributeType, IRuntimeMethodInfo& ctor, Boolean& ctorHasParameters, Boolean& isVarArg)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeModule decoratedModule, Int32 decoratedMetadataToken, Int32 pcaCount, RuntimeType attributeFilterType, Boolean mustBeInheritable, IList derivedAttributes, Boolean isDecoratedTargetSecurityTransparent)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeAssembly assembly, RuntimeType caType)
+   at System.Reflection.RuntimeAssembly.GetCustomAttributes(Boolean inherit)
+   at System.Web.UI.AssemblyCache.GetAjaxFrameworkAssemblyAttribute(Assembly assembly)
+   at System.Web.UI.ScriptManager.get_DefaultAjaxFrameworkAssembly()
+   at System.Web.UI.ScriptManager..ctor()
+   at ASP.orgchartmaster_master.__BuildControlScriptManager1() in c:\HCMS\HCMS.OrgChart\OrgChartMaster.Master:line 51
+   at ASP.orgchartmaster_master.__BuildControlform1() in c:\HCMS\HCMS.OrgChart\OrgChartMaster.Master:line 50
+   at ASP.orgchartmaster_master.__BuildControlTree(orgchartmaster_master __ctrl) in c:\HCMS\HCMS.OrgChart\OrgChartMaster.Master:line 1
+   at ASP.orgchartmaster_master.FrameworkInitialize() in c:\Users\mshivjiani\AppData\Local\Temp\1\Temporary ASP.NET Files\root\0a4a827e\73f761a\App_Web_rdmppzy5.0.cs:line 0
+   at System.Web.UI.UserControl.InitializeAsUserControlInternal()
+   at System.Web.UI.MasterPage.CreateMaster(TemplateControl owner, HttpContext context, VirtualPath masterPageFile, IDictionary contentTemplateCollection)
+   at System.Web.UI.Page.get_Master()
+   at System.Web.UI.Page.ApplyMasterPage()
+   at System.Web.UI.Page.PerformPreInit()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+Additional Info:
+
+MachineName : IFW9WO-BDBCHA1
+TimeStamp : 3/20/2015 2:00:32 PM
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : 380fcdc2-1-130713336139601394
+ThreadIdentity : 50
+WindowsIdentity : IFW\mshivjiani
+
+Category: General
+Priority: 0
+EventId: 100
+Severity: Error
+Title:Enterprise Library Exception Handling
+Machine: IFW9WO-BDBCHA1
+Application Domain: 380fcdc2-1-130713336139601394
+Process Id: 5068
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\10.0\WebDev.WebServer40.exe
+Win32 Thread Id: 7532
+Thread Name: 
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 3/20/2015 2:00:37 PM
+Message: HandlingInstanceID: f4cd9ad7-e8c2-4f4c-83ec-e7bd884b7d22
+An exception of type 'HCMS.Business.Common.BusinessException' occurred and was caught.
+--------------------------------------------------------------------------------------
+03/20/2015 10:00:37
+Type : HCMS.Business.Common.BusinessException, HCMS.Business, Version=14.0.0.0, Culture=neutral, PublicKeyToken=null
+Message : Implicit conversion from data type smalldatetime to int is not allowed. Use the CONVERT function to run this query.
+Source : HCMS.Business
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void HandleException(System.Exception)
+Stack Trace :    at HCMS.Business.Base.ExceptionBase.HandleException(Exception ex) in C:\HCMS\HCMS.Business\Base\ExceptionBase.cs:line 23
+   at HCMS.Business.OrganizationChart.OrgChartTrackerItem.GetCollectionForUser(Int32 userID) in C:\HCMS\HCMS.Business\OrganizationChart\OrgChartTrackerItem.cs:line 66
+   at HCMS.OrgChart.Controls.Tracker.ctrlOrgChartTracker.OrgChartTrackerGrid_NeedDataSource(Object sender, GridNeedDataSourceEventArgs e) in C:\HCMS\HCMS.OrgChart\Controls\Tracker\ctrlOrgChartTracker.ascx.cs:line 21
+   at Telerik.Web.UI.RadGrid.OnNeedDataSource(GridNeedDataSourceEventArgs e)
+   at Telerik.Web.UI.RadGrid.ObtainDataSource(GridRebindReason rebindReason, Boolean IsBoundUsingDataSourceId)
+   at Telerik.Web.UI.RadGrid.AutoDataBind(GridRebindReason rebindReason)
+   at Telerik.Web.UI.RadGrid.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+Additional Info:
+
+MachineName : IFW9WO-BDBCHA1
+TimeStamp : 3/20/2015 2:00:37 PM
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : 380fcdc2-1-130713336139601394
+ThreadIdentity : 50
+WindowsIdentity : IFW\mshivjiani
+
+Category: General
+Priority: 0
+EventId: 100
+Severity: Error
+Title:Enterprise Library Exception Handling
+Machine: IFW9WO-BDBCHA1
+Application Domain: 380fcdc2-1-130713336139601394
+Process Id: 5068
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\10.0\WebDev.WebServer40.exe
+Win32 Thread Id: 7532
+Thread Name: 
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 3/20/2015 2:02:22 PM
+Message: HandlingInstanceID: 63638518-bde6-4886-ac83-175215278056
+An exception of type 'HCMS.Business.Common.BusinessException' occurred and was caught.
+--------------------------------------------------------------------------------------
+03/20/2015 10:02:22
+Type : HCMS.Business.Common.BusinessException, HCMS.Business, Version=14.0.0.0, Culture=neutral, PublicKeyToken=null
+Message : Implicit conversion from data type smalldatetime to int is not allowed. Use the CONVERT function to run this query.
+Source : HCMS.Business
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void HandleException(System.Exception)
+Stack Trace :    at HCMS.Business.Base.ExceptionBase.HandleException(Exception ex) in C:\HCMS\HCMS.Business\Base\ExceptionBase.cs:line 23
+   at HCMS.Business.OrganizationChart.OrgChartTrackerItem.GetCollectionForUser(Int32 userID) in C:\HCMS\HCMS.Business\OrganizationChart\OrgChartTrackerItem.cs:line 66
+   at HCMS.OrgChart.Controls.Tracker.ctrlOrgChartTracker.OrgChartTrackerGrid_NeedDataSource(Object sender, GridNeedDataSourceEventArgs e) in C:\HCMS\HCMS.OrgChart\Controls\Tracker\ctrlOrgChartTracker.ascx.cs:line 21
+   at Telerik.Web.UI.RadGrid.OnNeedDataSource(GridNeedDataSourceEventArgs e)
+   at Telerik.Web.UI.RadGrid.ObtainDataSource(GridRebindReason rebindReason, Boolean IsBoundUsingDataSourceId)
+   at Telerik.Web.UI.RadGrid.AutoDataBind(GridRebindReason rebindReason)
+   at Telerik.Web.UI.RadGrid.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+Additional Info:
+
+MachineName : IFW9WO-BDBCHA1
+TimeStamp : 3/20/2015 2:02:22 PM
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : 380fcdc2-1-130713336139601394
+ThreadIdentity : 50
+WindowsIdentity : IFW\mshivjiani
+
+Category: General
+Priority: 0
+EventId: 100
+Severity: Error
+Title:Enterprise Library Exception Handling
+Machine: IFW9WO-BDBCHA1
+Application Domain: 380fcdc2-1-130713336139601394
+Process Id: 5068
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\10.0\WebDev.WebServer40.exe
+Win32 Thread Id: 8844
+Thread Name: 
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 3/20/2015 2:02:45 PM
+Message: HandlingInstanceID: 22c251c6-c98f-4459-9fc3-f88cccb7c5c5
+An exception of type 'HCMS.Business.Common.BusinessException' occurred and was caught.
+--------------------------------------------------------------------------------------
+03/20/2015 10:02:45
+Type : HCMS.Business.Common.BusinessException, HCMS.Business, Version=14.0.0.0, Culture=neutral, PublicKeyToken=null
+Message : Implicit conversion from data type smalldatetime to int is not allowed. Use the CONVERT function to run this query.
+Source : HCMS.Business
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void HandleException(System.Exception)
+Stack Trace :    at HCMS.Business.Base.ExceptionBase.HandleException(Exception ex) in C:\HCMS\HCMS.Business\Base\ExceptionBase.cs:line 23
+   at HCMS.Business.OrganizationChart.OrgChartTrackerItem.GetCollectionForUser(Int32 userID) in C:\HCMS\HCMS.Business\OrganizationChart\OrgChartTrackerItem.cs:line 66
+   at HCMS.OrgChart.Controls.Tracker.ctrlOrgChartTracker.OrgChartTrackerGrid_NeedDataSource(Object sender, GridNeedDataSourceEventArgs e) in C:\HCMS\HCMS.OrgChart\Controls\Tracker\ctrlOrgChartTracker.ascx.cs:line 21
+   at Telerik.Web.UI.RadGrid.OnNeedDataSource(GridNeedDataSourceEventArgs e)
+   at Telerik.Web.UI.RadGrid.ObtainDataSource(GridRebindReason rebindReason, Boolean IsBoundUsingDataSourceId)
+   at Telerik.Web.UI.RadGrid.AutoDataBind(GridRebindReason rebindReason)
+   at Telerik.Web.UI.RadGrid.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+Additional Info:
+
+MachineName : IFW9WO-BDBCHA1
+TimeStamp : 3/20/2015 2:02:45 PM
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : 380fcdc2-1-130713336139601394
+ThreadIdentity : 50
+WindowsIdentity : IFW\mshivjiani
+
+Category: General
+Priority: 0
+EventId: 100
+Severity: Error
+Title:Enterprise Library Exception Handling
+Machine: IFW9WO-BDBCHA1
+Application Domain: 380fcdc2-1-130713336139601394
+Process Id: 5068
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\10.0\WebDev.WebServer40.exe
+Win32 Thread Id: 2512
+Thread Name: 
+Extended Properties: 
+----------------------------------------

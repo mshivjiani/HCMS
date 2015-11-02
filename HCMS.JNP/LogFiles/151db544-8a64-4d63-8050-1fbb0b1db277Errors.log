@@ -1,0 +1,169 @@
+----------------------------------------
+Timestamp: 10/22/2013 4:26:49 PM
+Message: HandlingInstanceID: a176622d-f28b-4115-bf4b-f06aff80031c
+An exception of type 'System.IO.FileLoadException' occurred and was caught.
+---------------------------------------------------------------------------
+10/22/2013 12:26:49
+Type : System.IO.FileLoadException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Could not load file or assembly 'Microsoft.Practices.EnterpriseLibrary.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+Source : mscorlib
+Help link : 
+FileName : Microsoft.Practices.EnterpriseLibrary.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+FusionLog : WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ResolveType(System.Reflection.RuntimeModule, Int32, IntPtr*, Int32, IntPtr*, Int32, System.Runtime.CompilerServices.ObjectHandleOnStack)
+Stack Trace :    at System.ModuleHandle.ResolveType(RuntimeModule module, Int32 typeToken, IntPtr* typeInstArgs, Int32 typeInstCount, IntPtr* methodInstArgs, Int32 methodInstCount, ObjectHandleOnStack type)
+   at System.ModuleHandle.ResolveTypeHandleInternal(RuntimeModule module, Int32 typeToken, RuntimeTypeHandle[] typeInstantiationContext, RuntimeTypeHandle[] methodInstantiationContext)
+   at System.Reflection.RuntimeModule.ResolveType(Int32 metadataToken, Type[] genericTypeArguments, Type[] genericMethodArguments)
+   at System.Reflection.CustomAttribute.FilterCustomAttributeRecord(CustomAttributeRecord caRecord, MetadataImport scope, Assembly& lastAptcaOkAssembly, RuntimeModule decoratedModule, MetadataToken decoratedToken, RuntimeType attributeFilterType, Boolean mustBeInheritable, Object[] attributes, IList derivedAttributes, RuntimeType& attributeType, IRuntimeMethodInfo& ctor, Boolean& ctorHasParameters, Boolean& isVarArg)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeModule decoratedModule, Int32 decoratedMetadataToken, Int32 pcaCount, RuntimeType attributeFilterType, Boolean mustBeInheritable, IList derivedAttributes, Boolean isDecoratedTargetSecurityTransparent)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeAssembly assembly, RuntimeType caType)
+   at System.Reflection.RuntimeAssembly.GetCustomAttributes(Boolean inherit)
+   at System.Web.UI.AssemblyCache.GetAjaxFrameworkAssemblyAttribute(Assembly assembly)
+   at System.Web.UI.ScriptManager.get_DefaultAjaxFrameworkAssembly()
+   at System.Web.UI.ScriptManager..ctor()
+   at ASP.jnpmaster_master.__BuildControlScriptManager1() in c:\HCMS\HCMS.JNP\JNPMaster.master:line 57
+   at ASP.jnpmaster_master.__BuildControl_theForm() in c:\HCMS\HCMS.JNP\JNPMaster.master:line 56
+   at ASP.jnpmaster_master.__BuildControlTree(jnpmaster_master __ctrl) in c:\HCMS\HCMS.JNP\JNPMaster.master:line 1
+   at ASP.jnpmaster_master.FrameworkInitialize() in c:\Users\mshivjiani\AppData\Local\Temp\Temporary ASP.NET Files\root\912e2442\39a8f7b8\App_Web_yffs4ykz.0.cs:line 0
+   at System.Web.UI.UserControl.InitializeAsUserControlInternal()
+   at System.Web.UI.MasterPage.CreateMaster(TemplateControl owner, HttpContext context, VirtualPath masterPageFile, IDictionary contentTemplateCollection)
+   at System.Web.UI.Page.get_Master()
+   at System.Web.UI.Page.ApplyMasterPage()
+   at System.Web.UI.Page.PerformPreInit()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+Additional Info:
+
+MachineName : IFW9WO-BDBCHA1
+TimeStamp : 10/22/2013 4:26:49 PM
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : 61d7c3c8-7-130269319669321060
+ThreadIdentity : 1
+WindowsIdentity : IFW\mshivjiani
+
+Category: General
+Priority: 0
+EventId: 100
+Severity: Error
+Title:Enterprise Library Exception Handling
+Machine: IFW9WO-BDBCHA1
+Application Domain: 61d7c3c8-7-130269319669321060
+Process Id: 7952
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\10.0\WebDev.WebServer40.exe
+Win32 Thread Id: 8652
+Thread Name: 
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10/22/2013 4:26:52 PM
+Message: HandlingInstanceID: c4d31f8f-31ac-4ca2-baa0-3d745d462def
+An exception of type 'System.Runtime.InteropServices.COMException' occurred and was caught.
+-------------------------------------------------------------------------------------------
+10/22/2013 12:26:52
+Type : System.Runtime.InteropServices.COMException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : The handle is invalid. (Exception from HRESULT: 0x80070006 (E_HANDLE))
+Source : mscorlib
+Help link : 
+ErrorCode : -2147024890
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void GetRawBytes(System.Reflection.RuntimeAssembly, System.Runtime.CompilerServices.ObjectHandleOnStack)
+Stack Trace :    at System.Reflection.RuntimeAssembly.GetRawBytes(RuntimeAssembly assembly, ObjectHandleOnStack retRawBytes)
+   at System.Reflection.RuntimeAssembly.GetRawBytes()
+   at System.Security.Policy.Hash.GetRawData()
+   at System.Security.Policy.Hash.GenerateHash(Type hashType)
+   at System.Security.Policy.Hash.get_SHA1()
+   at System.Web.Handlers.ScriptResourceHandler.GetAssemblyInfoInternal(Assembly assembly)
+   at System.Web.Handlers.ScriptResourceHandler.GetAssemblyInfo(Assembly assembly)
+   at System.Web.Handlers.ScriptResourceHandler.RuntimeScriptResourceHandler.GetScriptResourceUrlImpl(List`1 assemblyResourceLists, Boolean zip)
+   at System.Web.Handlers.ScriptResourceHandler.RuntimeScriptResourceHandler.System.Web.Handlers.IScriptResourceHandler.GetScriptResourceUrl(List`1 assemblyResourceLists, Boolean zip)
+   at System.Web.Handlers.ScriptResourceHandler.RuntimeScriptResourceHandler.System.Web.Handlers.IScriptResourceHandler.GetScriptResourceUrl(Assembly assembly, String resourceName, CultureInfo culture, Boolean zip)
+   at System.Web.UI.ScriptReference.GetUrlFromName(ScriptManager scriptManager, IControl scriptManagerControl, Boolean zip)
+   at System.Web.UI.ScriptReference.GetUrlInternal(ScriptManager scriptManager, Boolean zip)
+   at System.Web.UI.ScriptReference.GetUrl(ScriptManager scriptManager, Boolean zip)
+   at System.Web.UI.ScriptManager.RegisterUniqueScripts(List`1 uniqueScripts)
+   at System.Web.UI.ScriptManager.RegisterScripts()
+   at System.Web.UI.ScriptManager.OnPagePreRenderComplete(Object sender, EventArgs e)
+   at System.Web.UI.Page.OnPreRenderComplete(EventArgs e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+Additional Info:
+
+MachineName : IFW9WO-BDBCHA1
+TimeStamp : 10/22/2013 4:26:52 PM
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : 61d7c3c8-7-130269319669321060
+ThreadIdentity : 1
+WindowsIdentity : IFW\mshivjiani
+
+Category: General
+Priority: 0
+EventId: 100
+Severity: Error
+Title:Enterprise Library Exception Handling
+Machine: IFW9WO-BDBCHA1
+Application Domain: 61d7c3c8-7-130269319669321060
+Process Id: 7952
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\10.0\WebDev.WebServer40.exe
+Win32 Thread Id: 2300
+Thread Name: 
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10/22/2013 4:26:55 PM
+Message: HandlingInstanceID: 79e130c7-23e9-4e15-9ac8-73b087165625
+An exception of type 'System.Runtime.InteropServices.COMException' occurred and was caught.
+-------------------------------------------------------------------------------------------
+10/22/2013 12:26:55
+Type : System.Runtime.InteropServices.COMException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : The handle is invalid. (Exception from HRESULT: 0x80070006 (E_HANDLE))
+Source : mscorlib
+Help link : 
+ErrorCode : -2147024890
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void GetRawBytes(System.Reflection.RuntimeAssembly, System.Runtime.CompilerServices.ObjectHandleOnStack)
+Stack Trace :    at System.Reflection.RuntimeAssembly.GetRawBytes(RuntimeAssembly assembly, ObjectHandleOnStack retRawBytes)
+   at System.Reflection.RuntimeAssembly.GetRawBytes()
+   at System.Security.Policy.Hash.GetRawData()
+   at System.Security.Policy.Hash.GenerateHash(Type hashType)
+   at System.Security.Policy.Hash.get_SHA1()
+   at System.Web.Handlers.ScriptResourceHandler.GetAssemblyInfoInternal(Assembly assembly)
+   at System.Web.Handlers.ScriptResourceHandler.GetAssemblyInfo(Assembly assembly)
+   at System.Web.Handlers.ScriptResourceHandler.RuntimeScriptResourceHandler.GetScriptResourceUrlImpl(List`1 assemblyResourceLists, Boolean zip)
+   at System.Web.Handlers.ScriptResourceHandler.RuntimeScriptResourceHandler.System.Web.Handlers.IScriptResourceHandler.GetScriptResourceUrl(List`1 assemblyResourceLists, Boolean zip)
+   at System.Web.Handlers.ScriptResourceHandler.RuntimeScriptResourceHandler.System.Web.Handlers.IScriptResourceHandler.GetScriptResourceUrl(Assembly assembly, String resourceName, CultureInfo culture, Boolean zip)
+   at System.Web.UI.ScriptReference.GetUrlFromName(ScriptManager scriptManager, IControl scriptManagerControl, Boolean zip)
+   at System.Web.UI.ScriptReference.GetUrlInternal(ScriptManager scriptManager, Boolean zip)
+   at System.Web.UI.ScriptReference.GetUrl(ScriptManager scriptManager, Boolean zip)
+   at System.Web.UI.ScriptManager.RegisterUniqueScripts(List`1 uniqueScripts)
+   at System.Web.UI.ScriptManager.RegisterScripts()
+   at System.Web.UI.ScriptManager.OnPagePreRenderComplete(Object sender, EventArgs e)
+   at System.Web.UI.Page.OnPreRenderComplete(EventArgs e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+Additional Info:
+
+MachineName : IFW9WO-BDBCHA1
+TimeStamp : 10/22/2013 4:26:55 PM
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : 61d7c3c8-7-130269319669321060
+ThreadIdentity : 1
+WindowsIdentity : IFW\mshivjiani
+
+Category: General
+Priority: 0
+EventId: 100
+Severity: Error
+Title:Enterprise Library Exception Handling
+Machine: IFW9WO-BDBCHA1
+Application Domain: 61d7c3c8-7-130269319669321060
+Process Id: 7952
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\10.0\WebDev.WebServer40.exe
+Win32 Thread Id: 6888
+Thread Name: 
+Extended Properties: 
+----------------------------------------

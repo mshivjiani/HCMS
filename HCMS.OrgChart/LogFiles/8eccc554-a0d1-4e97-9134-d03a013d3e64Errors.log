@@ -1,0 +1,184 @@
+----------------------------------------
+Timestamp: 11/10/2014 9:17:40 PM
+Message: HandlingInstanceID: 321d1b06-2b95-4241-b46a-2d74cccb8d07
+An exception of type 'System.IO.FileLoadException' occurred and was caught.
+---------------------------------------------------------------------------
+11/10/2014 16:17:40
+Type : System.IO.FileLoadException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Could not load file or assembly 'Microsoft.Practices.EnterpriseLibrary.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+Source : mscorlib
+Help link : 
+FileName : Microsoft.Practices.EnterpriseLibrary.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+FusionLog : WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ResolveType(System.Reflection.RuntimeModule, Int32, IntPtr*, Int32, IntPtr*, Int32, System.Runtime.CompilerServices.ObjectHandleOnStack)
+Stack Trace :    at System.ModuleHandle.ResolveType(RuntimeModule module, Int32 typeToken, IntPtr* typeInstArgs, Int32 typeInstCount, IntPtr* methodInstArgs, Int32 methodInstCount, ObjectHandleOnStack type)
+   at System.ModuleHandle.ResolveTypeHandleInternal(RuntimeModule module, Int32 typeToken, RuntimeTypeHandle[] typeInstantiationContext, RuntimeTypeHandle[] methodInstantiationContext)
+   at System.Reflection.RuntimeModule.ResolveType(Int32 metadataToken, Type[] genericTypeArguments, Type[] genericMethodArguments)
+   at System.Reflection.CustomAttribute.FilterCustomAttributeRecord(CustomAttributeRecord caRecord, MetadataImport scope, Assembly& lastAptcaOkAssembly, RuntimeModule decoratedModule, MetadataToken decoratedToken, RuntimeType attributeFilterType, Boolean mustBeInheritable, Object[] attributes, IList derivedAttributes, RuntimeType& attributeType, IRuntimeMethodInfo& ctor, Boolean& ctorHasParameters, Boolean& isVarArg)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeModule decoratedModule, Int32 decoratedMetadataToken, Int32 pcaCount, RuntimeType attributeFilterType, Boolean mustBeInheritable, IList derivedAttributes, Boolean isDecoratedTargetSecurityTransparent)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeAssembly assembly, RuntimeType caType)
+   at System.Reflection.RuntimeAssembly.GetCustomAttributes(Boolean inherit)
+   at System.Web.UI.AssemblyCache.GetAjaxFrameworkAssemblyAttribute(Assembly assembly)
+   at System.Web.UI.ScriptManager.get_DefaultAjaxFrameworkAssembly()
+   at System.Web.UI.ScriptManager..ctor()
+   at ASP.orgchart_addposition_aspx.__BuildControlScriptManager1() in c:\HCMS\HCMS.OrgChart\OrgChart\AddPosition.aspx:line 14
+   at ASP.orgchart_addposition_aspx.__BuildControlform1() in c:\HCMS\HCMS.OrgChart\OrgChart\AddPosition.aspx:line 12
+   at ASP.orgchart_addposition_aspx.__BuildControlTree(orgchart_addposition_aspx __ctrl) in c:\HCMS\HCMS.OrgChart\OrgChart\AddPosition.aspx:line 1
+   at ASP.orgchart_addposition_aspx.FrameworkInitialize() in c:\Users\mshivjiani\AppData\Local\Temp\1\Temporary ASP.NET Files\root\0a4a827e\73f761a\App_Web_wcbuztmq.2.cs:line 0
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.orgchart_addposition_aspx.ProcessRequest(HttpContext context) in c:\Users\mshivjiani\AppData\Local\Temp\1\Temporary ASP.NET Files\root\0a4a827e\73f761a\App_Web_wcbuztmq.2.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : IFW9WO-BDBCHA1
+TimeStamp : 11/10/2014 9:17:40 PM
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : 380fcdc2-5-130601278467089990
+ThreadIdentity : 50
+WindowsIdentity : IFW\mshivjiani
+
+Category: General
+Priority: 0
+EventId: 100
+Severity: Error
+Title:Enterprise Library Exception Handling
+Machine: IFW9WO-BDBCHA1
+Application Domain: 380fcdc2-5-130601278467089990
+Process Id: 8824
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\10.0\WebDev.WebServer40.exe
+Win32 Thread Id: 5672
+Thread Name: 
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 11/10/2014 9:17:43 PM
+Message: HandlingInstanceID: fb14ad66-e31b-4f93-a8d7-7838d43e1e3c
+An exception of type 'System.NotSupportedException' occurred and was caught.
+----------------------------------------------------------------------------
+11/10/2014 16:17:43
+Type : System.NotSupportedException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Cannot databind to collection which contains null.
+Source : Telerik.Web.UI
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.Object GetPropertyValue(System.Object, System.String)
+Stack Trace :    at Telerik.Web.UI.PropertyDescriptorCache.GetPropertyValue(Object dataItem, String propertyName)
+   at Telerik.Web.UI.PropertyDescriptorCache.GetPropertyValue(Object dataItem, String propertyName, String format)
+   at Telerik.Web.UI.ControlItem.PopulateFromDataItem(PropertyDescriptorCache properties, Object dataItem, String dataMember, Int32 depth)
+   at Telerik.Web.UI.RadComboBoxItem.PopulateFromDataItem(PropertyDescriptorCache properties, Object dataItem, String dataMember, Int32 depth)
+   at Telerik.Web.UI.ControlItem.Telerik.Web.UI.IItem.PopulateFromDataItem(PropertyDescriptorCache properties, Object dataItem, String dataMember, Int32 depth)
+   at Telerik.Web.UI.ControlDataBinder.BindToEnumerableData(IEnumerable dataSource)
+   at Telerik.Web.UI.ControlItemContainer.PerformDataBinding(IEnumerable data)
+   at Telerik.Web.UI.RadComboBox.PerformDataBinding(IEnumerable dataSource)
+   at Telerik.Web.UI.RadComboBox.OnDataSourceViewSelectCallback(IEnumerable data)
+   at System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   at Telerik.Web.UI.RadComboBox.OnDataBinding(EventArgs e)
+   at Telerik.Web.UI.RadComboBox.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   at Telerik.Web.UI.RadComboBox.DataBind()
+   at HCMS.WebFramework.Site.Utilities.ControlUtility.BindRadComboBoxControl(RadComboBox inputControl, Object source, RadComboBoxItemFilter filter, String textField, String valueField, String topOption, String preselectedValue) in C:\HCMS\HCMS.WebFramework\Site\Utilities\ControlUtility.cs:line 144
+   at HCMS.WebFramework.Site.Utilities.ControlUtility.BindRadComboBoxControl(RadComboBox inputControl, Object source, RadComboBoxItemFilter filter, String textField, String valueField, String topOption) in C:\HCMS\HCMS.WebFramework\Site\Utilities\ControlUtility.cs:line 109
+   at HCMS.OrgChart.Controls.CreateOrgChart.ctrlAddWFPPosition.LoadOrgPositionType() in C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx.cs:line 105
+   at HCMS.OrgChart.Controls.CreateOrgChart.ctrlAddWFPPosition.LoadControls() in C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx.cs:line 37
+   at HCMS.OrgChart.Controls.CreateOrgChart.ctrlAddWFPPosition.Page_Load(Object sender, EventArgs e) in C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx.cs:line 24
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+Additional Info:
+
+MachineName : IFW9WO-BDBCHA1
+TimeStamp : 11/10/2014 9:17:43 PM
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : 380fcdc2-5-130601278467089990
+ThreadIdentity : 50
+WindowsIdentity : IFW\mshivjiani
+
+Category: General
+Priority: 0
+EventId: 100
+Severity: Error
+Title:Enterprise Library Exception Handling
+Machine: IFW9WO-BDBCHA1
+Application Domain: 380fcdc2-5-130601278467089990
+Process Id: 8824
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\10.0\WebDev.WebServer40.exe
+Win32 Thread Id: 6020
+Thread Name: 
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 11/10/2014 9:24:24 PM
+Message: HandlingInstanceID: 613244ff-e561-4a6a-a8ec-ce8bb24b5e32
+An exception of type 'System.NotSupportedException' occurred and was caught.
+----------------------------------------------------------------------------
+11/10/2014 16:24:24
+Type : System.NotSupportedException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Cannot databind to collection which contains null.
+Source : Telerik.Web.UI
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.Object GetPropertyValue(System.Object, System.String)
+Stack Trace :    at Telerik.Web.UI.PropertyDescriptorCache.GetPropertyValue(Object dataItem, String propertyName)
+   at Telerik.Web.UI.PropertyDescriptorCache.GetPropertyValue(Object dataItem, String propertyName, String format)
+   at Telerik.Web.UI.ControlItem.PopulateFromDataItem(PropertyDescriptorCache properties, Object dataItem, String dataMember, Int32 depth)
+   at Telerik.Web.UI.RadComboBoxItem.PopulateFromDataItem(PropertyDescriptorCache properties, Object dataItem, String dataMember, Int32 depth)
+   at Telerik.Web.UI.ControlItem.Telerik.Web.UI.IItem.PopulateFromDataItem(PropertyDescriptorCache properties, Object dataItem, String dataMember, Int32 depth)
+   at Telerik.Web.UI.ControlDataBinder.BindToEnumerableData(IEnumerable dataSource)
+   at Telerik.Web.UI.ControlItemContainer.PerformDataBinding(IEnumerable data)
+   at Telerik.Web.UI.RadComboBox.PerformDataBinding(IEnumerable dataSource)
+   at Telerik.Web.UI.RadComboBox.OnDataSourceViewSelectCallback(IEnumerable data)
+   at System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   at Telerik.Web.UI.RadComboBox.OnDataBinding(EventArgs e)
+   at Telerik.Web.UI.RadComboBox.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   at Telerik.Web.UI.RadComboBox.DataBind()
+   at HCMS.WebFramework.Site.Utilities.ControlUtility.BindRadComboBoxControl(RadComboBox inputControl, Object source, RadComboBoxItemFilter filter, String textField, String valueField, String topOption, String preselectedValue) in C:\HCMS\HCMS.WebFramework\Site\Utilities\ControlUtility.cs:line 144
+   at HCMS.WebFramework.Site.Utilities.ControlUtility.BindRadComboBoxControl(RadComboBox inputControl, Object source, RadComboBoxItemFilter filter, String textField, String valueField, String topOption) in C:\HCMS\HCMS.WebFramework\Site\Utilities\ControlUtility.cs:line 109
+   at HCMS.OrgChart.Controls.CreateOrgChart.ctrlAddWFPPosition.LoadOrgPositionType() in C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx.cs:line 105
+   at HCMS.OrgChart.Controls.CreateOrgChart.ctrlAddWFPPosition.LoadControls() in C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx.cs:line 37
+   at HCMS.OrgChart.Controls.CreateOrgChart.ctrlAddWFPPosition.Page_Load(Object sender, EventArgs e) in C:\HCMS\HCMS.OrgChart\Controls\CreateOrgChart\ctrlAddWFPPosition.ascx.cs:line 24
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+Additional Info:
+
+MachineName : IFW9WO-BDBCHA1
+TimeStamp : 11/10/2014 9:24:24 PM
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : 380fcdc2-5-130601278467089990
+ThreadIdentity : 50
+WindowsIdentity : IFW\mshivjiani
+
+Category: General
+Priority: 0
+EventId: 100
+Severity: Error
+Title:Enterprise Library Exception Handling
+Machine: IFW9WO-BDBCHA1
+Application Domain: 380fcdc2-5-130601278467089990
+Process Id: 8824
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\10.0\WebDev.WebServer40.exe
+Win32 Thread Id: 9260
+Thread Name: 
+Extended Properties: 
+----------------------------------------

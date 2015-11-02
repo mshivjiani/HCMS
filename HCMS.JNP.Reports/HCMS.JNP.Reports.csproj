@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BDD0E259-BBB0-4BFE-B22A-19661FB505DE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HCMS.JNP.Reports</RootNamespace>
+    <AssemblyName>HCMS.JNP.Reports</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'LOCAL-NTCAD|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\LOCAL-NTCAD\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\HCMS.JNP.Reports.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Reporting, Version=6.1.12.611, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
+      <HintPath>C:\Program Files (x86)\Telerik\Reporting Q2 2012\bin\Telerik.Reporting.dll</HintPath>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CategoryRating.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CategoryRating.Designer.cs">
+      <DependentUpon>CategoryRating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryRatingListOfKSAs.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CategoryRatingListOfKSAs.Designer.cs">
+      <DependentUpon>CategoryRatingListOfKSAs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryRatingQualifyingStatements.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CategoryRatingQualifyingStatements.Designer.cs">
+      <DependentUpon>CategoryRatingQualifyingStatements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JNPComments.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="JNPComments.Designer.cs">
+      <DependentUpon>JNPComments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JNPDataSet.cs">
+      <DependentUpon>JNPDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="JNPDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JNPDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="JNPReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="JNPReport.Designer.cs">
+      <DependentUpon>JNPReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JNPReportDataSet.cs">
+      <DependentUpon>JNPReportDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="JNPReportDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JNPReportDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="JNPWorkflowNoteSubRpt1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="JNPWorkflowNoteSubRpt1.Designer.cs">
+      <DependentUpon>JNPWorkflowNoteSubRpt1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JNPWorkflowNoteSubRpt2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="JNPWorkflowNoteSubRpt2.Designer.cs">
+      <DependentUpon>JNPWorkflowNoteSubRpt2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobAnalysis.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="JobAnalysis.Designer.cs">
+      <DependentUpon>JobAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobAnalysisCOEsSubreport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="JobAnalysisCOEsSubreport.Designer.cs">
+      <DependentUpon>JobAnalysisCOEsSubreport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobAnalysisDutyEmploymentConditionSubReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="JobAnalysisDutyEmploymentConditionSubReport.Designer.cs">
+      <DependentUpon>JobAnalysisDutyEmploymentConditionSubReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobAnalysisDutySubReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="JobAnalysisDutySubReport.Designer.cs">
+      <DependentUpon>JobAnalysisDutySubReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobAnalysisSubReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="JobAnalysisSubReport.Designer.cs">
+      <DependentUpon>JobAnalysisSubReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobQuestionaireQuestionsSubReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="JobQuestionaireQuestionsSubReport.Designer.cs">
+      <DependentUpon>JobQuestionaireQuestionsSubReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobQuestionaireResponsesSubReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="JobQuestionaireResponsesSubReport.Designer.cs">
+      <DependentUpon>JobQuestionaireResponsesSubReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobQuestionaire.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="JobQuestionaire.Designer.cs">
+      <DependentUpon>JobQuestionaire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobQuestionnaireSubReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="JobQuestionnaireSubReport.Designer.cs">
+      <DependentUpon>JobQuestionnaireSubReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PDDutyDataSet.Designer.cs" />
+    <Compile Include="PDDutyKSA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PDDutyKSA.Designer.cs">
+      <DependentUpon>PDDutyKSA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PDDutyKSAConditionsOfEmploymentReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PDDutyKSAConditionsOfEmploymentReport.Designer.cs">
+      <DependentUpon>PDDutyKSAConditionsOfEmploymentReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PDDutyKSADetailReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PDDutyKSADetailReport.Designer.cs">
+      <DependentUpon>PDDutyKSADetailReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PDDutyKSADetailSubReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PDDutyKSADetailSubReport.Designer.cs">
+      <DependentUpon>PDDutyKSADetailSubReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PDDutyKSAHeaderReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PDDutyKSAHeaderReport.Designer.cs">
+      <DependentUpon>PDDutyKSAHeaderReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="HeaderReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HeaderReport.Designer.cs">
+      <DependentUpon>HeaderReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PublishedJNPByRegionForGivenDate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PublishedJNPByRegionForGivenDate.Designer.cs">
+      <DependentUpon>PublishedJNPByRegionForGivenDate.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CategoryRating.resx">
+      <DependentUpon>CategoryRating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CategoryRatingListOfKSAs.resx">
+      <DependentUpon>CategoryRatingListOfKSAs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CategoryRatingQualifyingStatements.resx">
+      <DependentUpon>CategoryRatingQualifyingStatements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JNPComments.resx">
+      <DependentUpon>JNPComments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JNPReport.resx">
+      <DependentUpon>JNPReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JNPWorkflowNoteSubRpt1.resx">
+      <DependentUpon>JNPWorkflowNoteSubRpt1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JNPWorkflowNoteSubRpt2.resx">
+      <DependentUpon>JNPWorkflowNoteSubRpt2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobAnalysis.resx">
+      <DependentUpon>JobAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeaderReport.resx">
+      <DependentUpon>HeaderReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobAnalysisCOEsSubreport.resx">
+      <DependentUpon>JobAnalysisCOEsSubreport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobAnalysisDutyEmploymentConditionSubReport.resx">
+      <DependentUpon>JobAnalysisDutyEmploymentConditionSubReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobAnalysisDutySubReport.resx">
+      <DependentUpon>JobAnalysisDutySubReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobAnalysisSubReport.resx">
+      <DependentUpon>JobAnalysisSubReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobQuestionaire.resx">
+      <DependentUpon>JobQuestionaire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobQuestionaireQuestionsSubReport.resx">
+      <DependentUpon>JobQuestionaireQuestionsSubReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobQuestionaireResponsesSubReport.resx">
+      <DependentUpon>JobQuestionaireResponsesSubReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobQuestionnaireSubReport.resx">
+      <DependentUpon>JobQuestionnaireSubReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PDDutyKSA.resx">
+      <DependentUpon>PDDutyKSA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PDDutyKSAConditionsOfEmploymentReport.resx">
+      <DependentUpon>PDDutyKSAConditionsOfEmploymentReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PDDutyKSADetailReport.resx">
+      <DependentUpon>PDDutyKSADetailReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PDDutyKSADetailSubReport.resx">
+      <DependentUpon>PDDutyKSADetailSubReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PDDutyKSAHeaderReport.resx">
+      <DependentUpon>PDDutyKSAHeaderReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PublishedJNPByRegionForGivenDate.resx">
+      <DependentUpon>PublishedJNPByRegionForGivenDate.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="References\Telerik.Reporting.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="JNPDataSet.xsc">
+      <DependentUpon>JNPDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="JNPDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JNPDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="JNPDataSet.xss">
+      <DependentUpon>JNPDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="JNPReportDataSet.xsc">
+      <DependentUpon>JNPReportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="JNPReportDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JNPReportDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="JNPReportDataSet.xss">
+      <DependentUpon>JNPReportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PDDutyDataSet.xsc">
+      <DependentUpon>PDDutyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PDDutyDataSet.xsd" />
+    <None Include="PDDutyDataSet.xss">
+      <DependentUpon>PDDutyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HCMS.Business\HCMS.Business.csproj">
+      <Project>{E45DDA26-40F5-4C0C-B039-ABEF98717E94}</Project>
+      <Name>HCMS.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HCMS.Reports\HCMS.Reports.csproj">
+      <Project>{8C392731-929D-45CD-B542-3C6CCED3EB5A}</Project>
+      <Name>HCMS.Reports</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

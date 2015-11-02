@@ -1,0 +1,231 @@
+﻿<%@ CodeTemplate Language="C#" TargetLanguage="T-SQL" Description="Generates a update stored procedure." %>
+<%@ Property Name="SourceTable" Type="SchemaExplorer.TableSchema" Category="Context" Description="Table that the stored procedures should be based on." %>
+<%@ Property Name="StoredProcedurePrefix" Type="String" Default="spr_" Category="Context" Description="The prefix to use for this stored procedure" %>
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Assembly Name="System" %>
+<%@ Import Namespace="SchemaExplorer" %>
+<%@ Import Namespace="System" %>
+<%-- select Stored Procedure --%>
+<%
+	string sourceTableName = MakeSingle(ReplacePrefixes(SourceTable.Name));
+	string storedProcedureName = string.Format("{0}Get{1}ByID", StoredProcedurePrefix, sourceTableName);
+%>
+---------------------------------------------------------------------------------------------------
+if exists (select * from sys.objects where type in (N'P', N'PC') and object_id = OBJECT_ID(N'[dbo].[<%= storedProcedureName %>]'))
+drop procedure  [dbo].[<%= storedProcedureName %>]
+go
+
+create procedure dbo.<%= storedProcedureName %>
+     <% for (int i = 0; i < SourceTable.PrimaryKey.MemberColumns.Count; i++) { %>
+      <%= GetSqlParameterStatement(SourceTable.Columns[i]) %><% if (i < SourceTable.PrimaryKey.MemberColumns.Count - 1) { %>,<% } %>
+      <% } %>
+as
+	set nocount on
+	
+	select
+		<% for (int i = 0; i < SourceTable.Columns.Count; i++) { %>
+		<%= SourceTable.Columns[i].Name %><% if (i < SourceTable.Columns.Count - 1) { %>,<% } %>
+		<% } %> 
+	from
+		<%= SourceTable.Name %>
+	where <% for (int i = 0; i < SourceTable.PrimaryKey.MemberColumns.Count; i++) { %><% if (i > 0) { %> and <% } %>
+		<%= SourceTable.PrimaryKey.MemberColumns[i].Name %> = @<%= getCleanSprocParameter(SourceTable.PrimaryKey.MemberColumns[i].Name) %>
+			<% } %>
+			
+go
+
+<%-- Update Stored Procedure --%>
+<% 
+	storedProcedureName = string.Format("{0}Update{1}", StoredProcedurePrefix, sourceTableName);
+%>
+---------------------------------------------------------------------------------------------------
+if exists (select * from sys.objects where type in (N'P', N'PC') and object_id = OBJECT_ID(N'[dbo].[<%= storedProcedureName %>]'))
+drop procedure  [dbo].[<%= storedProcedureName %>]
+go
+
+create procedure dbo.<%= storedProcedureName %>
+      <% for (int i = 0; i < SourceTable.Columns.Count; i++) { %>
+      <%= GetSqlParameterStatement(SourceTable.Columns[i]) %><% if (i < SourceTable.Columns.Count - 1) { %>,<% } %>
+      <% } %>
+as
+	set nocount on
+	
+	update <%= SourceTable.Name %> set
+		<% for (int i = 0; i < SourceTable.NonPrimaryKeyColumns.Count; i++) { %>
+		<%= SourceTable.NonPrimaryKeyColumns[i].Name %> = @<%= getCleanSprocParameter(SourceTable.NonPrimaryKeyColumns[i].Name) %><% if (i < SourceTable.NonPrimaryKeyColumns.Count - 1) { %>,<% } %>
+		<% } %>
+	where <% for (int i = 0; i < SourceTable.PrimaryKey.MemberColumns.Count; i++) { %><% if (i > 0) { %> and <% } %>
+		<%= SourceTable.PrimaryKey.MemberColumns[i].Name %> = @<%= getCleanSprocParameter(SourceTable.PrimaryKey.MemberColumns[i].Name) %>
+		<% } %>
+go
+
+<%-- Delete Stored Procedure --%>
+<% 
+	storedProcedureName = string.Format("{0}Delete{1}", StoredProcedurePrefix, sourceTableName);
+%>
+---------------------------------------------------------------------------------------------------
+if exists (select * from sys.objects where type in (N'P', N'PC') and object_id = OBJECT_ID(N'[dbo].[<%= storedProcedureName %>]'))
+drop procedure  [dbo].[<%= storedProcedureName %>]
+go
+
+create procedure dbo.<%= storedProcedureName %>
+      <% for (int i = 0; i < SourceTable.PrimaryKey.MemberColumns.Count; i++) { %>
+      <%= GetSqlParameterStatement(SourceTable.PrimaryKey.MemberColumns[i]) %><% if (i < SourceTable.PrimaryKey.MemberColumns.Count - 1) { %>,<% } %>
+      <% } %>
+as
+	set nocount on
+	
+	delete from <%= SourceTable.Name %>
+	where <% for (int i = 0; i < SourceTable.PrimaryKey.MemberColumns.Count; i++) { %><% if (i > 0) { %> and <% } %>
+		<%= SourceTable.PrimaryKey.MemberColumns[i].Name %> = @<%= getCleanSprocParameter(SourceTable.PrimaryKey.MemberColumns[i].Name) %>
+		<% } %>
+go
+
+<%-- Add Stored Procedure --%>
+<% 
+	storedProcedureName = string.Format("{0}Add{1}", StoredProcedurePrefix, sourceTableName);
+%>
+---------------------------------------------------------------------------------------------------
+if exists (select * from sys.objects where type in (N'P', N'PC') and object_id = OBJECT_ID(N'[dbo].[<%= storedProcedureName %>]'))
+drop procedure  [dbo].[<%= storedProcedureName %>]
+go
+
+create procedure dbo.<%= storedProcedureName %>
+      <%= string.Format("@new{0}", SourceTable.PrimaryKey.MemberColumns[0].Name) %> int output,
+      <% for (int i = 0; i < SourceTable.NonPrimaryKeyColumns.Count; i++) { %>
+      <%= GetSqlParameterStatement(SourceTable.NonPrimaryKeyColumns[i]) %><% if (i < SourceTable.NonPrimaryKeyColumns.Count - 1) { %>,<% } %>
+      <% } %>
+as
+	set nocount on
+	
+	insert into <%= SourceTable.Name %> 
+	(
+		<% for (int i = 0; i < SourceTable.NonPrimaryKeyColumns.Count; i++) { %>
+		<%= SourceTable.NonPrimaryKeyColumns[i].Name %><% if (i < SourceTable.NonPrimaryKeyColumns.Count - 1) { %>,<% } %>
+		<% } %>
+	)
+	Values
+	(
+		<% for (int i = 0; i < SourceTable.NonPrimaryKeyColumns.Count; i++) { %>
+		@<%= getCleanSprocParameter(SourceTable.NonPrimaryKeyColumns[i].Name) %><% if (i < SourceTable.NonPrimaryKeyColumns.Count - 1) { %>,<% } %>
+		<% } %>
+	)
+	
+	select <%= string.Format("@new{0}", SourceTable.PrimaryKey.MemberColumns[0].Name) %> = Scope_Identity()
+go
+
+<%-- select by Primary Key Stored Procedures (tables where the primary key in this table is a foreign key in other tables) --%>
+---------------------------------------------------------------------------------------------------
+<%= "Attempting to Generate Other Table/Primary Key Relationship/Stored Procedures -- Count: " + SourceTable.PrimaryKeys.Count.ToString() %>
+
+<% 
+	string sourceName = string.Empty;
+	string columnName = string.Empty;
+	columnName = SourceTable.PrimaryKey.MemberColumns[0].Name;
+	
+	for (int i = 0; i < SourceTable.PrimaryKeys.Count; i++) 
+	{ 		
+		TableKeySchema thisKeyTable = (TableKeySchema) SourceTable.PrimaryKeys[i];
+		TableSchema thisTable = (TableSchema) thisKeyTable.ForeignKeyTable;
+		sourceName = ReplacePrefixes(SourceTable.Name);
+		storedProcedureName = string.Format("{0}Get{1}By{2}", StoredProcedurePrefix, ReplacePrefixes(thisTable.Name), SourceTable.PrimaryKey.MemberColumns[0].Name);
+	%>	
+	
+if exists (select * from sys.objects where type in (N'P', N'PC') and object_id = OBJECT_ID(N'[dbo].[<%= storedProcedureName %>]'))
+drop procedure  [dbo].[<%= storedProcedureName %>]
+go
+
+create procedure dbo.<%= storedProcedureName %>
+    <%= GetSqlParameterStatement(thisKeyTable.PrimaryKeyMemberColumns[0]) %>
+as
+	set nocount on
+
+	select
+		<% for (int k = 0; k < thisTable.Columns.Count; k++) { %>
+		<%= thisTable.Columns[k].Name %><% if (k < thisTable.Columns.Count - 1) { %>,<% } %>
+		<% } %>
+	from
+		<%= thisTable.Name %>
+	where 
+		<%= columnName %> = @<%= getCleanSprocParameter(columnName) %>
+	
+go
+	
+	<%	
+	}
+	%>
+
+<script runat="template">
+public string ReplacePrefixes (string tableName)
+{
+	return tableName.Replace("lk_", string.Empty).Replace("tbl_", string.Empty).Replace("xref_", string.Empty);
+}
+
+public string getCleanSprocParameter(string fieldName)
+{
+	string newField = fieldName.Substring(0, 1).ToLower() + fieldName.Substring(1, fieldName.Length - 1);
+	return newField.Replace("_", string.Empty);
+}
+
+public string GetSqlParameterStatement(ColumnSchema column)
+{
+	return GetSqlParameterStatement(column, string.Empty);
+}
+
+public string GetSqlParameterStatement(ColumnSchema column, string prefix)
+{
+      string param = "@" + prefix + getCleanSprocParameter(column.Name) + " " + column.NativeType;
+ 
+      switch (column.DataType)
+      {
+			case DbType.Int16:
+			case DbType.Int32:
+			case DbType.Date:
+			case DbType.DateTime:
+			{
+				param = param;
+				break;
+			}
+			case DbType.AnsiString:
+			{
+				if(column.NativeType == "text")
+				{
+					param = param;
+				}
+				else
+				{
+					if (column.Size > 0)
+					{
+						param += "(" + column.Size + ")";
+					}
+				}
+				break;
+			}
+			
+            case DbType.Decimal:
+            {
+                  param += "(" + column.Precision + ", " + column.Scale + ")";
+                  break;
+            }
+            default:
+            {
+                  if (column.Size > 0)
+                  {
+                        param += "(" + column.Size + ")";
+                  }
+                  break;
+            }
+      }
+ 
+      return param;
+}
+
+public string MakeSingle(string tableName)
+	{
+		string singleName = tableName;
+		if (tableName.EndsWith("s"))
+                singleName = tableName.Remove(tableName.Length - 1, 1);
+
+		return singleName;
+	}
+</script>

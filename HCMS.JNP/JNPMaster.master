@@ -1,0 +1,293 @@
+<%@ Master Language="C#" AutoEventWireup="true" Inherits="HCMS.JNP.JNPMaster" Codebehind="JNPMaster.master.cs" %>
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<%@ Register Src="Controls/Layout/HeaderControl.ascx" TagName="HeaderControl" TagPrefix="uc1" %>
+<%@ Register src="Controls/Layout/InformationPanel.ascx" tagname="InformationPanel" tagprefix="uc2" %>
+
+<%@ Register src="Controls/JNPWorkflowNotePopup/JNPWorkflowNotePopupLink.ascx" tagname="JNPWorkflowNotePopupLink" tagprefix="uc3" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+   <meta http-equiv="X-UA-Compatible" content="IE=8,chrome=1">
+   <meta http-equiv="content-type" content="text/html; charset=windows-1250">
+   
+
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class=""> <!--<![endif]-->
+
+
+
+    <!-- CSS Files loaded thru control-->
+    <!-- Included JS Files -->
+    <script type="text/javascript" language="javascript" src="../Src/jquery-1.8.3.min.js" /></script>
+    <script type="text/javascript" language="javascript" src="../Src/JsRelatedTocss/app.JNP.js" /></script>
+    <%--<script type="text/javascript" language="javascript" src='<%# Page.ResolveClientUrl("~/Src/JsRelatedTocss/jquery-1.8.3.min.js") %>' /></script>
+    <script type="text/javascript" language="javascript" src='<%# Page.ResolveClientUrl("~/Src/JsRelatedTocss/app.JNP.js") %>' /></script>--%>
+
+
+    <script type="text/javascript">
+
+        function SetValidationGroup(validationGroupName) {
+            //debugger;
+            //-- Check for null validation group name
+            if (validationGroupName == null) {
+                return;
+            }
+            //-- Assign validation group name to validationSummary control
+            Page_ValidationSummaries[0].validationGroup = validationGroupName;
+
+        }
+        function scrolltoTop() {
+            $('[id$=valSummary]').focus();
+            $('html, body').animate({ scrollTop: '0px' }, 800);
+        }
+    </script>
+    <title></title>
+    <asp:ContentPlaceHolder id="headContent" runat="server">
+  
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+
+    <form id="_theForm" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true">
+        </asp:ScriptManager>
+
+     
+
+         <!-- Javascript to show and hide the session timeout window-->
+        <script type="text/javascript">
+            //Session can be renewed by following ways
+            // 1. refreshing page -value of Issessionrenewed is equal to "no" and value of warningshown=false
+            // 2. Ajax post back -value of Issessionrenewed is equal to "no" and value of warningshown=false
+            // 3. hitting ok on warning message -value of Issessionrenewed is equal to "yes" and value of warningshown=true
+            //but if user does not hit Ok on warning message -- IsSessionrenewed will be "no" and warningshown="true" -- then redirect to session timeout
+            var TimeoutTimerId = 0;
+            var AlertTimerId = 0;
+            var HideTimerId = 0;
+            var sessionTimeoutmillisec = 30 * 60000;
+            var Issessionrenewed = "no";
+            var warningshown = false;
+
+            function showAlert() {
+                $find('msgboxp').show();
+                warningshown = true;
+            }
+            function hide() {
+                var alertbox = $find('msgboxp');
+
+                //alertbox will always be defined even if the msgboxp is not open and active
+                //so if statement here is kind of mute but just keeping it for safety
+                if (alertbox) {
+                    alertbox.hide();
+                    var hdst = $("input[id$='hiddenSessionTimeout']");
+                    if (hdst) {
+                        sessionTimeoutmillisec = hdst.val() * 60000;
+                        Issessionrenewed = "no";
+                    }
+
+                }
+
+            }
+            function redirecttoTimeout() {
+                var htimeouturl = $("input[id$='hiddenTimeoutUrl']");
+
+                if ((warningshown = true) && (Issessionrenewed == "no")) {
+                    var mstrurl = htimeouturl.val();
+                    document.location = mstrurl;
+                }
+            }
+            function onOk() {
+                $find('msgboxp').hide();
+                renewSession();
+                Issessionrenewed = "yes";
+
+            }
+            function renewSession() {
+                var img = new Image(1, 1);
+                img.src = '<%= ResolveClientUrl( "~/RenewSes.aspx?date=")%>' + escape(new Date());
+                clearInterval(AlertTimerId);
+                clearInterval(HideTimerId);
+                clearInterval(TimeoutTimerId);
+                TimeoutTimerId = setInterval("redirecttoTimeout()", sessionTimeoutmillisec);
+                HideTimerId = setInterval("hide()", (sessionTimeoutmillisec - 10000));
+                AlertTimerId = setInterval("showAlert()", (sessionTimeoutmillisec - 120000));
+            }
+    </script>
+
+        <div id="container">
+             <div>
+                <asp:HiddenField ID="hiddenSessionTimeout" runat="server" />
+                <asp:HiddenField ID="hiddenTimeoutUrl" runat ="server" />
+            </div>
+            <asp:HiddenField ID="hiddenctr" runat="server" />
+            <!-- Session Time out controls -->
+            <asp:HiddenField ID="HiddenFieldmpe_alert" runat="server" />
+            <asp:Panel ID="pnlAlert" runat="server" Style="display: none" CssClass="modalPopup">
+                <table style="height: 100px; background-color: #dff0fb;" width="340" border="0">
+                    <tbody>
+                        <tr>
+                            <td style="width: 80%; height: 20px; background-color: #768ca5; color: #DFF0FB">
+                                Session Expiration Warning
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr align="center">
+                            <td>
+                                <asp:Literal ID="litmsg" runat="server">Your Login Session is about to expire.<br /> Please Save your changes.</asp:Literal></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                                    <tr align="center">
+                                        <td>
+                                            <asp:Button ID="btnOk" runat="server" Text="Ok" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </asp:Panel>
+            <cc1:ModalPopupExtender ID="mpe_alert" BehaviorID="msgboxp" runat="server" PopupControlID="pnlAlert"
+                OkControlID="btnOk" OnOkScript="onOk()" TargetControlID="HiddenFieldmpe_alert" Enabled="true"
+                BackgroundCssClass="modalBackground">
+            </cc1:ModalPopupExtender>
+            <!--End of Session Time out controls-->
+
+            <div id="main">
+                <!--Banner div-->
+                <div id="header"></div>
+                <asp:HiddenField ID="hdntime" runat="server" Value="" />
+                
+                <!--headercontrol div-->
+                <div id="userInfo"> 
+                    <uc1:HeaderControl ID="HeaderControl1" runat="server" />
+                </div>
+                
+
+                <!--User action dropdown bar-->
+                <div id="actionMenu" runat="server" class="actionMenu">      
+                    <telerik:RadMenu ID="RadMenu1" Runat="server" DataFieldID="Value" 
+                        DataNavigateUrlField="NavigateUrl" DataSourceID="TopActionMenuDS" 
+                        DataTextField="Text" Flow="Horizontal">
+                    </telerik:RadMenu>
+                    <asp:XmlDataSource ID="TopActionMenuDS" runat ="server" DataFile="~/App_Data/TopActionMenu.xml" XPath="//Menu/Item" ></asp:XmlDataSource>  
+                </div>
+                <!--End user action dropdown bar-->
+
+
+                <!--PD tracking information-->
+               
+                        <table class="divInfo" id="tblInfo" runat="server" >
+                          <thead>
+                            <tr>
+                              <th>JAX ID</th> 
+                              <th>SERIES/GRADE</th>
+                              <th>CURRENT STATUS</th>                       
+                              <th>NOTES</th>
+                              <th>WORKFLOW PROGRESS</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+
+                            <tr>
+                            <td><asp:Label ID ="lblJAnPID" runat="server"></asp:Label></td>
+                              <td> <div id="divInfo" runat="server">
+                              <!--information panel--> 
+                            <uc2:InformationPanel ID="InformationPanel1" runat="server" />
+                            </div>
+                              </td>
+                              
+                         <td><asp:Label ID="lblCurrentStatus" runat ="server" ></asp:Label></td>
+                              <td class="text-center"><div id="divWorkflowNotes" runat ="server">
+                              <!--workflow notes--> 
+                               <uc3:JNPWorkflowNotePopupLink ID="JNPWorkflowNotePopupLink1" runat="server" />
+                              </div></td>
+                              <td class="progress">
+                                <div id="progressBar">
+                                    <asp:Image ID="imgProgressbar" runat="server" ImageUrl="~/App_Themes/JNP_Default/Images/progressBar_0.png" />
+                                </div>
+                             </td>
+                            </tr>
+                            <tr><th colspan="5" align="right">Print &nbsp;&nbsp;<asp:ImageButton ID="imgPrint" 
+                                    runat ="server" Text="Print Documents"  
+                                    ImageUrl="~/App_Themes/JNP_Default/Images/Icons/printer_small.png" 
+                                    ToolTip="Print Documents" onclick="imgPrint_Click" ></asp:ImageButton></th></tr>
+                          </tbody>
+                        </table>
+                <!--end PD tracking information-->
+
+                
+
+                <!--main tab menu-->
+                <div id="topNav" class="topNav" runat="server" >
+                    <telerik:RadTabStrip ID="radTabJNPTopMenu" runat="server"  AutoPostBack="True" ClickSelectedTab="true" EnableEmbeddedBaseStylesheet="False" EnableEmbeddedSkins="False"
+                    DataNavigateUrlField="NavigateUrl" DataSourceID="TopMenuDS" DataTextField="Text" Orientation ="HorizontalTop" SkinID="WebBlue" Align="Justify" 
+                    DataValueField="Value"  TabIndex="-1"  ondatabound="radTabJNPTopMenu_DataBound">            
+                    </telerik:RadTabStrip>
+                    <asp:XmlDataSource ID="TopMenuDS" runat="server" 
+                        DataFile="~/App_Data/TopNavJNPWizard.xml" XPath="//TabStrip/TAB" 
+                        ></asp:XmlDataSource>  
+                </div>
+                <!--end main tab menu-->
+                
+                
+
+                <!--sub tab menu: Left name as leftNav because it breaks if you remove-->
+                <div id="subNav" class="subNav" runat="server">
+                   <telerik:RadTabStrip ID="radTabLeftMenu" runat ="server" AutoPostBack="True" ClickSelectedTab="true" EnableEmbeddedBaseStylesheet="False" EnableEmbeddedSkins="False"
+                            DataNavigateUrlField="NavigateUrl" DataSourceID="leftMenuDS" DataTextField="Text" 
+                            DataValueField="Value"  TabIndex="-1" Orientation ="HorizontalTop"  Skin ="WebBlue" >            
+                    </telerik:RadTabStrip>
+                    <asp:XmlDataSource ID="leftMenuDS" runat="server" DataFile="~/App_Data/LeftNavJA.xml"  XPath="//TabStrip/TAB"></asp:XmlDataSource>
+                </div>
+                <!--sub main tab menu-->
+
+                
+                
+                 <!--start of content-->
+                 <div id="scontent" runat="server" class="siteContent">
+                  
+                    <asp:UpdatePanel ID="panelSytsem" runat="server">
+                        <ContentTemplate>
+
+                        <!--page title-->
+                        <div id="divPgTitle" runat="server" class="pageTitle" visible="true" ><asp:Literal ID="literalPageTitle" runat="server" /></div>
+                            <div runat="server" id="divRequiredField" class="requiredField" visible="false">
+                                *Please note that field names with an asterisk (*) are required.</div>
+                            <asp:ValidationSummary ID="valSummary" runat="server" CssClass="validationMessageBox"
+                                ShowSummary="true" HeaderText="<span class='errorMessage'>Validation Message</span><br>"
+                                DisplayMode="BulletList" />
+                            <div runat="server" id="divMessage" visible="false" enableviewstate="false">
+                                <asp:Literal ID="literalSystemMessage" runat="server" /></div>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+
+
+                    <asp:ContentPlaceHolder id="mainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                
+                <div id="footer" runat="server" class="footer">
+                    <telerik:RadMenu ID="radMenuFooter" runat ="server" 
+                        EnableEmbeddedBaseStylesheet="False" EnableEmbeddedSkins="False" DataSourceID ="XmlDSFooter"
+                        DataNavigateUrlField="Url" DataTextField="Text" DataValueField="Value" onitemdatabound="radMenuFooter_ItemDataBound">
+                     </telerik:RadMenu>
+                     <asp:XmlDataSource ID="XmlDSFooter" runat="server" DataFile="~/App_Data/FooterJNP.xml"  XPath="//Menu/Item"></asp:XmlDataSource>
+                    <p>Copyright © U.S. Fish & Wildlife Service. All Rights Reserved.</p>
+                </div>
+            </div> <!--end of Main -->
+        </div><!--end of container -->
+    </form>
+</body>
+</html>

@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="InformationPanel.ascx.cs" Inherits="HCMS.JNP.Controls.Layout.InformationPanel" %>
+<div><asp:Literal ID="literalInfo" runat ="server"></asp:Literal></div>

@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html> 
+<html>
+<head runat="server">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Sample Org Chart</title>
+
+    <link rel="stylesheet" href="../src/chartrender/js/jquery/ui-lightness/jquery-ui-1.10.2.custom.css" />
+    <script type="text/javascript" src="../src/jquery-1.11.1.js"></script>
+
+    <script type="text/javascript" src="../src/chartrender/js/jquery/jquery-ui-1.10.2.custom.min.js"></script>
+    <script type="text/javascript" src="../src/chartrender/html2canvas.js"></script>
+
+    <script type="text/javascript" src="../src/chartrender/js/primitives.min.js"></script>
+    <link href="../src/chartrender/css/primitives.latest.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="../src/chartrender/css/primitiveCustomizations.css" media="screen" rel="stylesheet" type="text/css" />
+
+    <script type='text/javascript'>        //<![CDATA[ 
+        $(window).load(function () {
+            var options = new primitives.orgdiagram.Config();
+
+            var templates = [];
+            templates.push(getManagerTemplate_RootNode());
+            templates.push(getManagerTemplate_SimpleBox());
+
+            var items = [
+                new primitives.orgdiagram.ItemConfig({ itemTitleColor: primitives.common.Colors.Black, childrenPlacementType: primitives.common.ChildrenPlacementType.Horizontal, templateName: "rootNodeManagerTemplate", id: 01402001, occSeries: 0340, parent: null, title: "PROGRAM MANAGER", fullName: "VACANT", positionTitle: "PROGRAM MANAGER", orgCode: "FF09A20000", orgDescription: "DV OF INTERNATIONAL CONSERVATION", payPlan: "GS", grade: "15", gradeStep: "", typeApptDescription: "", workScheduleType: "FULL-TIME", }),
+                new primitives.orgdiagram.ItemConfig({ templateName: "managerTemplate", id: 0000701, occSeries: 0401, parent: 0001101, title: "FISH AND WILDLIFE BIOLOGIST", fullName: "FRED BAGLEY", positionTitle: "FISH AND WILDLIFE BIOLOGIST", orgCode: "FF09A20000", orgDescription: "DV OF INTERNATIONAL CONSERVATION", payPlan: "GS", grade: "13", gradeStep: "10", typeApptDescription: "CAREER (COMP SVC PERM)", workScheduleType: "FULL-TIME", }),
+                new primitives.orgdiagram.ItemConfig({ templateName: "managerTemplate", id: 0001101, occSeries: 0301, parent: 01402001, title: "INTERNATIONAL AFFAIRS SPECIALIST", fullName: "STEVEN KOHL", positionTitle: "INTERNATIONAL AFFAIRS SPECIALIST", orgCode: "FF09A20000", orgDescription: "DV OF INTERNATIONAL CONSERVATION", payPlan: "GS", grade: "14", gradeStep: "10", typeApptDescription: "CAREER (COMP SVC PERM)", workScheduleType: "FULL-TIME", }),
+                new primitives.orgdiagram.ItemConfig({ templateName: "managerTemplate", id: 00021791, occSeries: 0301, parent: 0001101, title: "INTERNATIONAL AFFAIRS SPEC", fullName: "PETER WARD", positionTitle: "INTERNATIONAL AFFAIRS SPEC", orgCode: "FF09A20000", orgDescription: "DV OF INTERNATIONAL CONSERVATION", payPlan: "GS", grade: "13", gradeStep: "08", typeApptDescription: "CAREER (COMP SVC PERM)", workScheduleType: "FULL-TIME", }),
+                new primitives.orgdiagram.ItemConfig({ templateName: "managerTemplate", id: 00050831, occSeries: 0301, parent: 01402001, title: "SUPVY INT AFFAIRS SPECIALIST", fullName: "MELIDA TAJBAKHSH", positionTitle: "SUPVY INT AFFAIRS SPECIALIST", orgCode: "FF09A20000", orgDescription: "DV OF INTERNATIONAL CONSERVATION", payPlan: "GS", grade: "14", gradeStep: "09", typeApptDescription: "CAREER (COMP SVC PERM)", workScheduleType: "FULL-TIME", }),
+                new primitives.orgdiagram.ItemConfig({ templateName: "managerTemplate", id: 00060561, occSeries: 0318, parent: 01402001, title: "SECRETARY (OA)", fullName: "VACANT", positionTitle: "SECRETARY (OA)", orgCode: "FF09A20000", orgDescription: "DV OF INTERNATIONAL CONSERVATION", payPlan: "GS", grade: "07", gradeStep: "", typeApptDescription: "", workScheduleType: "FULL-TIME", adviserPlacementType: primitives.common.AdviserPlacementType.Right, itemType: primitives.orgdiagram.ItemType.SubAssistant, }),
+                new primitives.orgdiagram.ItemConfig({ templateName: "managerTemplate", id: 00061721, occSeries: 0301, parent: 00050831, title: "INTERNATIONAL PROGRAM SPECIALIST", fullName: "JENNIFER MARTINEZ", positionTitle: "INTERNATIONAL PROGRAM SPECIALIST", orgCode: "FF09A20000", orgDescription: "DV OF INTERNATIONAL CONSERVATION", payPlan: "GS", grade: "13", gradeStep: "06", typeApptDescription: "CAREER (COMP SVC PERM)", workScheduleType: "FULL-TIME", }),
+                new primitives.orgdiagram.ItemConfig({ templateName: "managerTemplate", id: 00070241, occSeries: 0301, parent: 00911101, title: "INTERNATIONAL AFFAIRS SPECIALIST", fullName: "GILBERTO CINTRON-MOLERO", positionTitle: "INTERNATIONAL AFFAIRS SPECIALIST", orgCode: "FF09A20000", orgDescription: "DV OF INTERNATIONAL CONSERVATION", payPlan: "GS", grade: "14", gradeStep: "10", typeApptDescription: "CAREER (COMP SVC PERM)", workScheduleType: "FULL-TIME", }),
+                new primitives.orgdiagram.ItemConfig({ templateName: "managerTemplate", id: 00071391, occSeries: 0401, parent: 01402001, title: "GENERAL BIOLOGIST", fullName: "DIRCK BYLER", positionTitle: "GENERAL BIOLOGIST", orgCode: "FF09A20000", orgDescription: "DV OF INTERNATIONAL CONSERVATION", payPlan: "GS", grade: "13", gradeStep: "10", typeApptDescription: "CAREER (COMP SVC PERM)", workScheduleType: "FULL-TIME", }),
+                new primitives.orgdiagram.ItemConfig({ templateName: "managerTemplate", id: 00071392, occSeries: 0401, parent: 01402001, title: "GENERAL BIOLOGIST", fullName: "NANCY GELMAN", positionTitle: "GENERAL BIOLOGIST", orgCode: "FF09A20000", orgDescription: "DV OF INTERNATIONAL CONSERVATION", payPlan: "GS", grade: "13", gradeStep: "04", typeApptDescription: "CAREER (COMP SVC PERM)", workScheduleType: "FULL-TIME", }),
+                new primitives.orgdiagram.ItemConfig({ templateName: "managerTemplate", id: 00071393, occSeries: 0401, parent: 01402001, title: "GENERAL BIOLOGIST", fullName: "MATTHEW MUIR", positionTitle: "GENERAL BIOLOGIST", orgCode: "FF09A20000", orgDescription: "DV OF INTERNATIONAL CONSERVATION", payPlan: "GS", grade: "13", gradeStep: "04", typeApptDescription: "CAREER (COMP SVC PERM)", workScheduleType: "FULL-TIME", }),
+                new primitives.orgdiagram.ItemConfig({ templateName: "managerTemplate", id: 00071394, occSeries: 0401, parent: 01310601, title: "GENERAL BIOLOGIST", fullName: "CORY BROWN VEIZAGA", positionTitle: "GENERAL BIOLOGIST", orgCode: "FF09A20000", orgDescription: "DV OF INTERNATIONAL CONSERVATION", payPlan: "GS", grade: "13", gradeStep: "04", typeApptDescription: "CAREER (COMP SVC PERM)", workScheduleType: "FULL-TIME", }),
+                new primitives.orgdiagram.ItemConfig({ templateName: "managerTemplate", id: 00081821, occSeries: 0486, parent: 00911101, title: "WILDLIFE BIOLOGIST", fullName: "EARL POSSARDT", positionTitle: "WILDLIFE BIOLOGIST", orgCode: "FF09A20000", orgDescription: "DV OF INTERNATIONAL CONSERVATION", payPlan: "GS", grade: "13", gradeStep: "10", typeApptDescription: "CAREER (COMP SVC PERM)", workScheduleType: "FULL-TIME", }),
+                new primitives.orgdiagram.ItemConfig({ templateName: "managerTemplate", id: 00081941, occSeries: 0399, parent: 00911101, title: "STUDENT TRAINEE (OFFICE SUPPORT)", fullName: "DARIUS WILLIAMS-MCKENZIE", positionTitle: "STUDENT TRAINEE (OFFICE SUPPORT)", orgCode: "FF09A20000", orgDescription: "DV OF INTERNATIONAL CONSERVATION", payPlan: "GS", grade: "01", gradeStep: "01", typeApptDescription: "SCHED D (EXC SVC NONPERM)", workScheduleType: "FULL-TIME", }),
+                new primitives.orgdiagram.ItemConfig({ templateName: "managerTemplate", id: 00909101, occSeries: 0344, parent: 01310601, title: "MANAGEMENT ASSISTANT", fullName: "SONIA WILLIAMS", positionTitle: "MANAGEMENT ASSISTANT", orgCode: "FF09A20000", orgDescription: "DV OF INTERNATIONAL CONSERVATION", payPlan: "GS", grade: "07", gradeStep: "03", typeApptDescription: "CAREER (COMP SVC PERM)", workScheduleType: "FULL-TIME", }),
+                new primitives.orgdiagram.ItemConfig({ templateName: "managerTemplate", id: 00911101, occSeries: 0301, parent: 01402001, title: "SUPV INTERNATIONAL AFFAIRS SPECIALIST", fullName: "KRISHNA ROY", positionTitle: "SUPV INTERNATIONAL AFFAIRS SPECIALIST", orgCode: "FF09A20000", orgDescription: "DV OF INTERNATIONAL CONSERVATION", payPlan: "GS", grade: "14", gradeStep: "07", typeApptDescription: "CAREER (COMP SVC PERM)", workScheduleType: "FULL-TIME", }),
+                new primitives.orgdiagram.ItemConfig({ templateName: "managerTemplate", id: 00911901, occSeries: 0301, parent: 01310601, title: "INTERNATIONAL AFFAIRS SPECIALIST", fullName: "BRIAN HAYUM", positionTitle: "INTERNATIONAL AFFAIRS SPECIALIST", orgCode: "FF09A20000", orgDescription: "DV OF INTERNATIONAL CONSERVATION", payPlan: "GS", grade: "13", gradeStep: "05", typeApptDescription: "CAREER (COMP SVC PERM)", workScheduleType: "FULL-TIME", }),
+                new primitives.orgdiagram.ItemConfig({ templateName: "managerTemplate", id: 01002601, occSeries: 0343, parent: 01310601, title: "PROGRAM ANALYST", fullName: "JAMES MITCHELL", positionTitle: "PROGRAM ANALYST", orgCode: "FF09A20000", orgDescription: "DV OF INTERNATIONAL CONSERVATION", payPlan: "GS", grade: "13", gradeStep: "01", typeApptDescription: "CAREER (COMP SVC PERM)", workScheduleType: "FULL-TIME", }),
+                new primitives.orgdiagram.ItemConfig({ templateName: "managerTemplate", id: 01010001, occSeries: 0399, parent: 01402001, title: "STUDENT TRAINEE (ADMIN SUPPORT)", fullName: "TATIANA RIDDLE", positionTitle: "STUDENT TRAINEE (ADMIN SUPPORT)", orgCode: "FF09A20000", orgDescription: "DV OF INTERNATIONAL CONSERVATION", payPlan: "GS", grade: "04", gradeStep: "01", typeApptDescription: "SCHED D (EXC SVC NONPERM)", workScheduleType: "PART-TIME", }),
+                new primitives.orgdiagram.ItemConfig({ templateName: "managerTemplate", id: 01106601, occSeries: 0301, parent: 00050831, title: "INTERNATIONAL PROG SPEC", fullName: "ANI CUEVAS", positionTitle: "INTERNATIONAL PROG SPEC", orgCode: "FF09A20000", orgDescription: "DV OF INTERNATIONAL CONSERVATION", payPlan: "GS", grade: "13", gradeStep: "04", typeApptDescription: "CAREER (COMP SVC PERM)", workScheduleType: "FULL-TIME", }),
+                new primitives.orgdiagram.ItemConfig({ templateName: "managerTemplate", id: 01212101, occSeries: 0301, parent: 00050831, title: "INTERNATIONAL PROGRAM SPEC", fullName: "VALENCIA RICHARDSON", positionTitle: "INTERNATIONAL PROGRAM SPEC", orgCode: "FF09A20000", orgDescription: "DV OF INTERNATIONAL CONSERVATION", payPlan: "GS", grade: "12", gradeStep: "04", typeApptDescription: "CAREER (COMP SVC PERM)", workScheduleType: "FULL-TIME", }),
+                new primitives.orgdiagram.ItemConfig({ templateName: "managerTemplate", id: 01214611, occSeries: 1109, parent: 01310601, title: "GRANTS MANAGEMENT SPECIALIST", fullName: "CHERYL LEONARD", positionTitle: "GRANTS MANAGEMENT SPECIALIST", orgCode: "FF09A20000", orgDescription: "DV OF INTERNATIONAL CONSERVATION", payPlan: "GS", grade: "12", gradeStep: "01", typeApptDescription: "CAREER (COMP SVC PERM)", workScheduleType: "FULL-TIME", }),
+                new primitives.orgdiagram.ItemConfig({ templateName: "managerTemplate", id: 01214621, occSeries: 1109, parent: 01310601, title: "GRANTS MANAGEMENT SPECIALIST", fullName: "TEZETA DESTA", positionTitle: "GRANTS MANAGEMENT SPECIALIST", orgCode: "FF09A20000", orgDescription: "DV OF INTERNATIONAL CONSERVATION", payPlan: "GS", grade: "11", gradeStep: "02", typeApptDescription: "CAREER (COMP SVC PERM)", workScheduleType: "FULL-TIME", }),
+                new primitives.orgdiagram.ItemConfig({ templateName: "managerTemplate", id: 01214622, occSeries: 1109, parent: 01310601, title: "GRANTS MANAGEMENT SPECIALIST", fullName: "NIKOLE TUCKER", positionTitle: "GRANTS MANAGEMENT SPECIALIST", orgCode: "FF09A20000", orgDescription: "DV OF INTERNATIONAL CONSERVATION", payPlan: "GS", grade: "11", gradeStep: "01", typeApptDescription: "CAREER (COMP SVC PERM)", workScheduleType: "FULL-TIME", }),
+                new primitives.orgdiagram.ItemConfig({ templateName: "managerTemplate", id: 01300601, occSeries: 0301, parent: 00050831, title: "INTERNATIONAL AFFAIRS SPECIALIST", fullName: "AMANDA GONZALES", positionTitle: "INTERNATIONAL AFFAIRS SPECIALIST", orgCode: "FF09A20000", orgDescription: "DV OF INTERNATIONAL CONSERVATION", payPlan: "GS", grade: "13", gradeStep: "01", typeApptDescription: "CAREER (COMP SVC PERM)", workScheduleType: "FULL-TIME", }),
+                new primitives.orgdiagram.ItemConfig({ templateName: "managerTemplate", id: 01303411, occSeries: 1001, parent: 00911101, title: "OUTREACH AND EDUCATION SPECIALIST", fullName: "HEIDI RUFFLER", positionTitle: "OUTREACH AND EDUCATION SPECIALIST", orgCode: "FF09A20000", orgDescription: "DV OF INTERNATIONAL CONSERVATION", payPlan: "GS", grade: "12", gradeStep: "02", typeApptDescription: "CAREER-COND (COMP SVC PERM)", workScheduleType: "FULL-TIME", }),
+                new primitives.orgdiagram.ItemConfig({ templateName: "managerTemplate", id: 01303412, occSeries: 1001, parent: 00911101, title: "OUTREACH AND EDUCATION SPECIALIST", fullName: "BRENDAN TATE", positionTitle: "OUTREACH AND EDUCATION SPECIALIST", orgCode: "FF09A20000", orgDescription: "DV OF INTERNATIONAL CONSERVATION", payPlan: "GS", grade: "12", gradeStep: "01", typeApptDescription: "CAREER-COND (COMP SVC PERM)", workScheduleType: "FULL-TIME", }),
+                new primitives.orgdiagram.ItemConfig({ templateName: "managerTemplate", id: 01309801, occSeries: 0301, parent: 01310601, title: "SUPV INTERNATIONAL AFFAIRS SPEC", fullName: "DEREK LITCHFIELD", positionTitle: "SUPV INTERNATIONAL AFFAIRS SPEC", orgCode: "FF09A20000", orgDescription: "DV OF INTERNATIONAL CONSERVATION", payPlan: "GS", grade: "14", gradeStep: "02", typeApptDescription: "CAREER (COMP SVC PERM)", workScheduleType: "FULL-TIME", }),
+                new primitives.orgdiagram.ItemConfig({ templateName: "managerTemplate", id: 01310601, occSeries: 0301, parent: 01402001, title: "SUPVY INT AFFAIRS SPECIALIST", fullName: "VACANT", positionTitle: "SUPVY INT AFFAIRS SPECIALIST", orgCode: "FF09A20000", orgDescription: "DV OF INTERNATIONAL CONSERVATION", payPlan: "GS", grade: "14", gradeStep: "", typeApptDescription: "", workScheduleType: "FULL-TIME", }),
+                new primitives.orgdiagram.ItemConfig({ templateName: "managerTemplate", id: 01310801, occSeries: 1109, parent: 01310601, title: "GRANTS MANAGEMENT SPECIALIST", fullName: "FORREST MILLER", positionTitle: "GRANTS MANAGEMENT SPECIALIST", orgCode: "FF09A20000", orgDescription: "DV OF INTERNATIONAL CONSERVATION", payPlan: "GS", grade: "11", gradeStep: "01", typeApptDescription: "CAREER-COND (COMP SVC PERM)", workScheduleType: "FULL-TIME", }),
+                new primitives.orgdiagram.ItemConfig({ templateName: "managerTemplate", id: 01312801, occSeries: 1109, parent: 01310601, title: "GRANTS MANAGEMENT SPECIALIST", fullName: "ANDREW DIGGS", positionTitle: "GRANTS MANAGEMENT SPECIALIST", orgCode: "FF09A20000", orgDescription: "DV OF INTERNATIONAL CONSERVATION", payPlan: "GS", grade: "13", gradeStep: "04", typeApptDescription: "NONPERMANENT (COMP SVC NONPERM)", workScheduleType: "FULL-TIME", }),
+                new primitives.orgdiagram.ItemConfig({ templateName: "managerTemplate", id: 01402002, occSeries: 0340, parent: 01402001, title: "PROGRAM MANAGER", fullName: "RICHARD RUGGIERO", positionTitle: "PROGRAM MANAGER", orgCode: "FF09A20000", orgDescription: "DV OF INTERNATIONAL CONSERVATION", payPlan: "GS", grade: "15", gradeStep: "06", typeApptDescription: "CAREER (COMP SVC PERM)", workScheduleType: "FULL-TIME", }),
+                new primitives.orgdiagram.ItemConfig({ templateName: "managerTemplate", id: 01408101, occSeries: 0318, parent: 01310601, title: "SECRETARY (OA)", fullName: "DEVON LARSON", positionTitle: "SECRETARY (OA)", orgCode: "FF09A20000", orgDescription: "DV OF INTERNATIONAL CONSERVATION", payPlan: "GS", grade: "06", gradeStep: "02", typeApptDescription: "CAREER-COND (COMP SVC PERM)", workScheduleType: "FULL-TIME", }),
+                new primitives.orgdiagram.ItemConfig({ templateName: "managerTemplate", id: 09808401, occSeries: 0486, parent: 01402001, title: "WILDLIFE BIOLOGIST", fullName: "MICHELLE GADD", positionTitle: "WILDLIFE BIOLOGIST", orgCode: "FF09A20000", orgDescription: "DV OF INTERNATIONAL CONSERVATION", payPlan: "GS", grade: "13", gradeStep: "07", typeApptDescription: "CAREER (COMP SVC PERM)", workScheduleType: "FULL-TIME", }),
+            ];
+
+            options.items = items;
+            options.cursorItem = 0;     // ID of the preselected node
+            options.maximumColumnsInMatrix = 2;     // number of columns in matrix (side by side) format
+            // options.pageFitMode = primitives.orgdiagram.PageFitMode.FitToPage;
+            options.pageFitMode = primitives.orgdiagram.PageFitMode.None;
+            options.hasSelectorCheckbox = primitives.common.Enabled.False;
+            options.itemTitleFirstFontColor = primitives.common.Colors.White;
+            options.itemTitleSecondFontColor = primitives.common.Colors.White;
+            options.linesColor = primitives.common.Colors.Black;
+            options.linesWidth = 1;
+            options.linesType = primitives.common.LineType.Solid;
+            options.normalItemsInterval = 50;
+            options.normalLevelShift = 50;
+            options.leavesPlacementType = primitives.common.ChildrenPlacementType.Matrix;
+            options.templates = templates;
+            options.onItemRender = onTemplateRender;
+            options.selectionPathMode = primitives.common.SelectionPathMode.None;
+            options.graphicsType = primitives.common.GraphicsType.Canvas;
+            options.actualGraphicsType = primitives.common.GraphicsType.Canvas;
+            options.horizontalAlignment = primitives.common.HorizontalAlignmentType.Center;
+
+            $("#basicDiagram").orgDiagram(options);
+            function getManagerTemplate_SimpleBox() {
+                var result = new primitives.orgdiagram.TemplateConfig();
+                result.name = "managerTemplate";
+
+                result.itemSize = new primitives.common.Size(220, 120);
+                result.minimizedItemSize = new primitives.common.Size(6, 6);
+                result.highlightPadding = new primitives.common.Thickness(2, 2, 2, 2);
+
+                var itemTemplate = $('<div class="bp-item bp-corner-all bt-item-frame">'
+                    + '<div name="titleBackground" class="bp-item bp-corner-all bp-title-frame" style="top: 2px; left: 2px; width: 215px; height: 20px;">'
+                        + '<div name="fullName" class="bp-item bp-title" style="top: 3px; left: 6px; width: 100%; height: 18px;">'
+                        + '</div>'
+                    + '</div>'
+                    + '<div name="detailLine" class="bp-item-root" style="top: 26px; left: 6px; width: 175px; height: auto; font-size: 12px;"></div>'
+                    // + '<div name="payPlanInfo" class="bp-item" style="top: 52px; left: 6px; width: 165px; height: auto; font-size: 12px;"></div>'
+                    // + '<div name="workScheduleType" class="bp-item" style="top: 60px; left: 6px; width: 165px; height: auto; font-size: 11px;"></div>'
+                    // + '<div name="typeApptDescription" class="bp-item" style="top: 75px; left: 6px; width: 135px; height: auto; font-size: 10px;"></div>'
+                    // + '<div name="orgCode" class="bp-item" style="top: 102px; left: 6px; width: 165px; height: auto; font-size: 10px;"></div>'
+                + '</div>').css({
+                    width: result.itemSize.width + "px",
+                    height: result.itemSize.height + "px"
+                });
+                result.itemTemplate = itemTemplate.wrap('<div>').parent().html();
+
+                return result;
+            }
+
+            function getManagerTemplate_RootNode() {
+                var result = new primitives.orgdiagram.TemplateConfig();
+                result.name = "rootNodeManagerTemplate";
+
+                result.itemSize = new primitives.common.Size(220, 120);
+                result.minimizedItemSize = new primitives.common.Size(6, 6);
+                result.highlightPadding = new primitives.common.Thickness(2, 2, 2, 2);
+
+                var itemTemplate = $('<div class="bp-item-root bp-corner-all-root bt-item-frame-root">'
+                    + '<div name="titleBackground" class="bp-item-root bp-corner-all-root bp-title-frame-root" style="top: 2px; left: 2px; width: 215px; height: 20px;">'
+                        + '<div name="fullName" class="bp-item-root bp-title-root" style="top: 3px; left: 6px; width: 208px; height: 18px;">'
+                        + '</div>'
+                    + '</div>'
+                    + '<div name="detailLine" class="bp-item-root" style="top: 26px; left: 6px; width: 200px; font-size: 12px;"></div>'
+                + '</div>').css({
+                    width: result.itemSize.width + "px",
+                    height: result.itemSize.height + "px"
+                });
+                result.itemTemplate = itemTemplate.wrap('<div>').parent().html();
+
+                return result;
+            }
+
+            function onTemplateRender(event, data) {
+                switch (data.renderingMode) {
+                    case primitives.common.RenderingMode.Create:
+                        data.element.find("[name=email]").click(function (e) {
+                            /* Block mouse click propogation in order to avoid layout updates before server postback*/
+                            primitives.common.stopPropagation(e);
+                        });
+                        /* Initialize widgets here */
+                        break;
+                    case primitives.common.RenderingMode.Update:
+                        /* Update widgets here */
+                        break;
+                }
+
+                var itemConfig = data.context;
+
+                switch (data.templateName) {
+                    case "managerTemplate":
+                    case "rootNodeManagerTemplate":
+                        //data.element.find("[name=photo]").attr({ "src": itemConfig.image });
+                        // data.element.find("[name=payPlanInfo]").text(itemConfig["payPlan"] + itemConfig["grade"] + "-" + itemConfig["gradeStep"] + " - Series: " + itemConfig["occSeries"]);
+                        // data.element.find("[name=workScheduleType]").text(itemConfig["workScheduleType"] + ": " + itemConfig["payPlan"] + itemConfig["grade"] + "-" + itemConfig["gradeStep"] + " - Series: " + itemConfig["occSeries"]);
+                        // data.element.find("[name=orgCode]").text("Org. Code: " + itemConfig["orgCode"]);
+
+                        data.element.find("[name=titleBackground]").css({ "background": itemConfig.itemTitleColor });
+                        /* data.element.find("[name=detailLine]").html("<b>" + itemConfig["title"] + "</b><br />" + itemConfig["payPlan"] + itemConfig["grade"] + "-" + itemConfig["gradeStep"] + " - Series: " + itemConfig["occSeries"] + "<br />" + itemConfig["workScheduleType"] + "<br />" + itemConfig["typeApptDescription"] + "<br />Org Code: " + itemConfig["orgCode"]); */
+                        data.element.find("[name=detailLine]").html("<b>" + itemConfig["title"] + "</b><br />" + itemConfig["payPlan"] + itemConfig["grade"] + "-" + itemConfig["gradeStep"] + " - Series: " + itemConfig["occSeries"] + "<br />" + itemConfig["workScheduleType"] + "<br />" + itemConfig["typeApptDescription"]);
+
+                        var fields = ["title", "fullName"];
+
+                        for (var index = 0; index < fields.length; index += 1) {
+                            var field = fields[index];
+                            data.element.find("[name=" + field + "]").text(itemConfig[field]);
+                        }
+                        break;
+                }
+            }
+        });//]]>  
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    
+    <div id="basicDiagram" style="background-color: #FFFFFF; overflow: hidden; width: 100%; height: 100vh; border-style: dotted; border-width: 1px;" />
+        
+    </form>
+</body>
+</html>

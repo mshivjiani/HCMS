@@ -1,0 +1,1244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{52790839-04D9-4137-BAE0-F88206D2F1EF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HCMS.PDExpress</RootNamespace>
+    <AssemblyName>HCMS.PDExpress</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'LOCAL-NTCAD|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\HCMS.PDExpress.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.0.30930.28736, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching.Database, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Caching.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Configuration.Design.HostAdapter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.HostAdapter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data.SqlCe, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging.Database, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.PolicyInjection, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security.AzMan, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Security.AzMan.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security.Cryptography, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WinForms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.StaticFactory, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.Unity.StaticFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Telerik.Reporting, Version=6.1.12.611, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Telerik.Reporting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.ReportViewer.WebForms, Version=6.1.12.611, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Telerik.ReportViewer.WebForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2012.2.607.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins, Version=2012.2.607.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\BasicTools.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\DutyPercentage.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\FooterOtherMaster.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\FooterPDExpress.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\FooterSiteMaster.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\LeftNavCreatePD.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\LeftNavHome.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\TopNavPD.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\Validation.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Themes\PDExpress_Default\AjaxSessionTimer.css" />
+    <Content Include="App_Themes\PDExpress_Default\Images\banner.png" />
+    <Content Include="App_Themes\PDExpress_Default\Images\bg.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\bluegrad.jpg" />
+    <Content Include="App_Themes\PDExpress_Default\Images\btn_bg.png" />
+    <Content Include="App_Themes\PDExpress_Default\Images\btn_enter.png" />
+    <Content Include="App_Themes\PDExpress_Default\Images\header_logo.png" />
+    <Content Include="App_Themes\PDExpress_Default\Images\Icons\2cutedolfin2.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\Icons\2fishswim7.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\Icons\3bluejumper.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\Icons\bub001.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\Icons\check.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\Icons\collapse.jpg" />
+    <Content Include="App_Themes\PDExpress_Default\Images\Icons\expand.jpg" />
+    <Content Include="App_Themes\PDExpress_Default\Images\Icons\Fish102.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\Icons\flag_red.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\Icons\icon_add.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\Icons\icon_cancel.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\Icons\icon_checkmark.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\Icons\icon_component.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\Icons\icon_delete.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\Icons\icon_details.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\Icons\icon_edit.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\Icons\icon_editold.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\Icons\icon_escalated.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\Icons\icon_greenDot.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\Icons\icon_help.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\Icons\icon_Inactive.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\Icons\icon_lock.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\Icons\icon_notes.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\Icons\icon_ontrack.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\Icons\icon_pdflarge.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\Icons\icon_pdfsmall.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\Icons\icon_redDot.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\Icons\icon_refresh.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\Icons\icon_review.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\Icons\icon_unlock.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\Icons\icon_view.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\Icons\icon_warning.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\Icons\icon_yellowDot.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\Icons\loading.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\Icons\magnifying-glass-23px.png" />
+    <Content Include="App_Themes\PDExpress_Default\Images\Icons\square.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\Icons\Web20Loading.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\logo_bg.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Grid\AddRecord.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Grid\altRowBg.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Grid\bg.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Grid\Cancel.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Grid\Cancel_01.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Grid\defaultAlternatingItemBg.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Grid\defaultEditItemBg.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Grid\defaultHeaderBg.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Grid\defaultItemBg.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Grid\defaultPagerBg.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Grid\defaultSelectedItemBg.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Grid\Delete.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Grid\Delete_01.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Grid\Edit.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Grid\Edit_01.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Grid\expandedRowBg.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Grid\Filter.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Grid\headerBg.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Grid\headerBg2.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Grid\inner1HeaderBg.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Grid\inner2HeaderBg.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Grid\MoveDown.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Grid\MoveUp.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Grid\pagerBg.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Grid\PagingFirst.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Grid\PagingLast.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Grid\PagingNext.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Grid\PagingPrev.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Grid\Refresh.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Grid\SingleMinus.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Grid\SinglePlus.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Grid\SortAsc.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Grid\SortDesc.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Grid\sprite.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Grid\Update.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Grid\Update_01.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Grid\View.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Menu\down.png" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Menu\right.png" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Menu\up.png" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\SpellCheck\SpellCheck.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Window\ModalDialogAlert.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Images\RAD\Window\ModalDialogConfirm.gif" />
+    <Content Include="App_Themes\PDExpress_Default\main.css" />
+    <Content Include="App_Themes\PDExpress_Default\RADAjaxLoadingPanel.css" />
+    <Content Include="App_Themes\PDExpress_Default\style.PDExpress.css" />
+    <Content Include="App_Themes\PDExpress_Default\superfish.css" />
+    <Content Include="App_Themes\PDExpress_Default\ToolTip.HCMS.css" />
+    <Content Include="App_Themes\PDExpress_Default\ToolTip\Callouts.gif" />
+    <Content Include="App_Themes\PDExpress_Default\ToolTip\GridCustom.gif" />
+    <Content Include="App_Themes\PDExpress_Default\ToolTip\Loading.gif" />
+    <Content Include="App_Themes\PDExpress_Default\ToolTip\ToolTipSprites.gif" />
+    <Content Include="App_Themes\PDExpress_Default\ToolTip\ToolTipVerticalSprites.gif" />
+    <Content Include="App_Themes\PDExpress_Default\Window.HCMS.css" />
+    <Content Include="Common\AccessDenied.aspx" />
+    <Content Include="Common\Error.aspx" />
+    <Content Include="Common\FAQ.aspx" />
+    <Content Include="Common\Timeout.aspx" />
+    <Content Include="Controls\Common\HelpMessage.ascx" />
+    <Content Include="Controls\CreatePD\Approvals\Approvals.ascx" />
+    <Content Include="Controls\CreatePD\CareerLadderBundle.ascx" />
+    <Content Include="Controls\CreatePD\CareerLadderErrors.ascx" />
+    <Content Include="Controls\CreatePD\CLBundleActionsPopup.aspx" />
+    <Content Include="Controls\CreatePD\CreatePDChoice.ascx" />
+    <Content Include="Controls\CreatePD\CreatePDMapStatusProgress.ascx" />
+    <Content Include="Controls\CreatePD\CreatePDWorkflowNote.ascx" />
+    <Content Include="Controls\CreatePD\Duties\AddEditDutyQual.ascx" />
+    <Content Include="Controls\CreatePD\Duties\AddEditPDQual.ascx" />
+    <Content Include="Controls\CreatePD\Duties\Duties.ascx" />
+    <Content Include="Controls\CreatePD\Duties\DutyDefinitionPopup.aspx" />
+    <Content Include="Controls\CreatePD\Duties\DutyQualificationListing.ascx" />
+    <Content Include="Controls\CreatePD\Duties\DutyQualificationPopup.aspx" />
+    <Content Include="Controls\CreatePD\Duties\EditDuty.ascx" />
+    <Content Include="Controls\CreatePD\Duties\ShowDutyDiff.ascx" />
+    <Content Include="Controls\CreatePD\Factors\Evaluation.ascx" />
+    <Content Include="Controls\CreatePD\Factors\FactorLanguagePopup.aspx" />
+    <Content Include="Controls\CreatePD\Factors\FactorLanguagePopupCtrl.ascx" />
+    <Content Include="Controls\CreatePD\Factors\Factors.ascx" />
+    <Content Include="Controls\CreatePD\Factors\LadderProgressions.ascx" />
+    <Content Include="Controls\CreatePD\Factors\NarrativeFactorLanguagePopup.aspx" />
+    <Content Include="Controls\CreatePD\Factors\NarrativeFactorLanguagePopupCtrl.ascx" />
+    <Content Include="Controls\CreatePD\Factors\PositionFactorReview.ascx" />
+    <Content Include="Controls\CreatePD\Occupation\Occupation.ascx" />
+    <Content Include="Controls\CreatePD\Occupation\ShowOccupationDiff.ascx" />
+    <Content Include="Controls\CreatePD\PositionCharacteristics\PositionCharacteristics.ascx" />
+    <Content Include="Controls\CreatePD\ShowPositionFactorDiff.ascx" />
+    <Content Include="Controls\CreatePD\SOD\SOD.ascx" />
+    <Content Include="Controls\CreatePD\ViewFullPerformancePD.ascx" />
+    <Content Include="Controls\defaultMain.ascx" />
+    <Content Include="Controls\Layout\HeaderControl.ascx" />
+    <Content Include="Controls\Message\Message.ascx" />
+    <Content Include="Controls\PDExpress\PDTracker.ascx" />
+    <Content Include="Controls\ProgressBar\images\progress_bluegrey_empty.gif" />
+    <Content Include="Controls\ProgressBar\images\progress_bluegrey_full.gif" />
+    <Content Include="Controls\ProgressBar\images\progress_bluegrey_left.gif" />
+    <Content Include="Controls\ProgressBar\images\progress_bluegrey_right.gif" />
+    <Content Include="Controls\ProgressBar\images\progress_classic_empty.gif" />
+    <Content Include="Controls\ProgressBar\images\progress_classic_full.gif" />
+    <Content Include="Controls\ProgressBar\images\progress_classic_left.gif" />
+    <Content Include="Controls\ProgressBar\images\progress_classic_right.gif" />
+    <Content Include="Controls\ProgressBar\images\progress_ie7_empty.gif" />
+    <Content Include="Controls\ProgressBar\images\progress_ie7_full.gif" />
+    <Content Include="Controls\ProgressBar\images\progress_ie7_left.gif" />
+    <Content Include="Controls\ProgressBar\images\progress_ie7_right.gif" />
+    <Content Include="Controls\ProgressBar\images\progress_ie_empty.gif" />
+    <Content Include="Controls\ProgressBar\images\progress_ie_full.gif" />
+    <Content Include="Controls\ProgressBar\images\progress_ie_green.gif" />
+    <Content Include="Controls\ProgressBar\images\progress_ie_left.gif" />
+    <Content Include="Controls\ProgressBar\images\progress_ie_right.gif" />
+    <Content Include="Controls\ProgressBar\images\progress_ie_white.gif" />
+    <Content Include="Controls\ProgressBar\ProgressBar.ascx" />
+    <Content Include="Controls\Search\ctrlSearchKSA.ascx" />
+    <Content Include="Controls\Search\SearchReports.ascx" />
+    <Content Include="Controls\Search\SearchReportsAdvanced.ascx" />
+    <Content Include="Controls\ToolTip\ToolTip.ascx" />
+    <Content Include="Controls\WorkflowNotePopup\EditWorkflowNotePopup.ascx" />
+    <Content Include="Controls\WorkflowNotePopup\EditWorkflowNotePopup.aspx" />
+    <Content Include="Controls\WorkflowNotePopup\WorkflowNotePopup.ascx" />
+    <Content Include="Controls\WorkflowNotePopup\WorkflowNotePopup.aspx" />
+    <Content Include="CreatePD\AddEditDuty.aspx" />
+    <Content Include="CreatePD\AddEditDutyQual.aspx" />
+    <Content Include="CreatePD\AddEditPDQual.aspx" />
+    <Content Include="CreatePD\Approvals.aspx" />
+    <Content Include="CreatePD\Duties.aspx" />
+    <Content Include="CreatePD\Factors.aspx" />
+    <Content Include="CreatePD\Occupation.aspx" />
+    <Content Include="CreatePD\PDTypeChoice.aspx" />
+    <Content Include="CreatePD\PositionCharacteristics.aspx" />
+    <Content Include="CreatePD\PositionFactorReviewPopup.aspx" />
+    <Content Include="CreatePD\Published.aspx" />
+    <Content Include="CreatePD\ShowDiff.aspx" />
+    <Content Include="CreatePD\ShowDutyDiff.aspx" />
+    <Content Include="CreatePD\ShowExistingConfirmation.aspx" />
+    <Content Include="CreatePD\ShowOccupationDiff.aspx" />
+    <Content Include="CreatePD\SOD.aspx" />
+    <Content Include="Documents\CodingInfo\CodingInfoDocument.aspx" />
+    <Content Include="Documents\Comments\PDCommentsDocument.aspx" />
+    <Content Include="Documents\Evaluation\EvaluationStatementDocument.aspx" />
+    <Content Include="Documents\JobAnalysis\JobAnalysisDocument.aspx" />
+    <Content Include="Documents\PositionDescription\PositionDescriptionDocument.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Help.aspx" />
+    <Content Include="PDExpressTracker.aspx" />
+    <Content Include="References.aspx" />
+    <Content Include="References\AjaxControlToolkit.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.xml" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Caching.Database.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Caching.Database.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Caching.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Caching.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Common.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.HostAdapter.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Data.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Data.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Logging.Database.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Logging.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Logging.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.xml" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Security.AzMan.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Security.AzMan.xml" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.xml" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Security.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Security.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Validation.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WinForms.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WinForms.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Validation.XML" />
+    <Content Include="References\Microsoft.Practices.ObjectBuilder2.dll" />
+    <Content Include="References\Microsoft.Practices.ObjectBuilder2.xml" />
+    <Content Include="References\Microsoft.Practices.Unity.Configuration.dll" />
+    <Content Include="References\Microsoft.Practices.Unity.Configuration.xml" />
+    <Content Include="References\Microsoft.Practices.Unity.dll" />
+    <Content Include="References\Microsoft.Practices.Unity.Interception.Configuration.dll" />
+    <Content Include="References\Microsoft.Practices.Unity.Interception.Configuration.xml" />
+    <Content Include="References\Microsoft.Practices.Unity.Interception.dll" />
+    <Content Include="References\Microsoft.Practices.Unity.Interception.xml" />
+    <Content Include="References\Microsoft.Practices.Unity.StaticFactory.dll" />
+    <Content Include="References\Microsoft.Practices.Unity.xml" />
+    <Content Include="References\Telerik.Reporting.dll" />
+    <Content Include="References\Telerik.ReportViewer.WebForms.dll" />
+    <Content Include="References\Telerik.Web.UI.dll" />
+    <Content Include="References\Telerik.Web.UI.Skins.dll" />
+    <Content Include="References\Telerik.Web.UI.XML" />
+    <Content Include="RenewSes.aspx" />
+    <Content Include="Search\SearchReports.aspx" />
+    <Content Include="Search\SearchReportsAdvanced.aspx" />
+    <Content Include="Src\JsRelatedTocss\app.PDExpress.js" />
+    <Content Include="Src\JsRelatedTocss\hoverIntent.js" />
+    <Content Include="Src\JsRelatedTocss\jQuery-1.3.2-vsdoc.js" />
+    <Content Include="Src\JsRelatedTocss\jQuery-1.3.2.js" />
+    <Content Include="Src\JsRelatedTocss\jquery-1.8.3.min.js" />
+    <Content Include="Src\JsRelatedTocss\jquery.bgiframe.pack.js" />
+    <Content Include="Src\JsRelatedTocss\superfish.js" />
+    <Content Include="Src\JsRelatedTocss\supersubs.js" />
+    <Content Include="Src\SessionTimerRelated\AjaxSessionTimer.js" />
+    <Content Include="Src\SessionTimerRelated\net.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="WhatsNew.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\AccessDenied.aspx.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\FAQ.aspx.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Timeout.aspx.cs">
+      <DependentUpon>Timeout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Timeout.aspx.designer.cs">
+      <DependentUpon>Timeout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Layout\HeaderControl.ascx.cs">
+      <DependentUpon>HeaderControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Layout\HeaderControl.ascx.designer.cs">
+      <DependentUpon>HeaderControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Message\Message.ascx.cs">
+      <DependentUpon>Message.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Message\Message.ascx.designer.cs">
+      <DependentUpon>Message.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProgressBar\ProgressBar.ascx.cs">
+      <DependentUpon>ProgressBar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ProgressBar\ProgressBar.ascx.designer.cs">
+      <DependentUpon>ProgressBar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Search\ctrlSearchKSA.ascx.cs">
+      <DependentUpon>ctrlSearchKSA.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Search\ctrlSearchKSA.ascx.designer.cs">
+      <DependentUpon>ctrlSearchKSA.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ToolTip\ToolTip.ascx.cs">
+      <DependentUpon>ToolTip.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ToolTip\ToolTip.ascx.designer.cs">
+      <DependentUpon>ToolTip.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\CodingInfo\CodingInfoDocument.aspx.cs">
+      <DependentUpon>CodingInfoDocument.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Documents\Comments\PDCommentsDocument.aspx.cs">
+      <DependentUpon>PDCommentsDocument.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Documents\Evaluation\EvaluationStatementDocument.aspx.cs">
+      <DependentUpon>EvaluationStatementDocument.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Documents\JobAnalysis\JobAnalysisDocument.aspx.cs">
+      <DependentUpon>JobAnalysisDocument.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Documents\PositionDescription\PositionDescriptionDocument.aspx.cs">
+      <DependentUpon>PositionDescriptionDocument.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Other.Master.cs">
+      <DependentUpon>Other.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Other.Master.designer.cs">
+      <DependentUpon>Other.Master</DependentUpon>
+    </Compile>
+    <Compile Include="WhatsNew.aspx.cs">
+      <DependentUpon>WhatsNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WhatsNew.aspx.designer.cs">
+      <DependentUpon>WhatsNew.aspx</DependentUpon>
+    </Compile>
+    <Content Include="App_Code\ErrorModule.cs" />
+    <Compile Include="Controls\Common\HelpMessage.ascx.cs">
+      <DependentUpon>HelpMessage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\HelpMessage.ascx.designer.cs">
+      <DependentUpon>HelpMessage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Approvals\Approvals.ascx.cs">
+      <DependentUpon>Approvals.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Approvals\Approvals.ascx.designer.cs">
+      <DependentUpon>Approvals.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CreatePD\CareerLadderBundle.ascx.cs">
+      <DependentUpon>CareerLadderBundle.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CreatePD\CareerLadderBundle.ascx.designer.cs">
+      <DependentUpon>CareerLadderBundle.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CreatePD\CareerLadderErrors.ascx.cs">
+      <DependentUpon>CareerLadderErrors.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CreatePD\CareerLadderErrors.ascx.designer.cs">
+      <DependentUpon>CareerLadderErrors.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CreatePD\CLBundleActionsPopup.aspx.cs">
+      <DependentUpon>CLBundleActionsPopup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CreatePD\CLBundleActionsPopup.aspx.designer.cs">
+      <DependentUpon>CLBundleActionsPopup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CreatePD\CreatePDChoice.ascx.cs">
+      <DependentUpon>CreatePDChoice.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CreatePD\CreatePDChoice.ascx.designer.cs">
+      <DependentUpon>CreatePDChoice.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CreatePD\CreatePDMapStatusProgress.ascx.cs">
+      <DependentUpon>CreatePDMapStatusProgress.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CreatePD\CreatePDMapStatusProgress.ascx.designer.cs">
+      <DependentUpon>CreatePDMapStatusProgress.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CreatePD\CreatePDWorkflowNote.ascx.cs">
+      <DependentUpon>CreatePDWorkflowNote.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CreatePD\CreatePDWorkflowNote.ascx.designer.cs">
+      <DependentUpon>CreatePDWorkflowNote.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Duties\AddEditDutyQual.ascx.cs">
+      <DependentUpon>AddEditDutyQual.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Duties\AddEditDutyQual.ascx.designer.cs">
+      <DependentUpon>AddEditDutyQual.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Duties\AddEditPDQual.ascx.cs">
+      <DependentUpon>AddEditPDQual.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Duties\AddEditPDQual.ascx.designer.cs">
+      <DependentUpon>AddEditPDQual.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Duties\Duties.ascx.cs">
+      <DependentUpon>Duties.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Duties\Duties.ascx.designer.cs">
+      <DependentUpon>Duties.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Duties\DutyDefinitionPopup.aspx.cs">
+      <DependentUpon>DutyDefinitionPopup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Duties\DutyDefinitionPopup.aspx.designer.cs">
+      <DependentUpon>DutyDefinitionPopup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Duties\DutyQualificationListing.ascx.cs">
+      <DependentUpon>DutyQualificationListing.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Duties\DutyQualificationListing.ascx.designer.cs">
+      <DependentUpon>DutyQualificationListing.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Duties\DutyQualificationPopup.aspx.cs">
+      <DependentUpon>DutyQualificationPopup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Duties\DutyQualificationPopup.aspx.designer.cs">
+      <DependentUpon>DutyQualificationPopup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Duties\EditDuty.ascx.cs">
+      <DependentUpon>EditDuty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Duties\EditDuty.ascx.designer.cs">
+      <DependentUpon>EditDuty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Duties\ShowDutyDiff.ascx.cs">
+      <DependentUpon>ShowDutyDiff.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Duties\ShowDutyDiff.ascx.designer.cs">
+      <DependentUpon>ShowDutyDiff.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Factors\Evaluation.ascx.cs">
+      <DependentUpon>Evaluation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Factors\Evaluation.ascx.designer.cs">
+      <DependentUpon>Evaluation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Factors\FactorLanguagePopup.aspx.cs">
+      <DependentUpon>FactorLanguagePopup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Factors\FactorLanguagePopup.aspx.designer.cs">
+      <DependentUpon>FactorLanguagePopup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Factors\FactorLanguagePopupCtrl.ascx.cs">
+      <DependentUpon>FactorLanguagePopupCtrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Factors\FactorLanguagePopupCtrl.ascx.designer.cs">
+      <DependentUpon>FactorLanguagePopupCtrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Factors\Factors.ascx.cs">
+      <DependentUpon>Factors.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Factors\Factors.ascx.designer.cs">
+      <DependentUpon>Factors.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Factors\LadderProgressions.ascx.cs">
+      <DependentUpon>LadderProgressions.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Factors\LadderProgressions.ascx.designer.cs">
+      <DependentUpon>LadderProgressions.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Factors\NarrativeFactorLanguagePopup.aspx.cs">
+      <DependentUpon>NarrativeFactorLanguagePopup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Factors\NarrativeFactorLanguagePopup.aspx.designer.cs">
+      <DependentUpon>NarrativeFactorLanguagePopup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Factors\NarrativeFactorLanguagePopupCtrl.ascx.cs">
+      <DependentUpon>NarrativeFactorLanguagePopupCtrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Factors\NarrativeFactorLanguagePopupCtrl.ascx.designer.cs">
+      <DependentUpon>NarrativeFactorLanguagePopupCtrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Factors\PositionFactorReview.ascx.cs">
+      <DependentUpon>PositionFactorReview.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Factors\PositionFactorReview.ascx.designer.cs">
+      <DependentUpon>PositionFactorReview.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Occupation\Occupation.ascx.cs">
+      <DependentUpon>Occupation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Occupation\Occupation.ascx.designer.cs">
+      <DependentUpon>Occupation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Occupation\ShowOccupationDiff.ascx.cs">
+      <DependentUpon>ShowOccupationDiff.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CreatePD\Occupation\ShowOccupationDiff.ascx.designer.cs">
+      <DependentUpon>ShowOccupationDiff.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CreatePD\PositionCharacteristics\PositionCharacteristics.ascx.cs">
+      <DependentUpon>PositionCharacteristics.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CreatePD\PositionCharacteristics\PositionCharacteristics.ascx.designer.cs">
+      <DependentUpon>PositionCharacteristics.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CreatePD\ShowPositionFactorDiff.ascx.cs">
+      <DependentUpon>ShowPositionFactorDiff.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CreatePD\ShowPositionFactorDiff.ascx.designer.cs">
+      <DependentUpon>ShowPositionFactorDiff.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CreatePD\SOD\SOD.ascx.cs">
+      <DependentUpon>SOD.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CreatePD\SOD\SOD.ascx.designer.cs">
+      <DependentUpon>SOD.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CreatePD\ViewFullPerformancePD.ascx.cs">
+      <DependentUpon>ViewFullPerformancePD.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CreatePD\ViewFullPerformancePD.ascx.designer.cs">
+      <DependentUpon>ViewFullPerformancePD.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\defaultMain.ascx.cs">
+      <DependentUpon>defaultMain.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\defaultMain.ascx.designer.cs">
+      <DependentUpon>defaultMain.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PDExpress\PDTracker.ascx.cs">
+      <DependentUpon>PDTracker.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\PDExpress\PDTracker.ascx.designer.cs">
+      <DependentUpon>PDTracker.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Search\SearchReports.ascx.cs">
+      <DependentUpon>SearchReports.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Search\SearchReports.ascx.designer.cs">
+      <DependentUpon>SearchReports.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Search\SearchReportsAdvanced.ascx.cs">
+      <DependentUpon>SearchReportsAdvanced.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Search\SearchReportsAdvanced.ascx.designer.cs">
+      <DependentUpon>SearchReportsAdvanced.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WorkflowNotePopup\EditWorkflowNotePopup.ascx.cs">
+      <DependentUpon>EditWorkflowNotePopup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\WorkflowNotePopup\EditWorkflowNotePopup.ascx.designer.cs">
+      <DependentUpon>EditWorkflowNotePopup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WorkflowNotePopup\EditWorkflowNotePopup.aspx.cs">
+      <DependentUpon>EditWorkflowNotePopup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\WorkflowNotePopup\EditWorkflowNotePopup.aspx.designer.cs">
+      <DependentUpon>EditWorkflowNotePopup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WorkflowNotePopup\WorkflowNotePopup.ascx.cs">
+      <DependentUpon>WorkflowNotePopup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\WorkflowNotePopup\WorkflowNotePopup.ascx.designer.cs">
+      <DependentUpon>WorkflowNotePopup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WorkflowNotePopup\WorkflowNotePopup.aspx.cs">
+      <DependentUpon>WorkflowNotePopup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\WorkflowNotePopup\WorkflowNotePopup.aspx.designer.cs">
+      <DependentUpon>WorkflowNotePopup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreatePD\AddEditDuty.aspx.cs">
+      <DependentUpon>AddEditDuty.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreatePD\AddEditDuty.aspx.designer.cs">
+      <DependentUpon>AddEditDuty.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreatePD\AddEditDutyQual.aspx.cs">
+      <DependentUpon>AddEditDutyQual.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreatePD\AddEditDutyQual.aspx.designer.cs">
+      <DependentUpon>AddEditDutyQual.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreatePD\AddEditPDQual.aspx.cs">
+      <DependentUpon>AddEditPDQual.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreatePD\AddEditPDQual.aspx.designer.cs">
+      <DependentUpon>AddEditPDQual.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreatePD\Approvals.aspx.cs">
+      <DependentUpon>Approvals.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreatePD\Approvals.aspx.designer.cs">
+      <DependentUpon>Approvals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreatePD\Duties.aspx.cs">
+      <DependentUpon>Duties.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreatePD\Duties.aspx.designer.cs">
+      <DependentUpon>Duties.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreatePD\Factors.aspx.cs">
+      <DependentUpon>Factors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreatePD\Factors.aspx.designer.cs">
+      <DependentUpon>Factors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreatePD\Occupation.aspx.cs">
+      <DependentUpon>Occupation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreatePD\Occupation.aspx.designer.cs">
+      <DependentUpon>Occupation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreatePD\PDTypeChoice.aspx.cs">
+      <DependentUpon>PDTypeChoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreatePD\PDTypeChoice.aspx.designer.cs">
+      <DependentUpon>PDTypeChoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreatePD\PositionCharacteristics.aspx.cs">
+      <DependentUpon>PositionCharacteristics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreatePD\PositionCharacteristics.aspx.designer.cs">
+      <DependentUpon>PositionCharacteristics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreatePD\PositionFactorReviewPopup.aspx.cs">
+      <DependentUpon>PositionFactorReviewPopup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreatePD\PositionFactorReviewPopup.aspx.designer.cs">
+      <DependentUpon>PositionFactorReviewPopup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreatePD\Published.aspx.cs">
+      <DependentUpon>Published.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreatePD\Published.aspx.designer.cs">
+      <DependentUpon>Published.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreatePD\ShowDiff.aspx.cs">
+      <DependentUpon>ShowDiff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreatePD\ShowDiff.aspx.designer.cs">
+      <DependentUpon>ShowDiff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreatePD\ShowDutyDiff.aspx.cs">
+      <DependentUpon>ShowDutyDiff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreatePD\ShowDutyDiff.aspx.designer.cs">
+      <DependentUpon>ShowDutyDiff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreatePD\ShowExistingConfirmation.aspx.cs">
+      <DependentUpon>ShowExistingConfirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreatePD\ShowExistingConfirmation.aspx.designer.cs">
+      <DependentUpon>ShowExistingConfirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreatePD\ShowOccupationDiff.aspx.cs">
+      <DependentUpon>ShowOccupationDiff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreatePD\ShowOccupationDiff.aspx.designer.cs">
+      <DependentUpon>ShowOccupationDiff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreatePD\SOD.aspx.cs">
+      <DependentUpon>SOD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreatePD\SOD.aspx.designer.cs">
+      <DependentUpon>SOD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Help.aspx.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Help.aspx.designer.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PDExpressTracker.aspx.cs">
+      <DependentUpon>PDExpressTracker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PDExpressTracker.aspx.designer.cs">
+      <DependentUpon>PDExpressTracker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PDMaster.master.cs">
+      <DependentUpon>PDMaster.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PDMaster.master.designer.cs">
+      <DependentUpon>PDMaster.master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="References.aspx.cs">
+      <DependentUpon>References.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="References.aspx.designer.cs">
+      <DependentUpon>References.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RenewSes.aspx.cs">
+      <DependentUpon>RenewSes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RenewSes.aspx.designer.cs">
+      <DependentUpon>RenewSes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search\SearchReports.aspx.cs">
+      <DependentUpon>SearchReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search\SearchReports.aspx.designer.cs">
+      <DependentUpon>SearchReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search\SearchReportsAdvanced.aspx.cs">
+      <DependentUpon>SearchReportsAdvanced.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search\SearchReportsAdvanced.aspx.designer.cs">
+      <DependentUpon>SearchReportsAdvanced.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HCMS.Business\HCMS.Business.csproj">
+      <Project>{E45DDA26-40F5-4C0C-B039-ABEF98717E94}</Project>
+      <Name>HCMS.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HCMS.Reports\HCMS.Reports.csproj">
+      <Project>{8C392731-929D-45CD-B542-3C6CCED3EB5A}</Project>
+      <Name>HCMS.Reports</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HCMS.WebFramework\HCMS.WebFramework.csproj">
+      <Project>{E663DEDC-DD0B-4470-B5C9-B87A1756ED76}</Project>
+      <Name>HCMS.WebFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\PDExpress_Default\PDExpress_Default.skin" />
+    <Content Include="Web.CLSOD.sitemap" />
+    <Content Include="Web.SOD.sitemap" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\RadSpell\en-US.tdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDMaster.master" />
+    <Content Include="PDXMessagesSection.config" />
+    <Content Include="Common\Administrator Manual.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\FAQ.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Hiring Manager Manual.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Human Resources Manual.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\OPM FES - Factor 6 and 7 Language and Point Awards for Differentiated Job Series.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\QuickReferenceCard.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="References.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Web.sitemap" />
+    <Content Include="WhatsNew.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Other.Master" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>43441</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

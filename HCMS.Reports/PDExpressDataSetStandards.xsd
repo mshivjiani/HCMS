@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PDExpressDataSetStandards" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PDExpress" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PDExpress (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.HCMS.Reports.Properties.Settings.GlobalReference.Default.PDExpress" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PDExpressDataSetStandardsTableAdapter" GeneratorDataComponentClassName="PDExpressDataSetStandardsTableAdapter" Name="PDExpressDataSetStandardsTable" UserDataComponentName="PDExpressDataSetStandardsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PDExpress (Settings)" DbObjectName="PDExpress.dbo.xref_PositionClassificationStandard" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        xref_PositionClassificationStandard.*
+FROM            xref_PositionClassificationStandard</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PositionClassificationStandardID" DataSetColumn="PositionClassificationStandardID" />
+              <Mapping SourceColumn="PositionDescriptionID" DataSetColumn="PositionDescriptionID" />
+              <Mapping SourceColumn="ClassificationSourceID" DataSetColumn="ClassificationSourceID" />
+              <Mapping SourceColumn="ClassificationSourceName" DataSetColumn="ClassificationSourceName" />
+              <Mapping SourceColumn="CreatedByID" DataSetColumn="CreatedByID" />
+              <Mapping SourceColumn="CreateDate" DataSetColumn="CreateDate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PDExpressDataSetStandards" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="PDExpressDataSetStandards" msprop:Generator_DataSetName="PDExpressDataSetStandards">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PDExpressDataSetStandardsTable" msprop:Generator_UserTableName="PDExpressDataSetStandardsTable" msprop:Generator_RowDeletedName="PDExpressDataSetStandardsTableRowDeleted" msprop:Generator_TableClassName="PDExpressDataSetStandardsTableDataTable" msprop:Generator_RowChangedName="PDExpressDataSetStandardsTableRowChanged" msprop:Generator_RowClassName="PDExpressDataSetStandardsTableRow" msprop:Generator_RowChangingName="PDExpressDataSetStandardsTableRowChanging" msprop:Generator_RowEvArgName="PDExpressDataSetStandardsTableRowChangeEvent" msprop:Generator_RowEvHandlerName="PDExpressDataSetStandardsTableRowChangeEventHandler" msprop:Generator_TablePropName="PDExpressDataSetStandardsTable" msprop:Generator_TableVarName="tablePDExpressDataSetStandardsTable" msprop:Generator_RowDeletingName="PDExpressDataSetStandardsTableRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PositionClassificationStandardID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="PositionClassificationStandardID" msprop:Generator_ColumnPropNameInRow="PositionClassificationStandardID" msprop:Generator_ColumnVarNameInTable="columnPositionClassificationStandardID" msprop:Generator_ColumnPropNameInTable="PositionClassificationStandardIDColumn" type="xs:long" />
+              <xs:element name="PositionDescriptionID" msprop:Generator_UserColumnName="PositionDescriptionID" msprop:Generator_ColumnPropNameInRow="PositionDescriptionID" msprop:Generator_ColumnVarNameInTable="columnPositionDescriptionID" msprop:Generator_ColumnPropNameInTable="PositionDescriptionIDColumn" type="xs:long" />
+              <xs:element name="ClassificationSourceID" msprop:Generator_UserColumnName="ClassificationSourceID" msprop:Generator_ColumnPropNameInRow="ClassificationSourceID" msprop:Generator_ColumnVarNameInTable="columnClassificationSourceID" msprop:Generator_ColumnPropNameInTable="ClassificationSourceIDColumn" type="xs:int" />
+              <xs:element name="ClassificationSourceName" msprop:Generator_UserColumnName="ClassificationSourceName" msprop:Generator_ColumnPropNameInRow="ClassificationSourceName" msprop:Generator_ColumnVarNameInTable="columnClassificationSourceName" msprop:Generator_ColumnPropNameInTable="ClassificationSourceNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CreatedByID" msprop:Generator_UserColumnName="CreatedByID" msprop:Generator_ColumnPropNameInRow="CreatedByID" msprop:Generator_ColumnVarNameInTable="columnCreatedByID" msprop:Generator_ColumnPropNameInTable="CreatedByIDColumn" type="xs:int" />
+              <xs:element name="CreateDate" msprop:Generator_UserColumnName="CreateDate" msprop:Generator_ColumnPropNameInRow="CreateDate" msprop:Generator_ColumnVarNameInTable="columnCreateDate" msprop:Generator_ColumnPropNameInTable="CreateDateColumn" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

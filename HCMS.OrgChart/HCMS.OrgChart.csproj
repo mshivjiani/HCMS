@@ -1,0 +1,1043 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A5D26251-6AFA-42DE-A5A8-C5D01EA3218F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HCMS.OrgChart</RootNamespace>
+    <AssemblyName>HCMS.OrgChart</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'LOCAL-NTCAD|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\HCMS.OrgChart.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.0.30930.28736, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="evohtmltopdf, Version=5.19.0.0, Culture=neutral, PublicKeyToken=e1fcbb86597de299, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\evohtmltopdf.dll</HintPath>
+    </Reference>
+    <Reference Include="evopdfmerge, Version=5.0.0.0, Culture=neutral, PublicKeyToken=e1fcbb86597de299, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\evopdfmerge.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data.SqlCe, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Telerik.Reporting, Version=6.1.12.611, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Telerik.Reporting.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.ReportViewer.WebForms, Version=6.1.12.611, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Telerik.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2012.2.607.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins, Version=2012.2.607.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\FooterOrgChart.xml" />
+    <Content Include="App_Data\TopActionMenu.xml" />
+    <Content Include="App_Themes\OrgChart_Default\Images\arrow_dd.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\banner.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\bg.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\bg_blue_grad_up.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\bg_chevron.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\bg_chevron_brown.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\bg_chevron_brown_end.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\bg_chevron_off.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\bg_chevron_white.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\bg_grad_brown.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\bg_grad_gray.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\bg_green_grad.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\bg_medblue_grad.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\bg_springboard_birds_beach.jpg" />
+    <Content Include="App_Themes\OrgChart_Default\Images\bg_springboard_birds_woods.jpg" />
+    <Content Include="App_Themes\OrgChart_Default\Images\bg_stripe_blue.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\bg_stripe_thin_white.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\bg_yellow_grad.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\bluegrad.jpg" />
+    <Content Include="App_Themes\OrgChart_Default\Images\btn_bg.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\btn_enter.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\header_logo.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\2cutedolfin2.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\2fishswim7.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\3bluejumper.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\ajaxLoaderBlueTable.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\alertYellow.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\bub001.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\check.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\collapse.jpg" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\expand.jpg" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\Fish102.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\flag_red.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\icon_add.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\icon_cancel.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\icon_checkmark.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\icon_component.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\icon_delete.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\icon_details.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\icon_edit.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\icon_editold.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\icon_escalated.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\alertred.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\icon_greenDot.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\icon_help.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\icon_Inactive.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\icon_lock.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\icon_notes.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\icon_ontrack.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\icon_pdflarge.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\icon_pdfsmall.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\icon_redDot.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\icon_refresh.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\icon_review.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\icon_unlock.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\icon_view.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\icon_warning.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\icon_yellowDot.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\leftArrow.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\loading.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\magnifying-glass-23px.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\minus.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\print.ico" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\printer.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\printer_small.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\rightArrow.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\square.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\stopIcon.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\upArrow.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\upDownArrowBlue.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\Icons\Web20Loading.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\logo_bg.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\logo_HCMS.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\logo_JANP.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\logo_OrgChart.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\logo_PDExpress.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\logo_PDExpress_sm.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\progressBar_0.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\progressBar_1.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\progressBar_2.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\progressBar_3.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\progressBar_4.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\progressBar_5.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\progressBar_6.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\progressBar_7.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Grid\AddRecord.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Grid\altRowBg.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Grid\bg.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Grid\Cancel.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Grid\Cancel_01.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Grid\defaultAlternatingItemBg.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Grid\defaultEditItemBg.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Grid\defaultHeaderBg.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Grid\defaultItemBg.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Grid\defaultPagerBg.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Grid\defaultSelectedItemBg.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Grid\Delete.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Grid\Delete_01.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Grid\Edit.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Grid\Edit_01.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Grid\expandedRowBg.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Grid\Filter.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Grid\headerBg.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Grid\headerBg2.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Grid\inner1HeaderBg.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Grid\inner2HeaderBg.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Grid\MoveDown.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Grid\MoveUp.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Grid\pagerBg.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Grid\PagingFirst.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Grid\PagingLast.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Grid\PagingNext.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Grid\PagingPrev.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Grid\Refresh.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Grid\SingleMinus.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Grid\SinglePlus.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Grid\SortAsc.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Grid\SortDesc.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Grid\sprite.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Grid\Update.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Grid\Update_01.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Grid\View.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Menu\down.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Menu\right.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Menu\up.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\SpellCheck\SpellCheck.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Window\ModalDialogAlert.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\RAD\Window\ModalDialogConfirm.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Images\screenshot_PDExpress.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\tab_bg_on.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\tab_off.png" />
+    <Content Include="App_Themes\OrgChart_Default\Images\tab_on.png" />
+    <Content Include="App_Themes\OrgChart_Default\main.css" />
+    <Content Include="App_Themes\OrgChart_Default\Style_OrgChart.css" />
+    <Content Include="App_Themes\OrgChart_Default\ToolTip.OrgChart.css" />
+    <Content Include="App_Themes\OrgChart_Default\ToolTip\Callouts.gif" />
+    <Content Include="App_Themes\OrgChart_Default\ToolTip\GridCustom.gif" />
+    <Content Include="App_Themes\OrgChart_Default\ToolTip\Loading.gif" />
+    <Content Include="App_Themes\OrgChart_Default\ToolTip\ToolTipSprites.gif" />
+    <Content Include="App_Themes\OrgChart_Default\ToolTip\ToolTipVerticalSprites.gif" />
+    <Content Include="App_Themes\OrgChart_Default\Window.HCMS.css" />
+    <Content Include="Common\Error.aspx" />
+    <Content Include="Common\Help.aspx" />
+    <Content Include="Common\WhatsNew.aspx" />
+    <Content Include="Controls\Common\ctrlDisplayOrgChart.ascx" />
+    <Content Include="Controls\Common\ctrlDisplayOrgChartPopUp.ascx" />
+    <Content Include="Controls\Common\errorMessage.ascx" />
+    <Content Include="Controls\Common\noteBox.ascx" />
+    <Content Include="Controls\Common\readOnlyLabel.ascx" />
+    <Content Include="Controls\OrgChart\ctrlViewOrgChart.ascx" />
+    <Content Include="Controls\Positions\ctrlAbolishedPositionDetails.ascx" />
+    <Content Include="Controls\Positions\ctrlAbolishedPositions.ascx" />
+    <Content Include="Controls\Positions\ctrlAddWFPPosition.ascx" />
+    <Content Include="Controls\OrgChart\Common\orgChartDetailInformation.ascx" />
+    <Content Include="Controls\OrgChart\Common\orgChartValidations.ascx" />
+    <Content Include="Controls\OrgChart\ctrlCreateOrgChart.ascx" />
+    <Content Include="Controls\Layout\HeaderControl.ascx" />
+    <Content Include="Controls\OrgChart\ctrlOrgChartDetailsInProgress.ascx" />
+    <Content Include="Controls\Common\ctrlFPPSPositionInformation.ascx" />
+    <Content Include="Controls\Positions\ctrlIncludePositions.ascx" />
+    <Content Include="Controls\Positions\ctrlNewFPPSPositions.ascx" />
+    <Content Include="Controls\Positions\ctrlOrgChartPositions.ascx" />
+    <Content Include="Controls\Positions\ctrlUpdateFPPSPosition.ascx" />
+    <Content Include="Controls\Positions\ctrlUpdateChartPosition.ascx" />
+    <Content Include="Controls\Positions\ctrlUpdateWFPPosition.ascx" />
+    <Content Include="Controls\PubOrgChart\Common\pubOrgChartDetailInformation.ascx" />
+    <Content Include="Controls\PubOrgChart\ctrlOrgChartDetailsPublished.ascx" />
+    <Content Include="Controls\PubOrgChart\ctrlOrgChartPositionsPublished.ascx" />
+    <Content Include="Controls\PubOrgChart\ctrlViewChartPositionDetailsPublished.ascx" />
+    <Content Include="Controls\PubOrgChart\ctrlViewOrgChart.ascx" />
+    <Content Include="Controls\ToolTip\ToolTip.ascx" />
+    <Content Include="OrgChart\AbolishedPositionDetails.aspx" />
+    <Content Include="OrgChart\AbolishedPositions.aspx" />
+    <Content Include="OrgChart\AddWFPPosition.aspx" />
+    <Content Include="OrgChart\CreateOrgChart.aspx" />
+    <Content Include="OrgChart\DisplayChart.aspx" />
+    <Content Include="OrgChart\IncludePositions.aspx" />
+    <Content Include="Controls\Reports\ctrlCustomReports.ascx" />
+    <Content Include="Controls\Search\ctrlOrgChartSearch.ascx" />
+    <Content Include="Controls\Tracker\ctrlOrgChartTracker.ascx" />
+    <Content Include="Global.asax" />
+    <Content Include="OrgChart\NewFPPSPositions.aspx" />
+    <Content Include="OrgChart\OrgChartDetails.aspx" />
+    <Content Include="OrgChart\OrgChartPositions.aspx" />
+    <Content Include="OrgChart\UpdateChartPosition.aspx" />
+    <Content Include="OrgChart\UpdateNewFPPSPosition.aspx" />
+    <Content Include="OrgChart\ViewChart.aspx" />
+    <Content Include="OrgChart\ViewPubChart.aspx" />
+    <Content Include="Processing\ImageProcessor.asmx" />
+    <Content Include="Processing\Templates\Images\FWSLogoTransparent.png" />
+    <Content Include="Processing\Templates\Images\FWSLogoTransparent_small1.png" />
+    <Content Include="Processing\Templates\Images\FWSLogoTransparent_small2.png" />
+    <Content Include="Processing\Templates\templateOrgChart.html" />
+    <Content Include="PubOrgChart\DisplayChart.aspx" />
+    <Content Include="PubOrgChart\OrgChartDetails.aspx" />
+    <Content Include="PubOrgChart\OrgChartPositions.aspx" />
+    <Content Include="PubOrgChart\ViewChart.aspx" />
+    <Content Include="PubOrgChart\ViewChartPosition.aspx" />
+    <Content Include="References\AjaxControlToolkit.dll" />
+    <Content Include="References\EPPlus.dll" />
+    <Content Include="References\evohtmltopdf.dll" />
+    <Content Include="References\evohtmltopdf.xml" />
+    <Content Include="References\evopdfmerge.dll" />
+    <Content Include="References\evopdfmerge.xml" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Data.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll" />
+    <Content Include="References\Microsoft.Practices.ObjectBuilder2.dll" />
+    <Content Include="References\System.Web.Helpers.dll" />
+    <Content Include="References\Telerik.Reporting.dll" />
+    <Content Include="References\Telerik.ReportViewer.WebForms.dll" />
+    <Content Include="References\Telerik.Web.UI.dll" />
+    <Content Include="References\Telerik.Web.UI.Skins.dll" />
+    <Content Include="Reports\OrgChartCustomReportExport.aspx" />
+    <Content Include="Reports\OrgChartReports.aspx" />
+    <Content Include="Search\OrgChartExport.aspx" />
+    <Content Include="Search\SearchResults.aspx" />
+    <Content Include="Src\Canvas\canvasOperations.js" />
+    <Content Include="Src\ChartRender\bpCustomFunctions.js" />
+    <Content Include="Src\ChartRender\css\customChartStyles.css" />
+    <Content Include="Src\ChartRender\css\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Src\ChartRender\css\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Src\ChartRender\css\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Src\ChartRender\css\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Src\ChartRender\css\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Src\ChartRender\css\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Src\ChartRender\css\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Src\ChartRender\css\noHorizontalScroll.css" />
+    <Content Include="Src\ChartRender\css\primitiveCustomizations.css" />
+    <Content Include="Src\ChartRender\css\primitives.latest.css" />
+    <Content Include="Src\ChartRender\html2canvas-0.5alpha.js" />
+    <Content Include="Src\ChartRender\html2canvas-debug.js" />
+    <Content Include="Src\ChartRender\html2canvasCustom.js" />
+    <Content Include="Src\ChartRender\jquerylayout\jquery.layout-latest.min.js" />
+    <Content Include="Src\ChartRender\jquerylayout\layout-default-latest.css" />
+    <Content Include="Src\ChartRender\js\bporgeditor.latest.js" />
+    <Content Include="Src\ChartRender\js\bporgeditor.min.js" />
+    <Content Include="Src\ChartRender\js\demodata.js" />
+    <Content Include="Src\ChartRender\js\demodatasmall.js" />
+    <Content Include="Src\ChartRender\js\dependencies.js" />
+    <Content Include="Src\ChartRender\js\famdata.js" />
+    <Content Include="Src\ChartRender\js\famdata2.js" />
+    <Content Include="Src\ChartRender\js\famdata3.js" />
+    <Content Include="Src\ChartRender\js\jquery\jquery-ui-1.10.2.custom.js" />
+    <Content Include="Src\ChartRender\js\jquery\jquery-ui-1.10.2.custom.min.js" />
+    <Content Include="Src\ChartRender\js\jquery\ui-lightness\images\animated-overlay.gif" />
+    <Content Include="Src\ChartRender\js\jquery\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Src\ChartRender\js\jquery\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Src\ChartRender\js\jquery\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Src\ChartRender\js\jquery\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Src\ChartRender\js\jquery\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Src\ChartRender\js\jquery\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Src\ChartRender\js\jquery\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Src\ChartRender\js\jquery\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Src\ChartRender\js\jquery\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Src\ChartRender\js\jquery\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Src\ChartRender\js\jquery\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Src\ChartRender\js\jquery\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Src\ChartRender\js\jquery\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Src\ChartRender\js\jquery\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Src\ChartRender\js\jquery\ui-lightness\jquery-ui-1.10.2.custom.css" />
+    <Content Include="Src\ChartRender\js\jquery\ui-lightness\jquery-ui-1.10.2.custom.min.css" />
+    <Content Include="Src\ChartRender\js\json3.min.js" />
+    <Content Include="Src\ChartRender\js\primitives.latest.js" />
+    <Content Include="Src\ChartRender\js\primitives.min.js" />
+    <Content Include="Src\ChartRender\js\randomdata.js" />
+    <Content Include="Src\ChartRender\html2canvas.js" />
+    <Content Include="Src\jquery-1.11.1.js" />
+    <Content Include="Src\JsRelatedtoCSS\app.OrgChart.js" />
+    <Content Include="Src\Spin\spin.min.js" />
+    <Content Include="Src\Spin\spinCustomizations.js" />
+    <Content Include="Src\windowDialogFunctions.js" />
+    <Content Include="Tracker\OrgChartTracker.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Help.aspx.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Help.aspx.designer.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\WhatsNew.aspx.cs">
+      <DependentUpon>WhatsNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\WhatsNew.aspx.designer.cs">
+      <DependentUpon>WhatsNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\ctrlDisplayOrgChart.ascx.cs">
+      <DependentUpon>ctrlDisplayOrgChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\ctrlDisplayOrgChart.ascx.designer.cs">
+      <DependentUpon>ctrlDisplayOrgChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\ctrlDisplayOrgChartPopUp.ascx.cs">
+      <DependentUpon>ctrlDisplayOrgChartPopUp.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\ctrlDisplayOrgChartPopUp.ascx.designer.cs">
+      <DependentUpon>ctrlDisplayOrgChartPopUp.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\errorMessage.ascx.cs">
+      <DependentUpon>errorMessage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\errorMessage.ascx.designer.cs">
+      <DependentUpon>errorMessage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\noteBox.ascx.cs">
+      <DependentUpon>noteBox.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\noteBox.ascx.designer.cs">
+      <DependentUpon>noteBox.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\readOnlyLabel.ascx.cs">
+      <DependentUpon>readOnlyLabel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\readOnlyLabel.ascx.designer.cs">
+      <DependentUpon>readOnlyLabel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OrgChart\ctrlViewOrgChart.ascx.cs">
+      <DependentUpon>ctrlViewOrgChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\OrgChart\ctrlViewOrgChart.ascx.designer.cs">
+      <DependentUpon>ctrlViewOrgChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Positions\ctrlAbolishedPositionDetails.ascx.cs">
+      <DependentUpon>ctrlAbolishedPositionDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Positions\ctrlAbolishedPositionDetails.ascx.designer.cs">
+      <DependentUpon>ctrlAbolishedPositionDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Positions\ctrlAbolishedPositions.ascx.cs">
+      <DependentUpon>ctrlAbolishedPositions.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Positions\ctrlAbolishedPositions.ascx.designer.cs">
+      <DependentUpon>ctrlAbolishedPositions.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Positions\ctrlAddWFPPosition.ascx.cs">
+      <DependentUpon>ctrlAddWFPPosition.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Positions\ctrlAddWFPPosition.ascx.designer.cs">
+      <DependentUpon>ctrlAddWFPPosition.ascx</DependentUpon>
+    </Compile>
+    <Content Include="Common\Executive_Organizational_Chart_Report_without_Phone_Numbers.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Regional_Organizational_Chart_Report_without_Phone_Numbers.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="Controls\OrgChart\Common\orgChartDetailInformation.ascx.cs">
+      <DependentUpon>orgChartDetailInformation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\OrgChart\Common\orgChartDetailInformation.ascx.designer.cs">
+      <DependentUpon>orgChartDetailInformation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OrgChart\Common\orgChartValidations.ascx.cs">
+      <DependentUpon>orgChartValidations.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\OrgChart\Common\orgChartValidations.ascx.designer.cs">
+      <DependentUpon>orgChartValidations.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OrgChart\ctrlCreateOrgChart.ascx.cs">
+      <DependentUpon>ctrlCreateOrgChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\OrgChart\ctrlCreateOrgChart.ascx.designer.cs">
+      <DependentUpon>ctrlCreateOrgChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Layout\HeaderControl.ascx.cs">
+      <DependentUpon>HeaderControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Layout\HeaderControl.ascx.designer.cs">
+      <DependentUpon>HeaderControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OrgChart\ctrlOrgChartDetailsInProgress.ascx.cs">
+      <DependentUpon>ctrlOrgChartDetailsInProgress.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\OrgChart\ctrlOrgChartDetailsInProgress.ascx.designer.cs">
+      <DependentUpon>ctrlOrgChartDetailsInProgress.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\ctrlFPPSPositionInformation.ascx.cs">
+      <DependentUpon>ctrlFPPSPositionInformation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\ctrlFPPSPositionInformation.ascx.designer.cs">
+      <DependentUpon>ctrlFPPSPositionInformation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Positions\ctrlIncludePositions.ascx.cs">
+      <DependentUpon>ctrlIncludePositions.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Positions\ctrlIncludePositions.ascx.designer.cs">
+      <DependentUpon>ctrlIncludePositions.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Positions\ctrlNewFPPSPositions.ascx.cs">
+      <DependentUpon>ctrlNewFPPSPositions.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Positions\ctrlNewFPPSPositions.ascx.designer.cs">
+      <DependentUpon>ctrlNewFPPSPositions.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Positions\ctrlOrgChartPositions.ascx.cs">
+      <DependentUpon>ctrlOrgChartPositions.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Positions\ctrlOrgChartPositions.ascx.designer.cs">
+      <DependentUpon>ctrlOrgChartPositions.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Positions\ctrlUpdateFPPSPosition.ascx.cs">
+      <DependentUpon>ctrlUpdateFPPSPosition.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Positions\ctrlUpdateFPPSPosition.ascx.designer.cs">
+      <DependentUpon>ctrlUpdateFPPSPosition.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Positions\ctrlUpdateChartPosition.ascx.cs">
+      <DependentUpon>ctrlUpdateChartPosition.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Positions\ctrlUpdateChartPosition.ascx.designer.cs">
+      <DependentUpon>ctrlUpdateChartPosition.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Positions\ctrlUpdateWFPPosition.ascx.cs">
+      <DependentUpon>ctrlUpdateWFPPosition.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Positions\ctrlUpdateWFPPosition.ascx.designer.cs">
+      <DependentUpon>ctrlUpdateWFPPosition.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PubOrgChart\Common\pubOrgChartDetailInformation.ascx.cs">
+      <DependentUpon>pubOrgChartDetailInformation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\PubOrgChart\Common\pubOrgChartDetailInformation.ascx.designer.cs">
+      <DependentUpon>pubOrgChartDetailInformation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PubOrgChart\ctrlOrgChartDetailsPublished.ascx.cs">
+      <DependentUpon>ctrlOrgChartDetailsPublished.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\PubOrgChart\ctrlOrgChartDetailsPublished.ascx.designer.cs">
+      <DependentUpon>ctrlOrgChartDetailsPublished.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PubOrgChart\ctrlOrgChartPositionsPublished.ascx.cs">
+      <DependentUpon>ctrlOrgChartPositionsPublished.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\PubOrgChart\ctrlOrgChartPositionsPublished.ascx.designer.cs">
+      <DependentUpon>ctrlOrgChartPositionsPublished.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PubOrgChart\ctrlViewChartPositionDetailsPublished.ascx.cs">
+      <DependentUpon>ctrlViewChartPositionDetailsPublished.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\PubOrgChart\ctrlViewChartPositionDetailsPublished.ascx.designer.cs">
+      <DependentUpon>ctrlViewChartPositionDetailsPublished.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PubOrgChart\ctrlViewOrgChart.ascx.cs">
+      <DependentUpon>ctrlViewOrgChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\PubOrgChart\ctrlViewOrgChart.ascx.designer.cs">
+      <DependentUpon>ctrlViewOrgChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ToolTip\ToolTip.ascx.cs">
+      <DependentUpon>ToolTip.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ToolTip\ToolTip.ascx.designer.cs">
+      <DependentUpon>ToolTip.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgChartOther.Master.cs">
+      <DependentUpon>OrgChartOther.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrgChartOther.Master.designer.cs">
+      <DependentUpon>OrgChartOther.Master</DependentUpon>
+    </Compile>
+    <Compile Include="OrgChart\AbolishedPositionDetails.aspx.cs">
+      <DependentUpon>AbolishedPositionDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrgChart\AbolishedPositionDetails.aspx.designer.cs">
+      <DependentUpon>AbolishedPositionDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgChart\AbolishedPositions.aspx.cs">
+      <DependentUpon>AbolishedPositions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrgChart\AbolishedPositions.aspx.designer.cs">
+      <DependentUpon>AbolishedPositions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgChart\AddWFPPosition.aspx.cs">
+      <DependentUpon>AddWFPPosition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrgChart\AddWFPPosition.aspx.designer.cs">
+      <DependentUpon>AddWFPPosition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgChart\CreateOrgChart.aspx.cs">
+      <DependentUpon>CreateOrgChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrgChart\CreateOrgChart.aspx.designer.cs">
+      <DependentUpon>CreateOrgChart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgChart\DisplayChart.aspx.cs">
+      <DependentUpon>DisplayChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrgChart\DisplayChart.aspx.designer.cs">
+      <DependentUpon>DisplayChart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgChart\IncludePositions.aspx.cs">
+      <DependentUpon>IncludePositions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrgChart\IncludePositions.aspx.designer.cs">
+      <DependentUpon>IncludePositions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Reports\ctrlCustomReports.ascx.cs">
+      <DependentUpon>ctrlCustomReports.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Reports\ctrlCustomReports.ascx.designer.cs">
+      <DependentUpon>ctrlCustomReports.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Search\ctrlOrgChartSearch.ascx.cs">
+      <DependentUpon>ctrlOrgChartSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Search\ctrlOrgChartSearch.ascx.designer.cs">
+      <DependentUpon>ctrlOrgChartSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Tracker\ctrlOrgChartTracker.ascx.cs">
+      <DependentUpon>ctrlOrgChartTracker.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Tracker\ctrlOrgChartTracker.ascx.designer.cs">
+      <DependentUpon>ctrlOrgChartTracker.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="OrgChart\NewFPPSPositions.aspx.cs">
+      <DependentUpon>NewFPPSPositions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrgChart\NewFPPSPositions.aspx.designer.cs">
+      <DependentUpon>NewFPPSPositions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgChart\OrgChartDetails.aspx.cs">
+      <DependentUpon>OrgChartDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrgChart\OrgChartDetails.aspx.designer.cs">
+      <DependentUpon>OrgChartDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgChart\OrgChartPositions.aspx.cs">
+      <DependentUpon>OrgChartPositions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrgChart\OrgChartPositions.aspx.designer.cs">
+      <DependentUpon>OrgChartPositions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgChart\UpdateChartPosition.aspx.cs">
+      <DependentUpon>UpdateChartPosition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrgChart\UpdateChartPosition.aspx.designer.cs">
+      <DependentUpon>UpdateChartPosition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgChart\UpdateNewFPPSPosition.aspx.cs">
+      <DependentUpon>UpdateNewFPPSPosition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrgChart\UpdateNewFPPSPosition.aspx.designer.cs">
+      <DependentUpon>UpdateNewFPPSPosition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgChart\ViewChart.aspx.cs">
+      <DependentUpon>ViewChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrgChart\ViewChart.aspx.designer.cs">
+      <DependentUpon>ViewChart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrgChart\ViewPubChart.aspx.cs">
+      <DependentUpon>ViewPubChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrgChart\ViewPubChart.aspx.designer.cs">
+      <DependentUpon>ViewPubChart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Processing\ChartExportHandler.ashx.cs">
+      <DependentUpon>ChartExportHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Processing\ImageProcessor.asmx.cs">
+      <DependentUpon>ImageProcessor.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PubOrgChart\DisplayChart.aspx.cs">
+      <DependentUpon>DisplayChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PubOrgChart\DisplayChart.aspx.designer.cs">
+      <DependentUpon>DisplayChart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PubOrgChart\OrgChartDetails.aspx.cs">
+      <DependentUpon>OrgChartDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PubOrgChart\OrgChartDetails.aspx.designer.cs">
+      <DependentUpon>OrgChartDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PubOrgChart\OrgChartPositions.aspx.cs">
+      <DependentUpon>OrgChartPositions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PubOrgChart\OrgChartPositions.aspx.designer.cs">
+      <DependentUpon>OrgChartPositions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PubOrgChart\ViewChart.aspx.cs">
+      <DependentUpon>ViewChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PubOrgChart\ViewChart.aspx.designer.cs">
+      <DependentUpon>ViewChart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PubOrgChart\ViewChartPosition.aspx.cs">
+      <DependentUpon>ViewChartPosition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PubOrgChart\ViewChartPosition.aspx.designer.cs">
+      <DependentUpon>ViewChartPosition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\OrgChartCustomReportExport.aspx.cs">
+      <DependentUpon>OrgChartCustomReportExport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\OrgChartCustomReportExport.aspx.designer.cs">
+      <DependentUpon>OrgChartCustomReportExport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\OrgChartReports.aspx.cs">
+      <DependentUpon>OrgChartReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\OrgChartReports.aspx.designer.cs">
+      <DependentUpon>OrgChartReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search\OrgChartExport.aspx.cs">
+      <DependentUpon>OrgChartExport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search\OrgChartExport.aspx.designer.cs">
+      <DependentUpon>OrgChartExport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search\SearchResults.aspx.cs">
+      <DependentUpon>SearchResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search\SearchResults.aspx.designer.cs">
+      <DependentUpon>SearchResults.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tracker\OrgChartTracker.aspx.cs">
+      <DependentUpon>OrgChartTracker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tracker\OrgChartTracker.aspx.designer.cs">
+      <DependentUpon>OrgChartTracker.aspx</DependentUpon>
+    </Compile>
+    <Content Include="App_Code\ErrorModule.cs" />
+    <Compile Include="OrgChartMaster.Master.cs">
+      <DependentUpon>OrgChartMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrgChartMaster.Master.designer.cs">
+      <DependentUpon>OrgChartMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.LOCAL-NTCAD.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_GlobalResources\" />
+    <Folder Include="Documents\" />
+    <Folder Include="Positions\" />
+    <Folder Include="Processing\Generated\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HCMS.Business\HCMS.Business.csproj">
+      <Project>{E45DDA26-40F5-4C0C-B039-ABEF98717E94}</Project>
+      <Name>HCMS.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HCMS.WebFramework\HCMS.WebFramework.csproj">
+      <Project>{E663DEDC-DD0B-4470-B5C9-B87A1756ED76}</Project>
+      <Name>HCMS.WebFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\OrgChart_Default\OrgChart_Default.skin" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="OrgChartMaster.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Common\Enterprise_Organizational_Chart_Report.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="OrgChartOther.Master" />
+    <Content Include="Common\Executive_Organizational_Chart_Report_with_Phone_Numbers.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Green_Book_Organizational_Chart_Report.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Regional_Organizational_Chart_Report_with_Phone_Numbers.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\OrgChart\App_LocalResources\ctrlCreateOrgChart.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="OrgChart\App_LocalResources\CreateOrgChart.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\OrgChart\App_LocalResources\ctrlOrgChartDetailsInProgress.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Tracker\App_LocalResources\OrgChartTracker.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Search\App_LocalResources\SearchResults.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Reports\App_LocalResources\OrgChartReports.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="OrgChart\App_LocalResources\ApproveOrgChart.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\Positions\App_LocalResources\ctrlOrgChartPositions.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\OrgChart\Common\App_LocalResources\orgChartDetailInformation.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\Positions\App_LocalResources\ctrlAddWFPPosition.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\Positions\App_LocalResources\ctrlUpdateChartPosition.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\Positions\App_LocalResources\ctrlUpdateFPPSPosition.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\Positions\App_LocalResources\ctrlUpdateWFPPosition.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\Positions\App_LocalResources\ctrlIncludePositions.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\Positions\App_LocalResources\ctrlNewFPPSPositions.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="OrgChart\App_LocalResources\UpdateNewFPPSPosition.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\Positions\App_LocalResources\ctrlAbolishedPositions.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\Common\App_LocalResources\ctrlFPPSPositionInformation.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\Positions\App_LocalResources\ctrlAbolishedPositionDetails.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\PubOrgChart\App_LocalResources\ctrlOrgChartDetailsPublished.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\PubOrgChart\Common\App_LocalResources\pubOrgChartDetailInformation.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\PubOrgChart\App_LocalResources\ctrlOrgChartPositionsPublished.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\PubOrgChart\App_LocalResources\ctrlViewChartPositionDetailsPublished.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="OrgChart\App_LocalResources\ViewChart.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="OrgChart\App_LocalResources\ViewPubChart.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\PubOrgChart\App_LocalResources\ctrlViewOrgChart.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\Common\App_LocalResources\ctrlDisplayOrgChart.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\OrgChart\App_LocalResources\ctrlViewOrgChart.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Processing\ChartExportHandler.ashx" />
+    <Content Include="Common\WhatsNew.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\OrganizationChartExpressTrainingManual.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="References\evointernal.dat" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PubOrgChart\App_LocalResources\DisplayChart.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\Common\App_LocalResources\ctrlDisplayOrgChartPopUp.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="OrgChart\App_LocalResources\DisplayChart.aspx.resx" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

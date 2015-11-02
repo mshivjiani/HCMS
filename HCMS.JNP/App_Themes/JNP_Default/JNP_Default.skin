@@ -1,0 +1,196 @@
+﻿<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+
+<%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
+
+<asp:button  runat="server" style="background-color:#F0F0F0; 
+   font:11px bold arial, helvetica, 'sans serif'; 
+  border: 1px solid;  padding:2px;  border-color: #7b7568;  font-weight: bold; -ms-filter:progid:DXImageTransform.Microsoft.Gradient
+  (GradientType=0,StartColorStr='#fffffff',EndColorStr='#ffcac4b8');" />
+
+<asp:Image SkinID="loadingIcon" ImageUrl="Images/icons/loading.gif" alt="Loading.."  runat="Server"/>
+<asp:Image SkinID="TooltipIcon" ImageUrl="Images/icons/icon_help.gif" runat="server"/>
+<asp:Image SkinID="pdfIcon" ImageUrl="Images/Icons/icon_pdfsmall.gif" runat="server" AlternateText="Pdf icon"/>
+<asp:Image SkinID="helpIcon" ImageUrl="Images/icons/icon_help.gif" runat="server"/>
+<asp:Image SkinID="checkMarkIcon" ImageUrl="Images/icons/icon_checkmark.gif" runat="server"/>
+<asp:Image SkinID="emptySquareIcon" ImageUrl="Images/icons/square.gif" runat="server"/>
+<asp:Image SkinID="editIcon" ImageUrl="Images/icons/icon_edit.gif" runat="server"/>
+<asp:Image SkinID="updateIcon" ImageUrl="Images/icons/icon_checkmark.gif" runat="server"/>
+<asp:Image SkinID="deleteIcon" ImageUrl="Images/icons/icon_delete.gif" runat="server"/>
+<asp:Image SkinID="notesIcon" ImageUrl="Images/Icons/icon_notes.gif" runat="server"/>
+<asp:Image SkinID="detailsIcon" ImageUrl="Images/Icons/icon_details.gif" runat="server"/>
+<asp:Image SkinID="dropdownIcon" ImageUrl="Images/RAD/Menu/down.png" runat="server"/>
+<asp:Image SkinID="showHideKSASearch" ImageUrl="Images/Icons/magnifying-glass-23px.png" runat="server"/>
+
+<asp:ImageButton SkinID="actionRequired" ImageUrl="Images/Icons/flag_red.gif" runat="server" />
+<asp:ImageButton SkinID="checkButton" ImageUrl="images/icons/icon_checkmark.gif" runat="server" />
+<asp:ImageButton SkinID="updateButton" ImageUrl="images/icons/icon_checkmark.gif" runat="server" />
+<asp:ImageButton SkinID="cancelButton" ImageUrl="images/icons/icon_cancel.gif" runat="server" />
+<asp:ImageButton SkinID="editButton" ImageUrl="images/icons/icon_edit.gif" runat="server" />
+<asp:ImageButton SkinID="deleteButton" ImageUrl="images/icons/icon_delete.gif" runat="server" />
+<asp:ImageButton SkinID="viewButton" ImageUrl="images/icons/icon_view.gif" runat="server" />
+<asp:ImageButton SkinID="notesButton" ImageUrl="Images/Icons/icon_notes.gif" runat="server"/>
+<asp:ImageButton SkinID="searchButton" ImageUrl="Images/Icons/magnifying-glass-23px.png" runat="server"/>
+
+<asp:GridView runat="server" SkinId="adminGridView" CssClass="AdminTable">
+   <HeaderStyle CssClass="AdminHeader" />
+   <EmptyDataRowStyle CssClass="AdminEmpty" />
+   <RowStyle CssClass="AdminItem" />
+   <AlternatingRowStyle CssClass="AdminAlternateItem" />
+   <FooterStyle CssClass="AdminFooter" />
+   <PagerStyle CssClass="AdminPager" />
+</asp:GridView>
+
+<%-- Active/Inactive Icons --%>
+<asp:Image SkinID="activeIcon" ImageUrl="images/icons/icon_checkmark.gif" runat="Server"/>
+<asp:Image SkinID="inactiveIcon" ImageUrl="images/icons/flag_red.gif" runat="Server"/>
+
+<asp:Image SkinID="editUserIcon" ImageUrl="images/icons/icon_edit.gif" runat="Server"/>
+<asp:Image SkinID="delegatePDIcon" ImageUrl="images/icons/icon_component.gif" runat="Server"/>
+<asp:ImageButton SkinID="addIcon" ImageUrl="images/icons/icon_add.gif" runat="server" />
+<asp:ImageButton SkinID="deleteIcon" ImageUrl="images/icons/icon_delete.gif" runat="server" />
+
+<asp:ImageButton SkinID="checkIcon" ImageUrl="images/icons/icon_checkmark.gif" runat="server" />
+<asp:ImageButton SkinID="squareIcon" ImageUrl="images/icons/flag_red.gif" runat="server" />
+
+ 
+<telerik:RadAjaxLoadingPanel runat="server"  Skin="JNP_Default" EnableEmbeddedSkins="false"/>
+ 
+<telerik:RadGrid runat="server" SkinID="customRADGridView" CssClass="RadGrid" ImagesPath="~/App_Themes/JNP_Default/Images/RAD/Grid/" 
+    EnableEmbeddedSkins="false" AutoGenerateColumns="False" GridLines="Both">
+    <HeaderStyle CssClass="RadGridHeader" />
+    <PagerStyle CssClass="RadGridPager" Mode="NumericPages" />
+    <FooterStyle CssClass="RadGrid" />
+    <ItemStyle CssClass="RadGridItem" />
+    <AlternatingItemStyle CssClass="RadGridAlternatingItem" />
+    <CommandItemStyle CssClass="RadGridCommandItem" />
+    <SelectedItemStyle CssClass="RadGridSelectedItem" />
+    <EditItemStyle CssClass="RadGridEditItem" />
+    <GroupHeaderItemStyle CssClass="RadGridGroupHeaderItem"/>      
+    <ClientSettings EnableRowHoverStyle="true" />
+    <MasterTableView CommandItemSettings-AddNewRecordImageUrl="Images/Icons/icon_add.gif"  
+    CommandItemSettings-RefreshImageUrl="Images/Icons/icon_refresh.gif" >
+    <Columns>
+     
+
+    </Columns>
+    </MasterTableView>
+</telerik:RadGrid>
+<telerik:RadGrid runat="server" SkinID="RADGridView"  CssClass="RadGrid" ImagesPath="~/App_Themes/JNP_Default/Images/RAD/Grid/" 
+    EnableEmbeddedSkins="false" AutoGenerateColumns="False" GridLines="Both">
+    <HeaderStyle CssClass="RadGridHeader" />
+    <PagerStyle CssClass="RadGridPager" Mode="NumericPages" />
+    <FooterStyle CssClass="RadGrid" />
+    <ItemStyle CssClass="RadGridItem" />
+    <AlternatingItemStyle CssClass="RadGridAlternatingItem" />
+    <CommandItemStyle CssClass="RadGridCommandItem" />
+    <SelectedItemStyle CssClass="RadGridSelectedItem" />
+    <EditItemStyle CssClass="RadGridEditItem" />
+    <GroupHeaderItemStyle CssClass="RadGridGroupHeaderItem"/>      
+    <ClientSettings EnableRowHoverStyle="true" />
+    <MasterTableView CommandItemSettings-AddNewRecordImageUrl="Images/Icons/icon_add.gif"  
+    CommandItemSettings-RefreshImageUrl="Images/Icons/icon_refresh.gif" >
+    <Columns>
+     
+
+    </Columns>
+    </MasterTableView>
+</telerik:RadGrid>
+
+<telerik:RadGrid runat="server" SkinID="SearchRADGridView" CssClass="RadGrid" ImagesPath="~/App_Themes/JNP_Default/Images/RAD/Grid/" 
+    EnableEmbeddedSkins="false" AutoGenerateColumns="False" GridLines="Both">
+    <HeaderStyle CssClass="RadGridHeader" />
+	<PagerStyle CssClass="RadGridPagerNextPrev" Mode="NextPrevAndNumeric" AlwaysVisible="true" />
+    <FooterStyle CssClass="RadGrid" />
+    <ItemStyle CssClass="RadGridItem" />
+    <AlternatingItemStyle CssClass="RadGridAlternatingItem" />
+    <CommandItemStyle CssClass="RadGridCommandItem" />
+    <SelectedItemStyle CssClass="RadGridSelectedItem" />
+    <EditItemStyle CssClass="RadGridEditItem" />
+    <GroupHeaderItemStyle CssClass="RadGridGroupHeaderItem"/>      
+    <ClientSettings EnableRowHoverStyle="true" />
+    <MasterTableView CommandItemSettings-AddNewRecordImageUrl="Images/Icons/icon_add.gif"  
+    CommandItemSettings-RefreshImageUrl="Images/Icons/icon_refresh.gif" >
+    
+    <Columns>
+     
+
+    </Columns>
+    
+    </MasterTableView>
+</telerik:RadGrid>
+
+<telerik:RadEditor  CssClass="PDRadEditor" runat="server" 
+Style="overflow:false" Width="100%" Height="300px" 
+EditModes="Design"
+BorderStyle="Solid" BorderWidth="1px"  
+BackColor="#ffffff" BorderColor="Window"  
+Language="en-US"  
+SpellCheckSettings-DictionaryLanguage="en-US"
+SpellCheckSettings-AllowAddCustom="false"
+ToolsFile="~/App_Data/BasicTools.xml" StripFormattingOptions ="AllExceptNewLines">
+<ContextMenus>
+    <telerik:EditorContextMenu>
+    <telerik:EditorTool Name="Cut" Text="Cut" />
+    <telerik:EditorTool Name ="Copy" Text ="Copy" />
+    <telerik:EditorTool Name ="Paste" Text ="Paste" />
+    </telerik:EditorContextMenu>
+</ContextMenus>
+ <Content></Content>
+</telerik:RadEditor>
+
+<telerik:RadEditor  CssClass="PDRadEditor" runat="server"  skinID="shortRadEditor"
+Style="overflow:false" Width="100%" Height="100px" 
+EditModes="Design"
+BorderStyle="Solid" BorderWidth="1px"  
+BackColor="#ffffff" BorderColor="Window"  
+Language="en-US"  
+SpellCheckSettings-DictionaryLanguage="en-US"
+SpellCheckSettings-AllowAddCustom="false"
+ToolsFile="~/App_Data/BasicTools.xml" StripFormattingOptions ="AllExceptNewLines">
+<ContextMenus>
+    <telerik:EditorContextMenu>
+    <telerik:EditorTool Name="Cut" Text="Cut" />
+    <telerik:EditorTool Name ="Copy" Text ="Copy" />
+    <telerik:EditorTool Name ="Paste" Text ="Paste" />
+    </telerik:EditorContextMenu>
+</ContextMenus>
+ <Content></Content>
+</telerik:RadEditor>
+
+
+
+<telerik:RadEditor CssClass="PDRadEditor" runat="server"  skinID="limitedTextRadEditor"
+Style="overflow:false" Width="100%" Height="100px" MaxTextLength="1500"
+EditModes="Design"
+BorderStyle="Solid" BorderWidth="1px"  
+BackColor="#ffffff" BorderColor="Window"  
+Language="en-US"
+SpellCheckSettings-DictionaryLanguage="en-US"
+SpellCheckSettings-AllowAddCustom="false"
+ToolsFile="~/App_Data/BasicTools.xml" StripFormattingOptions ="AllExceptNewLines">
+<ContextMenus>
+    <telerik:EditorContextMenu>
+    <telerik:EditorTool Name="Cut" Text="Cut" />
+    <telerik:EditorTool Name ="Copy" Text ="Copy" />
+    <telerik:EditorTool Name ="Paste" Text ="Paste" />
+    </telerik:EditorContextMenu>
+</ContextMenus>
+ <Content></Content>
+</telerik:RadEditor>
+
+<%--JA issue id: 724 :making the dropdwon to alway open list in downward direction.--%>
+<telerik:RadComboBox runat="server" MarkFirstMatch="True"  EnableScreenBoundaryDetection ="false" ></telerik:RadComboBox>

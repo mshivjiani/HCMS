@@ -1,0 +1,1157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C77F2FE9-EC2C-4BDE-ACAF-BA385586E4F8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HCMS.JNP</RootNamespace>
+    <AssemblyName>HCMS.JNP</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'LOCAL-NTCAD|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\HCMS.JNP.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.0.30930.28736, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Configuration.Design.HostAdapter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.HostAdapter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data.SqlCe, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging.Database, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Telerik.Reporting, Version=6.1.12.611, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Telerik.Reporting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.ReportViewer.WebForms, Version=6.1.12.611, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Telerik.ReportViewer.WebForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2012.2.607.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Telerik.Web.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins, Version=2012.2.607.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Telerik.Web.UI.Skins.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Approval\Approval.aspx" />
+    <Content Include="App_Data\BasicTools.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\DutyPercentage.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\FooterJNP.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\FooterOtherMaster.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\LeftNavCR.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\LeftNavJA.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\LeftNavJNPHome.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\LeftNavJQ.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\TopActionMenu.xml" />
+    <Content Include="App_Data\TopNavJNP.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\TopNavJNPWizard.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\TopNavJNPWizardApproval.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Themes\JNP_Default\AjaxSessionTimer.css" />
+    <Content Include="App_Themes\JNP_Default\Images\arrow_dd.png" />
+    <Content Include="App_Themes\JNP_Default\Images\banner.png" />
+    <Content Include="App_Themes\JNP_Default\Images\bg.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\bg_blue_grad_up.png" />
+    <Content Include="App_Themes\JNP_Default\Images\bg_chevron.png" />
+    <Content Include="App_Themes\JNP_Default\Images\bg_chevron_brown.png" />
+    <Content Include="App_Themes\JNP_Default\Images\bg_chevron_brown_end.png" />
+    <Content Include="App_Themes\JNP_Default\Images\bg_chevron_off.png" />
+    <Content Include="App_Themes\JNP_Default\Images\bg_chevron_white.png" />
+    <Content Include="App_Themes\JNP_Default\Images\bg_grad_brown.png" />
+    <Content Include="App_Themes\JNP_Default\Images\bg_grad_gray.png" />
+    <Content Include="App_Themes\JNP_Default\Images\bg_green_grad.png" />
+    <Content Include="App_Themes\JNP_Default\Images\bg_medblue_grad.png" />
+    <Content Include="App_Themes\JNP_Default\Images\bg_springboard_birds_beach.jpg" />
+    <Content Include="App_Themes\JNP_Default\Images\bg_springboard_birds_woods.jpg" />
+    <Content Include="App_Themes\JNP_Default\Images\bg_stripe_blue.png" />
+    <Content Include="App_Themes\JNP_Default\Images\bg_stripe_thin_white.png" />
+    <Content Include="App_Themes\JNP_Default\Images\bluegrad.jpg" />
+    <Content Include="App_Themes\JNP_Default\Images\btn_bg.png" />
+    <Content Include="App_Themes\JNP_Default\Images\btn_enter.png" />
+    <Content Include="App_Themes\JNP_Default\Images\header_logo.png" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\2cutedolfin2.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\2fishswim7.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\3bluejumper.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\bub001.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\check.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\collapse.jpg" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\expand.jpg" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\Fish102.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\flag_red.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\icon_add.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\icon_cancel.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\icon_checkmark.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\icon_component.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\icon_delete.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\icon_details.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\icon_edit.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\icon_editold.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\icon_escalated.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\icon_greenDot.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\icon_help.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\icon_Inactive.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\icon_lock.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\icon_notes.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\icon_ontrack.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\icon_pdflarge.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\icon_pdfsmall.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\icon_redDot.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\icon_refresh.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\icon_review.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\icon_unlock.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\icon_view.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\icon_warning.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\icon_yellowDot.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\loading.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\printer.png" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\printer_small.png" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\square.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\upDownArrowBlue.png" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\Web20Loading.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\logo_bg.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\logo_HCMS.png" />
+    <Content Include="App_Themes\JNP_Default\Images\logo_JANP.png" />
+    <Content Include="App_Themes\JNP_Default\Images\logo_PDExpress.png" />
+    <Content Include="App_Themes\JNP_Default\Images\logo_PDExpress_sm.png" />
+    <Content Include="App_Themes\JNP_Default\Images\progressBar_0.png" />
+    <Content Include="App_Themes\JNP_Default\Images\progressBar_1.png" />
+    <Content Include="App_Themes\JNP_Default\Images\progressBar_2.png" />
+    <Content Include="App_Themes\JNP_Default\Images\progressBar_3.png" />
+    <Content Include="App_Themes\JNP_Default\Images\progressBar_4.png" />
+    <Content Include="App_Themes\JNP_Default\Images\progressBar_5.png" />
+    <Content Include="App_Themes\JNP_Default\Images\progressBar_6.png" />
+    <Content Include="App_Themes\JNP_Default\Images\progressBar_7.png" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Grid\AddRecord.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Grid\altRowBg.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Grid\bg.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Grid\Cancel.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Grid\Cancel_01.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Grid\defaultAlternatingItemBg.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Grid\defaultEditItemBg.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Grid\defaultHeaderBg.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Grid\defaultItemBg.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Grid\defaultPagerBg.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Grid\defaultSelectedItemBg.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Grid\Delete.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Grid\Delete_01.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Grid\Edit.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Grid\Edit_01.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Grid\expandedRowBg.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Grid\Filter.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Grid\headerBg.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Grid\headerBg2.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Grid\inner1HeaderBg.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Grid\inner2HeaderBg.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Grid\MoveDown.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Grid\MoveUp.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Grid\pagerBg.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Grid\PagingFirst.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Grid\PagingLast.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Grid\PagingNext.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Grid\PagingPrev.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Grid\Refresh.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Grid\SingleMinus.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Grid\SinglePlus.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Grid\SortAsc.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Grid\SortDesc.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Grid\sprite.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Grid\Update.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Grid\Update_01.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Grid\View.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Menu\down.png" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Menu\right.png" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Menu\up.png" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\SpellCheck\SpellCheck.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Window\ModalDialogAlert.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\RAD\Window\ModalDialogConfirm.gif" />
+    <Content Include="App_Themes\JNP_Default\Images\screenshot_PDExpress.png" />
+    <Content Include="App_Themes\JNP_Default\Images\tab_bg_on.png" />
+    <Content Include="App_Themes\JNP_Default\Images\tab_off.png" />
+    <Content Include="App_Themes\JNP_Default\Images\tab_on.png" />
+    <Content Include="App_Themes\JNP_Default\main.css" />
+    <Content Include="App_Themes\JNP_Default\RADAjaxLoadingPanel.css" />
+    <Content Include="App_Themes\JNP_Default\style.JNP.css" />
+    <Content Include="App_Themes\JNP_Default\ToolTip.HCMS.css" />
+    <Content Include="App_Themes\JNP_Default\ToolTip\Callouts.gif" />
+    <Content Include="App_Themes\JNP_Default\ToolTip\GridCustom.gif" />
+    <Content Include="App_Themes\JNP_Default\ToolTip\Loading.gif" />
+    <Content Include="App_Themes\JNP_Default\ToolTip\ToolTipSprites.gif" />
+    <Content Include="App_Themes\JNP_Default\ToolTip\ToolTipVerticalSprites.gif" />
+    <Content Include="App_Themes\JNP_Default\Window.HCMS.css" />
+    <Content Include="Common\Error.aspx" />
+    <Content Include="Common\FAQ.aspx" />
+    <Content Include="Common\Help.aspx" />
+    <Content Include="Common\References.aspx" />
+    <Content Include="Common\WhatsNew.aspx" />
+    <Content Include="Controls\CR\ctrlCategoryRating.ascx" />
+    <Content Include="Controls\CR\ctrlMinimumQualifications.ascx" />
+    <Content Include="Controls\JA\ctlFactor1PopUp.ascx" />
+    <Content Include="Controls\JA\ctrlAddEditDutyKSA.ascx" />
+    <Content Include="Controls\JA\ctrlAddEditJADuty.ascx" />
+    <Content Include="Controls\JA\ctrlDutyDescription.ascx" />
+    <Content Include="Controls\JA\ctrlDutyKSA.ascx" />
+    <Content Include="Controls\JA\ctrlJAFinalKSA.ascx" />
+    <Content Include="Controls\JA\ctrlPositionInfo.ascx" />
+    <Content Include="Controls\JNPWorkflowNotePopup\EditJNPWorkflowNotePopup.ascx" />
+    <Content Include="Controls\JNPWorkflowNotePopup\JNPWorkflowNotePopup.ascx" />
+    <Content Include="Controls\JNPWorkflowNotePopup\JNPWorkflowNotePopupLink.ascx" />
+    <Content Include="App_Themes\JNP_Default\Images\Icons\magnifying-glass-23px.png" />
+    <Content Include="Controls\JQ\ctrlAddEditKSAQuestion.ascx" />
+    <Content Include="Controls\JQ\ctrlAddEditKSA.ascx" />
+    <Content Include="Controls\JQ\ctrlAddEditQuestion.ascx" />
+    <Content Include="Controls\JQ\ctrlAddEditQualification.ascx" />
+    <Content Include="Controls\JQ\ctrlJQFinal.ascx" />
+    <Content Include="Controls\JQ\ctrlJQFinalDetails.ascx" />
+    <Content Include="Controls\JQ\ctrlJQInfo.ascx" />
+    <Content Include="Controls\JQ\ctrlJQKSA.ascx" />
+    <Content Include="Controls\JQ\ctrlQualification.ascx" />
+    <Content Include="Controls\JQ\ctrlJQResponse.ascx" />
+    <Content Include="Controls\JQ\ctrlTest.ascx" />
+    <Content Include="Controls\Layout\HeaderControl.ascx" />
+    <Content Include="Controls\Layout\InformationPanel.ascx" />
+    <Content Include="Controls\Approval\ctrlJNPApproval.ascx" />
+    <Content Include="Controls\Package\ctrlCopyJNP.ascx" />
+    <Content Include="Controls\Package\ctrlCreateJNP.ascx" />
+    <Content Include="Controls\Package\ctrlJNPChoice.ascx" />
+    <Content Include="Controls\Package\ctrlJNPTracker.ascx" />
+    <Content Include="Controls\Package\ctrlJNPUpdateHiringResult.ascx" />
+    <Content Include="Controls\Search\ctrlSearchKSA.ascx" />
+    <Content Include="Controls\Search\ctrlSearchTaskStatement.ascx" />
+    <Content Include="Controls\Search\SearchReports.ascx" />
+    <Content Include="Controls\ToolTip\ToolTip.ascx" />
+    <Content Include="Controls\Workflow\ctrlWorkflowActionManager.ascx" />
+    <Content Include="CR\CategoryRating.aspx" />
+    <Content Include="CR\MinimumQualifications.aspx" />
+    <Content Include="Documents\OpenJNPDocument.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="JA\AddEditJADutyKSA.aspx" />
+    <Content Include="JA\AddEditJADuty.aspx" />
+    <Content Include="JA\Factor1PopUp.aspx" />
+    <Content Include="JA\FinalKSA.aspx" />
+    <Content Include="JA\JADuties.aspx" />
+    <Content Include="JA\JAPositionInformation.aspx" />
+    <Content Include="JNPWorkflowNotePopup\EditJNPWorkflowNotePopup.aspx" />
+    <Content Include="JNPWorkflowNotePopup\JNPWorkflowNotePopup.aspx" />
+    <Content Include="JQ\AddEditQualification.aspx" />
+    <Content Include="JQ\AddEditQuestion.aspx" />
+    <Content Include="JQ\AddEditJQKSA.aspx" />
+    <Content Include="JQ\AddEditKSAQuestion.aspx" />
+    <Content Include="JQ\JQReport.aspx" />
+    <Content Include="Package\CopyJNPFromExisting.aspx" />
+    <Content Include="Package\CreateJNP.aspx" />
+    <Content Include="Package\CreateJNPFromExistingJNP.aspx" />
+    <Content Include="Package\JNPCreateOptions.aspx" />
+    <Content Include="Package\JNPTracker.aspx" />
+    <Content Include="JQ\FinalJQ.aspx" />
+    <Content Include="JQ\JobQuestionnaire.aspx" />
+    <Content Include="JQ\JQKSA.aspx" />
+    <Content Include="JQ\Qualifications.aspx" />
+    <Content Include="Package\Publish.aspx" />
+    <Content Include="Package\UpdateHiringResult.aspx" />
+    <Content Include="References\AjaxControlToolkit.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Common.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.HostAdapter.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Data.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Data.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Logging.Database.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Logging.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Logging.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Validation.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WinForms.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WinForms.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Validation.XML" />
+    <Content Include="References\Microsoft.Practices.ObjectBuilder2.dll" />
+    <Content Include="References\Microsoft.Practices.ObjectBuilder2.xml" />
+    <Content Include="References\Microsoft.Practices.Unity.Configuration.dll" />
+    <Content Include="References\Microsoft.Practices.Unity.Configuration.xml" />
+    <Content Include="References\Microsoft.Practices.Unity.dll" />
+    <Content Include="References\Microsoft.Practices.Unity.Interception.Configuration.dll" />
+    <Content Include="References\Microsoft.Practices.Unity.Interception.Configuration.xml" />
+    <Content Include="References\Microsoft.Practices.Unity.Interception.dll" />
+    <Content Include="References\Microsoft.Practices.Unity.Interception.xml" />
+    <Content Include="References\Microsoft.Practices.Unity.StaticFactory.dll" />
+    <Content Include="References\Microsoft.Practices.Unity.xml" />
+    <Content Include="References\Telerik.Reporting.dll" />
+    <Content Include="References\Telerik.ReportViewer.WebForms.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="References\Telerik.Web.UI.dll" />
+    <Content Include="References\Telerik.Web.UI.Skins.dll" />
+    <Content Include="References\Telerik.Web.UI.XML" />
+    <Content Include="RenewSes.aspx" />
+    <Content Include="Search\SearchResults.aspx" />
+    <Content Include="Src\JsRelatedtoCSS\app.JNP.js" />
+    <Content Include="Src\jquery-1.8.3.min.js" />
+    <Content Include="Src\JsRelatedtoCSS\JQ\FinalJQ.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Approval\Approval.aspx.cs">
+      <DependentUpon>Approval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Approval\Approval.aspx.designer.cs">
+      <DependentUpon>Approval.aspx</DependentUpon>
+    </Compile>
+    <Content Include="App_Code\ErrorModule.cs" />
+    <Compile Include="App_GlobalResources\JNPInfo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JNPInfo.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\JNPMessages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JNPMessages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\FAQ.aspx.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\FAQ.aspx.designer.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Help.aspx.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Help.aspx.designer.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\References.aspx.cs">
+      <DependentUpon>References.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\References.aspx.designer.cs">
+      <DependentUpon>References.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\WhatsNew.aspx.cs">
+      <DependentUpon>WhatsNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\WhatsNew.aspx.designer.cs">
+      <DependentUpon>WhatsNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Approval\ctrlJNPApproval.ascx.designer.cs">
+      <DependentUpon>ctrlJNPApproval.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CR\ctrlCategoryRating.ascx.cs">
+      <DependentUpon>ctrlCategoryRating.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CR\ctrlCategoryRating.ascx.designer.cs">
+      <DependentUpon>ctrlCategoryRating.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CR\ctrlMinimumQualifications.ascx.cs">
+      <DependentUpon>ctrlMinimumQualifications.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CR\ctrlMinimumQualifications.ascx.designer.cs">
+      <DependentUpon>ctrlMinimumQualifications.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\JA\ctlFactor1PopUp.ascx.cs">
+      <DependentUpon>ctlFactor1PopUp.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\JA\ctlFactor1PopUp.ascx.designer.cs">
+      <DependentUpon>ctlFactor1PopUp.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\JA\ctrlAddEditDutyKSA.ascx.cs">
+      <DependentUpon>ctrlAddEditDutyKSA.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\JA\ctrlAddEditDutyKSA.ascx.designer.cs">
+      <DependentUpon>ctrlAddEditDutyKSA.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\JA\ctrlAddEditJADuty.ascx.cs">
+      <DependentUpon>ctrlAddEditJADuty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\JA\ctrlAddEditJADuty.ascx.designer.cs">
+      <DependentUpon>ctrlAddEditJADuty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\JA\ctrlDutyDescription.ascx.cs">
+      <DependentUpon>ctrlDutyDescription.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\JA\ctrlDutyDescription.ascx.designer.cs">
+      <DependentUpon>ctrlDutyDescription.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\JA\ctrlDutyKSA.ascx.cs">
+      <DependentUpon>ctrlDutyKSA.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\JA\ctrlDutyKSA.ascx.designer.cs">
+      <DependentUpon>ctrlDutyKSA.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\JA\ctrlJAFinalKSA.ascx.cs">
+      <DependentUpon>ctrlJAFinalKSA.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\JA\ctrlJAFinalKSA.ascx.designer.cs">
+      <DependentUpon>ctrlJAFinalKSA.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\JA\ctrlPositionInfo.ascx.cs">
+      <DependentUpon>ctrlPositionInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\JA\ctrlPositionInfo.ascx.designer.cs">
+      <DependentUpon>ctrlPositionInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\JNPWorkflowNotePopup\EditJNPWorkflowNotePopup.ascx.cs">
+      <DependentUpon>EditJNPWorkflowNotePopup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\JNPWorkflowNotePopup\EditJNPWorkflowNotePopup.ascx.designer.cs">
+      <DependentUpon>EditJNPWorkflowNotePopup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\JNPWorkflowNotePopup\JNPWorkflowNotePopup.ascx.cs">
+      <DependentUpon>JNPWorkflowNotePopup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\JNPWorkflowNotePopup\JNPWorkflowNotePopup.ascx.designer.cs">
+      <DependentUpon>JNPWorkflowNotePopup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\JNPWorkflowNotePopup\JNPWorkflowNotePopupLink.ascx.cs">
+      <DependentUpon>JNPWorkflowNotePopupLink.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\JNPWorkflowNotePopup\JNPWorkflowNotePopupLink.ascx.designer.cs">
+      <DependentUpon>JNPWorkflowNotePopupLink.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\JQ\ctrlAddEditKSAQuestion.ascx.cs">
+      <DependentUpon>ctrlAddEditKSAQuestion.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\JQ\ctrlAddEditKSAQuestion.ascx.designer.cs">
+      <DependentUpon>ctrlAddEditKSAQuestion.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\JQ\ctrlAddEditKSA.ascx.cs">
+      <DependentUpon>ctrlAddEditKSA.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\JQ\ctrlAddEditKSA.ascx.designer.cs">
+      <DependentUpon>ctrlAddEditKSA.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\JQ\ctrlAddEditQuestion.ascx.cs">
+      <DependentUpon>ctrlAddEditQuestion.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\JQ\ctrlAddEditQuestion.ascx.designer.cs">
+      <DependentUpon>ctrlAddEditQuestion.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\JQ\ctrlAddEditQualification.ascx.cs">
+      <DependentUpon>ctrlAddEditQualification.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\JQ\ctrlAddEditQualification.ascx.designer.cs">
+      <DependentUpon>ctrlAddEditQualification.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\JQ\ctrlJQFinal.ascx.cs">
+      <DependentUpon>ctrlJQFinal.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\JQ\ctrlJQFinal.ascx.designer.cs">
+      <DependentUpon>ctrlJQFinal.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\JQ\ctrlJQFinalDetails.ascx.cs">
+      <DependentUpon>ctrlJQFinalDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\JQ\ctrlJQFinalDetails.ascx.designer.cs">
+      <DependentUpon>ctrlJQFinalDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\JQ\ctrlJQInfo.ascx.cs">
+      <DependentUpon>ctrlJQInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\JQ\ctrlJQInfo.ascx.designer.cs">
+      <DependentUpon>ctrlJQInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\JQ\ctrlJQKSA.ascx.cs">
+      <DependentUpon>ctrlJQKSA.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\JQ\ctrlJQKSA.ascx.designer.cs">
+      <DependentUpon>ctrlJQKSA.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\JQ\ctrlQualification.ascx.cs">
+      <DependentUpon>ctrlQualification.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\JQ\ctrlQualification.ascx.designer.cs">
+      <DependentUpon>ctrlQualification.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\JQ\ctrlJQResponse.ascx.cs">
+      <DependentUpon>ctrlJQResponse.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\JQ\ctrlJQResponse.ascx.designer.cs">
+      <DependentUpon>ctrlJQResponse.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\JQ\ctrlTest.ascx.cs">
+      <DependentUpon>ctrlTest.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\JQ\ctrlTest.ascx.designer.cs">
+      <DependentUpon>ctrlTest.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Layout\HeaderControl.ascx.cs">
+      <DependentUpon>HeaderControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Layout\HeaderControl.ascx.designer.cs">
+      <DependentUpon>HeaderControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Layout\InformationPanel.ascx.cs">
+      <DependentUpon>InformationPanel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Layout\InformationPanel.ascx.designer.cs">
+      <DependentUpon>InformationPanel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Approval\ctrlJNPApproval.ascx.cs">
+      <DependentUpon>ctrlJNPApproval.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Package\ctrlCopyJNP.ascx.cs">
+      <DependentUpon>ctrlCopyJNP.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Package\ctrlCopyJNP.ascx.designer.cs">
+      <DependentUpon>ctrlCopyJNP.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Package\ctrlCreateJNP.ascx.cs">
+      <DependentUpon>ctrlCreateJNP.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Package\ctrlCreateJNP.ascx.designer.cs">
+      <DependentUpon>ctrlCreateJNP.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Package\ctrlJNPChoice.ascx.cs">
+      <DependentUpon>ctrlJNPChoice.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Package\ctrlJNPChoice.ascx.designer.cs">
+      <DependentUpon>ctrlJNPChoice.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Package\ctrlJNPTracker.ascx.cs">
+      <DependentUpon>ctrlJNPTracker.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Package\ctrlJNPTracker.ascx.designer.cs">
+      <DependentUpon>ctrlJNPTracker.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Package\ctrlJNPUpdateHiringResult.ascx.cs">
+      <DependentUpon>ctrlJNPUpdateHiringResult.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Package\ctrlJNPUpdateHiringResult.ascx.designer.cs">
+      <DependentUpon>ctrlJNPUpdateHiringResult.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Search\ctrlSearchKSA.ascx.cs">
+      <DependentUpon>ctrlSearchKSA.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Search\ctrlSearchKSA.ascx.designer.cs">
+      <DependentUpon>ctrlSearchKSA.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Search\ctrlSearchTaskStatement.ascx.cs">
+      <DependentUpon>ctrlSearchTaskStatement.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Search\ctrlSearchTaskStatement.ascx.designer.cs">
+      <DependentUpon>ctrlSearchTaskStatement.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Search\SearchReports.ascx.cs">
+      <DependentUpon>SearchReports.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Search\SearchReports.ascx.designer.cs">
+      <DependentUpon>SearchReports.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ToolTip\ToolTip.ascx.cs">
+      <DependentUpon>ToolTip.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ToolTip\ToolTip.ascx.designer.cs">
+      <DependentUpon>ToolTip.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Workflow\ctrlWorkflowActionManager.ascx.cs">
+      <DependentUpon>ctrlWorkflowActionManager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Workflow\ctrlWorkflowActionManager.ascx.designer.cs">
+      <DependentUpon>ctrlWorkflowActionManager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CR\CategoryRating.aspx.cs">
+      <DependentUpon>CategoryRating.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CR\CategoryRating.aspx.designer.cs">
+      <DependentUpon>CategoryRating.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CR\MinimumQualifications.aspx.cs">
+      <DependentUpon>MinimumQualifications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CR\MinimumQualifications.aspx.designer.cs">
+      <DependentUpon>MinimumQualifications.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\OpenJNPDocument.aspx.cs">
+      <DependentUpon>OpenJNPDocument.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Documents\OpenJNPDocument.aspx.designer.cs">
+      <DependentUpon>OpenJNPDocument.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="JA\AddEditJADutyKSA.aspx.cs">
+      <DependentUpon>AddEditJADutyKSA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JA\AddEditJADutyKSA.aspx.designer.cs">
+      <DependentUpon>AddEditJADutyKSA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JA\AddEditJADuty.aspx.cs">
+      <DependentUpon>AddEditJADuty.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JA\AddEditJADuty.aspx.designer.cs">
+      <DependentUpon>AddEditJADuty.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JA\Factor1PopUp.aspx.cs">
+      <DependentUpon>Factor1PopUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JA\Factor1PopUp.aspx.designer.cs">
+      <DependentUpon>Factor1PopUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JA\FinalKSA.aspx.cs">
+      <DependentUpon>FinalKSA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JA\FinalKSA.aspx.designer.cs">
+      <DependentUpon>FinalKSA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JA\JADuties.aspx.cs">
+      <DependentUpon>JADuties.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JA\JADuties.aspx.designer.cs">
+      <DependentUpon>JADuties.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JA\JAPositionInformation.aspx.cs">
+      <DependentUpon>JAPositionInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JA\JAPositionInformation.aspx.designer.cs">
+      <DependentUpon>JAPositionInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JNPMaster.master.cs">
+      <DependentUpon>JNPMaster.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JNPMaster.master.designer.cs">
+      <DependentUpon>JNPMaster.master</DependentUpon>
+    </Compile>
+    <Compile Include="JNPWorkflowNotePopup\EditJNPWorkflowNotePopup.aspx.cs">
+      <DependentUpon>EditJNPWorkflowNotePopup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JNPWorkflowNotePopup\EditJNPWorkflowNotePopup.aspx.designer.cs">
+      <DependentUpon>EditJNPWorkflowNotePopup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JNPWorkflowNotePopup\JNPWorkflowNotePopup.aspx.cs">
+      <DependentUpon>JNPWorkflowNotePopup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JNPWorkflowNotePopup\JNPWorkflowNotePopup.aspx.designer.cs">
+      <DependentUpon>JNPWorkflowNotePopup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JQ\AddEditQualification.aspx.cs">
+      <DependentUpon>AddEditQualification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JQ\AddEditQualification.aspx.designer.cs">
+      <DependentUpon>AddEditQualification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JQ\AddEditQuestion.aspx.cs">
+      <DependentUpon>AddEditQuestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JQ\AddEditQuestion.aspx.designer.cs">
+      <DependentUpon>AddEditQuestion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JQ\AddEditJQKSA.aspx.cs">
+      <DependentUpon>AddEditJQKSA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JQ\AddEditJQKSA.aspx.designer.cs">
+      <DependentUpon>AddEditJQKSA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JQ\AddEditKSAQuestion.aspx.cs">
+      <DependentUpon>AddEditKSAQuestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JQ\AddEditKSAQuestion.aspx.designer.cs">
+      <DependentUpon>AddEditKSAQuestion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JQ\JQReport.aspx.cs">
+      <DependentUpon>JQReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JQ\JQReport.aspx.designer.cs">
+      <DependentUpon>JQReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Package\CopyJNPFromExisting.aspx.cs">
+      <DependentUpon>CopyJNPFromExisting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Package\CopyJNPFromExisting.aspx.designer.cs">
+      <DependentUpon>CopyJNPFromExisting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Package\CreateJNP.aspx.cs">
+      <DependentUpon>CreateJNP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Package\CreateJNP.aspx.designer.cs">
+      <DependentUpon>CreateJNP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Package\CreateJNPFromExistingJNP.aspx.cs">
+      <DependentUpon>CreateJNPFromExistingJNP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Package\CreateJNPFromExistingJNP.aspx.designer.cs">
+      <DependentUpon>CreateJNPFromExistingJNP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Package\JNPCreateOptions.aspx.cs">
+      <DependentUpon>JNPCreateOptions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Package\JNPCreateOptions.aspx.designer.cs">
+      <DependentUpon>JNPCreateOptions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Package\JNPTracker.aspx.cs">
+      <DependentUpon>JNPTracker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Package\JNPTracker.aspx.designer.cs">
+      <DependentUpon>JNPTracker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JQ\FinalJQ.aspx.cs">
+      <DependentUpon>FinalJQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JQ\FinalJQ.aspx.designer.cs">
+      <DependentUpon>FinalJQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JQ\JobQuestionnaire.aspx.cs">
+      <DependentUpon>JobQuestionnaire.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JQ\JobQuestionnaire.aspx.designer.cs">
+      <DependentUpon>JobQuestionnaire.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JQ\JQKSA.aspx.cs">
+      <DependentUpon>JQKSA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JQ\JQKSA.aspx.designer.cs">
+      <DependentUpon>JQKSA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JQ\Qualifications.aspx.cs">
+      <DependentUpon>Qualifications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JQ\Qualifications.aspx.designer.cs">
+      <DependentUpon>Qualifications.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Package\Publish.aspx.cs">
+      <DependentUpon>Publish.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Package\Publish.aspx.designer.cs">
+      <DependentUpon>Publish.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Package\UpdateHiringResult.aspx.cs">
+      <DependentUpon>UpdateHiringResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Package\UpdateHiringResult.aspx.designer.cs">
+      <DependentUpon>UpdateHiringResult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RenewSes.aspx.cs">
+      <DependentUpon>RenewSes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RenewSes.aspx.designer.cs">
+      <DependentUpon>RenewSes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search\SearchResults.aspx.cs">
+      <DependentUpon>SearchResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search\SearchResults.aspx.designer.cs">
+      <DependentUpon>SearchResults.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\JA\App_LocalResources\ctrlJAFinalKSA.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="JNPMaster.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.sitemap" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HCMS.Business\HCMS.Business.csproj">
+      <Project>{E45DDA26-40F5-4C0C-B039-ABEF98717E94}</Project>
+      <Name>HCMS.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HCMS.JNP.Reports\HCMS.JNP.Reports.csproj">
+      <Project>{BDD0E259-BBB0-4BFE-B22A-19661FB505DE}</Project>
+      <Name>HCMS.JNP.Reports</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HCMS.Reports\HCMS.Reports.csproj">
+      <Project>{8C392731-929D-45CD-B542-3C6CCED3EB5A}</Project>
+      <Name>HCMS.Reports</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HCMS.WebFramework\HCMS.WebFramework.csproj">
+      <Project>{E663DEDC-DD0B-4470-B5C9-B87A1756ED76}</Project>
+      <Name>HCMS.WebFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Package\App_LocalResources\CreateJNP.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\JNP_Default\JNP_Default.skin" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="JA\App_LocalResources\JAPositionInformation.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\JA\App_LocalResources\ctrlPositionInfo.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="JA\App_LocalResources\FinalKSA.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="JQ\App_LocalResources\FinalJQ.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\JA\App_LocalResources\ctrlDutyKSA.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\JQ\App_LocalResources\ctrlJQFinal.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\RadSpell\en-US.tdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Administrator Manual.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\FAQ.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Hiring Manager Manual.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Human Resources Manual.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\References.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\WhatsNew.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\JQ\App_LocalResources\ctrlJQFinalDetails.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\JNPMessages.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>JNPMessages.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\JNPInfo.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>JNPInfo.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Common\CRExample.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Common\KSAScaleTable.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="JNPMessageSection.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Common\JAXQRG.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PDExpressDataSetDuties" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PDExpress" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PDExpress (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.HCMS.Reports.Properties.Settings.GlobalReference.Default.PDExpress" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PDExpressDataSetDutiesTableAdapter" GeneratorDataComponentClassName="PDExpressDataSetDutiesTableAdapter" Name="PDExpressDataSetDutiesTable" UserDataComponentName="PDExpressDataSetDutiesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PDExpress (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     vw_PositionDescriptionDuties.DutyID, vw_PositionDescriptionDuties.PositionDescriptionID, vw_PositionDescriptionDuties.PercentageOfTime, 
+                      vw_PositionDescriptionDuties.DutyDescription, vw_PositionDescriptionDuties.DutyTypeID, vw_PositionDescriptionDuties.DutyType, 
+                      vw_PositionDescriptionDuties.DutyTypeDescription, vw_PositionDescriptionDuties.CreatedByID, vw_PositionDescriptionDuties.CreateDate, 
+                      vw_PositionDescriptionDuties.UpdatedByID, vw_PositionDescriptionDuties.UpdateDate, lk_Qualification.QualificationName, 
+                      lk_QualificationType.QualificationTypeName, xref_DutyCompetencyKSA.CompetencyKSA, xref_DutyCompetencyKSA.Certification, 
+                      xref_DutyCompetencyKSA.QualificationID
+FROM         vw_PositionDescriptionDuties LEFT OUTER JOIN
+                      xref_DutyCompetencyKSA ON vw_PositionDescriptionDuties.DutyID = xref_DutyCompetencyKSA.DutyID LEFT OUTER JOIN
+                      lk_Qualification ON xref_DutyCompetencyKSA.QualificationID = lk_Qualification.QualificationID LEFT OUTER JOIN
+                      lk_QualificationType ON xref_DutyCompetencyKSA.QualificationTypeID = lk_QualificationType.QualificationTypeID
+ORDER BY vw_PositionDescriptionDuties.PercentageOfTime DESC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PositionDescriptionID" DataSetColumn="PositionDescriptionID" />
+              <Mapping SourceColumn="PercentageOfTime" DataSetColumn="PercentageOfTime" />
+              <Mapping SourceColumn="DutyDescription" DataSetColumn="DutyDescription" />
+              <Mapping SourceColumn="DutyType" DataSetColumn="DutyType" />
+              <Mapping SourceColumn="DutyTypeDescription" DataSetColumn="DutyTypeDescription" />
+              <Mapping SourceColumn="QualificationName" DataSetColumn="QualificationName" />
+              <Mapping SourceColumn="QualificationTypeName" DataSetColumn="QualificationTypeName" />
+              <Mapping SourceColumn="DutyID" DataSetColumn="DutyID" />
+              <Mapping SourceColumn="DutyTypeID" DataSetColumn="DutyTypeID" />
+              <Mapping SourceColumn="CreatedByID" DataSetColumn="CreatedByID" />
+              <Mapping SourceColumn="CreateDate" DataSetColumn="CreateDate" />
+              <Mapping SourceColumn="UpdatedByID" DataSetColumn="UpdatedByID" />
+              <Mapping SourceColumn="UpdateDate" DataSetColumn="UpdateDate" />
+              <Mapping SourceColumn="CompetencyKSA" DataSetColumn="CompetencyKSA" />
+              <Mapping SourceColumn="Certification" DataSetColumn="Certification" />
+              <Mapping SourceColumn="QualificationID" DataSetColumn="QualificationID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PDExpressDataSetDuties" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="PDExpressDataSetDuties" msprop:Generator_DataSetName="PDExpressDataSetDuties">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PDExpressDataSetDutiesTable" msprop:Generator_UserTableName="PDExpressDataSetDutiesTable" msprop:Generator_RowDeletedName="PDExpressDataSetDutiesTableRowDeleted" msprop:Generator_RowChangedName="PDExpressDataSetDutiesTableRowChanged" msprop:Generator_RowClassName="PDExpressDataSetDutiesTableRow" msprop:Generator_RowChangingName="PDExpressDataSetDutiesTableRowChanging" msprop:Generator_RowEvArgName="PDExpressDataSetDutiesTableRowChangeEvent" msprop:Generator_RowEvHandlerName="PDExpressDataSetDutiesTableRowChangeEventHandler" msprop:Generator_TableClassName="PDExpressDataSetDutiesTableDataTable" msprop:Generator_TableVarName="tablePDExpressDataSetDutiesTable" msprop:Generator_RowDeletingName="PDExpressDataSetDutiesTableRowDeleting" msprop:Generator_TablePropName="PDExpressDataSetDutiesTable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PositionDescriptionID" msprop:Generator_UserColumnName="PositionDescriptionID" msprop:Generator_ColumnPropNameInRow="PositionDescriptionID" msprop:Generator_ColumnVarNameInTable="columnPositionDescriptionID" msprop:Generator_ColumnPropNameInTable="PositionDescriptionIDColumn" type="xs:long" />
+              <xs:element name="PercentageOfTime" msprop:Generator_UserColumnName="PercentageOfTime" msprop:Generator_ColumnPropNameInRow="PercentageOfTime" msprop:Generator_ColumnVarNameInTable="columnPercentageOfTime" msprop:Generator_ColumnPropNameInTable="PercentageOfTimeColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DutyDescription" msprop:Generator_UserColumnName="DutyDescription" msprop:Generator_ColumnPropNameInRow="DutyDescription" msprop:Generator_ColumnVarNameInTable="columnDutyDescription" msprop:Generator_ColumnPropNameInTable="DutyDescriptionColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DutyType" msprop:Generator_UserColumnName="DutyType" msprop:Generator_ColumnPropNameInRow="DutyType" msprop:Generator_ColumnVarNameInTable="columnDutyType" msprop:Generator_ColumnPropNameInTable="DutyTypeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DutyTypeDescription" msprop:Generator_UserColumnName="DutyTypeDescription" msprop:Generator_ColumnPropNameInRow="DutyTypeDescription" msprop:Generator_ColumnVarNameInTable="columnDutyTypeDescription" msprop:Generator_ColumnPropNameInTable="DutyTypeDescriptionColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QualificationName" msprop:Generator_UserColumnName="QualificationName" msprop:Generator_ColumnVarNameInTable="columnQualificationName" msprop:Generator_ColumnPropNameInRow="QualificationName" msprop:Generator_ColumnPropNameInTable="QualificationNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QualificationTypeName" msprop:Generator_UserColumnName="QualificationTypeName" msprop:Generator_ColumnVarNameInTable="columnQualificationTypeName" msprop:Generator_ColumnPropNameInRow="QualificationTypeName" msprop:Generator_ColumnPropNameInTable="QualificationTypeNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DutyID" msprop:Generator_UserColumnName="DutyID" msprop:Generator_ColumnPropNameInRow="DutyID" msprop:Generator_ColumnVarNameInTable="columnDutyID" msprop:Generator_ColumnPropNameInTable="DutyIDColumn" type="xs:int" />
+              <xs:element name="DutyTypeID" msprop:Generator_UserColumnName="DutyTypeID" msprop:Generator_ColumnPropNameInRow="DutyTypeID" msprop:Generator_ColumnVarNameInTable="columnDutyTypeID" msprop:Generator_ColumnPropNameInTable="DutyTypeIDColumn" type="xs:int" />
+              <xs:element name="CreatedByID" msprop:Generator_UserColumnName="CreatedByID" msprop:Generator_ColumnPropNameInRow="CreatedByID" msprop:Generator_ColumnVarNameInTable="columnCreatedByID" msprop:Generator_ColumnPropNameInTable="CreatedByIDColumn" type="xs:int" />
+              <xs:element name="CreateDate" msprop:Generator_UserColumnName="CreateDate" msprop:Generator_ColumnPropNameInRow="CreateDate" msprop:Generator_ColumnVarNameInTable="columnCreateDate" msprop:Generator_ColumnPropNameInTable="CreateDateColumn" type="xs:dateTime" />
+              <xs:element name="UpdatedByID" msprop:Generator_UserColumnName="UpdatedByID" msprop:Generator_ColumnPropNameInRow="UpdatedByID" msprop:Generator_ColumnVarNameInTable="columnUpdatedByID" msprop:Generator_ColumnPropNameInTable="UpdatedByIDColumn" type="xs:int" />
+              <xs:element name="UpdateDate" msprop:Generator_UserColumnName="UpdateDate" msprop:Generator_ColumnPropNameInRow="UpdateDate" msprop:Generator_ColumnVarNameInTable="columnUpdateDate" msprop:Generator_ColumnPropNameInTable="UpdateDateColumn" type="xs:dateTime" />
+              <xs:element name="CompetencyKSA" msprop:Generator_UserColumnName="CompetencyKSA" msprop:Generator_ColumnPropNameInRow="CompetencyKSA" msprop:Generator_ColumnVarNameInTable="columnCompetencyKSA" msprop:Generator_ColumnPropNameInTable="CompetencyKSAColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Certification" msprop:Generator_UserColumnName="Certification" msprop:Generator_ColumnPropNameInRow="Certification" msprop:Generator_ColumnVarNameInTable="columnCertification" msprop:Generator_ColumnPropNameInTable="CertificationColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QualificationID" msprop:Generator_UserColumnName="QualificationID" msprop:Generator_ColumnPropNameInRow="QualificationID" msprop:Generator_ColumnVarNameInTable="columnQualificationID" msprop:Generator_ColumnPropNameInTable="QualificationIDColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//PDExpressDataSetDutiesTable" />
+      <xs:field xpath="DutyID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

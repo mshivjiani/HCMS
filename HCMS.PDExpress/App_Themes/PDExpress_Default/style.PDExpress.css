@@ -1,0 +1,66 @@
+﻿/**************************************************
+JNP Specific styling
+The class .PDE is added to the body thru app.js
+***************************************************/
+
+.PDE {background:#827a6c}
+#header {background:#90cdef url(./Images/) repeat-x; height:100px}
+.logo {background:url(./Images/logo_bg.gif) no-repeat 10px 0px; width:600px !important; height:100px;}
+.footer {background:#3d657d; color:#fff}
+.footer a, .JNP .footer a:visited {color:#fff !important;}
+.topNav {border-bottom:1px solid #efefef; background:#3C647C}
+
+.footer .RadMenu_Default a { cursor:pointer !important; color:#544e3a; font-family: Arial,sans-serif !important; color:#544e3a !Important}
+.footer .RadMenu_Default a:hover {background:none !important; color:#6B6454	 !important;}
+.footer .RadMenu_Default .rmText {text-decoration:underline; color:#fff; border:0px !important}
+.footer .RadMenu_Default .rmText:hover {text-decoration:underline; color:#D9E3F0;}
+.rtsLink:hover {background:red;}
+
+
+/**************************************************
+/*telerik radcontrols override
+These are disabled within the masterpages by adding
+EnableEmbeddedBaseStylesheet="False" EnableEmbeddedSkins="False"
+to the control HTML
+***************************************************/
+
+/*top horizontal tabs*/
+
+/*telerik menu control overrides*/
+
+.RadTabStripTop_WebBlue .rtsLevel .rtsUL  {border-bottom:1px solid #efefef;  padding:0px; margin:0px;}
+.RadTabStripTop_WebBlue .rtsLevel .rtsLI {float:left; margin:0px; list-style:none; }
+.RadTabStripTop_WebBlue .rtsLevel .rtsLI a {font-family:Arial, Helvetica, sans-serif; font-weight:bold; color:#fff; display:block; font-size:11px; text-transform:uppercase; text-align:center; border:1px solid #fff; border-left:0px; text-decoration:none; padding:.7em 0 }
+.RadTabStripTop_WebBlue .rtsLevel .rtsLI a:active, .RadTabStripTop_WebBlue .rtsLevel .rtsLI a:visited {color:#fff;}
+.RadTabStripTop_WebBlue .rtsLevel .rtsLink:hover {background:#273E4B; color:#fff}
+.rtsLink, .rtsOut {line-height:normal !important; background:transparent url('') !important;}
+
+
+/*selected menu item*/
+.rtsSelected {background:#fff !important; color:#45453d !important}
+
+/*left vertical tabs*/
+.leftNav ul {margin-top:-1px; padding:0px; list-style:none;}
+.leftNav li {margin-left:0px; margin-bottom:1px}
+.leftNav li a {display:block; text-decoration:none; padding:.7em; font-weight:bold; text-transform:uppercase; font-size:11px; color:#fff;}
+
+/*to be used when turned into telerik control
+.PDE .leftNav {margin-top:-1px;}
+.PDE .leftNav .RadTabStrip_WebBlue .rtsSelected, .RadTabStrip_WebBlue .rtsSelected:hover {color:#45453d !important; background:#fff !important;}
+.PDE .leftNav .RadTabStrip_WebBlue .rtsLevel .rtsUL {padding:0px; margin:0px;} 
+.PDE .leftNav .RadTabStrip_WebBlue .rtsLevel .rtsLI {border-bottom:0px; margin:0px; list-style:none; border-bottom:1px solid #fff;}
+.PDE .leftNav .RadTabStrip_WebBlue .rtsLevel .rtsLI a {display:block; text-decoration:none; padding:.7em; font-weight:bold; text-transform:uppercase; font-size:11px; color:#fff;}*/
+.PDE .leftNav li a {background:#3a6881;}
+.PDE .leftNav li a:hover {background:#273E4B;}
+.PDE .leftNav_on {background: #51B848; /*#273E4B;*/ color: #FFF;}
+
+
+.PDE .leftNav .RadTabStrip_WebBlue .rtsSelected {background:#5BB32B !important; color:#fff !important;}
+
+
+/*fix for IE with first column no-wrap on PD Edit screen*/
+#ctl00_PDMasterMainContent_PDTracker1_rgDashBoard_ctl00 thead tr th:first-child  {width:60px !important; min-width:60px !important}
+
+
+/*fix for table width on Duties Edit page; unsure if blueTable is used elsewhere in app so mapping to control*/
+#ctl00_PDMasterMainContent_EditDuty1_updtPanelDuty .blueTable {width:855px;}

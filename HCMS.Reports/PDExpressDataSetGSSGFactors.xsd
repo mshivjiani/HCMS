@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PDExpressDataSetGSSGFactors" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PDExpress" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PDExpress (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.HCMS.Reports.Properties.Settings.GlobalReference.Default.PDExpress" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PDExpressDataSetGSSGFactorsTableAdapter" GeneratorDataComponentClassName="PDExpressDataSetGSSGFactorsTableAdapter" Name="PDExpressDataSetGSSGFactorsTable" UserDataComponentName="PDExpressDataSetGSSGFactorsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PDExpress (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        XPF.PositionDescriptionID, XPF.FactorID, XPF.FactorLevel, XPF.Point, XPF.Language, XPF.FactorJustification, XPF.FactorFormatTypeID, XPF.CreatedByID, 
+                         XPF.CreateDate, XPF.UpdatedByID, XPF.UpdateDate, XPF.PositionFactorID, lk_GSSGFactor.GSSGFactorTitle AS 'FactorTitle', [LevelID]
+FROM            xref_PositionFactor AS XPF INNER JOIN
+                         lk_GSSGFactor ON XPF.FactorID = lk_GSSGFactor.GSSGFactorID INNER JOIN
+                         lk_GSSGFactorLevelPoints ON XPF.FactorLevel = lk_GSSGFactorLevelPoints.GSSGFactorLevelID
+WHERE        (XPF.FactorFormatTypeID = 2)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PositionDescriptionID" DataSetColumn="PositionDescriptionID" />
+              <Mapping SourceColumn="FactorID" DataSetColumn="FactorID" />
+              <Mapping SourceColumn="FactorLevel" DataSetColumn="FactorLevel" />
+              <Mapping SourceColumn="Point" DataSetColumn="Point" />
+              <Mapping SourceColumn="Language" DataSetColumn="Language" />
+              <Mapping SourceColumn="FactorJustification" DataSetColumn="FactorJustification" />
+              <Mapping SourceColumn="FactorFormatTypeID" DataSetColumn="FactorFormatTypeID" />
+              <Mapping SourceColumn="CreatedByID" DataSetColumn="CreatedByID" />
+              <Mapping SourceColumn="CreateDate" DataSetColumn="CreateDate" />
+              <Mapping SourceColumn="UpdatedByID" DataSetColumn="UpdatedByID" />
+              <Mapping SourceColumn="UpdateDate" DataSetColumn="UpdateDate" />
+              <Mapping SourceColumn="PositionFactorID" DataSetColumn="PositionFactorID" />
+              <Mapping SourceColumn="FactorTitle" DataSetColumn="FactorTitle" />
+              <Mapping SourceColumn="LevelID" DataSetColumn="LevelID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PDExpressDataSetGSSGFactors" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="PDExpressDataSetGSSGFactors" msprop:Generator_DataSetName="PDExpressDataSetGSSGFactors">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PDExpressDataSetGSSGFactorsTable" msprop:Generator_UserTableName="PDExpressDataSetGSSGFactorsTable" msprop:Generator_RowDeletedName="PDExpressDataSetGSSGFactorsTableRowDeleted" msprop:Generator_RowChangedName="PDExpressDataSetGSSGFactorsTableRowChanged" msprop:Generator_RowClassName="PDExpressDataSetGSSGFactorsTableRow" msprop:Generator_RowChangingName="PDExpressDataSetGSSGFactorsTableRowChanging" msprop:Generator_RowEvArgName="PDExpressDataSetGSSGFactorsTableRowChangeEvent" msprop:Generator_RowEvHandlerName="PDExpressDataSetGSSGFactorsTableRowChangeEventHandler" msprop:Generator_TableClassName="PDExpressDataSetGSSGFactorsTableDataTable" msprop:Generator_TableVarName="tablePDExpressDataSetGSSGFactorsTable" msprop:Generator_RowDeletingName="PDExpressDataSetGSSGFactorsTableRowDeleting" msprop:Generator_TablePropName="PDExpressDataSetGSSGFactorsTable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PositionDescriptionID" msprop:Generator_UserColumnName="PositionDescriptionID" msprop:Generator_ColumnVarNameInTable="columnPositionDescriptionID" msprop:Generator_ColumnPropNameInRow="PositionDescriptionID" msprop:Generator_ColumnPropNameInTable="PositionDescriptionIDColumn" type="xs:long" />
+              <xs:element name="FactorID" msprop:Generator_UserColumnName="FactorID" msprop:Generator_ColumnVarNameInTable="columnFactorID" msprop:Generator_ColumnPropNameInRow="FactorID" msprop:Generator_ColumnPropNameInTable="FactorIDColumn" type="xs:int" />
+              <xs:element name="FactorLevel" msprop:Generator_UserColumnName="FactorLevel" msprop:Generator_ColumnVarNameInTable="columnFactorLevel" msprop:Generator_ColumnPropNameInRow="FactorLevel" msprop:Generator_ColumnPropNameInTable="FactorLevelColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Point" msprop:Generator_UserColumnName="Point" msprop:Generator_ColumnVarNameInTable="columnPoint" msprop:Generator_ColumnPropNameInRow="Point" msprop:Generator_ColumnPropNameInTable="PointColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Language" msprop:Generator_UserColumnName="Language" msprop:Generator_ColumnVarNameInTable="columnLanguage" msprop:Generator_ColumnPropNameInRow="Language" msprop:Generator_ColumnPropNameInTable="LanguageColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FactorJustification" msprop:Generator_UserColumnName="FactorJustification" msprop:Generator_ColumnVarNameInTable="columnFactorJustification" msprop:Generator_ColumnPropNameInRow="FactorJustification" msprop:Generator_ColumnPropNameInTable="FactorJustificationColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FactorFormatTypeID" msprop:Generator_UserColumnName="FactorFormatTypeID" msprop:Generator_ColumnVarNameInTable="columnFactorFormatTypeID" msprop:Generator_ColumnPropNameInRow="FactorFormatTypeID" msprop:Generator_ColumnPropNameInTable="FactorFormatTypeIDColumn" type="xs:int" />
+              <xs:element name="CreatedByID" msprop:Generator_UserColumnName="CreatedByID" msprop:Generator_ColumnVarNameInTable="columnCreatedByID" msprop:Generator_ColumnPropNameInRow="CreatedByID" msprop:Generator_ColumnPropNameInTable="CreatedByIDColumn" type="xs:int" />
+              <xs:element name="CreateDate" msprop:Generator_UserColumnName="CreateDate" msprop:Generator_ColumnVarNameInTable="columnCreateDate" msprop:Generator_ColumnPropNameInRow="CreateDate" msprop:Generator_ColumnPropNameInTable="CreateDateColumn" type="xs:dateTime" />
+              <xs:element name="UpdatedByID" msprop:Generator_UserColumnName="UpdatedByID" msprop:Generator_ColumnVarNameInTable="columnUpdatedByID" msprop:Generator_ColumnPropNameInRow="UpdatedByID" msprop:Generator_ColumnPropNameInTable="UpdatedByIDColumn" type="xs:int" />
+              <xs:element name="UpdateDate" msprop:Generator_UserColumnName="UpdateDate" msprop:Generator_ColumnVarNameInTable="columnUpdateDate" msprop:Generator_ColumnPropNameInRow="UpdateDate" msprop:Generator_ColumnPropNameInTable="UpdateDateColumn" type="xs:dateTime" />
+              <xs:element name="PositionFactorID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="PositionFactorID" msprop:Generator_ColumnVarNameInTable="columnPositionFactorID" msprop:Generator_ColumnPropNameInRow="PositionFactorID" msprop:Generator_ColumnPropNameInTable="PositionFactorIDColumn" type="xs:int" />
+              <xs:element name="FactorTitle" msprop:Generator_UserColumnName="FactorTitle" msprop:Generator_ColumnVarNameInTable="columnFactorTitle" msprop:Generator_ColumnPropNameInRow="FactorTitle" msprop:Generator_ColumnPropNameInTable="FactorTitleColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LevelID" msprop:Generator_UserColumnName="LevelID" msprop:Generator_ColumnPropNameInRow="LevelID" msprop:Generator_ColumnVarNameInTable="columnLevelID" msprop:Generator_ColumnPropNameInTable="LevelIDColumn" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//PDExpressDataSetGSSGFactorsTable" />
+      <xs:field xpath="PositionFactorID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

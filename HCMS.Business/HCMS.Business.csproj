@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E45DDA26-40F5-4C0C-B039-ABEF98717E94}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HCMS.Business</RootNamespace>
+    <AssemblyName>HCMS.Business</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'LOCAL-NTCAD|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\LOCAL-NTCAD\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\HCMS.Business.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AnalysisServices, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.AnalysisServices.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging.Database, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\SeriesGradeKSA.cs" />
+    <Compile Include="Admin\SeriesGradeKSATaskStatement.cs" />
+    <Compile Include="Admin\TaskStatement.cs" />
+    <Compile Include="Admin\Workforce\DashboardRole.cs" />
+    <Compile Include="Admin\Workforce\DashboardRoleManager.cs" />
+    <Compile Include="Base\BusinessBase.cs" />
+    <Compile Include="Base\ExceptionBase.cs" />
+    <Compile Include="Base\IBusinessEntityCollection.cs" />
+    <Compile Include="Base\IEntityDataAdapter.cs" />
+    <Compile Include="Base\ItemManager.cs" />
+    <Compile Include="Base\ListCollectionBase.cs" />
+    <Compile Include="Base\RepositoryBase.cs" />
+    <Compile Include="Check\CheckManager.cs" />
+    <Compile Include="Common\BusinessException.cs" />
+    <Compile Include="Common\CMenu.cs" />
+    <Compile Include="Common\CommonEnums.cs" />
+    <Compile Include="Common\DatabaseUtility.cs" />
+    <Compile Include="Common\EnumHelper.cs" />
+    <Compile Include="Common\Exceptions\DBPrimaryKeyNotSetException.cs" />
+    <Compile Include="Common\TransactionManager.cs" />
+    <Compile Include="CR\CategoryRating.cs" />
+    <Compile Include="CR\CategoryRatingGroup.cs" />
+    <Compile Include="CR\CategoryRatingGroupManager.cs" />
+    <Compile Include="CR\CategoryRatingManager.cs" />
+    <Compile Include="CR\CRWorkflowStatus.cs" />
+    <Compile Include="CR\CRWorkflowStatusManager.cs" />
+    <Compile Include="DashBoard\Collections\DashboardCollection.cs" />
+    <Compile Include="DashBoard\DashBoard.cs" />
+    <Compile Include="Duty\DutyCompetencyKSA.cs" />
+    <Compile Include="Error\ValidationError.cs" />
+    <Compile Include="Factor\FactorRevisionNote.cs" />
+    <Compile Include="Factor\FESFactorGradeLevel.cs" />
+    <Compile Include="Factor\PrimaryFESFactorLevelLanguage.cs" />
+    <Compile Include="JA\Collections\JobAnalysisDutyKSAFactorCollection.cs" />
+    <Compile Include="JA\JobAnalysisDutyKSAFactor.cs" />
+    <Compile Include="JA\Collections\JobAnalysisDutyKSACollection.cs" />
+    <Compile Include="JA\JAWorkflowStatus.cs" />
+    <Compile Include="JA\JAWorkflowStatusManager.cs" />
+    <Compile Include="JA\JobAnalysis.cs" />
+    <Compile Include="JA\JobAnalysisDuty.cs" />
+    <Compile Include="JA\JobAnalysisDutyKSA.cs" />
+    <Compile Include="JA\JobAnalysisDutyQualification.cs" />
+    <Compile Include="JNPTracker\TrackerItem.cs" />
+    <Compile Include="JNPTracker\TrackerItemCollection.cs" />
+    <Compile Include="JNPWorkflowNote\JNPWorkflowNote.cs" />
+    <Compile Include="JNPWorkflowNote\JNPWorkflowNoteStatus.cs" />
+    <Compile Include="JNP\JNPManager.cs" />
+    <Compile Include="JNP\JNPackage.cs" />
+    <Compile Include="JNP\Collections\JNPackageCollection.cs" />
+    <Compile Include="JNP\JNPApproval.cs" />
+    <Compile Include="JNP\JNPCheck.cs" />
+    <Compile Include="JNP\JNPEnums.cs" />
+    <Compile Include="JNP\JNPSearch.cs" />
+    <Compile Include="JNP\JNPWorkflowStatus.cs" />
+    <Compile Include="JNP\JNPWorkflowStatusCollection.cs" />
+    <Compile Include="JNP\JNPApprovalManager.cs" />
+    <Compile Include="JNP\Search\JNPSearchManager.cs" />
+    <Compile Include="JNP\Search\JNPSearchResult.cs" />
+    <Compile Include="JQ\Collections\JQFactorCollection.cs" />
+    <Compile Include="JQ\Collections\JQFactorItemCollection.cs" />
+    <Compile Include="JQ\Collections\JQRatingScaleCollection.cs" />
+    <Compile Include="JQ\Collections\RatingScaleResponseCollection.cs" />
+    <Compile Include="JQ\JobQuestionnaire.cs" />
+    <Compile Include="JQ\JQCommonBase.cs" />
+    <Compile Include="JQ\JQFactor.cs" />
+    <Compile Include="JQ\JQFactorItem.cs" />
+    <Compile Include="JQ\JQManager.cs" />
+    <Compile Include="JQ\JQRatingScale.cs" />
+    <Compile Include="JQ\JQWorkflowStatus.cs" />
+    <Compile Include="JQ\JQWorkflowStatusManager.cs" />
+    <Compile Include="JQ\RatingScaleResponse.cs" />
+    <Compile Include="JQ\SeriesGradeKSATaskStatement.cs" />
+    <Compile Include="LogObjects\DutyCompetencyKSALog.cs" />
+    <Compile Include="LogObjects\PositionCompetencyKSALog.cs" />
+    <Compile Include="LogObjects\PositionDescriptionLog.cs" />
+    <Compile Include="LogObjects\PositionDutyLog.cs" />
+    <Compile Include="Lookups\ActionType.cs" />
+    <Compile Include="Lookups\Adapters\CountryDataAdapter.cs" />
+    <Compile Include="Lookups\Adapters\OrgChartTypeDataAdapter.cs" />
+    <Compile Include="Lookups\Adapters\OrgPositionGroupTypeDataAdapter.cs" />
+    <Compile Include="Lookups\Adapters\OrgPositionPlacementTypeDataAdapter.cs" />
+    <Compile Include="Lookups\AppointmentEligibilty.cs" />
+    <Compile Include="Lookups\AppointmentEligibiltyManager.cs" />
+    <Compile Include="Lookups\AppointmentType.cs" />
+    <Compile Include="Lookups\AppointmentTypeManager.cs" />
+    <Compile Include="Lookups\CareerLadderPDType.cs" />
+    <Compile Include="Lookups\CareerLadderPDTypeGrade.cs" />
+    <Compile Include="Lookups\ClassificationStandardSource.cs" />
+    <Compile Include="Lookups\ActionTypeManager.cs" />
+    <Compile Include="Lookups\Collections\CareerLadderPDTypeCollection.cs" />
+    <Compile Include="Lookups\Collections\CareerLadderPDTypeGradeCollection.cs" />
+    <Compile Include="Lookups\Collections\DistinguishingValueScaleCollection.cs" />
+    <Compile Include="Lookups\Collections\GradeCollection.cs" />
+    <Compile Include="Lookups\Collections\ImportanceScaleCollection.cs" />
+    <Compile Include="Lookups\Collections\NeedAtEntryScaleCollection.cs" />
+    <Compile Include="Lookups\Collections\OrganizationCodeCollection.cs" />
+    <Compile Include="Lookups\Collections\OrgChartTypeCollection.cs" />
+    <Compile Include="Lookups\Collections\PayPlanCollection.cs" />
+    <Compile Include="Lookups\Collections\SeriesCollection.cs" />
+    <Compile Include="Lookups\Country.cs" />
+    <Compile Include="Lookups\OrgPositionPlacementType.cs" />
+    <Compile Include="Lookups\Repositories\CountryRepository.cs" />
+    <Compile Include="Lookups\DashboardRoleType.cs" />
+    <Compile Include="Lookups\DashboardRoleTypeManager.cs" />
+    <Compile Include="Lookups\DistinguishingValueScale.cs" />
+    <Compile Include="Lookups\DocWorkflowStatus.cs" />
+    <Compile Include="Lookups\DutyType.cs" />
+    <Compile Include="Lookups\EvalCriteria.cs" />
+    <Compile Include="Lookups\FactorFormatType.cs" />
+    <Compile Include="Lookups\FactorLevelPoint.cs" />
+    <Compile Include="Lookups\FesFactorLevelPoints.cs" />
+    <Compile Include="Lookups\FLSAType.cs" />
+    <Compile Include="Lookups\Grade.cs" />
+    <Compile Include="Lookups\GSSGFactorLevelPoints.cs" />
+    <Compile Include="Lookups\IFactorLevelPoint.cs" />
+    <Compile Include="Lookups\ImportanceScale.cs" />
+    <Compile Include="Lookups\JNPOptionType.cs" />
+    <Compile Include="Lookups\JNPType.cs" />
+    <Compile Include="Lookups\JNPWorkflowStatus.cs" />
+    <Compile Include="Lookups\JQFactorType.cs" />
+    <Compile Include="Lookups\JQItemType.cs" />
+    <Compile Include="Lookups\KSA.cs" />
+    <Compile Include="Lookups\KSAEntityManager.cs" />
+    <Compile Include="Lookups\LookupManager.cs" />
+    <Compile Include="Lookups\NeedAtEntryScale.cs" />
+    <Compile Include="Lookups\NoteStatus.cs" />
+    <Compile Include="Lookups\OrganizationCode.cs" />
+    <Compile Include="Lookups\OrgChartType.cs" />
+    <Compile Include="Lookups\OrgPositionGroupType.cs" />
+    <Compile Include="Lookups\OrgPositionStatusHistoryType.cs" />
+    <Compile Include="Lookups\OrgPositionStatusHistoryTypeManager.cs" />
+    <Compile Include="Lookups\OrgPositionType.cs" />
+    <Compile Include="Lookups\OrgPositionTypeManager.cs" />
+    <Compile Include="Lookups\OrgWorkflowStatus.cs" />
+    <Compile Include="Lookups\OrgWorkflowStatusManager.cs" />
+    <Compile Include="Lookups\PayPlan.cs" />
+    <Compile Include="Lookups\PositionStatusType.cs" />
+    <Compile Include="Lookups\PositionType.cs" />
+    <Compile Include="Lookups\PostionSensitivityType.cs" />
+    <Compile Include="Lookups\Qualification.cs" />
+    <Compile Include="Lookups\QualificationType.cs" />
+    <Compile Include="Lookups\RatingScaleType.cs" />
+    <Compile Include="Lookups\ReasonForSubmission.cs" />
+    <Compile Include="Lookups\Region.cs" />
+    <Compile Include="Lookups\Repositories\OrgChartTypeRepository.cs" />
+    <Compile Include="Lookups\Repositories\OrgPositionGroupTypeRepository.cs" />
+    <Compile Include="Lookups\Repositories\OrgPositionPlacementTypeRepository.cs" />
+    <Compile Include="Lookups\ScoringRangeGroupType.cs" />
+    <Compile Include="Lookups\Series.cs" />
+    <Compile Include="Lookups\Service.cs" />
+    <Compile Include="Lookups\SODParagraphOptions.cs" />
+    <Compile Include="Lookups\StaffingObjectType.cs" />
+    <Compile Include="Lookups\State.cs" />
+    <Compile Include="Lookups\StateManager.cs" />
+    <Compile Include="Lookups\SupervisoryStatus.cs" />
+    <Compile Include="Lookups\SupervisoryStatusManager.cs" />
+    <Compile Include="Lookups\TaskStatement.cs" />
+    <Compile Include="Lookups\TaskStatementEntityManager.cs" />
+    <Compile Include="Lookups\ToolTip.cs" />
+    <Compile Include="Lookups\ToolTipEntity.cs" />
+    <Compile Include="Lookups\ToolTipManager.cs" />
+    <Compile Include="Lookups\WorkflowGroup.cs" />
+    <Compile Include="Lookups\WorkflowGroupManager.cs" />
+    <Compile Include="Lookups\WorkflowStatus.cs" />
+    <Compile Include="Lookups\WorkScheduleType.cs" />
+    <Compile Include="Lookups\WorkScheduleTypeManager.cs" />
+    <Compile Include="NarrativeFactor\INarrativeFactor.cs" />
+    <Compile Include="NarrativeFactor\NarrativeFactor.cs" />
+    <Compile Include="OrganizationChart\Adapters\OrganizationChartBaseDataAdapter.cs" />
+    <Compile Include="OrganizationChart\Adapters\OrganizationChartDataAdapter.cs" />
+    <Compile Include="OrganizationChart\Configuration\OrgChartExpressSettings.cs" />
+    <Compile Include="OrganizationChart\Configuration\OrgExElement.cs" />
+    <Compile Include="OrganizationChart\Configuration\OrgExElementCollection.cs" />
+    <Compile Include="OrganizationChart\Positions\Exceptions\CircularPositionReferenceException.cs" />
+    <Compile Include="OrganizationChart\IChartPosition.cs" />
+    <Compile Include="OrganizationChart\Processing\ChartGenerationParameters.cs" />
+    <Compile Include="OrganizationChart\Processing\ImageManager.cs" />
+    <Compile Include="OrganizationChart\Processing\ITemporaryDocument.cs" />
+    <Compile Include="OrganizationChart\Processing\TemporaryDocument.cs" />
+    <Compile Include="OrganizationChart\Processing\TemporaryDocumentDataAdapter.cs" />
+    <Compile Include="OrganizationChart\Processing\TemporaryDocumentRepository.cs" />
+    <Compile Include="OrganizationChart\Published\Adapters\OrganizationChartLogDataAdapter.cs" />
+    <Compile Include="OrganizationChart\Published\Positions\Adapters\OrganizationChartPositionLogDataAdapter.cs" />
+    <Compile Include="OrganizationChart\Published\Positions\OrganizationChartPositionLog.cs" />
+    <Compile Include="OrganizationChart\Published\Positions\OrganizationChartPositionLogManager.cs" />
+    <Compile Include="OrganizationChart\Positions\Adapters\OrganizationChartPositionDataAdapter.cs" />
+    <Compile Include="OrganizationChart\Positions\Adapters\WorkforcePlanningPositionDataAdapter.cs" />
+    <Compile Include="OrganizationChart\Positions\Exceptions\AbolishedPositionsExistException.cs" />
+    <Compile Include="OrganizationChart\Exceptions\ChartBrokenHierarchyException.cs" />
+    <Compile Include="OrganizationChart\Positions\Exceptions\InvalidChartPositionException.cs" />
+    <Compile Include="OrganizationChart\Positions\Exceptions\InvalidParentChartPositionException.cs" />
+    <Compile Include="OrganizationChart\Positions\Exceptions\InvalidRootNodePositionReplacementException.cs" />
+    <Compile Include="OrganizationChart\Positions\Exceptions\MissingRootNodePositionException.cs" />
+    <Compile Include="OrganizationChart\Exceptions\NullNewUserException.cs" />
+    <Compile Include="OrganizationChart\Positions\Collections\OrganizationChartPositionCollection.cs" />
+    <Compile Include="OrganizationChart\Exceptions\ChartAlreadyInProgressException.cs" />
+    <Compile Include="OrganizationChart\Exceptions\NoPublishedChartAvailableException.cs" />
+    <Compile Include="OrganizationChart\Exceptions\NullActionUserException.cs" />
+    <Compile Include="OrganizationChart\Exceptions\NullOrganizationChartException.cs" />
+    <Compile Include="OrganizationChart\Exceptions\NullOrganizationCodeException.cs" />
+    <Compile Include="OrganizationChart\IOrganizationChart.cs" />
+    <Compile Include="OrganizationChart\Positions\Collections\WorkforcePlanningPositionCollection.cs" />
+    <Compile Include="OrganizationChart\Positions\Exceptions\PositionContainsSubordinatesException.cs" />
+    <Compile Include="OrganizationChart\Positions\IWorkforcePlanningPosition.cs" />
+    <Compile Include="OrganizationChart\OrganizationChart.cs" />
+    <Compile Include="OrganizationChart\OrganizationChartBase.cs" />
+    <Compile Include="OrganizationChart\Published\OrganizationChartLog.cs" />
+    <Compile Include="OrganizationChart\Published\OrganizationChartLogManager.cs" />
+    <Compile Include="OrganizationChart\OrganizationChartManager.cs" />
+    <Compile Include="OrganizationChart\Positions\OrganizationChartPosition.cs" />
+    <Compile Include="OrganizationChart\Positions\OrganizationChartPositionManager.cs" />
+    <Compile Include="OrganizationChart\Positions\WorkforcePlanningPosition.cs" />
+    <Compile Include="OrganizationChart\Positions\WorkforcePlanningPositionManager.cs" />
+    <Compile Include="OrganizationChart\Search\OrgChartSearchResult.cs" />
+    <Compile Include="OrganizationChart\OrgChartTrackerItemCollection.cs" />
+    <Compile Include="OrganizationChart\OrgChartTrackerItem.cs" />
+    <Compile Include="OrganizationChart\Search\OrgChartSearchManager.cs" />
+    <Compile Include="OrganizationChart\Search\OrgChartSearchResultCollection.cs" />
+    <Compile Include="PD\Collections\PDValidationErrorCollection.cs" />
+    <Compile Include="PD\Collections\PositionDescriptionCollection.cs" />
+    <Compile Include="PD\Collections\PositionWorkflowStatusCollection.cs" />
+    <Compile Include="PD\PDValidationError.cs" />
+    <Compile Include="PD\PositionClassificationStandard.cs" />
+    <Compile Include="PD\PositionCompetencyKSA.cs" />
+    <Compile Include="PD\PositionDescription.cs" />
+    <Compile Include="PD\PositionDescriptionSearcher.cs" />
+    <Compile Include="PD\PositionDuty.cs" />
+    <Compile Include="PD\PositionEvalCriteria.cs" />
+    <Compile Include="PD\PositionFactor.cs" />
+    <Compile Include="PD\PositionFactorLog.cs" />
+    <Compile Include="PD\PositionGradePoint.cs" />
+    <Compile Include="PD\PositionWorkflowStatus.cs" />
+    <Compile Include="PhoneNumber\UserPhoneNumber.cs" />
+    <Compile Include="PhoneNumber\UserPhoneNumberManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Lookups\QualificationTypeManager.cs" />
+    <Compile Include="Search\Search.cs" />
+    <Compile Include="Security\ActionUser.cs" />
+    <Compile Include="Security\Collections\PermissionCollection.cs" />
+    <Compile Include="Security\Collections\RoleCollection.cs" />
+    <Compile Include="Security\Collections\UserCollection.cs" />
+    <Compile Include="Security\IPermission.cs" />
+    <Compile Include="Security\IRole.cs" />
+    <Compile Include="Security\ISiteUser.cs" />
+    <Compile Include="Security\Permission.cs" />
+    <Compile Include="Security\Role.cs" />
+    <Compile Include="Security\SecurityManager.cs" />
+    <Compile Include="Security\User.cs" />
+    <Compile Include="SeriesFactorLevelLanguage\ISeriesFactorLevelLanguage.cs" />
+    <Compile Include="SeriesFactorLevelLanguage\SeriesFactorLevelLanguage.cs" />
+    <Compile Include="SeriesFactorLevelLanguage\SeriesFesFactorLevelLanguage.cs" />
+    <Compile Include="SeriesFactorLevelLanguage\SeriesGSSGFactorLevelLanguage.cs" />
+    <Compile Include="SeriesGradeFactor\SeriesGradeFesFactorLevelPoints.cs" />
+    <Compile Include="Series\Collections\SeriesOPMTitleCollection.cs" />
+    <Compile Include="Series\SeriesManager.cs" />
+    <Compile Include="Series\SeriesGradeKSATaskStatement.cs" />
+    <Compile Include="Series\SeriesOPMTitle.cs" />
+    <Compile Include="SSAS\AnalyisServicesRoleManager.cs" />
+    <Compile Include="WorkFlow\Exceptions\WorkflowNotSupportedException.cs" />
+    <Compile Include="WorkFlow\WorkflowObject.cs" />
+    <Compile Include="WorkFlow\WorkflowAction.cs" />
+    <Compile Include="WorkFlow\WorkflowGroupPermission.cs" />
+    <Compile Include="WorkFlow\WorkflowManager.cs" />
+    <Compile Include="WorkFlow\WorkflowNote.cs" />
+    <Compile Include="WorkFlow\WorkflowRule.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="References\Microsoft.AnalysisServices.DLL">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Data.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Logging.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Validation.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet.dll" />
+    <Content Include="References\Microsoft.Practices.ObjectBuilder2.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="OrganizationChart\Collections\" />
+    <Folder Include="OrganizationChart\Positions\Repositories\" />
+    <Folder Include="QualificationType\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Templates\BusinessLayer.cst" />
+    <None Include="Templates\LookupStoredProcedure.cst" />
+    <None Include="Templates\StoredProcedures.cst" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,104 @@
+﻿<%@ CodeTemplate Language="C#" TargetLanguage="T-SQL" Description="Generates a update stored procedure." %>
+<%@ Property Name="SourceTable" Type="SchemaExplorer.TableSchema" Category="Context" Description="Table that the stored procedures should be based on." %>
+<%@ Property Name="StoredProcedurePrefix" Type="String" Default="spr_" Category="Context" Description="The prefix to use for this stored procedure" %>
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Assembly Name="System" %>
+<%@ Import Namespace="SchemaExplorer" %>
+<%@ Import Namespace="System" %>
+<%-- select Stored Procedure --%>
+<%
+	string sourceTableName = MakeSingle(ReplacePrefixes(SourceTable.Name));
+	string storedProcedureName = string.Format("{0}GetAll{1}s", StoredProcedurePrefix, sourceTableName);
+%>
+---------------------------------------------------------------------------------------------------
+if exists (select * from sys.objects where type in (N'P', N'PC') and object_id = OBJECT_ID(N'[dbo].[<%= storedProcedureName %>]'))
+drop procedure  [dbo].[<%= storedProcedureName %>]
+go
+
+create procedure dbo.<%= storedProcedureName %>
+as
+	set nocount on
+	
+	select
+		<% for (int i = 0; i < SourceTable.Columns.Count; i++) { %>
+		<%= SourceTable.Columns[i].Name %><% if (i < SourceTable.Columns.Count - 1) { %>,<% } %>
+		<% } %> 
+	from
+		<%= SourceTable.Name %>
+		
+go
+
+<script runat="template">
+public string ReplacePrefixes (string tableName)
+{
+	return tableName.Replace("lk_", string.Empty).Replace("tbl_", string.Empty).Replace("xref_", string.Empty);
+}
+
+public string getCleanSprocParameter(string fieldName)
+{
+	string newField = fieldName.Substring(0, 1).ToLower() + fieldName.Substring(1, fieldName.Length - 1);
+	return newField.Replace("_", string.Empty);
+}
+
+public string GetSqlParameterStatement(ColumnSchema column)
+{
+	return GetSqlParameterStatement(column, string.Empty);
+}
+
+public string GetSqlParameterStatement(ColumnSchema column, string prefix)
+{
+      string param = "@" + prefix + getCleanSprocParameter(column.Name) + " " + column.NativeType;
+ 
+      switch (column.DataType)
+      {
+			case DbType.Int16:
+			case DbType.Int32:
+			case DbType.Date:
+			case DbType.DateTime:
+			{
+				param = param;
+				break;
+			}
+			case DbType.AnsiString:
+			{
+				if(column.NativeType == "text")
+				{
+					param = param;
+				}
+				else
+				{
+					if (column.Size > 0)
+					{
+						param += "(" + column.Size + ")";
+					}
+				}
+				break;
+			}
+			
+            case DbType.Decimal:
+            {
+                  param += "(" + column.Precision + ", " + column.Scale + ")";
+                  break;
+            }
+            default:
+            {
+                  if (column.Size > 0)
+                  {
+                        param += "(" + column.Size + ")";
+                  }
+                  break;
+            }
+      }
+ 
+      return param;
+}
+
+public string MakeSingle(string tableName)
+	{
+		string singleName = tableName;
+		if (tableName.EndsWith("s"))
+                singleName = tableName.Remove(tableName.Length - 1, 1);
+
+		return singleName;
+	}
+</script>

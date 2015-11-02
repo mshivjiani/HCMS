@@ -1,0 +1,1196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3485BEDC-609C-4F72-884F-3067C3375AEA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HCMS.Portal</RootNamespace>
+    <AssemblyName>HCMS.Portal</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'LOCAL-NTCAD|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\HCMS.Portal.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.0.30930.28736, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DocumentFormat.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching.Database, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Caching.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Configuration.Design.HostAdapter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.HostAdapter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data.SqlCe, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging.Database, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.PolicyInjection, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security.AzMan, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Security.AzMan.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security.Cryptography, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WinForms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.StaticFactory, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.Unity.StaticFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Telerik.Reporting.OpenXmlRendering, Version=6.1.12.611, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Telerik.Reporting.OpenXmlRendering.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2012.2.607.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins, Version=2012.2.607.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\AddEditWorkflowGroup.aspx" />
+    <Content Include="Admin\AddSeriesGradeKSATaskStatement.aspx" />
+    <Content Include="Admin\addUser.aspx" />
+    <Content Include="Admin\AddSeriesOPMTitle.aspx" />
+    <Content Include="Admin\DashboardRoleSearch.aspx" />
+    <Content Include="Admin\DashboardRole.aspx" />
+    <Content Include="Admin\DelegateJNP.aspx" />
+    <Content Include="Admin\default.aspx" />
+    <Content Include="Admin\DelegateOrgChart.aspx" />
+    <Content Include="Admin\delegatePD.aspx" />
+    <Content Include="Admin\editUser.aspx" />
+    <Content Include="Admin\JNPAdmin.aspx" />
+    <Content Include="Admin\JNPPublishedReport.aspx" />
+    <Content Include="Admin\KSAMaintenance.aspx" />
+    <Content Include="Admin\KSATaskStatementMaintenance.aspx" />
+    <Content Include="Admin\OrgCodeAdmin.aspx" />
+    <Content Include="Admin\PDAdmin.aspx" />
+    <Content Include="Admin\SearchKSA.aspx" />
+    <Content Include="Admin\SearchTaskStatement.aspx" />
+    <Content Include="Admin\SeriesAdmin.aspx" />
+    <Content Include="Admin\SSASRoles.aspx" />
+    <Content Include="Admin\TaskStatementMaintenance.aspx" />
+    <Content Include="Admin\ToolTipAdmin.aspx" />
+    <Content Include="Admin\Workforce.aspx" />
+    <Content Include="Admin\WorkflowActionAdministration.aspx" />
+    <Content Include="Admin\WorkflowGroupAdministration.aspx" />
+    <Content Include="Admin\WorkflowRuleAdministration.aspx" />
+    <Content Include="AjaxSessionUpdate.aspx" />
+    <Content Include="App_Data\BasicTools.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\FooterOtherMaster.xml" />
+    <Content Include="App_Data\FooterSiteMaster.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\LeftNavDashboardRole.xml" />
+    <Content Include="App_Data\LeftNavHome.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\LeftNavJNPAdmin.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\LeftNavMiscellaneous.xml" />
+    <Content Include="App_Data\LeftNavOrgCodeAdmin.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\LeftNavPDAdmin.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\LeftNavUserAdmin.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\TopNavAdmin.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\TopNavModuleSelector.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\TopNavSite.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Themes\HCMS_Default\AjaxSessionTimer.css" />
+    <Content Include="App_Themes\HCMS_Default\Images\banner.png" />
+    <Content Include="App_Themes\HCMS_Default\Images\bg_blue_grad.png" />
+    <Content Include="App_Themes\HCMS_Default\Images\bg_grad_brown.png" />
+    <Content Include="App_Themes\HCMS_Default\Images\bg_grad_gray.png" />
+    <Content Include="App_Themes\HCMS_Default\Images\bg_medblue_grad.png" />
+    <Content Include="App_Themes\HCMS_Default\Images\bg_springboard_birds_beach.jpg" />
+    <Content Include="App_Themes\HCMS_Default\Images\bg_springboard_birds_woods.jpg" />
+    <Content Include="App_Themes\HCMS_Default\Images\bg_stripe_blue.png" />
+    <Content Include="App_Themes\HCMS_Default\Images\bg_stripe_thin_white.png" />
+    <Content Include="App_Themes\HCMS_Default\Images\bluegrad.jpg" />
+    <Content Include="App_Themes\HCMS_Default\Images\btn_bg.png" />
+    <Content Include="App_Themes\HCMS_Default\Images\btn_enter.png" />
+    <Content Include="App_Themes\HCMS_Default\Images\header_logo.png" />
+    <Content Include="App_Themes\HCMS_Default\Images\Icons\2cutedolfin2.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\Icons\2fishswim7.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\Icons\3bluejumper.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\Icons\bub001.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\Icons\check.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\Icons\icon_delegate.ico" />
+    <Content Include="App_Themes\HCMS_Default\Images\Icons\excel-16.ico" />
+    <Content Include="App_Themes\HCMS_Default\Images\Icons\excel-24.ico" />
+    <Content Include="App_Themes\HCMS_Default\Images\Icons\Fish102.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\Icons\flag_red.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\Icons\icon_add.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\Icons\icon_cancel.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\Icons\icon_checkmark.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\Icons\icon_component.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\Icons\icon_delete.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\Icons\icon_details.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\Icons\icon_edit.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\Icons\icon_editold.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\Icons\icon_escalated.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\Icons\icon_greenDot.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\Icons\icon_help.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\Icons\icon_Inactive.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\Icons\icon_lock.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\Icons\icon_notes.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\Icons\icon_ontrack.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\Icons\icon_pdflarge.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\Icons\icon_pdfsmall.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\Icons\icon_redDot.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\Icons\icon_refresh.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\Icons\icon_review.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\Icons\icon_unlock.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\Icons\icon_view.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\Icons\icon_warning.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\Icons\icon_yellowDot.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\Icons\loading.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\Icons\square.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\Icons\Web20Loading.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\logo_bg.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\logo_HCMS.png" />
+    <Content Include="App_Themes\HCMS_Default\Images\logo_JANP.png" />
+    <Content Include="App_Themes\HCMS_Default\Images\logo_PDExpress.png" />
+    <Content Include="App_Themes\HCMS_Default\Images\logo_PDExpress_sm.png" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Grid\AddRecord.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Grid\altRowBg.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Grid\bg.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Grid\Cancel.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Grid\Cancel_01.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Grid\defaultAlternatingItemBg.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Grid\defaultEditItemBg.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Grid\defaultHeaderBg.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Grid\defaultItemBg.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Grid\defaultPagerBg.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Grid\defaultSelectedItemBg.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Grid\Delete.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Grid\Delete_01.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Grid\Edit.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Grid\Edit_01.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Grid\expandedRowBg.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Grid\Filter.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Grid\headerBg.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Grid\headerBg2.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Grid\inner1HeaderBg.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Grid\inner2HeaderBg.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Grid\MoveDown.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Grid\MoveUp.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Grid\pagerBg.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Grid\PagingFirst.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Grid\PagingLast.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Grid\PagingNext.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Grid\PagingPrev.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Grid\Refresh.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Grid\SingleMinus.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Grid\SinglePlus.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Grid\SortAsc.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Grid\SortDesc.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Grid\sprite.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Grid\Update.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Grid\Update_01.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Grid\View.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Menu\down.png" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Menu\right.png" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Menu\up.png" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\SpellCheck\SpellCheck.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Window\ModalDialogAlert.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\RAD\Window\ModalDialogConfirm.gif" />
+    <Content Include="App_Themes\HCMS_Default\Images\screenshot_HCMS.png" />
+    <Content Include="App_Themes\HCMS_Default\Images\screenshot_JNP.png" />
+    <Content Include="App_Themes\HCMS_Default\Images\screenshot_OrgExpress.png" />
+    <Content Include="App_Themes\HCMS_Default\Images\screenshot_PDExpress.png" />
+    <Content Include="App_Themes\HCMS_Default\Images\screenshot_workforce.png" />
+    <Content Include="App_Themes\HCMS_Default\Images\tab_bg_on.png" />
+    <Content Include="App_Themes\HCMS_Default\Images\tab_off.png" />
+    <Content Include="App_Themes\HCMS_Default\Images\tab_on.png" />
+    <Content Include="App_Themes\HCMS_Default\main.css" />
+    <Content Include="App_Themes\HCMS_Default\RADAjaxLoadingPanel.css" />
+    <Content Include="App_Themes\HCMS_Default\style.HCMS.css" />
+    <Content Include="App_Themes\HCMS_Default\ToolTip.HCMS.css" />
+    <Content Include="App_Themes\HCMS_Default\ToolTip\Callouts.gif" />
+    <Content Include="App_Themes\HCMS_Default\ToolTip\GridCustom.gif" />
+    <Content Include="App_Themes\HCMS_Default\ToolTip\Loading.gif" />
+    <Content Include="App_Themes\HCMS_Default\ToolTip\ToolTipSprites.gif" />
+    <Content Include="App_Themes\HCMS_Default\ToolTip\ToolTipVerticalSprites.gif" />
+    <Content Include="App_Themes\HCMS_Default\Window.HCMS.css" />
+    <Content Include="Common\AccessDenied.aspx" />
+    <Content Include="Common\Error.aspx" />
+    <Content Include="Common\FAQ.aspx" />
+    <Content Include="Common\PortalPage.aspx" />
+    <Content Include="Common\Timeout.aspx" />
+    <Content Include="Common\WarningPage.aspx" />
+    <Content Include="Controls\Admin\ctrJNPPublishedReport.ascx" />
+    <Content Include="Controls\Admin\ctrlAddSeriesOPMTitle.ascx" />
+    <Content Include="Controls\Admin\ctrlAdminSearchTaskStatement.ascx" />
+    <Content Include="Controls\Admin\ctrlDelegateOrgChart.ascx" />
+    <Content Include="Controls\Admin\ctrlJNPAdmin.ascx" />
+    <Content Include="Controls\Admin\ctrlAddEditWorkflowGroup.ascx" />
+    <Content Include="Controls\Admin\ctrlAddEditWorkflowPermission.ascx" />
+    <Content Include="Controls\Admin\ctrlAddSeriesGradeKSATaskStatement.ascx" />
+    <Content Include="Controls\Admin\ctrlDelegateJNP.ascx" />
+    <Content Include="Controls\Admin\ctrlAdminSearchKSA.ascx" />
+    <Content Include="Controls\Admin\ctrlSeriesOPMTitleAdmin.ascx" />
+    <Content Include="Controls\Admin\ctrlSSASRoles.ascx" />
+    <Content Include="Controls\Admin\ctrlToolTipAdmin.ascx" />
+    <Content Include="Controls\Admin\ctrlWorkforce.ascx" />
+    <Content Include="Controls\Admin\ctlDashboardRoleSearch.ascx" />
+    <Content Include="Controls\Admin\KSAMaintenance.ascx" />
+    <Content Include="Controls\Admin\KSATaskStatementMaintenance.ascx" />
+    <Content Include="Controls\Admin\TaskStatementMaintenance.ascx" />
+    <Content Include="Controls\Admin\UserMaintenace.ascx" />
+    <Content Include="Controls\Admin\ctrlAddEditWorkflowAction.ascx" />
+    <Content Include="Controls\Admin\ctrlWorkflowGroup.ascx" />
+    <Content Include="Controls\Admin\ctrlAddEditWorkflowRule.ascx" />
+    <Content Include="Controls\Common\HelpMessage.ascx" />
+    <Content Include="Controls\Admin\DashboardRole.ascx" />
+    <Content Include="Controls\defaultMain.ascx" />
+    <Content Include="Controls\Layout\HeaderControl.ascx" />
+    <Content Include="Controls\Login.ascx" />
+    <Content Include="Controls\Message\Message.ascx" />
+    <Content Include="Controls\ModuleSelector.ascx" />
+    <Content Include="Controls\ProgressBar\images\progress_bluegrey_empty.gif" />
+    <Content Include="Controls\ProgressBar\images\progress_bluegrey_full.gif" />
+    <Content Include="Controls\ProgressBar\images\progress_bluegrey_left.gif" />
+    <Content Include="Controls\ProgressBar\images\progress_bluegrey_right.gif" />
+    <Content Include="Controls\ProgressBar\images\progress_classic_empty.gif" />
+    <Content Include="Controls\ProgressBar\images\progress_classic_full.gif" />
+    <Content Include="Controls\ProgressBar\images\progress_classic_left.gif" />
+    <Content Include="Controls\ProgressBar\images\progress_classic_right.gif" />
+    <Content Include="Controls\ProgressBar\images\progress_ie7_empty.gif" />
+    <Content Include="Controls\ProgressBar\images\progress_ie7_full.gif" />
+    <Content Include="Controls\ProgressBar\images\progress_ie7_left.gif" />
+    <Content Include="Controls\ProgressBar\images\progress_ie7_right.gif" />
+    <Content Include="Controls\ProgressBar\images\progress_ie_empty.gif" />
+    <Content Include="Controls\ProgressBar\images\progress_ie_full.gif" />
+    <Content Include="Controls\ProgressBar\images\progress_ie_green.gif" />
+    <Content Include="Controls\ProgressBar\images\progress_ie_left.gif" />
+    <Content Include="Controls\ProgressBar\images\progress_ie_right.gif" />
+    <Content Include="Controls\ProgressBar\images\progress_ie_white.gif" />
+    <Content Include="Controls\ProgressBar\ProgressBar.ascx" />
+    <Content Include="Controls\ToolTip\ToolTip.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="References\AjaxControlToolkit.dll" />
+    <Content Include="References\DocumentFormat.OpenXml.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.xml" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Caching.Database.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Caching.Database.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Caching.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Caching.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Common.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.HostAdapter.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Data.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Data.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Logging.Database.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Logging.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Logging.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.xml" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Security.AzMan.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Security.AzMan.xml" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.xml" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Security.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Security.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Validation.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WinForms.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WinForms.XML" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Validation.XML" />
+    <Content Include="References\Microsoft.Practices.ObjectBuilder2.dll" />
+    <Content Include="References\Microsoft.Practices.ObjectBuilder2.xml" />
+    <Content Include="References\Microsoft.Practices.Unity.Configuration.dll" />
+    <Content Include="References\Microsoft.Practices.Unity.Configuration.xml" />
+    <Content Include="References\Microsoft.Practices.Unity.dll" />
+    <Content Include="References\Microsoft.Practices.Unity.Interception.Configuration.dll" />
+    <Content Include="References\Microsoft.Practices.Unity.Interception.Configuration.xml" />
+    <Content Include="References\Microsoft.Practices.Unity.Interception.dll" />
+    <Content Include="References\Microsoft.Practices.Unity.Interception.xml" />
+    <Content Include="References\Microsoft.Practices.Unity.StaticFactory.dll" />
+    <Content Include="References\Microsoft.Practices.Unity.xml" />
+    <Content Include="References\Telerik.Reporting.OpenXmlRendering.dll" />
+    <Content Include="References\Telerik.Web.UI.dll" />
+    <Content Include="References\Telerik.Web.UI.Skins.dll" />
+    <Content Include="References\Telerik.Web.UI.XML" />
+    <Content Include="RenewSes.aspx" />
+    <Content Include="Src\JsRelatedTocss\app.HCMS.js" />
+    <Content Include="Src\JsRelatedTocss\jquery-1.8.3.min.js" />
+    <Content Include="Src\SessionTimerRelated\AjaxSessionTimer.js" />
+    <Content Include="Src\SessionTimerRelated\net.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\AddEditWorkflowGroup.aspx.cs">
+      <DependentUpon>AddEditWorkflowGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddEditWorkflowGroup.aspx.designer.cs">
+      <DependentUpon>AddEditWorkflowGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AddSeriesGradeKSATaskStatement.aspx.cs">
+      <DependentUpon>AddSeriesGradeKSATaskStatement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddSeriesGradeKSATaskStatement.aspx.designer.cs">
+      <DependentUpon>AddSeriesGradeKSATaskStatement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\addUser.aspx.cs">
+      <DependentUpon>addUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\addUser.aspx.designer.cs">
+      <DependentUpon>addUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AddSeriesOPMTitle.aspx.cs">
+      <DependentUpon>AddSeriesOPMTitle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddSeriesOPMTitle.aspx.designer.cs">
+      <DependentUpon>AddSeriesOPMTitle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DashboardRoleSearch.aspx.cs">
+      <DependentUpon>DashboardRoleSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DashboardRoleSearch.aspx.designer.cs">
+      <DependentUpon>DashboardRoleSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DashboardRole.aspx.cs">
+      <DependentUpon>DashboardRole.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DashboardRole.aspx.designer.cs">
+      <DependentUpon>DashboardRole.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DelegateJNP.aspx.cs">
+      <DependentUpon>DelegateJNP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DelegateJNP.aspx.designer.cs">
+      <DependentUpon>DelegateJNP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DelegateOrgChart.aspx.cs">
+      <DependentUpon>DelegateOrgChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DelegateOrgChart.aspx.designer.cs">
+      <DependentUpon>DelegateOrgChart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\delegatePD.aspx.cs">
+      <DependentUpon>delegatePD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\delegatePD.aspx.designer.cs">
+      <DependentUpon>delegatePD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\editUser.aspx.cs">
+      <DependentUpon>editUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\editUser.aspx.designer.cs">
+      <DependentUpon>editUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\JNPAdmin.aspx.cs">
+      <DependentUpon>JNPAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\JNPAdmin.aspx.designer.cs">
+      <DependentUpon>JNPAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\JNPPublishedReport.aspx.cs">
+      <DependentUpon>JNPPublishedReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\JNPPublishedReport.aspx.designer.cs">
+      <DependentUpon>JNPPublishedReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\KSAMaintenance.aspx.cs">
+      <DependentUpon>KSAMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\KSAMaintenance.aspx.designer.cs">
+      <DependentUpon>KSAMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\KSATaskStatementMaintenance.aspx.cs">
+      <DependentUpon>KSATaskStatementMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\KSATaskStatementMaintenance.aspx.designer.cs">
+      <DependentUpon>KSATaskStatementMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\OrgCodeAdmin.aspx.cs">
+      <DependentUpon>OrgCodeAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\OrgCodeAdmin.aspx.designer.cs">
+      <DependentUpon>OrgCodeAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PDAdmin.aspx.cs">
+      <DependentUpon>PDAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PDAdmin.aspx.designer.cs">
+      <DependentUpon>PDAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SearchKSA.aspx.cs">
+      <DependentUpon>SearchKSA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SearchKSA.aspx.designer.cs">
+      <DependentUpon>SearchKSA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SearchTaskStatement.aspx.cs">
+      <DependentUpon>SearchTaskStatement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SearchTaskStatement.aspx.designer.cs">
+      <DependentUpon>SearchTaskStatement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SeriesAdmin.aspx.cs">
+      <DependentUpon>SeriesAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SeriesAdmin.aspx.designer.cs">
+      <DependentUpon>SeriesAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SSASRoles.aspx.cs">
+      <DependentUpon>SSASRoles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SSASRoles.aspx.designer.cs">
+      <DependentUpon>SSASRoles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TaskStatementMaintenance.aspx.cs">
+      <DependentUpon>TaskStatementMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TaskStatementMaintenance.aspx.designer.cs">
+      <DependentUpon>TaskStatementMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ToolTipAdmin.aspx.cs">
+      <DependentUpon>ToolTipAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ToolTipAdmin.aspx.designer.cs">
+      <DependentUpon>ToolTipAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\ctrlDelegateOrgChart.ascx.cs">
+      <DependentUpon>ctrlDelegateOrgChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\ctrlDelegateOrgChart.ascx.designer.cs">
+      <DependentUpon>ctrlDelegateOrgChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\ctrlSSASRoles.ascx.cs">
+      <DependentUpon>ctrlSSASRoles.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\ctrlSSASRoles.ascx.designer.cs">
+      <DependentUpon>ctrlSSASRoles.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\ctrlToolTipAdmin.ascx.cs">
+      <DependentUpon>ctrlToolTipAdmin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\ctrlToolTipAdmin.ascx.designer.cs">
+      <DependentUpon>ctrlToolTipAdmin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Site_Header.Master.cs">
+      <DependentUpon>Site_Header.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site_Header.Master.designer.cs">
+      <DependentUpon>Site_Header.Master</DependentUpon>
+    </Compile>
+    <Content Include="App_Code\ErrorModule.cs" />
+    <Compile Include="Admin\Workforce.aspx.cs">
+      <DependentUpon>Workforce.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Workforce.aspx.designer.cs">
+      <DependentUpon>Workforce.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\WorkflowActionAdministration.aspx.cs">
+      <DependentUpon>WorkflowActionAdministration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\WorkflowActionAdministration.aspx.designer.cs">
+      <DependentUpon>WorkflowActionAdministration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\WorkflowGroupAdministration.aspx.cs">
+      <DependentUpon>WorkflowGroupAdministration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\WorkflowGroupAdministration.aspx.designer.cs">
+      <DependentUpon>WorkflowGroupAdministration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\WorkflowRuleAdministration.aspx.cs">
+      <DependentUpon>WorkflowRuleAdministration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\WorkflowRuleAdministration.aspx.designer.cs">
+      <DependentUpon>WorkflowRuleAdministration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxSessionUpdate.aspx.cs">
+      <DependentUpon>AjaxSessionUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxSessionUpdate.aspx.designer.cs">
+      <DependentUpon>AjaxSessionUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\AccessDenied.aspx.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\AccessDenied.aspx.designer.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\FAQ.aspx.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\FAQ.aspx.designer.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\PortalPage.aspx.cs">
+      <DependentUpon>PortalPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\PortalPage.aspx.designer.cs">
+      <DependentUpon>PortalPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Timeout.aspx.cs">
+      <DependentUpon>Timeout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Timeout.aspx.designer.cs">
+      <DependentUpon>Timeout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\WarningPage.aspx.cs">
+      <DependentUpon>WarningPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\WarningPage.aspx.designer.cs">
+      <DependentUpon>WarningPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\ctrJNPPublishedReport.ascx.cs">
+      <DependentUpon>ctrJNPPublishedReport.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\ctrJNPPublishedReport.ascx.designer.cs">
+      <DependentUpon>ctrJNPPublishedReport.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\ctrlAddSeriesOPMTitle.ascx.cs">
+      <DependentUpon>ctrlAddSeriesOPMTitle.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\ctrlAddSeriesOPMTitle.ascx.designer.cs">
+      <DependentUpon>ctrlAddSeriesOPMTitle.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\ctrlAdminSearchTaskStatement.ascx.cs">
+      <DependentUpon>ctrlAdminSearchTaskStatement.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\ctrlAdminSearchTaskStatement.ascx.designer.cs">
+      <DependentUpon>ctrlAdminSearchTaskStatement.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\ctrlJNPAdmin.ascx.cs">
+      <DependentUpon>ctrlJNPAdmin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\ctrlJNPAdmin.ascx.designer.cs">
+      <DependentUpon>ctrlJNPAdmin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\ctrlAddEditWorkflowGroup.ascx.cs">
+      <DependentUpon>ctrlAddEditWorkflowGroup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\ctrlAddEditWorkflowGroup.ascx.designer.cs">
+      <DependentUpon>ctrlAddEditWorkflowGroup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\ctrlAddEditWorkflowPermission.ascx.cs">
+      <DependentUpon>ctrlAddEditWorkflowPermission.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\ctrlAddEditWorkflowPermission.ascx.designer.cs">
+      <DependentUpon>ctrlAddEditWorkflowPermission.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\ctrlAddSeriesGradeKSATaskStatement.ascx.cs">
+      <DependentUpon>ctrlAddSeriesGradeKSATaskStatement.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\ctrlAddSeriesGradeKSATaskStatement.ascx.designer.cs">
+      <DependentUpon>ctrlAddSeriesGradeKSATaskStatement.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\ctrlDelegateJNP.ascx.cs">
+      <DependentUpon>ctrlDelegateJNP.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\ctrlDelegateJNP.ascx.designer.cs">
+      <DependentUpon>ctrlDelegateJNP.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\ctrlAdminSearchKSA.ascx.cs">
+      <DependentUpon>ctrlAdminSearchKSA.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\ctrlAdminSearchKSA.ascx.designer.cs">
+      <DependentUpon>ctrlAdminSearchKSA.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\ctrlSeriesOPMTitleAdmin.ascx.cs">
+      <DependentUpon>ctrlSeriesOPMTitleAdmin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\ctrlSeriesOPMTitleAdmin.ascx.designer.cs">
+      <DependentUpon>ctrlSeriesOPMTitleAdmin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\ctrlWorkforce.ascx.cs">
+      <DependentUpon>ctrlWorkforce.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\ctrlWorkforce.ascx.designer.cs">
+      <DependentUpon>ctrlWorkforce.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\ctlDashboardRoleSearch.ascx.cs">
+      <DependentUpon>ctlDashboardRoleSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\ctlDashboardRoleSearch.ascx.designer.cs">
+      <DependentUpon>ctlDashboardRoleSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\KSAMaintenance.ascx.cs">
+      <DependentUpon>KSAMaintenance.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\KSAMaintenance.ascx.designer.cs">
+      <DependentUpon>KSAMaintenance.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\KSATaskStatementMaintenance.ascx.cs">
+      <DependentUpon>KSATaskStatementMaintenance.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\KSATaskStatementMaintenance.ascx.designer.cs">
+      <DependentUpon>KSATaskStatementMaintenance.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\TaskStatementMaintenance.ascx.cs">
+      <DependentUpon>TaskStatementMaintenance.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\TaskStatementMaintenance.ascx.designer.cs">
+      <DependentUpon>TaskStatementMaintenance.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\UserMaintenace.ascx.cs">
+      <DependentUpon>UserMaintenace.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\UserMaintenace.ascx.designer.cs">
+      <DependentUpon>UserMaintenace.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\ctrlAddEditWorkflowAction.ascx.cs">
+      <DependentUpon>ctrlAddEditWorkflowAction.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\ctrlAddEditWorkflowAction.ascx.designer.cs">
+      <DependentUpon>ctrlAddEditWorkflowAction.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\ctrlWorkflowGroup.ascx.cs">
+      <DependentUpon>ctrlWorkflowGroup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\ctrlWorkflowGroup.ascx.designer.cs">
+      <DependentUpon>ctrlWorkflowGroup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\ctrlAddEditWorkflowRule.ascx.cs">
+      <DependentUpon>ctrlAddEditWorkflowRule.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\ctrlAddEditWorkflowRule.ascx.designer.cs">
+      <DependentUpon>ctrlAddEditWorkflowRule.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\HelpMessage.ascx.cs">
+      <DependentUpon>HelpMessage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\HelpMessage.ascx.designer.cs">
+      <DependentUpon>HelpMessage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\DashboardRole.ascx.cs">
+      <DependentUpon>DashboardRole.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\DashboardRole.ascx.designer.cs">
+      <DependentUpon>DashboardRole.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\defaultMain.ascx.cs">
+      <DependentUpon>defaultMain.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\defaultMain.ascx.designer.cs">
+      <DependentUpon>defaultMain.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Layout\HeaderControl.ascx.cs">
+      <DependentUpon>HeaderControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Layout\HeaderControl.ascx.designer.cs">
+      <DependentUpon>HeaderControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Login.ascx.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Login.ascx.designer.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Message\Message.ascx.cs">
+      <DependentUpon>Message.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Message\Message.ascx.designer.cs">
+      <DependentUpon>Message.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ModuleSelector.ascx.cs">
+      <DependentUpon>ModuleSelector.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ModuleSelector.ascx.designer.cs">
+      <DependentUpon>ModuleSelector.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProgressBar\ProgressBar.ascx.cs">
+      <DependentUpon>ProgressBar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ProgressBar\ProgressBar.ascx.designer.cs">
+      <DependentUpon>ProgressBar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ToolTip\ToolTip.ascx.cs">
+      <DependentUpon>ToolTip.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ToolTip\ToolTip.ascx.designer.cs">
+      <DependentUpon>ToolTip.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Other.Master.cs">
+      <DependentUpon>Other.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Other.Master.designer.cs">
+      <DependentUpon>Other.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RenewSes.aspx.cs">
+      <DependentUpon>RenewSes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RenewSes.aspx.designer.cs">
+      <DependentUpon>RenewSes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controls\Search\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\RadSpell\en-US.tdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Themes\HCMS_Default\HCMS.skin" />
+    <Content Include="EntLib.config" />
+    <Content Include="Other.Master" />
+    <Content Include="Web.sitemap" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HCMS.Business\HCMS.Business.csproj">
+      <Project>{E45DDA26-40F5-4C0C-B039-ABEF98717E94}</Project>
+      <Name>HCMS.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HCMS.WebFramework\HCMS.WebFramework.csproj">
+      <Project>{E663DEDC-DD0B-4470-B5C9-B87A1756ED76}</Project>
+      <Name>HCMS.WebFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site_Header.Master" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>54394</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

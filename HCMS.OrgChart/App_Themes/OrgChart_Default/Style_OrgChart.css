@@ -1,0 +1,264 @@
+﻿/**************************************************
+OrgChart Specific Styling
+The class .OrgChart is added to the body thru app.js
+***************************************************/
+
+.OrgChart {background:#ebf1f4 url(./Images/bg_blue_grad.png) repeat-x;}
+.OrgChart #header {background:url(./Images/bg_yellow_grad.png) repeat-x; height:100px}
+.OrgChart .logo {background:url(./Images/logo_OrgChart.png) no-repeat 10px 5px; width:600px !important; height:100px;}
+.OrgChart .footer {background:#9a9a8d; color:#fff}
+.OrgChart .footer a, .OrgChart .footer a:visited {color:#fff !important;}
+
+/*.OrgChart .siteContent {margin-top:30px;}*/
+.OrgChart .siteContent {margin-top:3px;}
+
+/**************************************************
+/*telerik radcontrols override
+These are disabled within the masterpages by adding
+EnableEmbeddedBaseStylesheet="False" EnableEmbeddedSkins="False"
+to the control HTML
+***************************************************/
+#main {padding:15px !important}
+
+/*drop down menu*/
+.actionMenu {background:#9a9a8d; border-top:1px solid #fff; padding:5px;}
+
+.actionMenu .rmRootGroup {background:none !important; border:0px !important; }
+.actionMenu .rmItem {width:100px; /* margin-right:20px; border-left:1px solid #acac9f; */ }
+.actionMenu .rmItem:first-child {border-left:none;}
+.actionMenu .rmRootLink {color:#e8e8e1 !important; font-weight:bold !important; text-transform:uppercase; background:transparent url(images/arrow_dd.png) no-repeat 9px center !important; text-indent:15px;}
+.actionMenu .rmRootLink span {font-size:14px !important}
+.actionMenu .rmRootLink:hover {color:#fff !important; cursor:auto !important}
+
+/*drop down submenu
+.actionMenu .rmVertical, .actionMenu .rmGroup {background:#fff !important;}
+.actionMenu .rmGroup {border:1px solid #fff !important}
+.actionMenu .rmText, .rmLink {cursor:auto !important; background:none !important;}
+
+.actionMenu .rmVertical .rmLink {width:inherit !important;}
+.actionMenu .rmVertical .rmLink:hover {background:#e2e2da !important; width:inherit !important;}
+.actionMenu .rmVertical .rmItem {border:0px !important; margin-right:0px;}
+.actionMenu .rmVertical .rmText {padding-right:0px important!; padding-left:10px !important; margin-right:0px !important}*/
+
+/*information table*/
+.divInfo {width:100%;margin: 0px 0px 0px; border:0px;}
+.divInfo th, .divInfo td {padding:4px; border:1px solid #fff;}
+.divInfo th {background:#a5c7d8; color:#326e94;  font-size:11px;}
+.divInfo td {padding-top:10px; padding-right:10px; padding-left:10px; padding-bottom: 0px; background:#d5e5ed url(images/bg_blue_grad_up.png) repeat-x bottom; color:#5b5b5b; border-bottom:0px;}
+
+#ctl00_divWorkflowNotes {padding-top:12px;}
+
+div.ajaxLoaderIcon
+{
+    float: right; position: relative; top: 0px; width: 25px; 
+}
+
+/*////////////////////////*/
+/*  main horizontal tabs  */
+/*////////////////////////*/
+.topNav { padding-top:1px; margin-top:10px;}
+.topNav .rtsUL  {padding:0px; margin:0px; border-top:1px solid #fff; }
+.topNav .rtsLI {float:left; margin:0px; list-style:none; background:#d6d6cd}
+.topNav .rtsLI a {font-weight:bold; color:#6f6f67; display:block; font-size:11px; text-transform:uppercase; text-align:center; border-left:0px; text-decoration:none; padding:12px 0 }
+
+/*tab is selected*/
+.topNav .rtsSelected_parent  {background:#ffde4e url(./images/bg_chevron_brown.png) no-repeat left center}
+.topNav .rtsSelected {background:url(./images/bg_chevron_brown_end.png) no-repeat right center}
+
+
+/*first tab is selected*/
+.topNav .rtsFirst.rtsSelected_parent {background:#ffde4e url(./images/bg_chevron_white.png) no-repeat left center}
+.topNav .rtsFirst .rtsSelected {background:url(./images/bg_chevron_brown_end.png) no-repeat right center}
+
+/*last tab is selected*/
+.topNav .rtsLast.rtsSelected_parent {background:#ffde4e url(./images/bg_chevron_brown.png) no-repeat left center;}
+.topNav .rtsLast .rtsSelected {background:url()}
+
+
+/*////////////////////////*/
+/*   sub horizontal tabs  */
+/*////////////////////////*/
+.subNav {margin-top:9px; padding:10px 0; background:#fbfbf7; height:20px; border-bottom:1px solid #d6d6cd}
+.subNav .rtsUL  {border-bottom:0; margin:0px; margin-left:-40px;  padding-top:2px;}
+.subNav .rtsLI {float:left; margin:0px; list-style:none;}
+
+
+/*on states */
+.subNav .rtsLI a, .subNav .rtsLI a:visited {color:#6a6a61 !important; padding:10px 20px; text-decoration:none; font-weight:bold; font-size:12px;}
+.subNav a:active {background:#fff;}
+.subNav .rtsLI .rtsSelected {border-bottom:6px solid #ffde4e !important}
+.subNav a:hover {border-bottom:6px solid #d6d6cd !important}
+
+
+
+
+/*////////////////////////*/
+/*       progress bar     */
+/*////////////////////////*/
+#progressBar {
+		width: 220px;
+		height: 18px;
+		border: 1px solid #a5c7d8;
+		background-color: #fff;
+}
+
+#progressBar div {
+		height: 100%;
+		color: #fff;
+		text-align: right;
+		color:#fff;
+		line-height: 18px; /* same as #progressBar height if we want text middle aligned */
+		width: 0;
+		background: #57c24a url(images/bg_green_grad.png) repeat-x;
+}
+/*////////////////////////*/
+/*     Telerik Overrides  */
+/*////////////////////////*/
+
+div.RadGrid .rgRefresh { display: none; }
+
+
+/*wraps around all tables / rad grid and rg master table are the same*/
+/*.rgMasterTable { border: 1px solid #8dcbef !important; background-color: #dff0fb; }*/
+.rgMasterTable { border: 1px solid #999 !important; background-color: #dff0fc; }
+
+/* Change Related to Telerik.Web.UI upgrade to Q1 2012- added div to increase specificity */
+div .RadGrid .rgMasterTable { border-collapse: collapse; }
+.RadGrid { background-color: white; vertical-align: top; width: 100% !important; font-size: 11px; font-weight: normal; color: #333; }
+.RadGrid_Default {border:0px solid #a8c8df !important;}
+
+.RadGrid table td:last-child { white-space: normal !important; }
+
+
+/*BG FOR TABLE HEADER*/
+/* Change Related to Telerik.Web.UI upgrade to Q1 2012- added .RadGrid to increase specificity */
+.RadGrid .RadGridHeader { background: #91D2B2; color: #fff; /*color:#326e94;*/ font-weight: bold; border: 1px; border-collapse: collapse; }
+
+
+/* Change Related to Telerik.Web.UI upgrade to Q1 2012- added TH tag to increase specificity */
+TH.rgHeader.RadGridHeader { padding: 4px; padding-left: 8px; font-weight: bold; text-transform: uppercase; border-right: 1px solid #fff; white-space: nowrap; }
+
+
+
+.RadGridHeader SPAN { padding-top: 4px; display: inline; text-decoration: none; padding-left: 4px; color: #fff; font-weight: bold; }
+
+.RadGridHeader A { text-decoration: none; color: #fff; /*color: #326e94 !important;*/ }
+
+.RadGridHeader A:hover { text-decoration: underline; color: #fff; }
+
+.EditFormHeader { background-color: #ced9c1; color: #475c2c; height: 18px; }
+
+.EditFormButtonRow A { font-size: 12px; color: Green; }
+
+.EditFormHeader TD { font-weight: bold; font-size: 12px; padding-top: 4px; text-align: center; }
+
+.RadGridGroupHeaderItem { background-color: #BFD0DF; text-align: right; font-weight: bold; }
+.RadGridCommandItem { height: 25px; padding-left: 4px; background-color: white; color: Green; }
+
+a.RadGridCommandItem { text-align: right; font-weight: bold; font-size: 12px; }
+
+.RadGridCommandItem a:hover { color: Green; text-decoration: none; }
+
+.RadGridCommandItem div { padding: 4px; font-weight: bold; font-size: 12px; }
+
+.RadGridCommandItem td { border-right: solid 1px #9cb6c5; border-left: solid 0px #9cb6c5; border-bottom: solid 0px #9cb6c5; border-top: solid 0px #9cb6c5; padding: 4px; }
+
+.rgCommandTable td { border-right: solid 0px #9cb6c5; border-left: solid 0px #9cb6c5; border-bottom: solid 0px #9cb6c5; border-top: solid 0px #9cb6c5; }
+
+.rgNoRecords { height: 27px; padding-left: 4px; background-color: white; }
+
+.rgCaption { font-weight: bold; height: 20px; padding-top: 5px; text-align: left; }
+
+.rgDetailTable { margin: 10px 0 15px 0; }
+
+.rgDetailTable th { border: outset 1px #fff3a8; background-color: #fff3a8; padding: 4px; padding-left: 8px; color: black; /*#f2f0ec;*/ text-align: left; border-top: 1px solid #fff; height: 25px; font-weight: bold; }
+
+.rgDetailTable .RadGridAlternatingItem { border: solid 1px #8dcbef; background-color: #fff; padding: 5px; height: 25px; }
+.RadGrid_Default .rgAltRow {background:#fff !Important;}
+.RadGrid_Default .rgRow .rgSorted {background:#dff0fc !important}
+.RadGrid_Default .rgAltRow .rgSorted {background:#fff !important}
+
+
+/* Change Related to Telerik.Web.UI upgrade to Q1 2012- added this to have some space between lock icon and radmenu */
+.RadGrid .RadGridAlternatingItem.rgAltRow TD { padding-right: 5px; padding-left: 5px; }
+/* added this to prenvent showing two dropdown arrows 
+of the radcombobox, if the radcombobox was with in radgrid td*/
+.RadGrid .RadGridAlternatingItem.rgAltRow .dropdownTD TD { padding-right: 0px; padding-left: 0px; }
+/*sets style for odd number table rows*/
+.rgDetailTable .RadGridItem { border: solid 1px #8dcbef; background-color: #fff; padding: 5px; height: 25px; }
+/* Change Related to Telerik.Web.UI upgrade to Q1 2012- added this to have some space between lock icon and radmenu */
+.RadGrid .RadGridItem.rgRow TD { padding-right: 5px; padding-left: 5px; }
+.rgDetailTable .rgHoveredRow, .rgActiveRow { background-color: #E4EBF1; }
+/* added this to prenvent showing two dropdown arrows 
+of the radcombobox, if the radcombobox was with in radgrid td*/
+.RadGrid .RadGridItem.rgRow .dropdownTD TD { padding-right: 0px; padding-left: 0px; }
+/*sets style for odd number table rows*/
+.RadGridAlternatingItem td { border: solid 1px #a5c7d8; background-color: #dff0fc; padding: 5px; }
+.RadGrid .rgRow td, .RadGrid .rgAltRow td {border:0px !important}
+
+
+
+/*nested tables should not have borders*/
+.RadGrid td table td { border: 0px !important; }
+
+/*sets style for even number table rows*/
+.RadGridItem td { border: solid 1px #a5c7d8; background-color: #fff; padding: 5px; }
+
+/*lock image on item editing*/
+img.checked { float: right; margin-top: -20px; margin-left: 10px; }
+
+
+/*.rgNoRecords td { border-right: solid 1px #9cb6c5; border-left: solid 0px #9cb6c5; border-bottom: solid 0px #9cb6c5; border-top: solid 0px #9cb6c5; padding: 5px; font-weight: bold; }*/
+.rgNoRecords td { border-right: solid 1px #91D2B2; border-left: solid 0px #91D2B2; border-bottom: solid 0px #91D2B2; border-top: solid 0px #91D2B2; padding: 5px; font-weight: bold; }
+
+.rgHoveredRow, .rgActiveRow { background-color: #fff3a8; }
+
+.RadGridEditItem { padding-left: 4px; background-color: #fff3a8; }
+
+.RadGridSelectedItem { padding-left: 4px; background-color: #f2f0ec; }
+
+/* -------------------------------------------------- 
+	:: RadGrid PagerStyle.RadGridPager
+-------------------------------------------------- */
+
+/*PAGE NUMBER LAYOUTS*/
+.rgPager { }
+.RadGridPager td { }
+
+/*sets background color for table*/
+.RadGridPager table { font-weight: bold; margin: 3px 5px 5px 5px !important; }
+
+.RadGridPager td td { }
+.rgNumPart a.rgCurrentPage, .rgNumPart a.rgCurrentPage:hover, .rgNumPart a.rgCurrentPage:active { border-top: none 1px #8dcbef; border-bottom: none 1px #8dcbef; border-left: none 1px #8dcbef; border-right: none 1px #8dcbef; padding-left: 8px; padding-right: 8px; background-color: #fff; margin-right: 5px; color: green; cursor: text; }
+
+.RadGridPager a:active, .RadGridPager a:hover { border: 1px solid green; padding-left: 8px; padding-right: 8px; }
+.RadGridPager a, .RadGridPager a:visited { font-weight: bold; color: green; text-decoration: none; padding-left: 8px; padding-right: 8px; border: 1px solid #8dcbef; background-color: #fff; margin-right: 5px; }
+
+
+.RadGridPager div { margin-top: 5px; }
+/* Change Related to Telerik.Web.UI upgrade to Q1 2012- added this to decrease the size of the pager buttons */
+.RadGrid .RadGridPager .rgNumPart A { padding-right: 8px; margin-right: 5px; line-height: 14px; }
+
+/* -------------------------------------------------- 
+	:: RadGrid PagerStyle.RadGridPagerNextPrev
+-------------------------------------------------- */
+
+.RadGridPagerNextPrev td { border: 1px solid RGB(145,210,179) !important; }
+
+.RadGridPagerNextPrev .rgPagerCell .rgNumPart a { color: RGB(51,51,51) !important; line-height: 20px !important; }
+
+.RadGridPagerNextPrev .rgPagerCell .rgNumPart .rgCurrentPage { background: none !important; border: 1px solid #2B5980 !important; border-radius: 3px !important; }
+.RadGridPagerNextPrev .rgPagerCell .rgNumPart .rgCurrentPage:hover { padding: 0px 5px 0px 0px !important; margin: 0px !important; }
+
+.RadGridPagerNextPrev .rgPagerCell .rgAdvPart .RadComboBox { background-color: #FFF !important; border: 1px solid #6F7074 !important; border-radius: 3px !important; }
+.RadGridPagerNextPrev .rgPagerCell .rgAdvPart .RadComboBox .rcbInputCell input { padding-top: 0px !important; vertical-align: text-top !important; }
+.RadGridPagerNextPrev .rgPagerCell .rgAdvPart .RadComboBox .rcbArrowCellRight a { background: url(./images/RAD/Menu/down.png) no-repeat center; height: 14px !important; }
+
+.RadComboBoxDropDown { background-color: #FFF !important; border: 1px solid #6F7074 !important; }
+
+.RadComboBoxDropDown .rcbList li { margin: 0px; }
+.RadComboBoxDropDown .rcbList li.rcbHovered { background-color: #DEF0FC !important; }
+
+.RadGridPagerNextPrev .rgPagerCell .rgInfoPart strong { font-weight: bold !important; }
+
+/* end .RadGridPagerNextPrev */

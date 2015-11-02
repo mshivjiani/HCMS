@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Other.master.cs" Inherits="HCMS.Other"  %>
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<!DOCTYPE html>
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class=""> <!--<![endif]-->
+
+<html>
+<head id="Head1" runat="server">
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<!-- CSS Files loaded thru control-->
+    <!-- Included JS Files -->
+    <script type="text/javascript" language="javascript" src="../Src/JsRelatedTocss/jquery-1.8.3.min.js" ></script>
+    <script type="text/javascript" language="javascript" src="../Src/JsRelatedTocss/app.HCMS.js" ></script>
+    <title></title>
+</head>
+    
+<body>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <asp:Literal ID="literalTitle" runat="server"></asp:Literal>
+    </asp:ContentPlaceHolder>
+
+    <form id="_theForm" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true"> </asp:ScriptManager>
+        <div id="container">
+	        <div id="main">
+		        <div id="header"></div>
+		        <div id="topNav_off"></div>
+		        <div id="othercontent">
+		            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat ="server"></asp:ContentPlaceHolder>
+		        </div>
+		        <div id="footer" class="footer">
+		           <telerik:RadMenu ID="radMenuFooter" runat ="server" EnableEmbeddedBaseStylesheet="False" EnableEmbeddedSkins="False"></telerik:RadMenu>
+		            <p>Copyright © U.S. Fish & Wildlife Service. All Rights Reserved.</p>
+		        </div>
+	        </div>
+        </div>
+    </form>
+</body>
+</html>

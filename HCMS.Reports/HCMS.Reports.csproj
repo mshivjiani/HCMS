@@ -1,0 +1,686 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8C392731-929D-45CD-B542-3C6CCED3EB5A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HCMS.Reports</RootNamespace>
+    <AssemblyName>HCMS.Reports</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'LOCAL-NTCAD|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\LOCAL-NTCAD\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\HCMS.Reports.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Reporting, Version=6.1.12.611, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Telerik.Reporting.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CareerLadderDocuments\CLPDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CLPDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CareerLadderDocuments\EvalStatement.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CareerLadderDocuments\EvalStatement.Designer.cs">
+      <DependentUpon>EvalStatement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CareerLadderDocuments\HeaderTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CareerLadderDocuments\HeaderTable.Designer.cs">
+      <DependentUpon>HeaderTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CareerLadderDocuments\JobAnalysis.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CareerLadderDocuments\JobAnalysis.Designer.cs">
+      <DependentUpon>JobAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CareerLadderDocuments\PDComments.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CareerLadderDocuments\PDComments.Designer.cs">
+      <DependentUpon>PDComments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CareerLadderDocuments\PDDocument.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CareerLadderDocuments\PDDocument.Designer.cs">
+      <DependentUpon>PDDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CareerLadderDocuments\PDTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CareerLadderDocuments\PDTable.Designer.cs">
+      <DependentUpon>PDTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodingInfo\CodingInfo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CodingInfo\CodingInfo.Designer.cs">
+      <DependentUpon>CodingInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comments\PDComments.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Comments\PDComments.Designer.cs">
+      <DependentUpon>PDComments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comments\PDFESRecommendations.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Comments\PDFESRecommendations.Designer.cs">
+      <DependentUpon>PDFESRecommendations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comments\PDGSSGRecommendations.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Comments\PDGSSGRecommendations.Designer.cs">
+      <DependentUpon>PDGSSGRecommendations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comments\PDNarrativeRecommendations.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Comments\PDNarrativeRecommendations.Designer.cs">
+      <DependentUpon>PDNarrativeRecommendations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comments\PDNarrativeSupRecommendations.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Comments\PDNarrativeSupRecommendations.Designer.cs">
+      <DependentUpon>PDNarrativeSupRecommendations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comments\PDWorkflowComments.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Comments\PDWorkflowComments.Designer.cs">
+      <DependentUpon>PDWorkflowComments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PDExpressDataSetCOEs.cs">
+      <DependentUpon>PDExpressDataSetCOEs.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DutyQualDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DutyQualDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Evaluation\ClassificationStandards.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Evaluation\ClassificationStandards.Designer.cs">
+      <DependentUpon>ClassificationStandards.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Evaluation\EvalStatement.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Evaluation\EvalStatement.Designer.cs">
+      <DependentUpon>EvalStatement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobAnalysis\DutyQualifications.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="JobAnalysis\DutyQualifications.Designer.cs">
+      <DependentUpon>DutyQualifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobAnalysis\JobAnalysis.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="JobAnalysis\JobAnalysis.Designer.cs">
+      <DependentUpon>JobAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobAnalysis\JDuties.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="JobAnalysis\JDuties.Designer.cs">
+      <DependentUpon>JDuties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobAnalysis\PositionFactor1Language.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="JobAnalysis\PositionFactor1Language.Designer.cs">
+      <DependentUpon>PositionFactor1Language.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PDExpressDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PDExpressDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PDExpressDataSetCodingInfo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PDExpressDataSetCodingInfo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PDExpressDataSetCOEs.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PDExpressDataSetCOEs.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PDExpressDataSetDuties.cs">
+      <DependentUpon>PDExpressDataSetDuties.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PDExpressDataSetDuties.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PDExpressDataSetDuties.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PDExpressDataSetEvalStatement.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PDExpressDataSetEvalStatement.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PDExpressDataSetFactors.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PDExpressDataSetFactors.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PDExpressDataSetGSSGFactors.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PDExpressDataSetGSSGFactors.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PDExpressDataSetJobAnalysis.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PDExpressDataSetJobAnalysis.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PDExpressDataSetNarrativeFactors.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PDExpressDataSetNarrativeFactors.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PDExpressDataSetNarrativeSupervisoryFactors.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PDExpressDataSetNarrativeSupervisoryFactors.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PDExpressDataSetPositionFactor1Lang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PDExpressDataSetPositionFactor1Lang.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PDExpressDataSetPositionQual.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PDExpressDataSetPositionQual.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PDExpressDataSetStandards.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PDExpressDataSetStandards.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PDFactorRecommendations.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PDFactorRecommendations.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PDGradePoint.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PDGradePoint.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PDWorkflowNotes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PDWorkflowNotes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PositionDescription\PositionCOEs.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PositionDescription\PositionCOEs.Designer.cs">
+      <DependentUpon>PositionCOEs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PositionDescription\PDDocument.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PositionDescription\PDDocument.Designer.cs">
+      <DependentUpon>PDDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PositionDescription\PDDuties.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PositionDescription\PDDuties.Designer.cs">
+      <DependentUpon>PDDuties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PositionDescription\PDFESFactors.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PositionDescription\PDFESFactors.Designer.cs">
+      <DependentUpon>PDFESFactors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PositionDescription\PDGSSGFactors.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PositionDescription\PDGSSGFactors.Designer.cs">
+      <DependentUpon>PDGSSGFactors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PositionDescription\PDNarrativeFactors.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PositionDescription\PDNarrativeFactors.Designer.cs">
+      <DependentUpon>PDNarrativeFactors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PositionDescription\PDNarrativeSupervisoryFactors.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PositionDescription\PDNarrativeSupervisoryFactors.Designer.cs">
+      <DependentUpon>PDNarrativeSupervisoryFactors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PositionDescription\PositionDutyKSAs.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PositionDescription\PositionDutyKSAs.Designer.cs">
+      <DependentUpon>PositionDutyKSAs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PositionDescription\PositionFactorGradePointTotal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PositionDescription\PositionFactorGradePointTotal.Designer.cs">
+      <DependentUpon>PositionFactorGradePointTotal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PositionDescription\PositionOverallQualifications.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PositionDescription\PositionOverallQualifications.Designer.cs">
+      <DependentUpon>PositionOverallQualifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PositionDescription\PublishedPDBySeriesRegion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PositionDescription\PublishedPDBySeriesRegion.Designer.cs">
+      <DependentUpon>PublishedPDBySeriesRegion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PositionDescription\SODPDDocument.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PositionDescription\SODPDDocument.Designer.cs">
+      <DependentUpon>SODPDDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="CareerLadderDocuments\CLPDDataSet.xsc">
+      <DependentUpon>CLPDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CareerLadderDocuments\CLPDDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CLPDDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="CareerLadderDocuments\CLPDDataSet.xss">
+      <DependentUpon>CLPDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PDExpressDataSetCOEs.xsc">
+      <DependentUpon>PDExpressDataSetCOEs.xsd</DependentUpon>
+    </None>
+    <None Include="PDExpressDataSetCOEs.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PDExpressDataSetCOEs.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PDExpressDataSetCOEs.xss">
+      <DependentUpon>PDExpressDataSetCOEs.xsd</DependentUpon>
+    </None>
+    <None Include="DutyQualDataSet.xsc">
+      <DependentUpon>DutyQualDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DutyQualDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DutyQualDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DutyQualDataSet.xss">
+      <DependentUpon>DutyQualDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PDDataSet.xsc">
+      <DependentUpon>PDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PDDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PDDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PDDataSet.xss">
+      <DependentUpon>PDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PDExpressDataSet1.xsc">
+      <DependentUpon>PDExpressDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PDExpressDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PDExpressDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PDExpressDataSet1.xss">
+      <DependentUpon>PDExpressDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PDExpressDataSetCodingInfo.xsc">
+      <DependentUpon>PDExpressDataSetCodingInfo.xsd</DependentUpon>
+    </None>
+    <None Include="PDExpressDataSetCodingInfo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PDExpressDataSetCodingInfo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PDExpressDataSetCodingInfo.xss">
+      <DependentUpon>PDExpressDataSetCodingInfo.xsd</DependentUpon>
+    </None>
+    <None Include="PDExpressDataSetDuties.xsc">
+      <DependentUpon>PDExpressDataSetDuties.xsd</DependentUpon>
+    </None>
+    <None Include="PDExpressDataSetDuties.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PDExpressDataSetDuties.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PDExpressDataSetDuties.xss">
+      <DependentUpon>PDExpressDataSetDuties.xsd</DependentUpon>
+    </None>
+    <None Include="PDExpressDataSetEvalStatement.xsc">
+      <DependentUpon>PDExpressDataSetEvalStatement.xsd</DependentUpon>
+    </None>
+    <None Include="PDExpressDataSetEvalStatement.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PDExpressDataSetEvalStatement.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PDExpressDataSetEvalStatement.xss">
+      <DependentUpon>PDExpressDataSetEvalStatement.xsd</DependentUpon>
+    </None>
+    <None Include="PDExpressDataSetFactors.xsc">
+      <DependentUpon>PDExpressDataSetFactors.xsd</DependentUpon>
+    </None>
+    <None Include="PDExpressDataSetFactors.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PDExpressDataSetFactors.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PDExpressDataSetFactors.xss">
+      <DependentUpon>PDExpressDataSetFactors.xsd</DependentUpon>
+    </None>
+    <None Include="PDExpressDataSetGSSGFactors.xsc">
+      <DependentUpon>PDExpressDataSetGSSGFactors.xsd</DependentUpon>
+    </None>
+    <None Include="PDExpressDataSetGSSGFactors.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PDExpressDataSetGSSGFactors.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PDExpressDataSetGSSGFactors.xss">
+      <DependentUpon>PDExpressDataSetGSSGFactors.xsd</DependentUpon>
+    </None>
+    <None Include="PDExpressDataSetJobAnalysis.xsc">
+      <DependentUpon>PDExpressDataSetJobAnalysis.xsd</DependentUpon>
+    </None>
+    <None Include="PDExpressDataSetJobAnalysis.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PDExpressDataSetJobAnalysis.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PDExpressDataSetJobAnalysis.xss">
+      <DependentUpon>PDExpressDataSetJobAnalysis.xsd</DependentUpon>
+    </None>
+    <None Include="PDExpressDataSetNarrativeFactors.xsc">
+      <DependentUpon>PDExpressDataSetNarrativeFactors.xsd</DependentUpon>
+    </None>
+    <None Include="PDExpressDataSetNarrativeFactors.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PDExpressDataSetNarrativeFactors.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PDExpressDataSetNarrativeFactors.xss">
+      <DependentUpon>PDExpressDataSetNarrativeFactors.xsd</DependentUpon>
+    </None>
+    <None Include="PDExpressDataSetNarrativeSupervisoryFactors.xsc">
+      <DependentUpon>PDExpressDataSetNarrativeSupervisoryFactors.xsd</DependentUpon>
+    </None>
+    <None Include="PDExpressDataSetNarrativeSupervisoryFactors.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PDExpressDataSetNarrativeSupervisoryFactors.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PDExpressDataSetNarrativeSupervisoryFactors.xss">
+      <DependentUpon>PDExpressDataSetNarrativeSupervisoryFactors.xsd</DependentUpon>
+    </None>
+    <None Include="PDExpressDataSetPositionFactor1Lang.xsc">
+      <DependentUpon>PDExpressDataSetPositionFactor1Lang.xsd</DependentUpon>
+    </None>
+    <None Include="PDExpressDataSetPositionFactor1Lang.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PDExpressDataSetPositionFactor1Lang.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PDExpressDataSetPositionFactor1Lang.xss">
+      <DependentUpon>PDExpressDataSetPositionFactor1Lang.xsd</DependentUpon>
+    </None>
+    <None Include="PDExpressDataSetPositionQual.xsc">
+      <DependentUpon>PDExpressDataSetPositionQual.xsd</DependentUpon>
+    </None>
+    <None Include="PDExpressDataSetPositionQual.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PDExpressDataSetPositionQual.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PDExpressDataSetPositionQual.xss">
+      <DependentUpon>PDExpressDataSetPositionQual.xsd</DependentUpon>
+    </None>
+    <None Include="PDExpressDataSetStandards.xsc">
+      <DependentUpon>PDExpressDataSetStandards.xsd</DependentUpon>
+    </None>
+    <None Include="PDExpressDataSetStandards.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PDExpressDataSetStandards.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PDExpressDataSetStandards.xss">
+      <DependentUpon>PDExpressDataSetStandards.xsd</DependentUpon>
+    </None>
+    <None Include="PDFactorRecommendations.xsc">
+      <DependentUpon>PDFactorRecommendations.xsd</DependentUpon>
+    </None>
+    <None Include="PDFactorRecommendations.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PDFactorRecommendations.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PDFactorRecommendations.xss">
+      <DependentUpon>PDFactorRecommendations.xsd</DependentUpon>
+    </None>
+    <None Include="PDGradePoint.xsc">
+      <DependentUpon>PDGradePoint.xsd</DependentUpon>
+    </None>
+    <None Include="PDGradePoint.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PDGradePoint.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PDGradePoint.xss">
+      <DependentUpon>PDGradePoint.xsd</DependentUpon>
+    </None>
+    <None Include="PDWorkflowNotes.xsc">
+      <DependentUpon>PDWorkflowNotes.xsd</DependentUpon>
+    </None>
+    <None Include="PDWorkflowNotes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PDWorkflowNotes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PDWorkflowNotes.xss">
+      <DependentUpon>PDWorkflowNotes.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\PDExpress.Business.PD.PositionDescription.datasource" />
+    <None Include="Properties\DataSources\PDExpress.Business.PD.PositionFactor.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HCMS.Business\HCMS.Business.csproj">
+      <Project>{E45DDA26-40F5-4C0C-B039-ABEF98717E94}</Project>
+      <Name>HCMS.Business</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CareerLadderDocuments\EvalStatement.resx">
+      <DependentUpon>EvalStatement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CareerLadderDocuments\HeaderTable.resx">
+      <DependentUpon>HeaderTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CareerLadderDocuments\JobAnalysis.resx">
+      <DependentUpon>JobAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CareerLadderDocuments\PDComments.resx">
+      <DependentUpon>PDComments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CareerLadderDocuments\PDDocument.resx">
+      <DependentUpon>PDDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CareerLadderDocuments\PDTable.resx">
+      <DependentUpon>PDTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodingInfo\CodingInfo.resx">
+      <DependentUpon>CodingInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comments\PDComments.resx">
+      <DependentUpon>PDComments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Evaluation\ClassificationStandards.resx">
+      <DependentUpon>ClassificationStandards.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Evaluation\EvalStatement.resx">
+      <DependentUpon>EvalStatement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobAnalysis\DutyQualifications.resx">
+      <DependentUpon>DutyQualifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobAnalysis\JDuties.resx">
+      <DependentUpon>JDuties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobAnalysis\JobAnalysis.resx">
+      <DependentUpon>JobAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionDescription\PositionCOEs.resx">
+      <DependentUpon>PositionCOEs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionDescription\PDDocument.resx">
+      <DependentUpon>PDDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionDescription\PDDuties.resx">
+      <DependentUpon>PDDuties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionDescription\PDFESFactors.resx">
+      <DependentUpon>PDFESFactors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionDescription\PDGSSGFactors.resx">
+      <DependentUpon>PDGSSGFactors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionDescription\PDNarrativeFactors.resx">
+      <DependentUpon>PDNarrativeFactors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionDescription\PDNarrativeSupervisoryFactors.resx">
+      <DependentUpon>PDNarrativeSupervisoryFactors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionDescription\PositionDutyKSAs.resx">
+      <DependentUpon>PositionDutyKSAs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionDescription\PositionOverallQualifications.resx">
+      <DependentUpon>PositionOverallQualifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionDescription\PublishedPDBySeriesRegion.resx">
+      <DependentUpon>PublishedPDBySeriesRegion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionDescription\SODPDDocument.resx">
+      <DependentUpon>SODPDDocument.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="References\Telerik.Reporting.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
